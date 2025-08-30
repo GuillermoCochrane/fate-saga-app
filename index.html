@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fate View Checklist</title>
+    <link rel="icon" type="image/png" href="./assets/img/fate_logo.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="./assets/data/data.js"></script>
+    <script src="./assets/js/utils.js"></script>
+    <script src="./assets/js/app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fate View Checklist</h1>
+            <p>Seguimiento de tu progreso en el universo Fate</p>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </header>
+
+        <div class="controls">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="completed">Completados</button>
+                <button class="filter-btn" data-filter="incomplete">No completados</button>
+            </div>
+            <div class="import-export">
+                <button class="io-btn" id="export-btn">Exportar</button>
+                <button class="io-btn" id="import-btn">Importar</button>
+                <input type="file" id="file-input" accept=".json">
+            </div>
+        </div>
+
+        <div id="checklist-container">
+            <!-- El contenido se generará dinámicamente con JavaScript -->
+        </div>
+
+        <div class="total-progress">
+            <h3>Progreso Total</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" id="total-progress-bar" style="width: 0%"></div>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number" id="completed-items">0</div>
+                    <div class="stat-label">Completados</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="total-items">0</div>
+                    <div class="stat-label">Total</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="percentage">0%</div>
+                    <div class="stat-label">Completado</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">
+        Operación realizada con éxito
+    </div>
+</body>
+</html>
