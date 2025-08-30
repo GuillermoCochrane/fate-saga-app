@@ -13,46 +13,70 @@ function initApp() {
 
 // Configurar event listeners
 function setupEventListeners() {
-    // Filtros
+    // Selecciona el filtro, y le da la clase active al botón correspondiente
     document.querySelectorAll('.filter-btn').forEach(btn => {
+    //seleccionar todos los botones de clase filter-btn 
         btn.addEventListener('click', (e) => {
+        //ponemos a escuchar el evento click
             document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            //para cada botón, quitamos la clase active de todos los botones de clase filter-btn
             e.target.classList.add('active');
+            //ponemos la clase active al botón que se ha seleccionado
             currentFilter = e.target.dataset.filter;
+            //actualizamos el filtro actual
             renderChecklist();
         });
     });
 
-    // Importar/Exportar
+    //Exporta los datos al hacer clic 
     document.getElementById('export-btn').addEventListener('click', exportData);
+    
+    //Importa los datos al hacer clic
     document.getElementById('import-btn').addEventListener('click', () => {
+    // capturamos el boton de de id import-btn y escuchamos el evento click
         document.getElementById('file-input').click();
+        //hacemos click en el input de id file-input, ya que el mismo no es visible
     });
     document.getElementById('file-input').addEventListener('change', importData);
+    //cuando se cambie file-input, se ejecuta el la funcion importData
     
     // Event delegation para cambios de estado de details
     document.addEventListener('toggle', (e) => {
         if (e.target.tagName === 'DETAILS') {
+            //si se hizo click en un details
             const details = e.target;
+            //guardamos el elemento
             const isOpen = details.open;
+            //guardamos si el details abierto o cerrado
             
             // Encontrar el ID del elemento y actualizar su estado opened
             if (details.classList.contains('saga-details')) {
+                //si el details tiene la clase saga-details
                 const sagaName = details.querySelector('.saga-title').textContent;
+                //guardamos el texto del titulo
                 if (checklistData[sagaName]) {
+                    //si el titulo existe en el objeto
                     checklistData[sagaName].opened = isOpen;
+                    //actualizamos el objeto, guardando el estado abierto
                     saveChecklistData(checklistData);
+                    //lo guardamos en el localStorage
                 }
             } 
             else if (details.classList.contains('anime-details')) {
+                //si el details tiene la clase anime-details
                 const animeId = details.querySelector('input[type="checkbox"]').id.replace('main-', '');
+                //guardamos el id del checkbox
                 
-                // Buscar en todas las sagas este anime
+                // recorrremos todas las sagas en localStorage
                 for (const [sagaName, sagaData] of Object.entries(checklistData)) {
                     const anime = sagaData.items.find(a => a.id === animeId);
+                    // capturamos el anime con ese id
                     if (anime) {
+                        //si encuentra el anime
                         anime.opened = isOpen;
+                        //actualizamos el estado abierto
                         saveChecklistData(checklistData);
+                        //lo guardamos en el localStorage
                         break;
                     }
                 }
