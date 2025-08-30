@@ -87,76 +87,98 @@ function setupEventListeners() {
 
 // Renderizar la checklist completa
 function renderChecklist() {
+    //* pendiente: hacer diagrama de los contenedores que vamos generando para renderizar la checklist completa
+
     const container = document.getElementById('checklist-container');
     container.innerHTML = '';
+    //Capturemos el contenedor donde vamos a renderizar y lo borramos
 
     for (const [sagaName, sagaData] of Object.entries(checklistData)) {
+        // recorremos cada saga en el objeto
+
         const sagaElement = document.createElement('div');
         sagaElement.className = 'saga';
-        
+        //creamos el elemento div con la clase saga
+
         const details = document.createElement('details');
         details.className = 'saga-details';
         if (sagaData.opened) {
             details.setAttribute('open', 'true');
         }
-        
+        //creamos el elemento details con la clase saga-details, y le ponemos  el atributo open cuanddo corresponda, asi el details queda abierto
+
         const summary = document.createElement('summary');
         summary.className = 'saga-summary';
-        
+        //creamos el elemento summary con la clase saga-summary
+
         // Calcular progreso de la saga
-        const totalItems = countItems(sagaData.items);
-        const completedItems = countCompletedItems(sagaData.items);
-        const percentage = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0;
-        
+        const totalItems = countItems(sagaData.items); //calculamos el total de items de la saga
+        const completedItems = countCompletedItems(sagaData.items); //calculamos el total de items completados de la saga
+        const percentage = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0; // calculamos el porcentaje de completados, siempre que no sea 0
+
         // Contenedor flexible para título y progreso
         const summaryContent = document.createElement('div');
         summaryContent.className = 'summary-content';
-        
+        //creamos el elemento div con la clase summary-content
+
         // Título de la saga
         const sagaTitle = document.createElement('span');
         sagaTitle.className = 'saga-title';
         sagaTitle.textContent = sagaName;
-        
+        //creamos el elemento span con la clase saga-title, y le ponemos el texto del titulo de la saga
+
         // Contenedor de progreso
         const progressContainer = document.createElement('div');
         progressContainer.className = 'progress-container';
-        
         progressContainer.innerHTML = `
             <span class="progress-text">${percentage}%</span>
             <div class="progress-bar">
                 <div class="progress-fill" style="width: ${percentage}%"></div>
             </div>
         `;
-        
+        //creamos el elemento div con la clase progress-container, y le ponemos el valor del porcentaje y la barra de progreso
+
         summaryContent.appendChild(sagaTitle);
         summaryContent.appendChild(progressContainer);
         summary.appendChild(summaryContent);
-        
+        //agregamos al contenido del summaryContent el titulo y el contenedor de progreso, y lo agregamos al summary
+
         const contentDiv = document.createElement('div');
+        //creamos el elemento div 
         
         // Renderizar items de la saga (filtrando si es necesario)
         let hasVisibleItems = false;
         
         sagaData.items.forEach(item => {
+            //recorremos cada item de la saga
             if (shouldShowItem(item)) {
+                //si se debe mostrar el item
                 hasVisibleItems = true;
+                //lo ponemos visible ( valor booleano), para no crear el contendor del mensaje de no hay items visibles
                 contentDiv.appendChild(createAnimeItem(item, sagaName));
+                //lo agregamos al contenedor
             }
         });
-        
+
         if (!hasVisibleItems) {
+            //si no hay items visibles
             const noItemsMsg = document.createElement('p');
             noItemsMsg.style.padding = '15px';
             noItemsMsg.style.textAlign = 'center';
             noItemsMsg.style.color = '#888';
             noItemsMsg.textContent = 'No hay elementos que coincidan con el filtro';
+            // agregamos un mensaje de no hay items visibles
             contentDiv.appendChild(noItemsMsg);
+            //lo agregamos al contenedor
         }
         
         details.appendChild(summary);
         details.appendChild(contentDiv);
+        //agregamos  el summary y el contenedor al details
         sagaElement.appendChild(details);
+        //agregamos el details al elemento div de la saga
         container.appendChild(sagaElement);
+        //lo agregamos al contenedor
     }
 }
 
