@@ -128,14 +128,15 @@ function saveChecklistData(data) {
 
 // Contar items totales (incluyendo episodios)
 function countItems(items) {
-    let count = 0;
+    let count = 0; //Inicializamos el contador a 0
     items.forEach(item => {
-        count++;
+        count++; // recorremos cada item e incrementamos el contador en 1
         if (item.episodes && item.episodes.length > 0) {
-            count += item.episodes.length;
+            // si el item tiene episodios... 
+            count += item.episodes.length; //incrementamos el contador en el número de episodios
         }
     });
-    return count;
+    return count; //Devuelve el número de items totales
 }
 
 // Contar items completados (incluyendo episodios)
