@@ -141,16 +141,18 @@ function countItems(items) {
 
 // Contar items completados (incluyendo episodios)
 function countCompletedItems(items) {
-    let count = 0;
+    let count = 0; //Inicializamos el contador a 0
     items.forEach(item => {
-        if (item.completed) count++;
+    // Recorremos cada item
+        if (item.completed) count++; // si el item está completo, incrementamos el contador en 1
         if (item.episodes && item.episodes.length > 0) {
+            // si el item tiene episodios...
             item.episodes.forEach(episode => {
-                if (episode.completed) count++;
+                if (episode.completed) count++; // si el episodio está completo, incrementamos el contador en 1
             });
         }
     });
-    return count;
+    return count; //Devuelve el número de items completados
 }
 
 // Determinar si un item debe mostrarse según el filtro actual
