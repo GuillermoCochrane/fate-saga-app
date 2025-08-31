@@ -162,3 +162,8 @@ function shouldShowItem(item) {
     if (currentFilter === 'incomplete') return !item.completed;
     return true;
 }
+
+// Obtener elemento DOM
+function getElement(selector) {
+    return document.querySelector(selector);
+}
