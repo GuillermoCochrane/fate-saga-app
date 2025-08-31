@@ -316,7 +316,7 @@ function toggleAnimeComplete(animeId, sagaName) {
         }
         
         saveChecklistData(checklistData); //Guardamos los datos en el localStorage
-        renderChecklist(); //Volvemos a renderizar t
+        renderChecklist(); //Volvemos a renderizar
         updateTotalProgress(); //Actualizamos el progreso total
     }
 }
@@ -324,18 +324,25 @@ function toggleAnimeComplete(animeId, sagaName) {
 // Alternar estado completo de un episodio
 function toggleEpisodeComplete(episodeId, animeId, sagaName) {
     const anime = checklistData[sagaName].items.find(a => a.id === animeId);
+    //Buscamos el anime con ese id en el objeto
     if (anime && anime.episodes) {
+        //Si se encuentra el anime y tiene episodios...
         const episode = anime.episodes.find(e => e.id === episodeId);
+        //Buscamos el episodio con ese id en el anime
         if (episode) {
+            //Si se encuentra el episodio...
             episode.completed = !episode.completed;
-            
+            //Le cambiamos el estado del episodio
+
             // Verificar si todos los episodios están completos para marcar el anime como completo
             const allEpisodesCompleted = anime.episodes.every(e => e.completed);
+            //Verificamos si todos los episodios están completos para marcar el anime como completo
             anime.completed = allEpisodesCompleted;
+            //Actualizamos el estado del anime
             
-            saveChecklistData(checklistData);
-            renderChecklist();
-            updateTotalProgress();
+            saveChecklistData(checklistData); //Guardamos los datos en el localStorage
+            renderChecklist(); //Volvemos a renderizar
+            updateTotalProgress(); //Actualizamos el progreso total
         }
     }
 }
