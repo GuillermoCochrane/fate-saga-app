@@ -2,18 +2,23 @@
 function showNotification(message, isError = false) {
     const notification = document.getElementById('notification');
     notification.textContent = message;
+    // Capturamos el elemento con id notification y lo cambiamos el texto
     
     if (isError) {
+        // Si es un error, cambiamos el color de error
         notification.style.borderLeftColor = '#f44336';
     } else {
+        // Si no es un error, cambiamos al color de completado
         notification.style.borderLeftColor = 'var(--completed-color)';
     }
     
     notification.classList.add('show');
+    //Agregamos la clase show al elemento notification
     
     setTimeout(() => {
         notification.classList.remove('show');
     }, 3000);
+    //Eliminamos la clase show del elemento notification en 3 segundos
 }
 
 // Exportar datos
