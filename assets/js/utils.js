@@ -111,14 +111,13 @@ function setupTheme() {
     }
 }
 
-
 // Cargar datos guardados o usar los predeterminados
 function loadChecklistData() {
-    const savedData = localStorage.getItem('fateChecklist');
+    const savedData = localStorage.getItem('fateChecklist'); //Capturamos los datos guardados en localStorage
     if (savedData) {
-        return JSON.parse(savedData);
+        return JSON.parse(savedData); //Si los datos existen, los convertimos a un objeto
     }
-    return fateChecklistData;
+    return fateChecklistData; //Si no existen datos, devuelve los datos por defecto
 }
 
 // Guardar datos en localStorage
