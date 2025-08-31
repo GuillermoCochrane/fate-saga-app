@@ -21,19 +21,18 @@ function showNotification(message, isError = false) {
     //Eliminamos la clase show del elemento notification en 3 segundos
 }
 
-// Exportar datos
 function exportData() {
-    const dataStr = JSON.stringify(checklistData, null, 2);
-    const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+    const dataStr = JSON.stringify(checklistData, null, 2); //Guardamos los datos de la checklist en un string JSON
+    const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr); //Creamos un URI para el string de datos
     
-    const exportFileDefaultName = 'fate-checklist.json';
+    const exportFileDefaultName = 'fate-checklist.json'; //Nombre del archivo por defecto
     
-    const linkElement = document.createElement('a');
-    linkElement.setAttribute('href', dataUri);
-    linkElement.setAttribute('download', exportFileDefaultName);
-    linkElement.click();
+    const linkElement = document.createElement('a'); //Creamos el un enlace
+    linkElement.setAttribute('href', dataUri); //Asignamos el URI al atributo href del enlace
+    linkElement.setAttribute('download', exportFileDefaultName); //Asignamos el nombre del archivo por defecto al atributo download del enlace
+    linkElement.click(); //Hacemos click en el enlace para iniciar la descarga del archivo
     
-    showNotification('Datos exportados con éxito');
+    showNotification('Datos exportados con éxito'); //Mostramos una notificación con el mensaje de exportación exitosa
 }
 
 // Importar datos
