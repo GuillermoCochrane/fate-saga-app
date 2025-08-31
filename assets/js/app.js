@@ -33,7 +33,7 @@ function setupEventListeners() {
     
     //Importa los datos al hacer clic
     document.getElementById('import-btn').addEventListener('click', () => {
-    // capturamos el boton de de id import-btn y escuchamos el evento click
+    // capturamos el botón de de id import-btn y escuchamos el evento click
         document.getElementById('file-input').click();
         //hacemos click en el input de id file-input, ya que el mismo no es visible
     });
@@ -53,11 +53,11 @@ function setupEventListeners() {
             if (details.classList.contains('saga-details')) {
                 //si el details tiene la clase saga-details
                 const sagaName = details.querySelector('.saga-title').textContent;
-                //guardamos el texto del titulo
+                //guardamos el texto del título
                 if (checklistData[sagaName]) {
-                    //si el titulo existe en el objeto
+                    //si el título existe en el objeto
                     checklistData[sagaName].opened = isOpen;
-                    //actualizamos el objeto, guardando el estado abierto
+                    //actualizamos el objeto, guardando el estado del details 
                     saveChecklistData(checklistData);
                     //lo guardamos en el localStorage
                 }
@@ -204,7 +204,7 @@ function createAnimeItem(item, sagaName) {
     animeCheckbox.type = 'checkbox';
     animeCheckbox.id = `main-${item.id}`;
     animeCheckbox.checked = item.completed || false;
-    //creamos el checkbox y le ponemos el id del correspondiente, dejandolo marcado segun corresponda
+    //creamos el checkbox y le ponemos el id del item correspondiente, dejandolo marcado segun corresponda
 
     animeCheckbox.addEventListener('change', () => toggleAnimeComplete(item.id, sagaName));
     //Escuchamos el evento change del checkbox, y llamamos a la funcion toggleAnimeComplete
@@ -265,28 +265,37 @@ function createAnimeItem(item, sagaName) {
 function createEpisodeItem(episode, animeId, sagaName) {
     const episodeDiv = document.createElement('div');
     episodeDiv.className = 'check-item';
+    //Creamos el elemento div con la clase check-item
     
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.id = episode.id;
     checkbox.checked = episode.completed || false;
+    //Creamos el checkbox y le ponemos el id del episodio correspondiente, dejándolo marcado según corresponda
     checkbox.addEventListener('change', () => toggleEpisodeComplete(episode.id, animeId, sagaName));
+    //Escuchamos el evento change del checkbox, y llamamos a la función toggleEpisodeComplete
     
     const label = document.createElement('label');
     label.htmlFor = episode.id;
+    //Creamos el label y lo vinculamos con el checkbox correspondiente
     
     // Añadir número de episodio en negrita
     const episodeNumber = document.createElement('span');
     episodeNumber.className = 'episode-number';
+    //Creamos el elemento span con la clase episode-number
     episodeNumber.innerHTML = `<strong>Episodio ${episode.number}:</strong>`;
+    //Agregamos el número de episodio en negrita
     
     label.appendChild(episodeNumber);
     label.appendChild(document.createTextNode(` ${episode.label}`));
+    //Agregamos el número de episodio y el título del episodio al label
     
     episodeDiv.appendChild(checkbox);
     episodeDiv.appendChild(label);
+    //Agregamos el checkbox y el label al elemento div de episodio
     
     return episodeDiv;
+    //Devuelve el elemento padre completo, con todos sus elementos hijos
 }
 
 // Alternar estado completo de un anime
