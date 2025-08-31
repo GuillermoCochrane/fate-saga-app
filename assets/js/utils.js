@@ -167,3 +167,8 @@ function shouldShowItem(item) {
 function getElement(selector) {
     return document.querySelector(selector);
 }
+
+// Obtener todos los elementos DOM
+function getElements(selector) {
+    return document.querySelectorAll(selector);
+}
