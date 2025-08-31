@@ -353,16 +353,18 @@ function updateTotalProgress() {
     let completedItems = 0;
     
     for (const saga of Object.values(checklistData)) {
-        totalItems += countItems(saga.items);
-        completedItems += countCompletedItems(saga.items);
+        //Recorremos cada saga en el objeto
+        totalItems += countItems(saga.items); //Calculamos el total de items de la saga
+        completedItems += countCompletedItems(saga.items); //Calculamos el total de items completados de la saga
     }
     
     const percentage = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0;
+    //si hay items, calculamos el porcentaje de completados, siempre que no sea 0
     
-    document.getElementById('total-progress-bar').style.width = `${percentage}%`;
-    document.getElementById('completed-items').textContent = completedItems;
-    document.getElementById('total-items').textContent = totalItems;
-    document.getElementById('percentage').textContent = `${percentage}%`;
+    document.getElementById('total-progress-bar').style.width = `${percentage}%`; //Actualizamos el progreso total
+    document.getElementById('completed-items').textContent = completedItems; //Actualizamos el número de items completados
+    document.getElementById('total-items').textContent = totalItems; //Actualizamos el número de items totales
+    document.getElementById('percentage').textContent = `${percentage}%`; //Actualizamos el porcentaje de completados
 }
 
 // Iniciar la aplicación cuando el DOM esté listo
