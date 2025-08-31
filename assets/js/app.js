@@ -105,7 +105,7 @@ function renderChecklist() {
         if (sagaData.opened) {
             details.setAttribute('open', 'true');
         }
-        //creamos el elemento details con la clase saga-details, y le ponemos  el atributo open cuanddo corresponda, asi el details queda abierto
+        //creamos el elemento details con la clase saga-details, y le ponemos  el atributo open cuando corresponda, asi el details queda abierto
 
         const summary = document.createElement('summary');
         summary.className = 'saga-summary';
@@ -186,61 +186,79 @@ function renderChecklist() {
 function createAnimeItem(item, sagaName) {
     const animeDiv = document.createElement('div');
     animeDiv.className = 'anime-item';
+    //creamos el elemento div con la clase anime-item
     
     const details = document.createElement('details');
     details.className = 'anime-details';
     if (item.opened) {
         details.setAttribute('open', 'true');
     }
+    //creamos el elemento details con la clase anime-details, y le ponemos  el atributo open cuando corresponda, asi el details queda abierto
     
     const summary = document.createElement('summary');
     summary.className = 'anime-summary';
+    //creamos el elemento summary con la clase anime-summary
     
     // Checkbox para el anime completo
     const animeCheckbox = document.createElement('input');
     animeCheckbox.type = 'checkbox';
     animeCheckbox.id = `main-${item.id}`;
     animeCheckbox.checked = item.completed || false;
+    //creamos el checkbox y le ponemos el id del correspondiente, dejandolo marcado segun corresponda
+
     animeCheckbox.addEventListener('change', () => toggleAnimeComplete(item.id, sagaName));
+    //Escuchamos el evento change del checkbox, y llamamos a la funcion toggleAnimeComplete
     
     // Contenedor para título y formato
     const titleContainer = document.createElement('div');
     titleContainer.className = 'anime-title-container';
+    //creamos el elemento div con la clase anime-title-container
     
     const label = document.createElement('label');
-    label.htmlFor = `main-${item.id}`;
+    label.htmlFor = `main-${item.id}`; // 
     label.textContent = item.label;
+    // creamos el label vinculandolo con el  checkbox correspondiente, y le agregamos el texto que corresponda
     
     const formatSpan = document.createElement('span');
     formatSpan.className = 'anime-format';
     formatSpan.textContent = `${item.format}`;
+    //creamos el elemento span con la clase anime-format, y le ponemos el texto del formato del anime
     
     titleContainer.appendChild(label);
     titleContainer.appendChild(formatSpan);
-    
+    // Agregamos el label y el span al contenedor de título
+
     summary.appendChild(animeCheckbox);
     summary.appendChild(titleContainer);
+    // Agregamos el checkbox y el contenedor de título al summary
     
     const checklist = document.createElement('div');
     checklist.className = 'checklist';
+    //creamos el elemento div con la clase checklist
     
     // Si hay episodios, renderizarlos
     if (item.episodes && item.episodes.length > 0) {
+    //si items tiene elementos...
         const episodeList = document.createElement('div');
         episodeList.className = 'episode-list';
+        //creamos el elemento div con la clase episode-list
         
         item.episodes.forEach(episode => {
             episodeList.appendChild(createEpisodeItem(episode, item.id, sagaName));
         });
+        //recorremos cada episodio del item, y lo agregamos al contenedor de episodios
         
         checklist.appendChild(episodeList);
+        //lo agregamos al contenedor de clase checklist
     }
     
     details.appendChild(summary);
     details.appendChild(checklist);
+    //agregamos el summary y el contenedor de clase checklist al details
     animeDiv.appendChild(details);
-    
-    return animeDiv;
+    //agregamos el details al elemento div de la anime
+
+    return animeDiv; //devuelve el elemento padre completo, con todos sus elementos hijos
 }
 
 // Crear elemento de episodio individual
