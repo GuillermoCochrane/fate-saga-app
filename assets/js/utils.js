@@ -122,8 +122,8 @@ function loadChecklistData() {
 
 // Guardar datos en localStorage
 function saveChecklistData(data) {
-    localStorage.setItem('fateChecklist', JSON.stringify(data));
-    checklistData = data;
+    localStorage.setItem('fateChecklist', JSON.stringify(data)); //Convertimos los datos a un string JSON y lo guardamos en localStorage en el key 'fateChecklist'
+    checklistData = data; //Actualizamos el objeto checklistData con los datos guardados
 }
 
 // Contar items totales (incluyendo episodios)
