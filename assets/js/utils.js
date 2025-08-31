@@ -21,6 +21,7 @@ function showNotification(message, isError = false) {
     //Eliminamos la clase show del elemento notification en 3 segundos
 }
 
+// Exportar datos
 function exportData() {
     const dataStr = JSON.stringify(checklistData, null, 2); //Guardamos los datos de la checklist en un string JSON
     const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr); //Creamos un URI para el string de datos
@@ -37,25 +38,27 @@ function exportData() {
 
 // Importar datos
 function importData(event) {
-    const file = event.target.files[0];
-    if (!file) return;
+    const file = event.target.files[0]; //Capturamos el primer archivo seleccionado
+    if (!file) return; //Si no hay archivo, salimos de la función
     
-    const reader = new FileReader();
+    const reader = new FileReader(); //Creamos un objeto FileReader
     reader.onload = function(e) {
+    // Cuando el archivo se cargue, ejecutamos la función
+    // podemos sustituirlo con reader.addEventListener('load', function(e) {...})
         try {
-            const importedData = JSON.parse(e.target.result);
-            saveChecklistData(importedData);
-            renderChecklist();
-            updateTotalProgress();
-            showNotification('Datos importados con éxito');
+            const importedData = JSON.parse(e.target.result); //Convertimos el JSON a un objeto
+            saveChecklistData(importedData); //Guardamos los datos en el localStorage
+            renderChecklist(); //Volvemos a renderizar
+            updateTotalProgress(); //Actualizamos el progreso total
+            showNotification('Datos importados con éxito'); //Mostramos una notificación con el mensaje de importación exitosa
         } catch (error) {
-            showNotification('Error al importar datos: formato inválido', true);
+            showNotification('Error al importar datos: formato inválido', true); //Mostramos una notificación con el mensaje de error al importar datos
         }
     };
-    reader.readAsText(file);
+    reader.readAsText(file); //Leemos el archivo como texto
     
     // Reset input
-    event.target.value = '';
+    event.target.value = ''; //Reseteamos el input
 }
 
 // Configurar el tema claro/oscuro
