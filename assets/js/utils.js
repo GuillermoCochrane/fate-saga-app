@@ -172,3 +172,10 @@ function getElement(selector) {
 function getElements(selector) {
     return document.querySelectorAll(selector);
 }
+
+// Crea elemento DOM con su clase
+function createElement(tagName, className) {
+    const element = document.createElement(tagName);
+    element.className = className;
+    return element;
+}
