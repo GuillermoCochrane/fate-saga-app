@@ -37,6 +37,67 @@ const enableLightMode = () => {
     $themeToggle.textContent = '🌙';
 }
 
+// maneja el cambio de tema
+const themeHandler = (settings, store = false) => {
+    if (settings === 'dark') {
+        enableDarkMode();
+        if (store) localStorage.setItem('theme', 'dark');
+    } else {
+        enableLightMode();
+        if (store) localStorage.setItem('theme', 'light');
+    }
+}
+
+// Configurar el tema claro/oscuro
+function setupTheme() {
+    const themeToggle = document.getElementById('themeToggle'); // capturamos el elemento con id themeToggle
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches; // comprobamos si la preferencia de tema es oscuro con la Api matchMedia
+    
+    // Establecer tema inicial basado en preferencias del sistema
+    if (prefersDarkScheme) {
+        // Si la preferencia de tema es oscura, establecemos el tema en oscuro, y cambiamos el icono de alternar tema
+        document.documentElement.setAttribute('data-theme', 'dark'); // <html data-theme="dark">
+        // document.documentElement === document.querySelector('html')
+        themeToggle.textContent = '☀️';
+    } else {
+        // si no es oscuro, establecemos el tema en claro, y cambiamos el icono de alternar tema
+        document.documentElement.removeAttribute('data-theme');
+        themeToggle.textContent = '🌙';
+    }
+    
+    // Alternar tema al hacer clic
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        //recuperamos el valor del atributo data-theme (tema actual)
+        if (currentTheme === 'dark') {
+            // si el tema actual es oscuro...
+            document.documentElement.removeAttribute('data-theme'); // le removemos el atributo data-theme
+            themeToggle.textContent = '🌙'; // cambiamos el icono
+            localStorage.setItem('theme', 'light'); // guardamos el tema en localStorage
+        } else {
+            // si no es oscuro...
+            document.documentElement.setAttribute('data-theme', 'dark'); // le agregamos el atributo data-theme = dark
+            themeToggle.textContent = '☀️'; // cambiamos el icono
+            localStorage.setItem('theme', 'dark'); // guardamos el tema en localStorage
+        }
+    });
+    
+    // Respeta la selección previa del usuario si existe
+    const savedTheme = localStorage.getItem('theme'); // recuperamos el tema guardado en localStorage
+    if (savedTheme) {
+        // si el tema existe en localStorage...
+        if (savedTheme === 'dark') {
+            // si el tema es oscuro...
+            document.documentElement.setAttribute('data-theme', 'dark'); // le agregamos el atributo data-theme = dark
+            themeToggle.textContent = '☀️'; // cambiamos el icono
+        } else {
+            // si no es oscuro...
+            document.documentElement.removeAttribute('data-theme'); // le removemos el atributo data-theme
+            themeToggle.textContent = '🌙'; // cambiamos el icono
+        }
+    }
+}
+
 // Mostrar notificación
 function showNotification(message, isError = false) {
     const notification = document.getElementById('notification');
