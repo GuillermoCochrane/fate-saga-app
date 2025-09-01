@@ -1,3 +1,28 @@
+// Referencias a elementos del DOM que se uttilizan frecuentemente
+const themeElements = {
+    $globalTag:     getElement('html'),
+    $themeToggle:   getElement('#themeToggle')
+}
+
+//* Utilidades
+
+// Obtener elemento DOM
+function getElement(selector) {
+    return document.querySelector(selector);
+}
+
+// Obtener todos los elementos DOM
+function getElements(selector) {
+    return document.querySelectorAll(selector);
+}
+
+// Crea elemento DOM con su clase
+function createElement(tagName, className) {
+    const element = document.createElement(tagName);
+    element.className = className;
+    return element;
+}
+
 // Mostrar notificación
 function showNotification(message, isError = false) {
     const notification = document.getElementById('notification');
@@ -161,21 +186,4 @@ function shouldShowItem(item) {
     if (currentFilter === 'completed') return item.completed;
     if (currentFilter === 'incomplete') return !item.completed;
     return true;
-}
-
-// Obtener elemento DOM
-function getElement(selector) {
-    return document.querySelector(selector);
-}
-
-// Obtener todos los elementos DOM
-function getElements(selector) {
-    return document.querySelectorAll(selector);
-}
-
-// Crea elemento DOM con su clase
-function createElement(tagName, className) {
-    const element = document.createElement(tagName);
-    element.className = className;
-    return element;
 }
