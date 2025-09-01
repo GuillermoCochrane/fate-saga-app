@@ -23,6 +23,14 @@ function createElement(tagName, className) {
     return element;
 }
 
+// aplica tema oscuro
+const enableDarkMode   = () => {
+    const { $globalTag, $themeToggle } = themeElements;
+    $globalTag.setAttribute('data-theme', 'dark'); // <html data-theme="dark">
+    $themeToggle.textContent = '☀️';
+}
+
+
 // Mostrar notificación
 function showNotification(message, isError = false) {
     const notification = document.getElementById('notification');
