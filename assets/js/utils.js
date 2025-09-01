@@ -30,6 +30,12 @@ const enableDarkMode   = () => {
     $themeToggle.textContent = '☀️';
 }
 
+// aplica tema claro
+const enableLightMode = () => {
+    const { $globalTag, $themeToggle } = themeElements;
+    $globalTag.removeAttribute('data-theme');
+    $themeToggle.textContent = '🌙';
+}
 
 // Mostrar notificación
 function showNotification(message, isError = false) {
