@@ -1,18 +1,18 @@
 // Referencias a elementos del DOM que se uttilizan frecuentemente
 const themeElements = {
-    $globalTag:     getElement('html'),
-    $themeToggle:   getElement('#themeToggle')
+    $globalTag:     $('html'),
+    $themeToggle:   $('#themeToggle')
 }
 
 //* Utilidades
 
 // Obtener elemento DOM
-function getElement(selector) {
+function $(selector) {
     return document.querySelector(selector);
 }
 
 // Obtener todos los elementos DOM
-function getElements(selector) {
+function $$(selector) {
     return document.querySelectorAll(selector);
 }
 
@@ -72,7 +72,7 @@ function setupTheme() {
 
 // Handler de notificaciones
 function showNotification(message, isError = false) {
-    const $notification = getElement('#notification');
+    const $notification = $('#notification');
     $notification.textContent = message; // Capturamos el elemento con id notification y le cambiamos el texto
 
     if (isError) {
