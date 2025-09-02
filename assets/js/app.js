@@ -316,10 +316,15 @@ function toggleAnimeComplete(animeId, sagaName) {
             //Si el anime está completo y tiene episodios...
             anime.episodes.forEach(episode => {
                 episode.completed = true;
-            }); //* revisar que xq falta la funcionalidad de desmarcado completo
+            }); 
             //marcamos todos los episodios como completos
+        } else if (!anime.completed && anime.episodes) {
+            //Si el anime no está completo y tiene episodios...
+            anime.episodes.forEach(episode => {
+                episode.completed = false;
+            });
+            //desmarcamos todos los episodios como completos
         }
-        
         saveChecklistData(checklistData); //Guardamos los datos en el localStorage
         renderChecklist(); //Volvemos a renderizar
         updateTotalProgress(); //Actualizamos el progreso total
