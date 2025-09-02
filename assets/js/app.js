@@ -13,12 +13,17 @@ function initApp() {
 
 // Configurar event listeners
 function setupEventListeners() {
+    const $filterBtns = $$('.filter-btn');
+    const $exportBtn = $('#export-btn');
+    const $importBtn = $('#import-btn');
+    const $fileInput = $('#file-input');
+
     // Selecciona el filtro, y le da la clase active al botón correspondiente
-    document.querySelectorAll('.filter-btn').forEach(btn => {
+    $filterBtns.forEach(button => {
     //seleccionar todos los botones de clase filter-btn 
-        btn.addEventListener('click', (e) => {
+        button.addEventListener('click', (e) => {
         //ponemos a escuchar el evento click
-            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            $filterBtns.forEach(btn => btn.classList.remove('active'));
             //para cada botón, quitamos la clase active de todos los botones de clase filter-btn
             e.target.classList.add('active');
             //ponemos la clase active al botón que se ha seleccionado
@@ -29,15 +34,15 @@ function setupEventListeners() {
     });
 
     //Exporta los datos al hacer clic 
-    document.getElementById('export-btn').addEventListener('click', exportData);
+    $exportBtn.addEventListener('click', exportData);
     
     //Importa los datos al hacer clic
-    document.getElementById('import-btn').addEventListener('click', () => {
+    $importBtn.addEventListener('click', () => {
     // capturamos el botón de de id import-btn y escuchamos el evento click
-        document.getElementById('file-input').click();
+        $fileInput.click();
         //hacemos click en el input de id file-input, ya que el mismo no es visible
     });
-    document.getElementById('file-input').addEventListener('change', importData);
+    $fileInput.addEventListener('change', importData);
     //cuando se cambie file-input, se ejecuta el la funcion importData
     
     // Event delegation para cambios de estado de details
