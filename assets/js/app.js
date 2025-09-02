@@ -359,6 +359,10 @@ function toggleEpisodeComplete(episodeId, animeId, sagaName) {
 
 // Actualizar progreso total
 function updateTotalProgress() {
+    const $totalProgressBar = $('#total-progress-bar');
+    const $completedItems = $('#completed-items');
+    const $totalItems = $('#total-items');
+    const $percentage = $('#percentage');
     let totalItems = 0;
     let completedItems = 0;
     
@@ -371,10 +375,10 @@ function updateTotalProgress() {
     const percentage = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0;
     //si hay items, calculamos el porcentaje de completados, siempre que no sea 0
     
-    document.getElementById('total-progress-bar').style.width = `${percentage}%`; //Actualizamos el progreso total
-    document.getElementById('completed-items').textContent = completedItems; //Actualizamos el número de items completados
-    document.getElementById('total-items').textContent = totalItems; //Actualizamos el número de items totales
-    document.getElementById('percentage').textContent = `${percentage}%`; //Actualizamos el porcentaje de completados
+    $totalProgressBar.style.width = `${percentage}%`; //Actualizamos el progreso total
+    $completedItems.textContent = completedItems; //Actualizamos el número de items completados
+    $totalItems.textContent = totalItems; //Actualizamos el número de items totales
+    $percentage.textContent = `${percentage}%`; //Actualizamos el porcentaje de completados
 }
 
 // Iniciar la aplicación cuando el DOM esté listo
