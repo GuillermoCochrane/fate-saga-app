@@ -1,7 +1,9 @@
 // Referencias a elementos del DOM que se uttilizan frecuentemente
-const themeElements = {
-    $globalTag:     $('html'),
-    $themeToggle:   $('#themeToggle')
+function themeElements() {
+    return {
+        $globalTag:     $('html'),
+        $themeToggle:   $("#themeToggle")
+    }
 }
 
 //* Utilidades
@@ -25,15 +27,16 @@ function createElement(tagName, className) {
 
 // aplica tema oscuro
 const enableDarkMode   = () => {
-    const { $globalTag, $themeToggle } = themeElements;
+    const { $globalTag, $themeToggle } = themeElements();
     $globalTag.setAttribute('data-theme', 'dark'); // <html data-theme="dark">
     $themeToggle.textContent = '☀️';
 }
 
 // aplica tema claro
 const enableLightMode = () => {
-    const { $globalTag, $themeToggle } = themeElements;
+    const { $globalTag, $themeToggle } = themeElements();
     $globalTag.removeAttribute('data-theme');
+    console.log($globalTag, $themeToggle);
     $themeToggle.textContent = '🌙';
 }
 
@@ -50,7 +53,7 @@ const themeHandler = (settings, store = false) => {
 
 // Handler del tema de acuerdo a la preferencia del sistema, seleccion manual  del usuario o seleccion previa
 function setupTheme() {
-    const { $globalTag, $themeToggle } = themeElements;
+    const { $globalTag, $themeToggle } = themeElements();
     const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches; // comprobamos si la preferencia de tema es oscuro con la Api matchMedia
     
     // Establece tema inicial basado en preferencias del sistema
