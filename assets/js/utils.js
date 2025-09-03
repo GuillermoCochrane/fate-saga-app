@@ -28,7 +28,7 @@ function createElement(tagName, className, textContent) {
 
 //funcion que calcula porcentajes
 function calculatePercentage(completed, total) {
-    return  totalItems > 0 ? Math.round((completed / total) * 100) : 0; // devolvemos el porcentaje de completados, siempre que no sea 0
+    return  total > 0 ? Math.round((completed / total) * 100) : 0; // devolvemos el porcentaje de completados, siempre que no sea 0
 }
 
 //funcion que calcula el porcentaje de completados
