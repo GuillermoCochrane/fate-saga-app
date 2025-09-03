@@ -19,9 +19,10 @@ function $$(selector) {
 }
 
 // Crea elemento DOM con su clase
-function createElement(tagName, className) {
+function createElement(tagName, className, textContent) {
     const element = document.createElement(tagName);
-    element.className = className;
+    className && (element.className = className);
+    textContent && (element.textContent = textContent);
     return element;
 }
 
