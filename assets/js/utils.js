@@ -39,6 +39,15 @@ function createLabel(textContent, forId, className) {
     return label;
 }
 
+function createCheckbox(id, checked = false, onChange = null, className) {
+    const checkbox = createElement('input', className, null);
+    checkbox.type = 'checkbox';
+    id && (checkbox.id = id);
+    checked && (checkbox.checked = checked);
+    onChange && (checkbox.addEventListener('change', onChange));
+    return checkbox;
+}
+
 //funcion que calcula porcentajes
 function calculatePercentage(completed, total) {
     return  total > 0 ? Math.round((completed / total) * 100) : 0; // devolvemos el porcentaje de completados, siempre que no sea 0
