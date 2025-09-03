@@ -156,81 +156,50 @@ function renderChecklist() {
 
 // Crear elemento de anime con sus episodios
 function createAnimeItem(item, sagaName) {
-    const animeDiv = document.createElement('div');
-    animeDiv.className = 'anime-item';
-    //creamos el elemento div con la clase anime-item
-    
-    const details = document.createElement('details');
-    details.className = 'anime-details';
-    if (item.opened) {
-        details.setAttribute('open', 'true');
-    }
-    //creamos el elemento details con la clase anime-details, y le ponemos  el atributo open cuando corresponda, asi el details queda abierto
-    
-    const summary = document.createElement('summary');
-    summary.className = 'anime-summary';
-    //creamos el elemento summary con la clase anime-summary
-    
+    //* pendiente: hacer diagrama de los contenedores que vamos generando para renderizar la checklist completa
+    //Creacion de los elementos
+    const $animeDiv = createElement('div', 'anime-item');
+    const $details = createDetails('anime-details', item.opened); //creamos el elemento details, abierto cuando corresponda
+    const $summary = createElement('summary', 'anime-summary');
+    const $checklist = createElement('div', 'checklist');  //creamos el contenedor del contenedor de episodios
+
+    const checkboxID = `main-${item.id}`; //id del checkbox
+    const checkBoxEventHandler = () => toggleAnimeComplete(item.id, sagaName); //funcion que se ejecuta al cambiar el estado del checkbox
     // Checkbox para el anime completo
-    const animeCheckbox = document.createElement('input');
-    animeCheckbox.type = 'checkbox';
-    animeCheckbox.id = `main-${item.id}`;
-    animeCheckbox.checked = item.completed || false;
-    //creamos el checkbox y le ponemos el id del item correspondiente, dejandolo marcado segun corresponda
-
-    animeCheckbox.addEventListener('change', () => toggleAnimeComplete(item.id, sagaName));
-    //Escuchamos el evento change del checkbox, y llamamos a la funcion toggleAnimeComplete
+    const $animeCheckbox = createCheckbox(checkboxID, item.completed, checkBoxEventHandler);
+    const $label = createLabel(item.label, checkboxID, 'anime-label');              //label del checkbox 
+    const $formatSpan = createElement('span', 'anime-format', `${item.format}`);    //span con el formato del anime
+    const $titleContainer = createElement('div', 'anime-title-container');          //contenedor para el label y el formato
     
-    // Contenedor para título y formato
-    const titleContainer = document.createElement('div');
-    titleContainer.className = 'anime-title-container';
-    //creamos el elemento div con la clase anime-title-container
-    
-    const label = document.createElement('label');
-    label.htmlFor = `main-${item.id}`; // 
-    label.textContent = item.label;
-    // creamos el label vinculandolo con el  checkbox correspondiente, y le agregamos el texto que corresponda
-    
-    const formatSpan = document.createElement('span');
-    formatSpan.className = 'anime-format';
-    formatSpan.textContent = `${item.format}`;
-    //creamos el elemento span con la clase anime-format, y le ponemos el texto del formato del anime
-    
-    titleContainer.appendChild(label);
-    titleContainer.appendChild(formatSpan);
     // Agregamos el label y el span al contenedor de título
-
-    summary.appendChild(animeCheckbox);
-    summary.appendChild(titleContainer);
+    $titleContainer.appendChild($label);
+    $titleContainer.appendChild($formatSpan);
     // Agregamos el checkbox y el contenedor de título al summary
+    $summary.appendChild($animeCheckbox);
+    $summary.appendChild($titleContainer);
     
-    const checklist = document.createElement('div');
-    checklist.className = 'checklist';
-    //creamos el elemento div con la clase checklist
     
-    // Si hay episodios, renderizarlos
+    // Si hay episodios los renderizaremos
     if (item.episodes && item.episodes.length > 0) {
     //si items tiene elementos...
-        const episodeList = document.createElement('div');
-        episodeList.className = 'episode-list';
-        //creamos el elemento div con la clase episode-list
-        
+        const $episodeList = createElement('div', 'episode-list'); //creamos el contenedor de episodios
+
         item.episodes.forEach(episode => {
-            episodeList.appendChild(createEpisodeItem(episode, item.id, sagaName));
+            //recorremos todos los episodios del item
+            const $episodeItem = createEpisodeItem(episode, item.id, sagaName); //creamos el capitulo
+            $episodeList.appendChild($episodeItem);                             //lo agregamos al contenedor de episodios
         });
-        //recorremos cada episodio del item, y lo agregamos al contenedor de episodios
-        
-        checklist.appendChild(episodeList);
-        //lo agregamos al contenedor de clase checklist
+
+        $checklist.appendChild($episodeList); //lo agregamos al contenedor de clase checklist
     }
     
-    details.appendChild(summary);
-    details.appendChild(checklist);
     //agregamos el summary y el contenedor de clase checklist al details
-    animeDiv.appendChild(details);
+    $details.appendChild($summary);
+    $details.appendChild($checklist);
     //agregamos el details al elemento div de la anime
+    $animeDiv.appendChild($details);
 
-    return animeDiv; //devuelve el elemento padre completo, con todos sus elementos hijos
+    return $animeDiv; //devuelve el elemento padre completo, con todos sus elementos hijos
 }
 
 // Crear elemento de episodio individual
