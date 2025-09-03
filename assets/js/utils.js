@@ -32,6 +32,13 @@ function createDetails( className, open = false) {
     return details;
 }
 
+function createLabel(textContent, forId, className) {
+    const label = createElement('label', className);
+    forId && (label.htmlFor = forId);
+    textContent && (label.textContent = textContent);
+    return label;
+}
+
 //funcion que calcula porcentajes
 function calculatePercentage(completed, total) {
     return  total > 0 ? Math.round((completed / total) * 100) : 0; // devolvemos el porcentaje de completados, siempre que no sea 0
