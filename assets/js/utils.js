@@ -25,6 +25,11 @@ function createElement(tagName, className) {
     return element;
 }
 
+//funcion que calcula porcentajes
+function calculatePercentage(completed, total) {
+    return  totalItems > 0 ? Math.round((completed / total) * 100) : 0; // devolvemos el porcentaje de completados, siempre que no sea 0
+}
+
 // aplica tema oscuro
 const enableDarkMode   = () => {
     const { $globalTag, $themeToggle } = themeElements();
