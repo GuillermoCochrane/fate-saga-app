@@ -26,6 +26,12 @@ function createElement(tagName, className, textContent) {
     return element;
 }
 
+function createDetails( className, open = false) {
+    const details = createElement('details', className);
+    open && (details.setAttribute('open', 'true'));
+    return details;
+}
+
 //funcion que calcula porcentajes
 function calculatePercentage(completed, total) {
     return  total > 0 ? Math.round((completed / total) * 100) : 0; // devolvemos el porcentaje de completados, siempre que no sea 0
