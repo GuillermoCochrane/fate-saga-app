@@ -30,6 +30,13 @@ function calculatePercentage(completed, total) {
     return  totalItems > 0 ? Math.round((completed / total) * 100) : 0; // devolvemos el porcentaje de completados, siempre que no sea 0
 }
 
+//funcion que calcula el porcentaje de completados
+function calculateProgress(data) {
+    const totalItems = countItems(data); //calculamos el total de items de la saga
+    const completedItems = countCompletedItems(data); //calculamos el total de items completados de la saga
+    return calculatePercentage(completedItems, totalItems);
+}
+
 // aplica tema oscuro
 const enableDarkMode   = () => {
     const { $globalTag, $themeToggle } = themeElements();
