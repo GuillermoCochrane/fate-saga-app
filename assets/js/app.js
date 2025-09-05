@@ -111,13 +111,8 @@ function renderChecklist() {
         const $summary = createElement('summary', 'saga-summary');              // Creamos el elemento summary con la clase saga-summary
         const $summaryContent = createElement('div', 'summary-content');        // Contenedor flexible para título y progreso
         const $sagaTitle = createElement('span', 'saga-title', sagaName);       // Título de la saga
-        const $progressContainer = createElement('div', 'progress-container');  // Contenedor de progreso
-        $progressContainer.innerHTML = `
-            <span class="progress-text">${percentage}%</span>
-            <div class="progress-bar">
-                <div class="progress-fill" style="width: ${percentage}%"></div>
-            </div>
-        `;
+        const progressHTML =  `<span class="progress-text">${percentage}%</span>\n<div class="progress-bar">\n    <div class="progress-fill" style="width: ${percentage}%"></div>\n</div>\n`;// Contenedor de progreso
+        const $progressContainer = createElement('div', 'progress-container', progressHTML, true); // Creamos el elemento div con la clase progress-container
 
         $summaryContent.appendChild($sagaTitle);         // agregamos  el titulo 
         $summaryContent.appendChild($progressContainer); // agregamos el contenedor de progreso
