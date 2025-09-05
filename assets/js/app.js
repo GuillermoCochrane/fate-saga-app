@@ -46,48 +46,7 @@ function setupEventListeners() {
     //cuando se cambie file-input, se ejecuta el la funcion importData
     
     // Event delegation para cambios de estado de details
-    document.addEventListener('toggle', (e) => {
-        if (e.target.tagName === 'DETAILS') {
-            //si se hizo click en un details
-            const details = e.target;
-            //guardamos el elemento
-            const isOpen = details.open;
-            //guardamos si el details abierto o cerrado
-            
-            // Encontrar el ID del elemento y actualizar su estado opened
-            if (details.classList.contains('saga-details')) {
-                //si el details tiene la clase saga-details
-                const sagaName = details.querySelector('.saga-title').textContent;
-                //guardamos el texto del título
-                if (checklistData[sagaName]) {
-                    //si el título existe en el objeto
-                    checklistData[sagaName].opened = isOpen;
-                    //actualizamos el objeto, guardando el estado del details 
-                    saveChecklistData(checklistData);
-                    //lo guardamos en el localStorage
-                }
-            } 
-            else if (details.classList.contains('anime-details')) {
-                //si el details tiene la clase anime-details
-                const animeId = details.querySelector('input[type="checkbox"]').id.replace('main-', '');
-                //guardamos el id del checkbox
-                
-                // recorrremos todas las sagas en localStorage
-                for (const [sagaName, sagaData] of Object.entries(checklistData)) {
-                    const anime = sagaData.items.find(a => a.id === animeId);
-                    // capturamos el anime con ese id
-                    if (anime) {
-                        //si encuentra el anime
-                        anime.opened = isOpen;
-                        //actualizamos el estado abierto
-                        saveChecklistData(checklistData);
-                        //lo guardamos en el localStorage
-                        break;
-                    }
-                }
-            }
-        }
-    }, true);
+    document.addEventListener('toggle', (e) => { handleDetails(e, checklistData); }, true);
 }
 
 // Renderizar la checklist completa
