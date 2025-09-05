@@ -20,16 +20,11 @@ function setupEventListeners() {
 
     // Selecciona el filtro, y le da la clase active al botón correspondiente
     $filterBtns.forEach(button => {
-    //seleccionar todos los botones de clase filter-btn 
+    //seleccionamos todos los .filter-btn 
         button.addEventListener('click', (e) => {
-        //ponemos a escuchar el evento click
-            $filterBtns.forEach(btn => btn.classList.remove('active'));
-            //para cada botón, quitamos la clase active de todos los botones de clase filter-btn
-            e.target.classList.add('active');
-            //ponemos la clase active al botón que se ha seleccionado
-            currentFilter = e.target.dataset.filter;
-            //actualizamos el filtro actual
-            renderChecklist();
+            //ponemos a escuchar el evento click 
+            currentFilter = handleFilterClick(e, $filterBtns); // Delegamos en handleFilterClick, los cambios de estilos de los botones de filtro
+            renderChecklist(); // renderizamos
         });
     });
 

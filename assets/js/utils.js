@@ -265,3 +265,10 @@ function handleDetails(event, checklistData) {
         }
     }
 }
+
+//manejo de los cambios de filtro
+function handleFilterClick(event, $button) {
+    $button.forEach(button => button.classList.remove('active')); //para cada botón, quitamos la clase active
+    event.target.classList.add('active'); //ponemos la clase active al botón que se ha seleccionado
+    return event.target.dataset.filter; //actualizamos el filtro actual
+}
