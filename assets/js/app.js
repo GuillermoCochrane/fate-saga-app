@@ -204,39 +204,28 @@ function createAnimeItem(item, sagaName) {
 
 // Crear elemento de episodio individual
 function createEpisodeItem(episode, animeId, sagaName) {
-    const episodeDiv = document.createElement('div');
-    episodeDiv.className = 'check-item';
-    //Creamos el elemento div con la clase check-item
-    
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.id = episode.id;
-    checkbox.checked = episode.completed || false;
-    //Creamos el checkbox y le ponemos el id del episodio correspondiente, dejándolo marcado según corresponda
-    checkbox.addEventListener('change', () => toggleEpisodeComplete(episode.id, animeId, sagaName));
-    //Escuchamos el evento change del checkbox, y llamamos a la función toggleEpisodeComplete
-    
-    const label = document.createElement('label');
-    label.htmlFor = episode.id;
-    //Creamos el label y lo vinculamos con el checkbox correspondiente
-    
-    // Añadir número de episodio en negrita
-    const episodeNumber = document.createElement('span');
-    episodeNumber.className = 'episode-number';
-    //Creamos el elemento span con la clase episode-number
-    episodeNumber.innerHTML = `<strong>Episodio ${episode.number}:</strong>`;
-    //Agregamos el número de episodio en negrita
-    
-    label.appendChild(episodeNumber);
-    label.appendChild(document.createTextNode(` ${episode.label}`));
+    //Creamos el contendor con la clase check-item
+    const $episodeDiv = createElement('div', 'check-item');
+
+    //Creamos el checkbox  y su label, dejándolo marcado según corresponda
+    const checkboxID = `${episode.id}`;
+    const checkBoxEventHandler = () => toggleEpisodeComplete(episode.id, animeId, sagaName)
+    const $checkbox = createCheckbox(checkboxID, episode.completed, checkBoxEventHandler);
+    const $label = createLabel('', checkboxID, 'episode-label'); // El contenido del label se va a añadir posteriormente
+
+    //Creamos el  span con la clase episode-number, y el número de episodio en negrita
+    const episodeTag =  `<strong>Episodio ${episode.number}:</strong>`
+    const $episodeNumber = createElement('span', 'episode-number', episodeTag, true);
+
     //Agregamos el número de episodio y el título del episodio al label
+    $label.appendChild($episodeNumber);
+    $label.appendChild(document.createTextNode(` ${episode.label}`));
     
-    episodeDiv.appendChild(checkbox);
-    episodeDiv.appendChild(label);
-    //Agregamos el checkbox y el label al elemento div de episodio
+    //Agregamos el checkbox y el label al elemento contenedor de episodio
+    $episodeDiv.appendChild($checkbox);
+    $episodeDiv.appendChild($label);
     
-    return episodeDiv;
-    //Devuelve el elemento padre completo, con todos sus elementos hijos
+    return $episodeDiv; //Devuelve el contendor de episodio completo
 }
 
 // Alternar estado completo de un anime
