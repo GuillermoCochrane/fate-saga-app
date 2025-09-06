@@ -112,7 +112,7 @@ function renderChecklist() {
         $details.appendChild($summary);
         $details.appendChild($contentDiv);
         /* 
-            hasta aca tendriamos (3)
+            hasta aca tendriamos (2)
             <details class="saga-details" open>
                 <summary class="saga-summary">
                     --- con todo lo de (1) ---
@@ -129,7 +129,6 @@ function renderChecklist() {
 
 // Crear elemento de anime con sus episodios
 function createAnimeItem(item, sagaName) {
-    //* pendiente: hacer diagrama de los contenedores que vamos generando para renderizar la checklist completa
     //Creacion de los elementos
     const $animeDiv = createElement('div', 'anime-item');
     const $details = createDetails('anime-details', item.opened); //creamos el elemento details, abierto cuando corresponda
@@ -147,10 +146,24 @@ function createAnimeItem(item, sagaName) {
     // Agregamos el label y el span al contenedor de título
     $titleContainer.appendChild($label);
     $titleContainer.appendChild($formatSpan);
+    /*  <div class="anime-title-container">
+            <label for="main-1" class="anime-label">Titulo del anime</label>
+            <span class="anime-format">Formato del anime</span>
+        </div> 
+    */
     // Agregamos el checkbox y el contenedor de título al summary
     $summary.appendChild($animeCheckbox);
     $summary.appendChild($titleContainer);
-    
+    /* 
+        hasta aca tendriamos (1)
+        <summary class="anime-summary">
+            <input type="checkbox" id="main-1">
+            <div class="anime-title-container">
+                <label for="main-1" class="anime-label">Titulo del anime</label>
+                <span class="anime-format">Formato del anime</span>
+            </div>
+        </summary>
+    */    
     
     // Si hay episodios los renderizaremos
     if (item.episodes && item.episodes.length > 0) {
@@ -171,7 +184,19 @@ function createAnimeItem(item, sagaName) {
     $details.appendChild($checklist);
     //agregamos el details al elemento div de la anime
     $animeDiv.appendChild($details);
-
+    /*
+        hasta aca tendriamos (2)
+        <div class="anime-item">
+            <details class="anime-details">
+                --- con todo lo de (1) (summary) ---
+                <div class="checklist">
+                    <div class="episode-list">
+                        --- todos los episodios del anime ---
+                    </div>
+                </div>
+            </details>
+        </div>
+    */
     return $animeDiv; //devuelve el elemento padre completo, con todos sus elementos hijos
 }
 
