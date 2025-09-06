@@ -46,8 +46,6 @@ function setupEventListeners() {
 
 // Renderizar la checklist completa
 function renderChecklist() {
-    //* pendiente: hacer diagrama de los contenedores que vamos generando para renderizar la checklist completa
-
     //Capturemos el contenedor donde vamos a renderizar y lo borramos
     const $container = $('#checklist-container');
     $container.innerHTML = '';
@@ -72,6 +70,21 @@ function renderChecklist() {
         $summaryContent.appendChild($progressContainer); // agregamos el contenedor de progreso
         $summary.appendChild($summaryContent);           // agregamos summaryContent al summary
 
+        /* 
+            hasta aca tendriamos (1)
+            <summary class="saga-summary">
+                <div class="summary-content">
+                    <span class="saga-title">Saga X</span>
+                    <div class="progress-container">
+                        <span class="progress-text">100%</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </summary>
+         */
+
         const $contentDiv = createElement('div'); //creamos el elemento div
         
         let hasVisibleItems = false; 
@@ -84,7 +97,7 @@ function renderChecklist() {
                 const $animeItem = createAnimeItem(item, sagaName); //creamos el capitulo
                 $contentDiv.appendChild($animeItem);                //lo agregamos al contenedor
             }
-        }
+        } // devuelve todas las temporadas de la saga, con sus episodios
 
         if (!hasVisibleItems) {
             //si no hay items visibles
@@ -96,10 +109,21 @@ function renderChecklist() {
             $contentDiv.appendChild($noItemsMsg); // agregamos un mensaje de que no hay items visibles
         }
         
-        $details.appendChild($summary);         //agregamos  el summary 
-        $details.appendChild($contentDiv);      //agregamos el contenedor al details
-        $sagaElement.appendChild($details);     //agregamos el details al elemento div de la saga
-        $container.appendChild($sagaElement);   //lo agregamos al contenedor
+        $details.appendChild($summary);
+        $details.appendChild($contentDiv);
+        /* 
+            hasta aca tendriamos (3)
+            <details class="saga-details" open>
+                <summary class="saga-summary">
+                    --- con todo lo de (1) ---
+                </summary>
+                <div>
+                    --- con todas las temporadas de la saga, o el mensaje de no hay items visibles ---
+                </div>
+            </details>
+         */      
+        $sagaElement.appendChild($details);     //agregamos el details  al contenedor .saga
+        $container.appendChild($sagaElement);   //con cada iteración, agregamos la saga al contenedor
     }
 }
 

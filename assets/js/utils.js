@@ -65,7 +65,7 @@ function calculateProgress(data) {
 }
 
 // aplica tema oscuro
-const enableDarkMode   = () => {
+const enableDarkMode  = () => {
     const { $globalTag, $themeToggle } = themeElements();
     $globalTag.setAttribute('data-theme', 'dark'); // <html data-theme="dark">
     $themeToggle.textContent = '☀️';
