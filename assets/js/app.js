@@ -101,11 +101,7 @@ function renderChecklist() {
 
         if (!hasVisibleItems) {
             //si no hay items visibles
-            const $noItemsMsg = createElement('p', null, "No hay elementos que coincidan con el filtro");
-            //! cambiar los estilos inline a una clase de css
-            $noItemsMsg.style.padding = '15px';
-            $noItemsMsg.style.textAlign = 'center';
-            $noItemsMsg.style.color = '#888'; 
+            const $noItemsMsg = createElement('p', "empty-list", "No hay elementos que coincidan con el filtro");
             $contentDiv.appendChild($noItemsMsg); // agregamos un mensaje de que no hay items visibles
         }
         

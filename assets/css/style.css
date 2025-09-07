@@ -356,6 +356,12 @@ h1 {
     transform: translateX(0);
 }
 
+p.empty-list {
+    padding: 15px;
+    text-align: center;
+    color: #888;
+}
+
 @media (max-width: 768px) {
     .controls {
         flex-direction: column;
