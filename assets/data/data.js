@@ -2,7 +2,7 @@
 const fateChecklistData = {
   "Fate Saga": {
     opened: false,
-    items: [
+    seasons: [
       {
         id: "fate-zero",
         label: "Fate/Zero",
@@ -506,7 +506,7 @@ const fateChecklistData = {
   },
   "Lord El-Melloi II": {
     opened: false,
-    items: [
+    seasons: [
       {
         id: "elmelloi-special",
         label: "Lord El-Melloi II Sei no Jikenbo",
@@ -613,7 +613,7 @@ const fateChecklistData = {
   },
   "Fate/Strange Fake": {
     opened: false,
-    items: [
+    seasons: [
       {
         id: "strange-fake-special",
         label: "Fate/strange Fake: Whispers of Dawn",
@@ -714,7 +714,7 @@ const fateChecklistData = {
   },
   "Fate/Grand Order": {
     opened: false,
-    items: [
+    seasons: [
       {
         id: "fgo-recap",
         label: "Fate/Grand Order: Zettai Majuu Sensen Babylonia - Initium Iter",
@@ -995,7 +995,7 @@ const fateChecklistData = {
   },
   "Fate/Kaleid Liner Prisma Illya": {
     opened: false,
-    items: [
+    seasons: [
       {
         id: "prisma-illya-1",
         label: "Fate/kaleid liner Prisma☆Illya",
@@ -1369,7 +1369,7 @@ const fateChecklistData = {
   },
   "Otros (Mundos Alternativos e Independientes)": {
     opened: false,
-    items: [
+    seasons: [
       {
         id: "fate-apocrypha",
         label: "Fate/Apocrypha",
