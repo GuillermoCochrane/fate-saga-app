@@ -185,17 +185,16 @@ function saveChecklistData(data) {
     checklistData = data; //Actualizamos el objeto checklistData con los datos guardados
 }
 
-// Contar items totales (incluyendo episodios)
-function countItems(items) {
+// Contar episodios totales
+function countItems(saga) {
     let count = 0; //Inicializamos el contador a 0
-    items.forEach(item => {
-        count++; // recorremos cada item e incrementamos el contador en 1
-        if (item.episodes && item.episodes.length > 0) {
-            // si el item tiene episodios... 
-            count += item.episodes.length; //incrementamos el contador en el número de episodios
+    for (const season of saga) {
+        if (season.episodes && season.episodes.length > 0) {
+            // si el Temporada tiene episodios... contamos el número de episodios
+            count += season.episodes.length; 
         }
-    });
-    return count; //Devuelve el número de items totales
+    }
+    return count; //Devuelve el número de episodios totales
 }
 
 // Contar items completados (incluyendo episodios)
