@@ -53,13 +53,13 @@ function renderChecklist() {
     // recorremos cada saga en el objeto
     for (const [sagaName, sagaData] of Object.entries(checklistData)) {
 
-        const percentage = calculateProgress(sagaData.items);       //calculamos el progreso de la saga
         const $sagaElement = createElement('div', 'saga');          // Creamos el elemento div con la clase saga
         const $details = createElement('details', 'saga-details');  //Creamos el elemento details, y le ponemos  el atributo open cuando corresponda, asi el details queda abierto
         if (sagaData.opened) {
             $details.setAttribute('open', 'true');
         }
-
+        
+        const percentage = calculateProgress(sagaData.items);                   //calculamos el progreso de la saga
         const $summary = createElement('summary', 'saga-summary');              // Creamos el elemento summary con la clase saga-summary
         const $summaryContent = createElement('div', 'summary-content');        // Contenedor flexible para título y progreso
         const $sagaTitle = createElement('span', 'saga-title', sagaName);       // Título de la saga
@@ -84,27 +84,9 @@ function renderChecklist() {
                 </div>
             </summary>
          */
-
-        const $contentDiv = createElement('div'); //creamos el elemento div
         
-        let hasVisibleItems = false; 
+        const $contentDiv = sagaCreator(sagaData, sagaName);
 
-        for (const item of sagaData.items) {
-            //recorremos cada item de la saga
-            if (shouldShowItem(item)) {
-                //si se debe mostrar el item
-                hasVisibleItems = true;                             //lo ponemos visible ( valor booleano), para no crear el contendor del mensaje de no hay items visibles      
-                const $animeItem = createAnimeItem(item, sagaName); //creamos el capitulo
-                $contentDiv.appendChild($animeItem);                //lo agregamos al contenedor
-            }
-        } // devuelve todas las temporadas de la saga, con sus episodios
-
-        if (!hasVisibleItems) {
-            //si no hay items visibles
-            const $noItemsMsg = createElement('p', "empty-list", "No hay elementos que coincidan con el filtro");
-            $contentDiv.appendChild($noItemsMsg); // agregamos un mensaje de que no hay items visibles
-        }
-        
         $details.appendChild($summary);
         $details.appendChild($contentDiv);
         /* 
