@@ -218,10 +218,27 @@ function createEpisodeItem(episode, animeId, sagaName) {
     //Agregamos el número de episodio y el título del episodio al label
     $label.appendChild($episodeNumber);
     $label.appendChild(document.createTextNode(` ${episode.label}`));
+
+    /* 
+        hasta aca tendriamos (1)
+        <label for="main-1" class="episode-label">
+            <span class="episode-number">
+                <strong>Episodio 1:</strong> 
+            </span>
+            Título del episodio
+        </label>
+     */
     
     //Agregamos el checkbox y el label al elemento contenedor de episodio
     $episodeDiv.appendChild($checkbox);
     $episodeDiv.appendChild($label);
+    /*
+        hasta aca tendriamos (2)
+        <div class="check-item">
+            <input type="checkbox" id="main-1">
+            --- con todo lo de (1) ---
+        </div>
+     */
     
     return $episodeDiv; //Devuelve el contendor de episodio completo
 }
