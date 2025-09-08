@@ -198,18 +198,16 @@ function countItems(saga) {
 }
 
 // Contar items completados (incluyendo episodios)
-function countCompletedItems(items) {
+function countCompletedItems(saga) {
     let count = 0; //Inicializamos el contador a 0
-    items.forEach(item => {
-    // Recorremos cada item
-        if (item.completed) count++; // si el item está completo, incrementamos el contador en 1
-        if (item.episodes && item.episodes.length > 0) {
-            // si el item tiene episodios...
-            item.episodes.forEach(episode => {
-                if (episode.completed) count++; // si el episodio está completo, incrementamos el contador en 1
-            });
+    for (const season of saga) {
+        if (season.episodes && season.episodes.length > 0) {
+        // si el Temporada tiene episodios... 
+            for (const episode of season.episodes) {
+                if (episode.completed) count++; // si el episodio está visto, incrementamos el contador en 1
+            }
         }
-    });
+    }
     return count; //Devuelve el número de items completados
 }
 
