@@ -52,18 +52,6 @@ function createCheckbox(id, checked = false, onChange = null, className) {
     return checkbox;
 }
 
-//funcion que calcula porcentajes
-function calculatePercentage(completed, total) {
-    return  total > 0 ? Math.round((completed / total) * 100) : 0; // devolvemos el porcentaje de completados, siempre que no sea 0
-}
-
-//funcion que calcula el porcentaje de completados
-function calculateProgress(data) {
-    const totalItems = countItems(data); //calculamos el total de items de la saga
-    const completedItems = countCompletedItems(data); //calculamos el total de items completados de la saga
-    return calculatePercentage(completedItems, totalItems);
-}
-
 // aplica tema oscuro
 const enableDarkMode  = () => {
     const { $globalTag, $themeToggle } = themeElements();
@@ -185,31 +173,32 @@ function saveChecklistData(data) {
     checklistData = data; //Actualizamos el objeto checklistData con los datos guardados
 }
 
-// Contar episodios totales
-function countItems(saga) {
-    let count = 0; //Inicializamos el contador a 0
+function countEpisodes(saga) {
+    let total = 0; //Inicializamos el contador a 0
+    let completed = 0; //Inicializamos el contador a 0
     for (const season of saga) {
         if (season.episodes && season.episodes.length > 0) {
             // si el Temporada tiene episodios... contamos el número de episodios
-            count += season.episodes.length; 
-        }
-    }
-    return count; //Devuelve el número de episodios totales
-}
-
-// Contar items completados (incluyendo episodios)
-function countCompletedItems(saga) {
-    let count = 0; //Inicializamos el contador a 0
-    for (const season of saga) {
-        if (season.episodes && season.episodes.length > 0) {
-        // si el Temporada tiene episodios... 
             for (const episode of season.episodes) {
-                if (episode.completed) count++; // si el episodio está visto, incrementamos el contador en 1
+                if (episode.completed) completed++; // si el episodio está visto, incrementamos el contador en 1
+                total++;
             }
         }
     }
-    return count; //Devuelve el número de items completados
+    return { total, completed }; //Devuelve el número de episodios totales y el número de episodios vistos
 }
+
+//funcion que calcula porcentajes
+function calculatePercentage(completed, total) {
+    return  total > 0 ? Math.round((completed / total) * 100) : 0; // devolvemos el porcentaje de completados, siempre que no sea 0
+}
+
+//funcion que calcula el porcentaje de completados
+function calculateProgress(data) {
+    const { total, completed } = countEpisodes(data); //calculamos el total de episodios de la saga
+    return calculatePercentage(completed, total);
+}
+
 
 // Determinar si un item debe mostrarse según el filtro actual
 function shouldShowItem(item) {
