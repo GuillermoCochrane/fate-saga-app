@@ -58,8 +58,8 @@ function renderChecklist() {
         if (sagaData.opened) {
             $details.setAttribute('open', 'true');
         }
-        
-        const percentage = calculateProgress(sagaData.items);       //calculamos el progreso de la saga
+
+        const percentage = calculateProgress(sagaData.seasons);       //calculamos el progreso de la saga
         const $summary = sagaSummaryCreator(sagaName, percentage);  // Creamos el summary de la saga
         const $contentDiv = sagaCreator(sagaData, sagaName);        // Creamos el contenedor de la seasons de la saga
 
@@ -199,7 +199,7 @@ function createEpisodeItem(episode, animeId, sagaName) {
 
 // Alternar estado completo de un anime
 function toggleAnimeComplete(animeId, sagaName) {
-    const anime = checklistData[sagaName].items.find(a => a.id === animeId);
+    const anime = checklistData[sagaName].seasons.find(a => a.id === animeId);
     //Buscamos el anime con ese id en el objeto
     if (anime) {
         //Si se ecnuetra el anime...
@@ -227,7 +227,7 @@ function toggleAnimeComplete(animeId, sagaName) {
 
 // Alternar estado completo de un episodio
 function toggleEpisodeComplete(episodeId, animeId, sagaName) {
-    const anime = checklistData[sagaName].items.find(a => a.id === animeId);
+    const anime = checklistData[sagaName].seasons.find(a => a.id === animeId);
     //Buscamos el anime con ese id en el objeto
     if (anime && anime.episodes) {
         //Si se encuentra el anime y tiene episodios...
@@ -262,8 +262,9 @@ function updateTotalProgress() {
     
     for (const saga of Object.values(checklistData)) {
         //Recorremos cada saga en el objeto
-        totalItems += countItems(saga.items); //Calculamos el total de items de la saga
-        completedItems += countCompletedItems(saga.items); //Calculamos el total de items completados de la saga
+        let { total, completed } = countEpisodes(saga.seasons); //calculamos el total de episodios de la saga
+        totalItems += total; //Calculamos el total de items de la saga
+        completedItems += completed; //Calculamos el total de items completados de la saga
     }
     
     const percentage = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0;
