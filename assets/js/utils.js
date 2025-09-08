@@ -268,9 +268,9 @@ function sagaCreator(sagaData, sagaName){
         //recorremos cada season de la saga
         if (shouldShowItem(season)) {
             //si se debe mostrar la season
-            hasVisibleItems = true;                             //lo ponemos visible ( valor booleano), para no crear el contendor del mensaje de no hay items visibles      
-            const $animeItem = createAnimeItem(season, sagaName); //creamos el capitulo
-            $sagaContainer.appendChild($animeItem);                //lo agregamos al contenedor
+            hasVisibleItems = true;  //lo ponemos visible ( valor booleano), para no crear el contendor del mensaje de no hay items visibles      
+            const $seasonContainer = seasonContainerCreator(season, sagaName); //creamos el capitulo
+            $sagaContainer.appendChild($seasonContainer); //lo agregamos al contenedor
         }
     } // devuelve todas las temporadas de la saga, con sus episodios
 
@@ -312,6 +312,35 @@ function sagaSummaryCreator(sagaName, progress){
     return $summary;
 }
 
+// Crear elemento de anime con sus episodios
+function seasonContainerCreator(season, sagaName) {
+    //Creacion de los elementos
+    const $animeDiv = createElement('div', 'anime-item');
+    const $details = createDetails('anime-details', season.opened); //creamos el elemento details, abierto cuando corresponda
+    const $summary = seasonSummaryCreator(sagaName, season);  //creamos el summary de la temporada
+    const $seasonContainer = seasonCreator(season, sagaName); //creamos el contenedor de la temporada
+    
+    $details.appendChild($summary);         //agregamos el summary al details
+    $details.appendChild($seasonContainer); //Agregamos el contenedor de la temporada al details
+    $animeDiv.appendChild($details);        //agregamos el details al contenedor general de la teporada
+    /*
+        hasta aca tendriamos (
+        <div class="anime-item">
+            <details class="anime-details">
+                --- con todo lo de summary ---
+                <div class="checklist">
+                    <div class="episode-list">
+                        --- todos los episodios del anime ---
+                    </div>
+                </div>
+            </details>
+        </div>
+    */
+    return $animeDiv; //devuelve el contendeor de la temporada completo, con todos sus elementos hijos
+}
+
+
+// Crear el contenedor de la temporada
 function seasonCreator(season, sagaName) {
     const $seasonContainer = createElement('div', 'checklist');  //creamos el contenedor del la temporada
     if (season.episodes && season.episodes.length > 0) {
@@ -320,7 +349,7 @@ function seasonCreator(season, sagaName) {
 
         for (const episode of season.episodes) {
             //recorremos todos los episodios del item
-            const $episodeItem = createEpisodeItem(episode, season.id, sagaName); //creamos el capitulo
+            const $episodeItem = episodeCreator(episode, season.id, sagaName); //creamos el capitulo
             $episodeList.appendChild($episodeItem);                             //lo agregamos al contenedor de episodios
         }
 
@@ -363,4 +392,41 @@ function seasonSummaryCreator(sagaName, season) {
         </summary>
     */    
     return $summary;
+}
+
+
+// Crear elemento de episodio individual
+function episodeCreator(episode, animeId, sagaName) {
+    //Creamos el contendor con la clase check-item
+    const $episodeDiv = createElement('div', 'check-item');
+
+    //Creamos el checkbox, dejándolo marcado según corresponda
+    const checkboxID = `${episode.id}`;
+    const checkBoxEventHandler = () => toggleEpisodeComplete(episode.id, animeId, sagaName)
+    const $checkbox = createCheckbox(checkboxID, episode.completed, checkBoxEventHandler);
+
+    const episodeTag =  `<strong>Episodio ${episode.number}:</strong>`
+    const $episodeNumber = createElement('span', 'episode-number', episodeTag, true); //Marcador del episodio en negrita
+
+    const $label = createLabel('', checkboxID, 'episode-label');      //creamos el label
+    $label.appendChild($episodeNumber);                               //agregamos el marcador del episodio al label
+    $label.appendChild(document.createTextNode(` ${episode.label}`)); //agregamos el nombre del episodio al label
+
+
+    $episodeDiv.appendChild($checkbox);  //agregamos el checkbox al contenedor de episodio
+    $episodeDiv.appendChild($label);     //agregamos el label al contenedor de episodio
+    /*
+        Estructura HTML resultante:
+        <div class="check-item">
+            <input type="checkbox" id="main-1">
+            <label for="main-1" class="episode-label">
+                <span class="episode-number">
+                    <strong>Episodio 1:</strong> 
+                </span>
+                Título del episodio
+            </label>
+        </div>
+     */
+    
+    return $episodeDiv; //Devuelve el contendor del episodio
 }
