@@ -86,33 +86,17 @@ function createAnimeItem(season, sagaName) {
     //Creacion de los elementos
     const $animeDiv = createElement('div', 'anime-item');
     const $details = createDetails('anime-details', season.opened); //creamos el elemento details, abierto cuando corresponda
-    const $checklist = createElement('div', 'checklist');  //creamos el contenedor del contenedor de episodios
-
-    const $summary = seasonSummaryCreator(sagaName, season);
-    // Si hay episodios los renderizaremos
-    if (season.episodes && season.episodes.length > 0) {
-    //si items tiene elementos...
-        const $episodeList = createElement('div', 'episode-list'); //creamos el contenedor de episodios
-
-        season.episodes.forEach(episode => {
-            //recorremos todos los episodios del item
-            const $episodeItem = createEpisodeItem(episode, season.id, sagaName); //creamos el capitulo
-            $episodeList.appendChild($episodeItem);                             //lo agregamos al contenedor de episodios
-        });
-
-        $checklist.appendChild($episodeList); //lo agregamos al contenedor de clase checklist
-    }
+    const $summary = seasonSummaryCreator(sagaName, season);  //creamos el summary de la temporada
+    const $seasonContainer = seasonCreator(season, sagaName); //creamos el contenedor de la temporada
     
-    //agregamos el summary y el contenedor de clase checklist al details
-    $details.appendChild($summary);
-    $details.appendChild($checklist);
-    //agregamos el details al elemento div de la anime
-    $animeDiv.appendChild($details);
+    $details.appendChild($summary);         //agregamos el summary al details
+    $details.appendChild($seasonContainer); //Agregamos el contenedor de la temporada al details
+    $animeDiv.appendChild($details);        //agregamos el details al contenedor general de la teporada
     /*
-        hasta aca tendriamos (2)
+        hasta aca tendriamos (
         <div class="anime-item">
             <details class="anime-details">
-                --- con todo lo de (1) (summary) ---
+                --- con todo lo de summary ---
                 <div class="checklist">
                     <div class="episode-list">
                         --- todos los episodios del anime ---
@@ -121,7 +105,7 @@ function createAnimeItem(season, sagaName) {
             </details>
         </div>
     */
-    return $animeDiv; //devuelve el elemento padre completo, con todos sus elementos hijos
+    return $animeDiv; //devuelve el contendeor de la temporada completo, con todos sus elementos hijos
 }
 
 // Crear elemento de episodio individual

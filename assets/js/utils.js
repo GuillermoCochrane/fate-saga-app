@@ -312,6 +312,24 @@ function sagaSummaryCreator(sagaName, progress){
     return $summary;
 }
 
+function seasonCreator(season, sagaName) {
+    const $seasonContainer = createElement('div', 'checklist');  //creamos el contenedor del la temporada
+    if (season.episodes && season.episodes.length > 0) {
+    //si la temporada tiene episodios...
+        const $episodeList = createElement('div', 'episode-list'); //creamos el contenedor de episodios
+
+        for (const episode of season.episodes) {
+            //recorremos todos los episodios del item
+            const $episodeItem = createEpisodeItem(episode, season.id, sagaName); //creamos el capitulo
+            $episodeList.appendChild($episodeItem);                             //lo agregamos al contenedor de episodios
+        }
+
+        $seasonContainer.appendChild($episodeList); //lo agregamos al contenedor de la temporada
+    }
+    return $seasonContainer;
+}
+
+// Crear el summary de la temporada
 function seasonSummaryCreator(sagaName, season) {
     const $summary = createElement('summary', 'anime-summary');
     const checkboxID = `main-${season.id}`; //id del checkbox
