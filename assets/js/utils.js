@@ -63,7 +63,6 @@ const enableDarkMode  = () => {
 const enableLightMode = () => {
     const { $globalTag, $themeToggle } = themeElements();
     $globalTag.removeAttribute('data-theme');
-    console.log($globalTag, $themeToggle);
     $themeToggle.textContent = '🌙';
 }
 
@@ -237,7 +236,7 @@ function handleDetails(event, checklistData) {
             
             // recorrremos todas las sagas en localStorage
             for (const [sagaName, sagaData] of Object.entries(checklistData)) {
-                const anime = sagaData.items.find(a => a.id === animeId);
+                const anime = sagaData.seasons.find(a => a.id === animeId);
                 // capturamos el anime con ese id
                 if (anime) {
                     //si encuentra el anime
@@ -265,7 +264,7 @@ function sagaCreator(sagaData, sagaName){
 
     let hasVisibleItems = false; 
 
-    for (const season of sagaData.items) {
+    for (const season of sagaData.seasons) {
         //recorremos cada season de la saga
         if (shouldShowItem(season)) {
             //si se debe mostrar la season
