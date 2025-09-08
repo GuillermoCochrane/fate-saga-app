@@ -311,3 +311,38 @@ function sagaSummaryCreator(sagaName, progress){
 
     return $summary;
 }
+
+function seasonSummaryCreator(sagaName, season) {
+    const $summary = createElement('summary', 'anime-summary');
+    const checkboxID = `main-${season.id}`; //id del checkbox
+    const checkBoxEventHandler = () => toggleAnimeComplete(season.id, sagaName); //funcion que se ejecuta al cambiar el estado del checkbox
+    // Checkbox para el anime completo
+    const $animeCheckbox = createCheckbox(checkboxID, season.completed, checkBoxEventHandler);
+
+    const $label = createLabel(season.label, checkboxID, 'anime-label');              //label del checkbox 
+    const $formatSpan = createElement('span', 'anime-format', `${season.format}`);    //span con el formato del anime
+    const $titleContainer = createElement('div', 'anime-title-container');          //contenedor para el label y el formato
+    
+    // Agregamos el label y el span al contenedor de título
+    $titleContainer.appendChild($label);
+    $titleContainer.appendChild($formatSpan);
+    /*  <div class="anime-title-container">
+            <label for="main-1" class="anime-label">Titulo del anime</label>
+            <span class="anime-format">Formato del anime</span>
+        </div> 
+    */
+    // Agregamos el checkbox y el contenedor de título al summary
+    $summary.appendChild($animeCheckbox);
+    $summary.appendChild($titleContainer);
+    /* 
+        hasta aca tendriamos (1)
+        <summary class="anime-summary">
+            <input type="checkbox" id="main-1">
+            <div class="anime-title-container">
+                <label for="main-1" class="anime-label">Titulo del anime</label>
+                <span class="anime-format">Formato del anime</span>
+            </div>
+        </summary>
+    */    
+    return $summary;
+}
