@@ -8,6 +8,7 @@
     --completed-color: #4caf50;
     --hover-color: rgba(154, 31, 46, 0.1);
     --filter-active: #d32f2f;
+    --error-notification: #f44336;
 }
 
 [data-theme="dark"] {
@@ -20,6 +21,7 @@
     --completed-color: #388e3c;
     --hover-color: rgba(201, 50, 67, 0.2);
     --filter-active: #f44336;
+    --error-notification: #f44336;
 }
 
 * {
