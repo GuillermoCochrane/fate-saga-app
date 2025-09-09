@@ -1,15 +1,14 @@
 //? funcion de creacion de componente season (temporada)
 
 import { createElement, createDetails, createLabel, createCheckbox } from '../utilities/dom.js';
-import { toggleAnimeComplete } from '../core/eventHandlers.js';
 import { episodeCreator } from './episode.js';
 
 // Crear elemento de anime con sus episodios
-export function seasonContainerCreator(season, sagaName) {
+export function seasonContainerCreator(season, sagaName, handleToggle) {
     //Creacion de los elementos
     const $animeDiv = createElement('div', 'anime-item');
     const $details = createDetails('anime-details', season.opened); //creamos el elemento details, abierto cuando corresponda
-    const $summary = seasonSummaryCreator(sagaName, season);  //creamos el summary de la temporada
+    const $summary = seasonSummaryCreator(sagaName, season, handleToggle);  //creamos el summary de la temporada
     const $seasonContainer = seasonCreator(season, sagaName); //creamos el contenedor de la temporada
     
     $details.appendChild($summary);         //agregamos el summary al details
@@ -50,10 +49,11 @@ export function seasonCreator(season, sagaName) {
 }
 
 // Crear el summary de la temporada
-export function seasonSummaryCreator(sagaName, season) {
+export function seasonSummaryCreator(sagaName, season, handleToggleCheckbox) {
     const $summary = createElement('summary', 'anime-summary');
     const checkboxID = `main-${season.id}`; //id del checkbox
-    const checkBoxEventHandler = () => toggleAnimeComplete(season.id, sagaName); //funcion que se ejecuta al cambiar el estado del checkbox
+    const checkBoxEventHandler = () => handleToggleCheckbox(season.id, sagaName); //funcion que se ejecuta al cambiar el estado del checkbox
+    //const checkBoxEventHandler = () => toggleSeasonComplete(season.id, sagaName, checklistdata); //funcion que se ejecuta al cambiar el estado del checkbox
     // Checkbox para el anime completo
     const $animeCheckbox = createCheckbox(checkboxID, season.completed, checkBoxEventHandler);
 
