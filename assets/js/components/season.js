@@ -4,12 +4,12 @@ import { createElement, createDetails, createLabel, createCheckbox } from '../ut
 import { episodeCreator } from './episode.js';
 
 // Crear elemento de anime con sus episodios
-export function seasonContainerCreator(season, sagaName, handleToggle) {
+export function seasonContainerCreator(season, sagaName, handleToggleCheckbox) {
     //Creacion de los elementos
     const $animeDiv = createElement('div', 'anime-item');
     const $details = createDetails('anime-details', season.opened); //creamos el elemento details, abierto cuando corresponda
-    const $summary = seasonSummaryCreator(sagaName, season, handleToggle);  //creamos el summary de la temporada
-    const $seasonContainer = seasonCreator(season, sagaName); //creamos el contenedor de la temporada
+    const $summary = seasonSummaryCreator(sagaName, season, handleToggleCheckbox);  //creamos el summary de la temporada
+    const $seasonContainer = seasonCreator(season, sagaName, handleToggleCheckbox); //creamos el contenedor de la temporada
     
     $details.appendChild($summary);         //agregamos el summary al details
     $details.appendChild($seasonContainer); //Agregamos el contenedor de la temporada al details
@@ -31,7 +31,7 @@ export function seasonContainerCreator(season, sagaName, handleToggle) {
 }
 
 // Crear el contenedor de la temporada
-export function seasonCreator(season, sagaName) {
+export function seasonCreator(season, sagaName, handleToggleCheckbox) {
     const $seasonContainer = createElement('div', 'checklist');  //creamos el contenedor del la temporada
     if (season.episodes && season.episodes.length > 0) {
     //si la temporada tiene episodios...
@@ -39,7 +39,7 @@ export function seasonCreator(season, sagaName) {
 
         for (const episode of season.episodes) {
             //recorremos todos los episodios del item
-            const $episodeItem = episodeCreator(episode, season.id, sagaName); //creamos el capitulo
+            const $episodeItem = episodeCreator(episode, season.id, sagaName, handleToggleCheckbox); //creamos el capitulo
             $episodeList.appendChild($episodeItem);                             //lo agregamos al contenedor de episodios
         }
 

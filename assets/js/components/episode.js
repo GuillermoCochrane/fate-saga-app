@@ -1,16 +1,16 @@
 //? funcion de creación de componente episode
 
 import { createElement, createCheckbox, createLabel } from '../utilities/dom.js';
-import { toggleEpisodeComplete } from '../core/eventHandlers.js';
 
 // Crear elemento de episodio individual
-export function episodeCreator(episode, animeId, sagaName) {
+export function episodeCreator(episode, seasonID, sagaName, handleToggleCheckbox) {
     //Creamos el contendor con la clase check-item
     const $episodeDiv = createElement('div', 'check-item');
 
     //Creamos el checkbox, dejándolo marcado según corresponda
     const checkboxID = `${episode.id}`;
-    const checkBoxEventHandler = () => toggleEpisodeComplete(episode.id, animeId, sagaName)
+    // handleToggleCheckbox(seasonID, sagaName, isEpisode = false, episodeID = null) 
+    const checkBoxEventHandler = () => handleToggleCheckbox(seasonID, sagaName , true, episode.id);
     const $checkbox = createCheckbox(checkboxID, episode.completed, checkBoxEventHandler);
 
     const episodeTag =  `<strong>Episodio ${episode.number}:</strong>`
