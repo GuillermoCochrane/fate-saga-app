@@ -53,9 +53,45 @@ export function toggleEpisodeComplete(episodeID, seasonID, sagaName, checklistDa
     return checklistData; //devuelve el original si no se ha cambiado nada
 }
 
-//manejo de los cambios de filtro
+//Manejo de los cambios de filtro
 export function handleFilterClick(event, $button) {
     $button.forEach(button => button.classList.remove('active')); //para cada botón, quitamos la clase active
     event.target.classList.add('active'); //ponemos la clase active al botón que se ha seleccionado
     return event.target.dataset.filter; //actualizamos el filtro actual
+}
+
+//Maneja los cambios de estado de details, con Event delegation 
+export function handleDetails(event, checklistData) {
+    const newData = JSON.parse(JSON.stringify(checklistData));
+    if (event.target.tagName === 'DETAILS') {
+        //si se hizo click en un details
+        const details = event.target;//guardamos el elemento
+        const isOpen = details.open; //guardamos si el details abierto o cerrado
+        
+        // Encontrar el ID del elemento y actualizar su estado opened
+        if (details.classList.contains('saga-details')) {
+            //si el details tiene la clase saga-details
+            const sagaName = details.querySelector('.saga-title').textContent; //guardamos el texto del título
+            if (newData[sagaName]) {
+                //si el título existe en el objeto
+                newData[sagaName].opened = isOpen; //actualizamos el objeto, guardando el estado del details 
+                return newData; //devuelve el objeto con los cambios
+            }
+        } 
+        else if (details.classList.contains('anime-details')) {
+            //si el details tiene la clase anime-details
+            const seasonID = details.querySelector('input[type="checkbox"]').id.replace('main-', ''); //guardamos el id del checkbox
+            
+            // recorrremos todas las sagas en localStorage
+            for (const [sagaName, sagaData] of Object.entries(newData)) {
+                const season = sagaData.seasons.find(season => season.id === seasonID); // capturamos la temporada con ese id
+                if (season) {
+                    //si encuentra la temporada
+                    season.opened = isOpen; //actualizamos el estado abierto
+                    return newData; // devuelve el objeto con los cambios
+                }
+            }
+        }
+    }
+    return checklistData; //devuelve el original si no se ha cambiado nada
 }
