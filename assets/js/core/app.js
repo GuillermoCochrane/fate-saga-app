@@ -64,7 +64,14 @@ function setupEventListeners() {
     });
     
     // Event delegation para cambios de estado de details
-    document.addEventListener('toggle', (e) => { handleDetails(e, checklistData); }, true);
+    document.addEventListener('toggle', (e) => { 
+        const newData = handleDetails(e, checklistData);
+        if (newData !== checklistData) { // ← Si hubo cambios
+            checklistData = newData;
+            saveChecklistData(checklistData);
+            // NO necesita renderizar (solo cambia estado opened)
+        }
+    }, true);
 }
 
 // Renderizar la checklist completa
