@@ -52,3 +52,10 @@ export function toggleEpisodeComplete(episodeID, seasonID, sagaName, checklistDa
     }
     return checklistData; //devuelve el original si no se ha cambiado nada
 }
+
+//manejo de los cambios de filtro
+export function handleFilterClick(event, $button) {
+    $button.forEach(button => button.classList.remove('active')); //para cada botón, quitamos la clase active
+    event.target.classList.add('active'); //ponemos la clase active al botón que se ha seleccionado
+    return event.target.dataset.filter; //actualizamos el filtro actual
+}
