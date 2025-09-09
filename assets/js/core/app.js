@@ -1,6 +1,6 @@
 //? Funciones encargada de manejar la aplicación
 
-import { handleFilterClick, handleDetails, toggleSeasonComplete } from './eventHandlers.js';
+import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeComplete } from './eventHandlers.js';
 import { setupTheme } from '../utilities/theme.js';
 import { $, $$, createElement } from '../utilities/dom.js';
 import { importData, exportData, saveChecklistData, loadChecklistData } from '../utilities/storage.js';
@@ -104,8 +104,10 @@ function renderChecklist() {
     }
 }
 
-function handleToggleCheckbox(seasonId, sagaName) {
-    checklistData = toggleSeasonComplete(seasonId, sagaName, checklistData);
+function handleToggleCheckbox(seasonID, sagaName, isEpisode = false, episodeID = null) {
+    checklistData = isEpisode ? 
+        toggleEpisodeComplete(episodeID, seasonID, sagaName, checklistData) : 
+        toggleSeasonComplete(seasonID, sagaName, checklistData);
     saveChecklistData(checklistData);
     renderChecklist();
     updateTotalProgress();
