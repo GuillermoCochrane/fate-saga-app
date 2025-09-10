@@ -9,54 +9,52 @@
     <script type="module" src="./assets/js/core/app.js"></script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Fate View Checklist</h1>
-            <p>Seguimiento de tu progreso en el universo Fate</p>
-            <button class="theme-toggle" id="themeToggle">🌙</button>
-        </header>
+    <header>
+        <h1>Fate View Checklist</h1>
+        <p>Seguimiento de tu progreso en el universo Fate</p>
+        <button class="theme-toggle" id="themeToggle">🌙</button>
+    </header>
 
-        <div class="controls">
-            <div class="filters">
-                <button class="filter-btn active" data-filter="all">Todos</button>
-                <button class="filter-btn" data-filter="completed">Completados</button>
-                <button class="filter-btn" data-filter="incomplete">No completados</button>
-            </div>
-            <div class="import-export">
-                <button class="io-btn" id="export-btn">Exportar</button>
-                <button class="io-btn" id="import-btn">Importar</button>
-                <input type="file" id="file-input" accept=".json">
-            </div>
-        </div>
+    <nav class="controls">
+        <section class="filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="completed">Completados</button>
+            <button class="filter-btn" data-filter="incomplete">No completados</button>
+        </section>
+        <section class="import-export">
+            <button class="io-btn" id="export-btn">Exportar</button>
+            <button class="io-btn" id="import-btn">Importar</button>
+            <input type="file" id="file-input" accept=".json">
+        </section>
+    </nav>
 
-        <div id="checklist-container">
-            <!-- El contenido se generará dinámicamente con JavaScript -->
-        </div>
+    <main id="checklist-container">
+        <!-- El contenido se generará dinámicamente con JavaScript -->
+    </main>
 
-        <div class="total-progress">
-            <h3>Progreso Total</h3>
-            <div class="progress-bar">
-                <div class="progress-fill" id="total-progress-bar" style="width: 0%"></div>
-            </div>
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-number" id="completed-items">0</div>
-                    <div class="stat-label">Completados</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number" id="total-items">0</div>
-                    <div class="stat-label">Total</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number" id="percentage">0%</div>
-                    <div class="stat-label">Completado</div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <footer class="total-progress">
+        <h3>Progreso Total</h3>
+        <section class="progress-bar">
+            <div class="progress-fill" id="total-progress-bar" style="width: 0%"></div>
+        </section>
+        <section class="stats">
+            <article class="stat">
+                <p class="stat-number" id="completed-items">0</p>
+                <p class="stat-label">Completados</p>
+            </article>
+            <article class="stat">
+                <p class="stat-number" id="total-items">0</p>
+                <p class="stat-label">Total</p>
+            </article>
+            <article class="stat">
+                <p class="stat-number" id="percentage">0%</p>
+                <p class="stat-label">Completado</p>
+            </article>
+        </section>
+    </footer>
 
-    <div class="notification" id="notification">
-        Operación realizada con éxito
-    </div>
+<aside class="notification" id="notification">
+    Operación realizada con éxito
+</aside>
 </body>
 </html>
