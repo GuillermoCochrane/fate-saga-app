@@ -1,6 +1,6 @@
 // Funciones para manipular la carga y guardado de datos
 
-import { fateChecklistData } from '../data/data.js';
+import { fateChecklistData } from '../../data/data.js';
 
 // Cargar datos guardados en localStorage o usar los predeterminados
 export function loadChecklistData() {

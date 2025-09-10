@@ -1,5 +1,5 @@
 // Datos iniciales de la checklist con episodios
-const fateChecklistData = {
+export const fateChecklistData = {
   "Fate Saga": {
     opened: false,
     seasons: [
