@@ -91,7 +91,7 @@ function renderChecklist() {
 
         const percentage = calculateProgress(sagaData.seasons);       //calculamos el progreso de la saga
         const $summary = sagaSummaryCreator(sagaName, percentage);  // Creamos el summary de la saga
-        const $contentDiv = sagaCreator(sagaData, sagaName, handleToggleCheckbox);        // Creamos el contenedor de la seasons de la saga
+        const $contentDiv = sagaCreator(sagaData, sagaName, handleToggleCheckbox, currentFilter);        // Creamos el contenedor de la seasons de la saga
 
         $details.appendChild($summary);
         $details.appendChild($contentDiv);

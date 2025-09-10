@@ -6,14 +6,14 @@ import { seasonContainerCreator } from './season.js';
 
 
 // Crear las temporadas de la saga
-export function sagaCreator(sagaData, sagaName, handleToggleCheckbox){
+export function sagaCreator(sagaData, sagaName, handleToggleCheckbox, currentFilter){
     const $sagaContainer = createElement('div'); //creamos el contendor de saga
 
     let hasVisibleItems = false; 
 
     for (const season of sagaData.seasons) {
         //recorremos cada season de la saga
-        if (shouldShowItem(season)) {
+        if (shouldShowItem(season, currentFilter)) {
             //si se debe mostrar la season
             hasVisibleItems = true;  //lo ponemos visible ( valor booleano), para no crear el contendor del mensaje de no hay items visibles      
             const $seasonContainer = seasonContainerCreator(season, sagaName, handleToggleCheckbox); //creamos el capitulo
