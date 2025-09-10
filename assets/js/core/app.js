@@ -4,7 +4,7 @@ import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeCo
 import { setupTheme } from '../utilities/theme.js';
 import { $, $$, createElement } from '../utilities/dom.js';
 import { importData, exportData, saveChecklistData, loadChecklistData } from '../utilities/storage.js';
-import { updateTotalProgress, calculateProgress } from '../utilities/utilities.js';
+import { updateTotalProgress, calculateProgress, showNotification } from '../utilities/utilities.js';
 import { sagaSummaryCreator, sagaCreator } from '../components/saga.js';
 
 // 📁 core/app.js
@@ -16,7 +16,7 @@ function initApp() {
     setupEventListeners();
     renderChecklist();
     setupTheme();
-    updateTotalProgress();
+    updateTotalProgress(checklistData);
 }
 
 // Configurar event listeners
@@ -56,7 +56,7 @@ function setupEventListeners() {
             checklistData = importedData;
             saveChecklistData(checklistData);
             renderChecklist();
-            updateTotalProgress();
+            updateTotalProgress(checklistData);
             showNotification('Datos importados con éxito');
         } catch (error) {
             showNotification('Error al importar: ' + error.message, true);
@@ -117,7 +117,7 @@ function handleToggleCheckbox(seasonID, sagaName, isEpisode = false, episodeID =
         toggleSeasonComplete(seasonID, sagaName, checklistData);
     saveChecklistData(checklistData);
     renderChecklist();
-    updateTotalProgress();
+    updateTotalProgress(checklistData);
 }
 
 // Iniciar la aplicación cuando el DOM esté listo
