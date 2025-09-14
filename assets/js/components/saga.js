@@ -34,7 +34,8 @@ export function sagaSummaryCreator(sagaName, progress){
     const $summary = createElement('summary', 'saga-summary');              // Creamos el elemento summary con la clase saga-summary
     const $summaryContent = createElement('div', 'summary-content');        // Contenedor flexible para título y progreso
     const $sagaTitle = createElement('span', 'saga-title', sagaName);       // Título de la saga
-    const progressHTML =  `<span class="progress-text">${progress}%</span>\n<div class="progress-bar">\n    <div class="progress-fill" style="width: ${progress}%"></div>\n</div>\n`;// Contenedor de progreso
+    /*         <progress id="complete-progress-bar" class="progress-bar" value="0" max="100"></progress> */
+    const progressHTML =  `<span class="progress-text">${progress}%</span>\n<progress  class="progress-bar" value="${progress}" max="100"></progress>\n`;// Contenedor de progreso
     const $progressContainer = createElement('div', 'progress-container', progressHTML, true); // Creamos el elemento div con la clase progress-container
 
     $summaryContent.appendChild($sagaTitle);         // agregamos  el titulo 
@@ -48,9 +49,7 @@ export function sagaSummaryCreator(sagaName, progress){
                 <span class="saga-title">Saga X</span>
                 <div class="progress-container">
                     <span class="progress-text">100%</span>
-                    <div class="progress-bar">
-                        <div class="progress-fill" style="width: 100%"></div>
-                    </div>
+                    <progress  class="progress-bar" value="0" max="100"></progress>
                 </div>
             </div>
         </summary>
