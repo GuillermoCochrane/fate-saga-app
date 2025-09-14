@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fate View Checklist</title>
+    <style>
+        :root {
+            --bg-color: #f5f5f5;
+            --text-color: #333;
+            --card-bg: #fff;
+            --border-color: #ddd;
+            --accent-color: #9a1f2e;
+            --progress-bg: #e0e0e0;
+            --completed-color: #4caf50;
+            --hover-color: rgba(154, 31, 46, 0.1);
+            --filter-active: #d32f2f;
+        }
+
+        [data-theme="dark"] {
+            --bg-color: #1a1a1a;
+            --text-color: #f5f5f5;
+            --card-bg: #2a2a2a;
+            --border-color: #444;
+            --accent-color: #c93243;
+            --progress-bg: #3a3a3a;
+            --completed-color: #388e3c;
+            --hover-color: rgba(201, 50, 67, 0.2);
+            --filter-active: #f44336;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 15px;
+            position: relative;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            margin: 0;
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            padding: 5px;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .filters {
+            display: flex;
+            gap: 10px;
+        }
+
+        .filter-btn {
+            padding: 8px 15px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            cursor: pointer;
+            color: var(--text-color);
+            transition: all 0.3s;
+        }
+
+        .filter-btn.active {
+            background-color: var(--accent-color);
+            color: white;
+            border-color: var(--accent-color);
+        }
+
+        .filter-btn:hover {
+            background-color: var(--hover-color);
+        }
+
+        .import-export {
+            display: flex;
+            gap: 10px;
+        }
+
+        .io-btn {
+            padding: 8px 15px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            cursor: pointer;
+            color: var(--text-color);
+            transition: all 0.3s;
+        }
+
+        .io-btn:hover {
+            background-color: var(--hover-color);
+        }
+
+        #file-input {
+            display: none;
+        }
+
+        .saga {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .saga-summary {
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--card-bg);
+            transition: background-color 0.2s;
+        }
+
+        .saga-summary:hover {
+            background-color: var(--hover-color);
+        }
+
+        .saga-summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .saga-summary::after {
+            content: "▼";
+            font-size: 0.8rem;
+            transition: transform 0.3s;
+        }
+
+        .saga-details[open] .saga-summary::after {
+            transform: rotate(180deg);
+        }
+
+        .progress-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .progress-text {
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            font-weight: bold;
+            min-width: 60px;
+        }
+
+        .progress-bar {
+            width: 100px;
+            height: 8px;
+            background-color: var(--progress-bg);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--completed-color);
+            border-radius: 4px;
+            transition: width 0.3s ease;
+        }
+
+        .anime-item {
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .anime-item:last-child {
+            border-bottom: none;
+        }
+
+        .anime-summary {
+            padding: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .anime-summary:hover {
+            background-color: var(--hover-color);
+        }
+
+        .anime-summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .anime-summary::after {
+            content: "►";
+            font-size: 0.8rem;
+            transition: transform 0.3s;
+        }
+
+        .anime-details[open] .anime-summary::after {
+            transform: rotate(90deg);
+        }
+
+        .checklist {
+            padding: 10px 15px 10px 30px;
+        }
+
+        .check-item {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .check-item input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 3px;
+            accent-color: var(--accent-color);
+        }
+
+        .check-item label {
+            flex: 1;
+            cursor: pointer;
+        }
+
+        .check-item .format {
+            font-size: 0.8rem;
+            color: #888;
+            margin-left: 10px;
+            font-style: italic;
+        }
+
+        .episode-list {
+            margin-left: 25px;
+            margin-top: 5px;
+            padding-left: 15px;
+            border-left: 2px solid var(--border-color);
+        }
+
+        .total-progress {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .total-progress h3 {
+            margin-top: 0;
+            color: var(--accent-color);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 15px;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .stat {
+            text-align: center;
+            min-width: 80px;
+        }
+
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-color);
+            opacity: 0.8;
+        }
+
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 15px;
+            background-color: var(--card-bg);
+            border-left: 4px solid var(--completed-color);
+            border-radius: 4px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .notification.show {
+            transform: translateX(0);
+        }
+
+        @media (max-width: 768px) {
+            .controls {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .filters, .import-export {
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+            
+            .progress-container {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+            
+            .progress-bar {
+                width: 80px;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fate View Checklist</h1>
+            <p>Seguimiento de tu progreso en el universo Fate</p>
+            <button class="theme-toggle" id="themeToggle">🌙</button>
+        </header>
+
+        <div class="controls">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="completed">Completados</button>
+                <button class="filter-btn" data-filter="incomplete">No completados</button>
+            </div>
+            <div class="import-export">
+                <button class="io-btn" id="export-btn">Exportar</button>
+                <button class="io-btn" id="import-btn">Importar</button>
+                <input type="file" id="file-input" accept=".json">
+            </div>
+        </div>
+
+        <div id="checklist-container">
+            <!-- El contenido se generará dinámicamente con JavaScript -->
+        </div>
+
+        <div class="total-progress">
+            <h3>Progreso Total</h3>
+            <div class="progress-bar">
+                <div class="progress-fill" id="total-progress-bar" style="width: 0%"></div>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number" id="completed-items">0</div>
+                    <div class="stat-label">Completados</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="total-items">0</div>
+                    <div class="stat-label">Total</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="percentage">0%</div>
+                    <div class="stat-label">Completado</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="notification" id="notification">
+        Operación realizada con éxito
+    </div>
+
+    <script>
+        // Datos iniciales de la checklist con episodios
+        const fateChecklistData = {
+            "Fate Saga": {
+                items: [
+                    { 
+                        id: "fz", 
+                        label: "Fate/Zero", 
+                        format: "Anime", 
+                        completed: true,
+                        episodes: [
+                            { id: "fz-1", label: "Episodio 1", completed: true },
+                            { id: "fz-2", label: "Episodio 2", completed: true },
+                            { id: "fz-3", label: "Episodio 3", completed: true },
+                            { id: "fz-4", label: "Episodio 4", completed: true },
+                            { id: "fz-5", label: "Episodio 5", completed: true },
+                            { id: "fz-6", label: "Episodio 6", completed: true },
+                            { id: "fz-7", label: "Episodio 7", completed: true },
+                            { id: "fz-8", label: "Episodio 8", completed: true },
+                            { id: "fz-9", label: "Episodio 9", completed: true },
+                            { id: "fz-10", label: "Episodio 10", completed: true },
+                            { id: "fz-11", label: "Episodio 11", completed: true },
+                            { id: "fz-12", label: "Episodio 12", completed: true },
+                            { id: "fz-13", label: "Episodio 13", completed: true }
+                        ]
+                    },
+                    { 
+                        id: "fsn-saber", 
+                        label: "Fate/stay night (Saber Route)", 
+                        format: "Anime", 
+                        completed: true,
+                        episodes: [
+                            { id: "fsn-s-1", label: "Episodio 1", completed: true },
+                            { id: "fsn-s-2", label: "Episodio 2", completed: true },
+                            { id: "fsn-s-3", label: "Episodio 3", completed: true },
+                            { id: "fsn-s-4", label: "Episodio 4", completed: true },
+                            { id: "fsn-s-5", label: "Episodio 5", completed: true },
+                            { id: "fsn-s-6", label: "Episodio 6", completed: true },
+                            { id: "fsn-s-7", label: "Episodio 7", completed: true },
+                            { id: "fsn-s-8", label: "Episodio 8", completed: true },
+                            { id: "fsn-s-9", label: "Episodio 9", completed: true },
+                            { id: "fsn-s-10", label: "Episodio 10", completed: true },
+                            { id: "fsn-s-11", label: "Episodio 11", completed: true },
+                            { id: "fsn-s-12", label: "Episodio 12", completed: true },
+                            { id: "fsn-s-13", label: "Episodio 13", completed: true },
+                            { id: "fsn-s-14", label: "Episodio 14", completed: true },
+                            { id: "fsn-s-15", label: "Episodio 15", completed: true },
+                            { id: "fsn-s-16", label: "Episodio 16", completed: true },
+                            { id: "fsn-s-17", label: "Episodio 17", completed: true },
+                            { id: "fsn-s-18", label: "Episodio 18", completed: true },
+                            { id: "fsn-s-19", label: "Episodio 19", completed: true },
+                            { id: "fsn-s-20", label: "Episodio 20", completed: true },
+                            { id: "fsn-s-21", label: "Episodio 21", completed: true },
+                            { id: "fsn-s-22", label: "Episodio 22", completed: true },
+                            { id: "fsn-s-23", label: "Episodio 23", completed: true },
+                            { id: "fsn-s-24", label: "Episodio 24", completed: true }
+                        ]
+                    },
+                    // Más series con episodios...
+                    { 
+                        id: "hf", 
+                        label: "Fate/stay night: Heaven's Feel", 
+                        format: "Película", 
+                        completed: true,
+                        episodes: [
+                            { id: "hf1", label: "Presage Flower", completed: true },
+                            { id: "hf2", label: "Lost Butterfly", completed: true },
+                            { id: "hf3", label: "Spring Song", completed: true }
+                        ]
+                    }
+                ]
+            },
+            "Lord El-Melloi II": {
+                items: [
+                    { 
+                        id: "elmelloi-anime", 
+                        label: "Lord El-Melloi II Sei no Jikenbo: Rail Zeppelin Grace Note", 
+                        format: "Anime", 
+                        completed: true,
+                        episodes: [
+                            { id: "elmelloi-1", label: "Episodio 1", completed: true },
+                            { id: "elmelloi-2", label: "Episodio 2", completed: true },
+                            { id: "elmelloi-3", label: "Episodio 3", completed: true },
+                            { id: "elmelloi-4", label: "Episodio 4", completed: true },
+                            { id: "elmelloi-5", label: "Episodio 5", completed: true },
+                            { id: "elmelloi-6", label: "Episodio 6", completed: true },
+                            { id: "elmelloi-7", label: "Episodio 7", completed: true },
+                            { id: "elmelloi-8", label: "Episodio 8", completed: true },
+                            { id: "elmelloi-9", label: "Episodio 9", completed: true },
+                            { id: "elmelloi-10", label: "Episodio 10", completed: true },
+                            { id: "elmelloi-11", label: "Episodio 11", completed: true },
+                            { id: "elmelloi-12", label: "Episodio 12", completed: true },
+                            { id: "elmelloi-13", label: "Episodio 13", completed: true }
+                        ]
+                    }
+                ]
+            },
+            "Fate/Strange Fake": {
+                items: [
+                    { 
+                        id: "fsf-anime", 
+                        label: "Fate/strange Fake", 
+                        format: "Anime", 
+                        completed: true,
+                        episodes: [
+                            { id: "fsf-1", label: "Episodio 1", completed: true },
+                            { id: "fsf-2", label: "Episodio 2", completed: true },
+                            { id: "fsf-3", label: "Episodio 3", completed: true },
+                            { id: "fsf-4", label: "Episodio 4", completed: true },
+                            { id: "fsf-5", label: "Episodio 5", completed: true },
+                            { id: "fsf-6", label: "Episodio 6", completed: true },
+                            { id: "fsf-7", label: "Episodio 7", completed: true },
+                            { id: "fsf-8", label: "Episodio 8", completed: true },
+                            { id: "fsf-9", label: "Episodio 9", completed: true },
+                            { id: "fsf-10", label: "Episodio 10", completed: true },
+                            { id: "fsf-11", label: "Episodio 11", completed: true },
+                            { id: "fsf-12", label: "Episodio 12", completed: true }
+                        ]
+                    }
+                ]
+            },
+            "Fate/Grand Order": {
+                items: [
+                    { 
+                        id: "fgo-babylonia", 
+                        label: "Fate/Grand Order: Zettai Majuu Sensen Babylonia", 
+                        format: "Anime", 
+                        completed: false,
+                        episodes: [
+                            { id: "fgo-b-1", label: "Episodio 1", completed: false },
+                            { id: "fgo-b-2", label: "Episodio 2", completed: false },
+                            { id: "fgo-b-3", label: "Episodio 3", completed: false },
+                            { id: "fgo-b-4", label: "Episodio 4", completed: false },
+                            { id: "fgo-b-5", label: "Episodio 5", completed: false },
+                            { id: "fgo-b-6", label: "Episodio 6", completed: false },
+                            { id: "fgo-b-7", label: "Episodio 7", completed: false },
+                            { id: "fgo-b-8", label: "Episodio 8", completed: false },
+                            { id: "fgo-b-9", label: "Episodio 9", completed: false },
+                            { id: "fgo-b-10", label: "Episodio 10", completed: false },
+                            { id: "fgo-b-11", label: "Episodio 11", completed: false },
+                            { id: "fgo-b-12", label: "Episodio 12", completed: false },
+                            { id: "fgo-b-13", label: "Episodio 13", completed: false },
+                            { id: "fgo-b-14", label: "Episodio 14", completed: false },
+                            { id: "fgo-b-15", label: "Episodio 15", completed: false },
+                            { id: "fgo-b-16", label: "Episodio 16", completed: false },
+                            { id: "fgo-b-17", label: "Episodio 17", completed: false },
+                            { id: "fgo-b-18", label: "Episodio 18", completed: false },
+                            { id: "fgo-b-19", label: "Episodio 19", completed: false },
+                            { id: "fgo-b-20", label: "Episodio 20", completed: false },
+                            { id: "fgo-b-21", label: "Episodio 21", completed: false }
+                        ]
+                    }
+                ]
+            },
+            "Fate/Kaleid Liner Prisma Illya": {
+                items: [
+                    { 
+                        id: "prisma1", 
+                        label: "Fate/kaleid liner Prisma☆Illya", 
+                        format: "Anime (10 episodios) [PRIMERA TEMPORADA]", 
+                        completed: false,
+                        episodes: [
+                            { id: "prisma1-1", label: "Episodio 1", completed: false },
+                            { id: "prisma1-2", label: "Episodio 2", completed: false },
+                            { id: "prisma1-3", label: "Episodio 3", completed: false },
+                            { id: "prisma1-4", label: "Episodio 4", completed: false },
+                            { id: "prisma1-5", label: "Episodio 5", completed: false },
+                            { id: "prisma1-6", label: "Episodio 6", completed: false },
+                            { id: "prisma1-7", label: "Episodio 7", completed: false },
+                            { id: "prisma1-8", label: "Episodio 8", completed: false },
+                            { id: "prisma1-9", label: "Episodio 9", completed: false },
+                            { id: "prisma1-10", label: "Episodio 10", completed: false }
+                        ]
+                    }
+                ]
+            },
+            "Otros (Mundos Alternativos e Independientes)": {
+                items: [
+                    { 
+                        id: "apocrypha", 
+                        label: "Fate/Apocrypha", 
+                        format: "Anime", 
+                        completed: true,
+                        episodes: [
+                            { id: "apoc-1", label: "Episodio 1", completed: true },
+                            { id: "apoc-2", label: "Episodio 2", completed: true },
+                            { id: "apoc-3", label: "Episodio 3", completed: true },
+                            { id: "apoc-4", label: "Episodio 4", completed: true },
+                            { id: "apoc-5", label: "Episodio 5", completed: true },
+                            { id: "apoc-6", label: "Episodio 6", completed: true },
+                            { id: "apoc-7", label: "Episodio 7", completed: true },
+                            { id: "apoc-8", label: "Episodio 8", completed: true },
+                            { id: "apoc-9", label: "Episodio 9", completed: true },
+                            { id: "apoc-10", label: "Episodio 10", completed: true },
+                            { id: "apoc-11", label: "Episodio 11", completed: true },
+                            { id: "apoc-12", label: "Episodio 12", completed: true },
+                            { id: "apoc-13", label: "Episodio 13", completed: true },
+                            { id: "apoc-14", label: "Episodio 14", completed: true },
+                            { id: "apoc-15", label: "Episodio 15", completed: true },
+                            { id: "apoc-16", label: "Episodio 16", completed: true },
+                            { id: "apoc-17", label: "Episodio 17", completed: true },
+                            { id: "apoc-18", label: "Episodio 18", completed: true },
+                            { id: "apoc-19", label: "Episodio 19", completed: true },
+                            { id: "apoc-20", label: "Episodio 20", completed: true },
+                            { id: "apoc-21", label: "Episodio 21", completed: true },
+                            { id: "apoc-22", label: "Episodio 22", completed: true },
+                            { id: "apoc-23", label: "Episodio 23", completed: true },
+                            { id: "apoc-24", label: "Episodio 24", completed: true },
+                            { id: "apoc-25", label: "Episodio 25", completed: true }
+                        ]
+                    }
+                ]
+            }
+        };
+
+        // Variables globales
+        let currentFilter = 'all';
+        let checklistData = {};
+
+        // Cargar datos guardados o usar los predeterminados
+        function loadChecklistData() {
+            const savedData = localStorage.getItem('fateChecklist');
+            if (savedData) {
+                return JSON.parse(savedData);
+            }
+            return fateChecklistData;
+        }
+
+        // Guardar datos en localStorage
+        function saveChecklistData(data) {
+            localStorage.setItem('fateChecklist', JSON.stringify(data));
+            checklistData = data;
+        }
+
+        // Inicializar la aplicación
+        function initApp() {
+            checklistData = loadChecklistData();
+            setupEventListeners();
+            renderChecklist();
+            setupTheme();
+            updateTotalProgress();
+        }
+
+        // Configurar event listeners
+        function setupEventListeners() {
+            // Filtros
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    e.target.classList.add('active');
+                    currentFilter = e.target.dataset.filter;
+                    renderChecklist();
+                });
+            });
+
+            // Importar/Exportar
+            document.getElementById('export-btn').addEventListener('click', exportData);
+            document.getElementById('import-btn').addEventListener('click', () => {
+                document.getElementById('file-input').click();
+            });
+            document.getElementById('file-input').addEventListener('change', importData);
+        }
+
+        // Renderizar la checklist completa
+        function renderChecklist() {
+            const container = document.getElementById('checklist-container');
+            container.innerHTML = '';
+
+            for (const [sagaName, sagaData] of Object.entries(checklistData)) {
+                const sagaElement = document.createElement('div');
+                sagaElement.className = 'saga';
+                
+                const details = document.createElement('details');
+                details.className = 'saga-details';
+                const summary = document.createElement('summary');
+                summary.className = 'saga-summary';
+                
+                // Calcular progreso de la saga
+                const totalItems = countItems(sagaData.items);
+                const completedItems = countCompletedItems(sagaData.items);
+                const percentage = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0;
+                
+                summary.innerHTML = `
+                    <span>${sagaName}</span>
+                    <div class="progress-container">
+                        <span class="progress-text">${percentage}%</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: ${percentage}%"></div>
+                        </div>
+                    </div>
+                `;
+                
+                const contentDiv = document.createElement('div');
+                
+                // Renderizar items de la saga (filtrando si es necesario)
+                let hasVisibleItems = false;
+                
+                sagaData.items.forEach(item => {
+                    if (shouldShowItem(item)) {
+                        hasVisibleItems = true;
+                        contentDiv.appendChild(createAnimeItem(item, sagaName));
+                    }
+                });
+                
+                if (!hasVisibleItems) {
+                    const noItemsMsg = document.createElement('p');
+                    noItemsMsg.style.padding = '15px';
+                    noItemsMsg.style.textAlign = 'center';
+                    noItemsMsg.style.color = '#888';
+                    noItemsMsg.textContent = 'No hay elementos que coincidan con el filtro';
+                    contentDiv.appendChild(noItemsMsg);
+                }
+                
+                details.appendChild(summary);
+                details.appendChild(contentDiv);
+                sagaElement.appendChild(details);
+                container.appendChild(sagaElement);
+            }
+        }
+
+        // Determinar si un item debe mostrarse según el filtro actual
+        function shouldShowItem(item) {
+            if (currentFilter === 'all') return true;
+            if (currentFilter === 'completed') return item.completed;
+            if (currentFilter === 'incomplete') return !item.completed;
+            return true;
+        }
+
+        // Crear elemento de anime con sus episodios
+        function createAnimeItem(item, sagaName) {
+            const animeDiv = document.createElement('div');
+            animeDiv.className = 'anime-item';
+            
+            const details = document.createElement('details');
+            details.className = 'anime-details';
+            
+            const summary = document.createElement('summary');
+            summary.className = 'anime-summary';
+            
+            // Checkbox para el anime completo
+            const animeCheckbox = document.createElement('input');
+            animeCheckbox.type = 'checkbox';
+            animeCheckbox.id = `main-${item.id}`;
+            animeCheckbox.checked = item.completed || false;
+            animeCheckbox.addEventListener('change', () => toggleAnimeComplete(item.id, sagaName));
+            
+            const label = document.createElement('label');
+            label.htmlFor = `main-${item.id}`;
+            label.textContent = item.label;
+            
+            const formatSpan = document.createElement('span');
+            formatSpan.className = 'format';
+            formatSpan.textContent = item.format;
+            
+            label.appendChild(formatSpan);
+            summary.appendChild(animeCheckbox);
+            summary.appendChild(label);
+            
+            const checklist = document.createElement('div');
+            checklist.className = 'checklist';
+            
+            // Si hay episodios, renderizarlos
+            if (item.episodes && item.episodes.length > 0) {
+                const episodeList = document.createElement('div');
+                episodeList.className = 'episode-list';
+                
+                item.episodes.forEach(episode => {
+                    episodeList.appendChild(createEpisodeItem(episode, item.id, sagaName));
+                });
+                
+                checklist.appendChild(episodeList);
+            }
+            
+            details.appendChild(summary);
+            details.appendChild(checklist);
+            animeDiv.appendChild(details);
+            
+            return animeDiv;
+        }
+
+        // Crear elemento de episodio individual
+        function createEpisodeItem(episode, animeId, sagaName) {
+            const episodeDiv = document.createElement('div');
+            episodeDiv.className = 'check-item';
+            
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.id = episode.id;
+            checkbox.checked = episode.completed || false;
+            checkbox.addEventListener('change', () => toggleEpisodeComplete(episode.id, animeId, sagaName));
+            
+            const label = document.createElement('label');
+            label.htmlFor = episode.id;
+            label.textContent = episode.label;
+            
+            episodeDiv.appendChild(checkbox);
+            episodeDiv.appendChild(label);
+            
+            return episodeDiv;
+        }
+
+        // Alternar estado completo de un anime
+        function toggleAnimeComplete(animeId, sagaName) {
+            const anime = checklistData[sagaName].items.find(a => a.id === animeId);
+            if (anime) {
+                anime.completed = !anime.completed;
+                
+                // Si se marca como completado, marcar todos los episodios como completados
+                if (anime.completed && anime.episodes) {
+                    anime.episodes.forEach(episode => {
+                        episode.completed = true;
+                    });
+                }
+                
+                saveChecklistData(checklistData);
+                renderChecklist();
+                updateTotalProgress();
+            }
+        }
+
+        // Alternar estado completo de un episodio
+        function toggleEpisodeComplete(episodeId, animeId, sagaName) {
+            const anime = checklistData[sagaName].items.find(a => a.id === animeId);
+            if (anime && anime.episodes) {
+                const episode = anime.episodes.find(e => e.id === episodeId);
+                if (episode) {
+                    episode.completed = !episode.completed;
+                    
+                    // Verificar si todos los episodios están completos para marcar el anime como completo
+                    const allEpisodesCompleted = anime.episodes.every(e => e.completed);
+                    anime.completed = allEpisodesCompleted;
+                    
+                    saveChecklistData(checklistData);
+                    renderChecklist();
+                    updateTotalProgress();
+                }
+            }
+        }
+
+        // Contar items totales (incluyendo episodios)
+        function countItems(items) {
+            let count = 0;
+            items.forEach(item => {
+                count++;
+                if (item.episodes && item.episodes.length > 0) {
+                    count += item.episodes.length;
+                }
+            });
+            return count;
+        }
+
+        // Contar items completados (incluyendo episodios)
+        function countCompletedItems(items) {
+            let count = 0;
+            items.forEach(item => {
+                if (item.completed) count++;
+                if (item.episodes && item.episodes.length > 0) {
+                    item.episodes.forEach(episode => {
+                        if (episode.completed) count++;
+                    });
+                }
+            });
+            return count;
+        }
+
+        // Actualizar progreso total
+        function updateTotalProgress() {
+            let totalItems = 0;
+            let completedItems = 0;
+            
+            for (const saga of Object.values(checklistData)) {
+                totalItems += countItems(saga.items);
+                completedItems += countCompletedItems(saga.items);
+            }
+            
+            const percentage = totalItems > 0 ? Math.round((completedItems / totalItems) * 100) : 0;
+            
+            document.getElementById('total-progress-bar').style.width = `${percentage}%`;
+            document.getElementById('completed-items').textContent = completedItems;
+            document.getElementById('total-items').textContent = totalItems;
+            document.getElementById('percentage').textContent = `${percentage}%`;
+        }
+
+        // Configurar el tema claro/oscuro
+        function setupTheme() {
+            const themeToggle = document.getElementById('themeToggle');
+            const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            // Establecer tema inicial basado en preferencias del sistema
+            if (prefersDarkScheme) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = '☀️';
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                themeToggle.textContent = '🌙';
+            }
+            
+            // Alternar tema al hacer clic
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                if (currentTheme === 'dark') {
+                    document.documentElement.removeAttribute('data-theme');
+                    themeToggle.textContent = '🌙';
+                    localStorage.setItem('theme', 'light');
+                } else {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.textContent = '☀️';
+                    localStorage.setItem('theme', 'dark');
+                }
+            });
+            
+            // Respeta la selección previa del usuario si existe
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                if (savedTheme === 'dark') {
+                    document.documentElement.setAttribute('data-theme', 'dark');
+                    themeToggle.textContent = '☀️';
+                } else {
+                    document.documentElement.removeAttribute('data-theme');
+                    themeToggle.textContent = '🌙';
+                }
+            }
+        }
+
+        // Exportar datos
+        function exportData() {
+            const dataStr = JSON.stringify(checklistData, null, 2);
+            const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+            
+            const exportFileDefaultName = 'fate-checklist.json';
+            
+            const linkElement = document.createElement('a');
+            linkElement.setAttribute('href', dataUri);
+            linkElement.setAttribute('download', exportFileDefaultName);
+            linkElement.click();
+            
+            showNotification('Datos exportados con éxito');
+        }
+
+        // Importar datos
+        function importData(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+            
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const importedData = JSON.parse(e.target.result);
+                    saveChecklistData(importedData);
+                    renderChecklist();
+                    updateTotalProgress();
+                    showNotification('Datos importados con éxito');
+                } catch (error) {
+                    showNotification('Error al importar datos: formato inválido', true);
+                }
+            };
+            reader.readAsText(file);
+            
+            // Reset input
+            event.target.value = '';
+        }
+
+        // Mostrar notificación
+        function showNotification(message, isError = false) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            
+            if (isError) {
+                notification.style.borderLeftColor = '#f44336';
+            } else {
+                notification.style.borderLeftColor = "var(--completed-color)";
+            }
+            
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Iniciar la aplicación cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', initApp);
+    </script>
+</body>
+</html>
