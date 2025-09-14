@@ -17,6 +17,7 @@ function initApp() {
     renderChecklist();
     setupTheme();
     updateTotalProgress(checklistData);
+    setupMenuAccessibility();
 }
 
 // Configurar event listeners
@@ -25,6 +26,8 @@ function setupEventListeners() {
     const $exportBtn = $('#export-btn');
     const $importBtn = $('#import-btn');
     const $fileInput = $('#file-input');
+    const $menu = $('#main-menu');
+    const $summary = $menu.querySelector('summary');
 
     // Selecciona el filtro, y le da la clase active al botón correspondiente
     $filterBtns.forEach(button => {
@@ -34,6 +37,11 @@ function setupEventListeners() {
             currentFilter = handleFilterClick(e, $filterBtns); // Delegamos en handleFilterClick, los cambios de estilos de los botones de filtro
             renderChecklist(); // renderizamos
         });
+    });
+
+    //Cuando se cambie el estado del menú, actualizamos el estado de accesibilidad
+    $menu.addEventListener('toggle', (e) => {
+        $summary.setAttribute('aria-expanded', e.target.open);
     });
 
     //Exporta los datos al hacer clic 
