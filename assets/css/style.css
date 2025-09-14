@@ -283,7 +283,6 @@ details.menu a.button:active {
     text-align: right;
 }
 
-
 .progress-bar {
     width: 90%;
     margin-inline: auto;
@@ -291,13 +290,6 @@ details.menu a.button:active {
     background-color: var(--progress-bg);
     border-radius: 4px;
     border: none;
-}
-
-.progress-fill {
-    height: 100%;
-    background-color: var(--completed-color);
-    border-radius: 4px;
-    transition: all 0.3s ease;
 }
 
 .progress-bar::-webkit-progress-bar {
