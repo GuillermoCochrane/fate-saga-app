@@ -40,7 +40,7 @@ body {
     transition: background-color 0.3s, color 0.3s;
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px;
 }
 
 header {
