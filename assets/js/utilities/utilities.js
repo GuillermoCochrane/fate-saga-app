@@ -57,10 +57,10 @@ export function showNotification(message, isError = false) {
 
 // Actualizar progreso total
 export function updateTotalProgress(checklistData) {
-    const $totalProgressBar = $('#total-progress-bar');
     const $completedItems = $('#completed-items');
     const $totalItems = $('#total-items');
     const $percentage = $('#percentage');
+    const $progressBar = $('#complete-progress-bar');
     let totalItems = 0;
     let completedItems = 0;
     
@@ -73,8 +73,8 @@ export function updateTotalProgress(checklistData) {
     
     const percentage = calculatePercentage(completedItems, totalItems);
     //si hay items, calculamos el porcentaje de completados, siempre que no sea 0
-    
-    $totalProgressBar.style.width = `${percentage}%`; //Actualizamos el progreso total
+
+    $progressBar.value = percentage;
     $completedItems.textContent = completedItems; //Actualizamos el número de items completados
     $totalItems.textContent = totalItems; //Actualizamos el número de items totales
     $percentage.textContent = `${percentage}%`; //Actualizamos el porcentaje de completados
