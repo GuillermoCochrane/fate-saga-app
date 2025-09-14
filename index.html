@@ -10,6 +10,21 @@
 </head>
 <body>
     <header>
+        <details class="menu" id="main-menu" role="menu">
+            <summary role="button" aria-haspopup="menu" aria-expanded="false">
+                <a class="button">
+                    <span class="open-icon">☰</span>
+                    <span class="close-icon">✖</span>
+                </a>
+            </summary>
+            <ul>
+                <li><hr class="link-separator"></li>
+                <li><a href="#" id="export-btn">Exportar</a></li>
+                <li><a href="#" id="import-btn">Importar</a></li>
+                <li><input type="file" id="file-input" accept=".json"></li>
+                <li><hr class="link-separator"></li>
+            </ul>
+        </details>
         <h1>Fate View Checklist</h1>
         <p>Seguimiento de tu progreso en el universo Fate</p>
         <button class="theme-toggle" id="themeToggle">🌙</button>
@@ -20,11 +35,6 @@
             <button class="filter-btn active" data-filter="all">Todos</button>
             <button class="filter-btn" data-filter="completed">Completados</button>
             <button class="filter-btn" data-filter="incomplete">No completados</button>
-        </section>
-        <section class="import-export">
-            <button class="io-btn" id="export-btn">Exportar</button>
-            <button class="io-btn" id="import-btn">Importar</button>
-            <input type="file" id="file-input" accept=".json">
         </section>
     </nav>
 
