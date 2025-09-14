@@ -283,20 +283,42 @@ details.menu a.button:active {
     text-align: right;
 }
 
+
 .progress-bar {
     width: 90%;
     margin-inline: auto;
     height: 8px;
     background-color: var(--progress-bg);
     border-radius: 4px;
-    overflow: hidden;
+    border: none;
 }
 
 .progress-fill {
     height: 100%;
     background-color: var(--completed-color);
     border-radius: 4px;
-    transition: width 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+.progress-bar::-webkit-progress-bar {
+    background-color: var(--progress-bg);
+    border-radius: 4px;
+}
+
+.progress-bar::-webkit-progress-value {
+    background-color: var(--completed-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.progress-bar::-moz-progress-bar {
+    background-color: var(--completed-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.progress-bar[value] {
+    color: var(--completed-color);
 }
 
 .anime-item {
@@ -476,7 +498,7 @@ p.empty-list {
     }
     
     .progress-bar {
-        width: 80px;
+        width: 50%;
     }
     
     .stats {
