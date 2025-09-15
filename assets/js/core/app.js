@@ -1,6 +1,6 @@
 //? Funciones encargada de manejar la aplicación
 
-import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeComplete } from './eventHandlers.js';
+import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeComplete, resetProgress } from './eventHandlers.js';
 import { setupTheme } from '../utilities/theme.js';
 import { $, $$, createElement } from '../utilities/dom.js';
 import { importData, exportData, saveChecklistData, loadChecklistData } from '../utilities/storage.js';
@@ -25,6 +25,7 @@ function setupEventListeners() {
     const $exportBtn = $('#export-btn');
     const $importBtn = $('#import-btn');
     const $resetMemoryBtn = $('#reset-memory-btn');
+    const $resetProgressBtn = $('#reset-progress-btn');
     const $fileInput = $('#file-input');
     const $menu = $('#main-menu');
     const $summary = $menu.querySelector('summary');
@@ -47,7 +48,10 @@ function setupEventListeners() {
     //Borra los datos guardados en localStorage
     $resetMemoryBtn.addEventListener('click', () => {
         localStorage.removeItem('fateChecklist');
-        location.reload();
+        showNotification('Memoria borrada correctamente');
+        setTimeout(() => {
+            location.reload();
+        }, 1000);
     });
 
     //Exporta los datos al hacer clic 
