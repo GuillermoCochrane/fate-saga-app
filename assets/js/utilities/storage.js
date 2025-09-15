@@ -5,7 +5,7 @@ import { fateChecklistData } from '../../data/data.js';
 // Cargar datos guardados en localStorage o usar los predeterminados
 export function loadChecklistData() {
     const savedData = localStorage.getItem('fateChecklist'); //Capturamos los datos guardados en localStorage
-    return savedData ? JSON.parse(savedData) : {...fateChecklistData}; //Si los datos existen. los devuelve, si no, devuelve los datos por defecto
+    return savedData ? JSON.parse(savedData) : [...fateChecklistData]; //Si los datos existen. los devuelve, si no, devuelve los datos por defecto
 }
 
 // Guardar datos en localStorage
