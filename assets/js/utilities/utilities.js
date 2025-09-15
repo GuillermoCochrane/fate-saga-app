@@ -64,7 +64,7 @@ export function updateTotalProgress(checklistData) {
     let totalItems = 0;
     let completedItems = 0;
     
-    for (const saga of Object.values(checklistData)) {
+    for (const saga of checklistData) {
         //Recorremos cada saga en el objeto
         let { total, completed } = countEpisodes(saga.seasons); //calculamos el total de episodios de la saga
         totalItems += total; //Calculamos el total de items de la saga
