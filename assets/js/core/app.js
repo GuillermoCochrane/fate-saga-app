@@ -53,6 +53,15 @@ function setupEventListeners() {
             location.reload();
         }, 1000);
     });
+    
+    //Resetea el progreso de la franquicia
+    $resetProgressBtn.addEventListener('click', () => {
+        checklistData = resetProgress(checklistData);
+        saveChecklistData(checklistData);
+        renderChecklist();
+        updateTotalProgress(checklistData);
+        showNotification('Progreso reseteado correctamente');
+    });
 
     //Exporta los datos al hacer clic 
     $exportBtn.addEventListener('click', () => {
