@@ -17,7 +17,6 @@ function initApp() {
     renderChecklist();
     setupTheme();
     updateTotalProgress(checklistData);
-    setupMenuAccessibility();
 }
 
 // Configurar event listeners
@@ -25,6 +24,7 @@ function setupEventListeners() {
     const $filterBtns = $$('.filter-btn');
     const $exportBtn = $('#export-btn');
     const $importBtn = $('#import-btn');
+    const $resetMemoryBtn = $('#reset-memory-btn');
     const $fileInput = $('#file-input');
     const $menu = $('#main-menu');
     const $summary = $menu.querySelector('summary');
@@ -42,6 +42,12 @@ function setupEventListeners() {
     //Cuando se cambie el estado del menú, actualizamos el estado de accesibilidad
     $menu.addEventListener('toggle', (e) => {
         $summary.setAttribute('aria-expanded', e.target.open);
+    });
+
+    //Borra los datos guardados en localStorage
+    $resetMemoryBtn.addEventListener('click', () => {
+        localStorage.removeItem('fateChecklist');
+        location.reload();
     });
 
     //Exporta los datos al hacer clic 
