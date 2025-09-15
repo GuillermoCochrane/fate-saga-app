@@ -3,9 +3,9 @@
 // Alternar estado completo de una temporada
 export function toggleSeasonComplete(seasonID, sagaName, checklistData) {
     const newData = JSON.parse(JSON.stringify(checklistData));
-    const saga = newData.find(saga => saga.saga === sagaName);
-    const seasons = saga.seasons.find(season => season.id === seasonID);
-    //Buscamos la temporada con ese id en el objeto
+    const saga = newData.find(saga => saga.saga === sagaName); // Buscamos el saga con ese nombre
+    const seasons = saga.seasons.find(season => season.id === seasonID); // Buscamos la temporada con ese id
+
     if (seasons) {
         //Si se ecnuetra la temporada...
         seasons.completed = !seasons.completed;
@@ -32,23 +32,17 @@ export function toggleSeasonComplete(seasonID, sagaName, checklistData) {
 // Alternar estado completo de un episodio
 export function toggleEpisodeComplete(episodeID, seasonID, sagaName, checklistData) {
     const newData = JSON.parse(JSON.stringify(checklistData));
-    const saga = newData.find(saga => saga.saga === sagaName);
-    const season = saga.seasons.find(season => season.id === seasonID);
-    //Buscamos la temporada con ese id en el objeto
+    const saga = newData.find(saga => saga.saga === sagaName); // Buscamos el saga con ese nombre
+    const season = saga.seasons.find(season => season.id === seasonID); // Buscamos la temporada con ese id
+
     if (season && season.episodes) {
         //Si se encuentra el temporada y tiene episodios...
-        const episode = season.episodes.find(episode => episode.id === episodeID);
-        //Buscamos el episodio con ese id en el temporada
+        const episode = season.episodes.find(episode => episode.id === episodeID); //Buscamos el episodio con ese id en el temporada
         if (episode) {
             //Si se encuentra el episodio...
-            episode.completed = !episode.completed;
-            //Le cambiamos el estado del episodio
-
-            // Verificar si todos los episodios están completos para marcar la temporada como completa
-            const allEpisodesCompleted = season.episodes.every(episode => episode.completed);
-            //Verificamos si todos los episodios están completos para marcar la temporada como completa
-            season.completed = allEpisodesCompleted;
-            //Actualizamos el estado de la temporada
+            episode.completed = !episode.completed; //Le cambiamos el estado del episodio
+            const allEpisodesCompleted = season.episodes.every(episode => episode.completed); //Verificamos si todos los episodios están completos para marcar la temporada como completa
+            season.completed = allEpisodesCompleted; //Actualizamos el estado de la temporada
             return newData; //devuelve el objeto con los cambios
         }
     }
@@ -74,9 +68,9 @@ export function handleDetails(event, checklistData) {
         if (details.classList.contains('saga-details')) {
             //si el details tiene la clase saga-details
             const sagaName = details.querySelector('.saga-title').textContent; //guardamos el texto del título
-            if (newData[sagaName]) {
-                //si el título existe en el objeto
-                newData[sagaName].opened = isOpen; //actualizamos el objeto, guardando el estado del details 
+            const saga = newData.find(saga => saga.saga === sagaName); // Buscamos el saga con ese nombre
+            if (saga) {
+                saga.opened = isOpen; //actualizamos el objeto, guardando el estado del details
                 return newData; //devuelve el objeto con los cambios
             }
         } 
@@ -85,7 +79,7 @@ export function handleDetails(event, checklistData) {
             const seasonID = details.querySelector('input[type="checkbox"]').id.replace('main-', ''); //guardamos el id del checkbox
             
             // recorrremos todas las sagas en localStorage
-            for (const [sagaName, sagaData] of Object.entries(newData)) {
+            for (const sagaData of newData) {
                 const season = sagaData.seasons.find(season => season.id === seasonID); // capturamos la temporada con ese id
                 if (season) {
                     //si encuentra la temporada
