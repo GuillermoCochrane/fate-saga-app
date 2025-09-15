@@ -9,7 +9,7 @@ import { sagaSummaryCreator, sagaCreator } from '../components/saga.js';
 
 // 📁 core/app.js
 export let currentFilter = 'all';
-export let checklistData = {};
+export let checklistData = [];
 
 function initApp() {
     checklistData = loadChecklistData();
@@ -89,8 +89,8 @@ function renderChecklist() {
     $container.innerHTML = '';
 
     // recorremos cada saga en el objeto
-    for (const [sagaName, sagaData] of Object.entries(checklistData)) {
-
+    for (const sagaData of checklistData) {
+        const sagaName = sagaData.saga;
         const $sagaElement = createElement('div', 'saga');          // Creamos el elemento div con la clase saga
         const $details = createElement('details', 'saga-details');  //Creamos el elemento details, y le ponemos  el atributo open cuando corresponda, asi el details queda abierto
         if (sagaData.opened) {
