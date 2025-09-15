@@ -1,6 +1,7 @@
 // Datos iniciales de la checklist con episodios
-export const fateChecklistData = {
-  "Fate Saga": {
+export const fateChecklistData = [
+  {
+    saga: "Fate Saga",
     opened: false,
     seasons: [
       {
@@ -504,7 +505,8 @@ export const fateChecklistData = {
       },
     ],
   },
-  "Lord El-Melloi II": {
+  {
+    saga: "Lord El-Melloi II",
     opened: false,
     seasons: [
       {
@@ -611,7 +613,8 @@ export const fateChecklistData = {
       },
     ],
   },
-  "Fate/Strange Fake": {
+  {
+    saga: "Fate/Strange Fake",
     opened: false,
     seasons: [
       {
@@ -712,7 +715,8 @@ export const fateChecklistData = {
       },
     ],
   },
-  "Fate/Grand Order": {
+  {
+    saga: "Fate/Grand Order",
     opened: false,
     seasons: [
       {
@@ -993,7 +997,8 @@ export const fateChecklistData = {
       },
     ],
   },
-  "Fate/Kaleid Liner Prisma Illya": {
+  {
+    saga: "Fate/Kaleid Liner Prisma Illya",
     opened: false,
     seasons: [
       {
@@ -1367,7 +1372,8 @@ export const fateChecklistData = {
       },
     ],
   },
-  "Otros (Mundos Alternativos e Independientes)": {
+  {
+    saga: "Otros (Mundos Alternativos e Independientes)",
     opened: false,
     seasons: [
       {
@@ -1857,4 +1863,4 @@ export const fateChecklistData = {
       },
     ],
   },
-};
+];
