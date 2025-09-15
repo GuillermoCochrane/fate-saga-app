@@ -91,3 +91,21 @@ export function handleDetails(event, checklistData) {
     }
     return checklistData; //devuelve el original si no se ha cambiado nada
 }
+
+// Función para resetear progreso
+export function resetProgress(checklistData) {
+    const newData = JSON.parse(JSON.stringify(checklistData));
+
+    for (const saga of newData) {
+        for (const season of saga.seasons) {
+            season.completed = false;
+            if (season.episodes) {
+                for (const episode of season.episodes) {
+                    episode.completed = false;
+                }
+            }
+        }
+    }
+
+    return newData;
+}
