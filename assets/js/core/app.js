@@ -3,7 +3,7 @@
 import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeComplete, resetProgress } from './eventHandlers.js';
 import { setupTheme } from '../utilities/theme.js';
 import { $, $$, createElement } from '../utilities/dom.js';
-import { importData, exportData, saveChecklistData, loadChecklistData } from '../utilities/storage.js';
+import { importData, exportData, saveChecklistData, loadChecklistData, loadChecklistTitle } from '../utilities/storage.js';
 import { updateTotalProgress, calculateProgress, showNotification, updateChecklistTitle } from '../utilities/utilities.js';
 import { sagaSummaryCreator, sagaCreator } from '../components/saga.js';
 
@@ -14,6 +14,7 @@ export let checklistTitle = '';
 
 function initApp() {
     checklistData = loadChecklistData();
+    checklistTitle = loadChecklistTitle();
     setupEventListeners();
     updateChecklistTitle(checklistTitle);
     renderChecklist();
