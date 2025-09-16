@@ -49,7 +49,7 @@ function setupEventListeners() {
 
     //Borra los datos guardados en localStorage
     $resetMemoryBtn.addEventListener('click', () => {
-        localStorage.removeItem('fateChecklist');
+        localStorage.removeItem('checklist');
         showNotification('Memoria borrada correctamente');
         setTimeout(() => {
             location.reload();
