@@ -79,3 +79,13 @@ export function updateTotalProgress(checklistData) {
     $totalItems.textContent = totalItems; //Actualizamos el número de items totales
     $percentage.textContent = `${percentage}%`; //Actualizamos el porcentaje de completados
 }
+
+export function updateChecklistTitle(title) {
+    const $tabtitle = $("title")    
+    const $franchiseMainTitle = $('#franchise-main-title');
+    const $franchiseText = $('#franchise-text');
+
+    $tabtitle.textContent = title + ' - Checklist';
+    $franchiseMainTitle.textContent = title;
+    $franchiseText.textContent = title;
+}

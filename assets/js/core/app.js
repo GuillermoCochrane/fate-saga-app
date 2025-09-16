@@ -4,16 +4,18 @@ import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeCo
 import { setupTheme } from '../utilities/theme.js';
 import { $, $$, createElement } from '../utilities/dom.js';
 import { importData, exportData, saveChecklistData, loadChecklistData } from '../utilities/storage.js';
-import { updateTotalProgress, calculateProgress, showNotification } from '../utilities/utilities.js';
+import { updateTotalProgress, calculateProgress, showNotification, updateChecklistTitle } from '../utilities/utilities.js';
 import { sagaSummaryCreator, sagaCreator } from '../components/saga.js';
 
 // 📁 core/app.js
 export let currentFilter = 'all';
 export let checklistData = [];
+export let checklistTitle = '';
 
 function initApp() {
     checklistData = loadChecklistData();
     setupEventListeners();
+    updateChecklistTitle(checklistTitle);
     renderChecklist();
     setupTheme();
     updateTotalProgress(checklistData);
