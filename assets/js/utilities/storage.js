@@ -19,6 +19,11 @@ export function saveChecklistData(data) {
     localStorage.setItem('checklist', JSON.stringify(data)); //Convertimos los datos a un string JSON y lo guardamos en localStorage en el key 'checklist'
 }
 
+// Guardar datos del titulo de la checklist en localStorage
+export function saveChecklistTitle(title) {
+    localStorage.setItem('checklistTitle', JSON.stringify(title)); //Convertimos el titulo a un string JSON y lo guardamos en localStorage en el key 'checklistTitle'
+}
+
 // Exportar datos
 export function exportData(checklistData) {
     const dataStr = JSON.stringify(checklistData, null, 2); //Guardamos los datos de la checklist en un string JSON

@@ -83,8 +83,10 @@ function setupEventListeners() {
     $fileInput.addEventListener('change', async (event) => {
         try {
             const importedData = await importData(event);
-            checklistData = importedData;
+            checklistData = importedData.checklistData;
+            checklistTitle = importedData.checklistTitle;
             saveChecklistData(checklistData);
+            saveChecklistTitle(checklistTitle);
             renderChecklist();
             updateTotalProgress(checklistData);
             showNotification('Datos importados con éxito');
