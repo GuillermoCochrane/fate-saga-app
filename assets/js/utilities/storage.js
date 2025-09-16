@@ -52,9 +52,12 @@ export function importData(event) {
         reader.onload = (e) => {
             try {
                 const importedData = JSON.parse(e.target.result);
-                resolve(importedData); // ← Devuelve datos
+                resolve({
+                    checklistData: importedData.sagas,       // ← Array de sagas
+                    checklistTitle: importedData.franchise   // ← String de título
+                });
             } catch (error) {
-                reject(error); // ← Devuelve error
+                reject(error);
             }
         };
         reader.readAsText(file);
