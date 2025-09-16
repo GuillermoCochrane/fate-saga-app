@@ -19,17 +19,21 @@ export function saveChecklistData(data) {
     localStorage.setItem('checklist', JSON.stringify(data)); //Convertimos los datos a un string JSON y lo guardamos en localStorage en el key 'checklist'
 }
 
-// Guardar datos del titulo de la checklist en localStorage
+// Guardar el titulo de la franquicia en localStorage
 export function saveChecklistTitle(title) {
     localStorage.setItem('checklistTitle', JSON.stringify(title)); //Convertimos el titulo a un string JSON y lo guardamos en localStorage en el key 'checklistTitle'
 }
 
 // Exportar datos
-export function exportData(checklistData) {
-    const dataStr = JSON.stringify(checklistData, null, 2); //Guardamos los datos de la checklist en un string JSON
+export function exportData(checklistData, checklistTitle) {
+    const data = {
+        franchise: checklistTitle,
+        sagas: checklistData
+    }; //Creamos un objeto con los datos de la checklist y el titulo
+    const dataStr = JSON.stringify(data, null, 2); //Guardamos los datos de la checklist en un string JSON
     const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr); //Creamos un URI para el string de datos
     
-    const exportFileDefaultName = 'fate-checklist.json'; //Nombre del archivo por defecto
+    const exportFileDefaultName = `${checklistTitle}-checklist.json`; //Nombre del archivo por defecto
     
     const linkElement = document.createElement('a'); //Creamos el un enlace
     linkElement.setAttribute('href', dataUri); //Asignamos el URI al atributo href del enlace

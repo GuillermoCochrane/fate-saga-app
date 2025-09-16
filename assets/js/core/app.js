@@ -3,7 +3,7 @@
 import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeComplete, resetProgress } from './eventHandlers.js';
 import { setupTheme } from '../utilities/theme.js';
 import { $, $$, createElement } from '../utilities/dom.js';
-import { importData, exportData, saveChecklistData, loadChecklistData, loadChecklistTitle } from '../utilities/storage.js';
+import { importData, exportData, saveChecklistData, loadChecklistData, loadChecklistTitle, saveChecklistTitle } from '../utilities/storage.js';
 import { updateTotalProgress, calculateProgress, showNotification, updateChecklistTitle } from '../utilities/utilities.js';
 import { sagaSummaryCreator, sagaCreator } from '../components/saga.js';
 
@@ -66,9 +66,9 @@ function setupEventListeners() {
         showNotification('Progreso reseteado correctamente');
     });
 
-    //Exporta los datos al hacer clic 
+   //Exporta los datos al hacer clic 
     $exportBtn.addEventListener('click', () => {
-        exportData(checklistData); // ← Pasar explícitamente
+        exportData(checklistData, checklistTitle); // ← Pasar explícitamente
         showNotification('Datos exportados con éxito'); // ← Notificación aquí
     });
 
@@ -94,7 +94,7 @@ function setupEventListeners() {
             showNotification('Error al importar: ' + error.message, true);
         }
     });
-    
+
     // Event delegation para cambios de estado de details
     document.addEventListener('toggle', (e) => { 
         const newData = handleDetails(e, checklistData);
