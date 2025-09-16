@@ -3,7 +3,7 @@
 import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeComplete, resetProgress } from './eventHandlers.js';
 import { setupTheme } from '../utilities/theme.js';
 import { $, $$, createElement } from '../utilities/dom.js';
-import { importData, exportData, saveChecklistData, loadChecklistData, loadChecklistTitle, saveChecklistTitle } from '../utilities/storage.js';
+import { importData, exportData, saveChecklistData, loadChecklistData, loadChecklistTitle, saveChecklistTitle } from '../utilities/storage.js'; 
 import { updateTotalProgress, calculateProgress, showNotification, updateChecklistTitle } from '../utilities/utilities.js';
 import { sagaSummaryCreator, sagaCreator } from '../components/saga.js';
 
@@ -51,6 +51,7 @@ function setupEventListeners() {
     //Borra los datos guardados en localStorage
     $resetMemoryBtn.addEventListener('click', () => {
         localStorage.removeItem('checklist');
+        localStorage.removeItem('checklistTitle');
         showNotification('Memoria borrada correctamente');
         setTimeout(() => {
             location.reload();
@@ -66,7 +67,7 @@ function setupEventListeners() {
         showNotification('Progreso reseteado correctamente');
     });
 
-   //Exporta los datos al hacer clic 
+    //Exporta los datos al hacer clic 
     $exportBtn.addEventListener('click', () => {
         exportData(checklistData, checklistTitle); // ← Pasar explícitamente
         showNotification('Datos exportados con éxito'); // ← Notificación aquí
