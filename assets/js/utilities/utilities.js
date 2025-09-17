@@ -114,14 +114,14 @@ export function generateSecondaryTitle(title, symmbol) {
 
 export function generateTextReport(checklistData, checklistTitle) {
     const title = generateTitle(checklistTitle, '*');
-    let report = title;
+    let report = `${title}\n`;
     
     for (const saga of checklistData) {
-        const sagaTitle = generateSeparator(saga.saga, '=');
+        const sagaTitle = generateSecondaryTitle(saga.saga, '=');
         report += sagaTitle;
         
         for (const season of saga.seasons) {
-            const seasonTitle = generateSeparator(season.label, '-');
+            const seasonTitle = generateSecondaryTitle(season.label, '-');
             report += seasonTitle;
             
             if (season.episodes) {
