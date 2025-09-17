@@ -89,3 +89,8 @@ export function updateChecklistTitle(title) {
     $franchiseMainTitle.textContent = title;
     $franchiseText.textContent = title;
 }
+
+export function generateSeparator(title, symmbol) {
+    const separator = symmbol.repeat(title.length);
+    return `${separator} ${title} ${separator}\n\n`;
+}
