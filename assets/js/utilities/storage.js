@@ -1,6 +1,8 @@
 // Funciones para manipular la carga y guardado de datos
 
 import { fateChecklistData } from '../../data/data.js';
+import { asistenceChecklistData } from "../../data/asistence.js";
+
 
 // Cargar datos guardados en localStorage de la checklist o usar el predeterminado
 export function loadChecklistData() {
