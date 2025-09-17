@@ -101,19 +101,21 @@ export function generateTitle(title,symmbol) {
 }
 
 export function generateTextReport(checklistData, checklistTitle) {
-    const title = generateTitle(checklistTitle, '=');
+    const title = generateTitle(checklistTitle, '*');
     let report = title;
     
     for (const saga of checklistData) {
-        const subtitle = generateSeparator(saga.saga, '-');
-        report += subtitle;
+        const sagaTitle = generateSeparator(saga.saga, '=');
+        report += sagaTitle;
         
         for (const season of saga.seasons) {
-            report += `  "${season.label}"\n`;
+            const seasonTitle = generateSeparator(season.label, '-');
+            report += seasonTitle;
             
             if (season.episodes) {
                 for (const episode of season.episodes) {
-                    const status = episode.completed ? '✅' : '❌';
+                    //const status = episode.completed ? '✅' : '❌'; version original, con problemas para visualizar emojis en chrome de android
+                    const status = episode.completed ? '[✓]' : '[ ]';
                     report += `  ${status} ${episode.label}\n`;
                 }
             }
