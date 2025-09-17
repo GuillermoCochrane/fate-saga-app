@@ -98,8 +98,8 @@ export function generateSeparator(title, symmbol) {
 }
 
 export function generateTitle(title,symmbol) {
-    const separator = symmbol.repeat(title.length);
-    return `${separator} ${title} ${separator}\n\n`;
+    const separator = generateSeparator(title, symmbol);
+    return `\n${separator} ${title} ${separator}\n`;
 }
 
 export function generateTextReport(checklistData, checklistTitle) {
