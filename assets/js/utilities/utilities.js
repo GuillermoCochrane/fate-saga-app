@@ -124,3 +124,16 @@ export function generateTextReport(checklistData, checklistTitle) {
     
     return report;
 }
+
+export function exportTextReport(checklistData, checklistTitle) {
+    const report = generateTextReport(checklistData, checklistTitle);
+    const blob = new Blob([report], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `${checklistTitle}-report.txt`;
+    link.click();
+    
+    URL.revokeObjectURL(url);
+}
