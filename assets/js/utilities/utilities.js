@@ -106,6 +106,12 @@ export function generateMargins(title, symmbol) {
     return symmbol.repeat((title.length)-2);
 }
 
+export function generateSecondaryTitle(title, symmbol) {
+    const secondaryTitle = generateTitle(title, symmbol);
+    const margins = generateMargins(secondaryTitle, symmbol);
+    return `${margins}${secondaryTitle}${margins}\n\n`;
+}
+
 export function generateTextReport(checklistData, checklistTitle) {
     const title = generateTitle(checklistTitle, '*');
     let report = title;
