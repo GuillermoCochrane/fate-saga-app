@@ -102,6 +102,10 @@ export function generateTitle(title,symmbol) {
     return `\n${separator} ${title} ${separator}\n`;
 }
 
+export function generateMargins(title, symmbol) {
+    return symmbol.repeat((title.length)-2);
+}
+
 export function generateTextReport(checklistData, checklistTitle) {
     const title = generateTitle(checklistTitle, '*');
     let report = title;
