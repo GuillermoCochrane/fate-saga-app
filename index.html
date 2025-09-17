@@ -28,7 +28,7 @@
                 <li><hr class="link-separator"></li>
             </ul>
         </details>
-        <h1><span id="franchise-main-title"></span> View Checklist</h1>
+        <h1><span id="franchise-main-title"></span> Checklist</h1>
         <p>Seguimiento de tu progreso en el universo <span id="franchise-text"></span></p>
         <button class="theme-toggle" id="themeToggle">🌙</button>
     </header>
@@ -64,8 +64,27 @@
         </section>
     </footer>
 
-<aside class="notification" id="notification">
-    Operación realizada con éxito
-</aside>
+    <dialog class="modal" id="multifunction-modal" aria-labelledby="modal-title" role="dialog" aria-hidden="true" hidden>
+        
+        <!-- SECCIÓN CONFIRMACIÓN -->
+        <section id="confirm-section" class="modal-section" hidden>
+            <header class="confirm-header">
+                <h3>Confirmar acción</h3>
+            </header>
+            <article class="confirm-content">
+                <p id="confirm-message"><!-- Mensaje dinámico específico --></p>
+                <p>Se perderán los cambios no guardados. ¿Estás seguro de que quieres continuar?</p>
+                <footer class="modal-buttons">
+            </article>
+            <footer class="confirm-footer">
+                <button class="btn-confirm" id="confirm-action-btn">Confirmar</button>
+                <button class="btn-cancel" id="cancel-action-btn">Cancelar</button>
+            </footer>
+        </section>
+
+    </dialog>
+    <aside class="notification" id="notification">
+        Operación realizada con éxito
+    </aside>
 </body>
 </html>
