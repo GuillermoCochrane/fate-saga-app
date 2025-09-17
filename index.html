@@ -89,6 +89,70 @@
             <button class="btn-close" id="dynamic-close-btn">Cerrar</button>
         </section>
 
+        <section id="help-section" class="modal-section" hidden>
+            <header class="help-header">
+                <h3>🛠️ Centro de Ayuda</h3>
+            </header>
+            
+            <article class="help-content">
+                <!-- 📥 IMPORTAR JSON -->
+                <details open>
+                    <summary><strong>📥 Importar JSON</strong></summary>
+                    <p>Estructura requerida para importar nuevas franquicias:</p>
+                    <pre><code>{
+  "franchise": "Nombre Franquicia",
+  "sagas": [
+    {
+      "saga": "Nombre Saga",
+      "opened": false,
+      "seasons": [
+        {
+          "id": "id-único",
+          "label": "Nombre Temporada", 
+          "format": "Anime/Película/Especial",
+          "completed": false,
+          "opened": false,
+          "episodes": [
+            {
+              "id": "ep-id-único",
+              "number": 1,
+              "label": "Nombre Episodio",
+              "completed": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+                    </code></pre>
+                </details>
+
+                <!-- ⚠️ SOLUCIÓN DE PROBLEMAS -->
+                <details>
+                    <summary><strong>⚠️ Solución de Problemas</strong></summary>
+                    <ul>
+                        <li>✅ Asegurate que los IDs sean únicos</li>
+                        <li>✅ Verifica que el JSON sea válido</li>
+                        <li>✅ Los campos "completed" y "opened" deben ser booleanos</li>
+                        <li>❌ Si falla la importación, revisa la consola (F12)</li>
+                    </ul>
+                </details>
+
+                <!-- 💾 EXPORTAR/IMPORTAR -->
+                <details>
+                    <summary><strong>💾 Backup & Restore</strong></summary>
+                    <p><strong>Exportar:</strong> Guarda tu progreso actual en JSON</p>
+                    <p><strong>Importar:</strong> Carga un JSON válido (reemplaza datos actuales)</p>
+                    <p><strong>Resetear:</strong> Vuelve a los datos iniciales</p>
+                </details>
+            </article>
+
+            <footer class="help-footer">
+                <button class="btn-close" id="help-close-btn">Cerrar</button>
+            </footer>
+        </section>
+
     </dialog>
     <aside class="notification" id="notification">
         Operación realizada con éxito
