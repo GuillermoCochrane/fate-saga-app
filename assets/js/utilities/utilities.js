@@ -91,8 +91,10 @@ export function updateChecklistTitle(title) {
 }
 
 export function generateSeparator(title, symmbol) {
-    const separator = symmbol.repeat(title.length);
-    return `${separator} ${title} ${separator}\n\n`;
+    let separatorLength = Math.ceil(title.length / 4);
+    separatorLength = separatorLength > 0 ? separatorLength : 1;
+    const separator = symmbol.repeat(separatorLength);
+    return separator;
 }
 
 export function generateTitle(title,symmbol) {
