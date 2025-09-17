@@ -99,3 +99,28 @@ export function generateTitle(title,symmbol) {
     const separator = symmbol.repeat(title.length);
     return `${separator} ${title} ${separator}\n\n`;
 }
+
+export function generateTextReport(checklistData, checklistTitle) {
+    const title = generateTitle(checklistTitle, '=');
+    let report = title;
+    
+    for (const saga of checklistData) {
+        const subtitle = generateSeparator(saga.saga, '-');
+        report += subtitle;
+        
+        for (const season of saga.seasons) {
+            report += `  "${season.label}"\n`;
+            
+            if (season.episodes) {
+                for (const episode of season.episodes) {
+                    const status = episode.completed ? '✅' : '❌';
+                    report += `  ${status} ${episode.label}\n`;
+                }
+            }
+            report += '\n';
+        }
+        report += '\n';
+    }
+    
+    return report;
+}
