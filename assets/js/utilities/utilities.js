@@ -94,3 +94,8 @@ export function generateSeparator(title, symmbol) {
     const separator = symmbol.repeat(title.length);
     return `${separator} ${title} ${separator}\n\n`;
 }
+
+export function generateTitle(title,symmbol) {
+    const separator = symmbol.repeat(title.length);
+    return `${separator} ${title} ${separator}\n\n`;
+}
