@@ -64,10 +64,10 @@
         </section>
     </footer>
 
-    <dialog class="modal" id="multifunction-modal" aria-labelledby="modal-title" role="dialog" aria-hidden="true" hidden>
+    <dialog class="modal" id="multifunction-modal" aria-labelledby="modal-title" role="dialog" aria-hidden="true">
         
         <!-- SECCIÓN CONFIRMACIÓN -->
-        <section id="confirm-section" class="modal-section" hidden>
+        <section id="confirm-section" class="modal-section" hidden aria-hidden="true">
             <header class="confirm-header">
                 <h3>Confirmar acción</h3>
             </header>
@@ -80,6 +80,13 @@
                 <button class="btn-confirm" id="confirm-action-btn">Confirmar</button>
                 <button class="btn-cancel" id="cancel-action-btn">Cancelar</button>
             </footer>
+        </section>
+
+        <!-- SECCIÓN DINÁMICA -->
+        <section id="dynamic-section" class="modal-section" hidden aria-hidden="true">
+            <h3 id="dynamic-title"><!-- Título dinámico --></h3>
+            <article id="dynamic-content"><!-- Contenido dinámico --></article>
+            <button class="btn-close" id="dynamic-close-btn">Cerrar</button>
         </section>
 
     </dialog>
