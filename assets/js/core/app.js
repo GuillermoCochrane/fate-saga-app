@@ -4,7 +4,7 @@ import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeCo
 import { setupTheme } from '../utilities/theme.js';
 import { $, $$, createElement } from '../utilities/dom.js';
 import { importData, exportData, saveChecklistData, loadChecklistData, loadChecklistTitle, saveChecklistTitle } from '../utilities/storage.js'; 
-import { updateTotalProgress, calculateProgress, showNotification, updateChecklistTitle } from '../utilities/utilities.js';
+import { updateTotalProgress, calculateProgress, showNotification, updateChecklistTitle, exportTextReport } from '../utilities/utilities.js';
 import { sagaSummaryCreator, sagaCreator } from '../components/saga.js';
 
 // 📁 core/app.js
@@ -27,6 +27,7 @@ function setupEventListeners() {
     const $filterBtns = $$('.filter-btn');
     const $exportBtn = $('#export-btn');
     const $importBtn = $('#import-btn');
+    const $reportBtn = $('#report-btn');
     const $resetMemoryBtn = $('#reset-memory-btn');
     const $resetProgressBtn = $('#reset-progress-btn');
     const $fileInput = $('#file-input');
@@ -80,6 +81,12 @@ function setupEventListeners() {
         //hacemos click en el input de id file-input, ya que el mismo no es visible
     });
 
+    //Genera el reporte
+    $reportBtn.addEventListener('click', () => {
+        exportTextReport(checklistData, checklistTitle);
+        showNotification('Reporte generado con éxito');
+    });
+
     //cuando se cambie file-input, se ejecuta el la funcion importData
     $fileInput.addEventListener('change', async (event) => {
         try {
@@ -95,7 +102,7 @@ function setupEventListeners() {
             showNotification('Error al importar: ' + error.message, true);
         }
     });
-
+    
     // Event delegation para cambios de estado de details
     document.addEventListener('toggle', (e) => { 
         const newData = handleDetails(e, checklistData);
