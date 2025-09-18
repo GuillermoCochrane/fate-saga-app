@@ -504,6 +504,11 @@ p.empty-list {
     }
 }
 
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s ease-in-out;
+}
+
 dialog section article details{
     border-bottom: 1px solid var(--border-color);
 }
@@ -518,9 +523,13 @@ dialog section article p {
     padding-left: 20px;
 }
 
-.modal::backdrop {
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: background-color 0.3s ease-in-out;
+dialog section article details pre{
+    margin-inline: 20px;
+    padding-inline: 1em;
+    padding-block: .5em;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-radius: 15px;
 }
 
 .help-footer {
