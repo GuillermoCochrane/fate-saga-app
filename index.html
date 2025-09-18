@@ -96,8 +96,17 @@
             </header>
             
             <article class="help-content">
-                <!-- 📥 IMPORTAR JSON -->
+                <!-- 💾 EXPORTAR/IMPORTAR -->
                 <details open>
+                    <summary><strong>💾 Backup & Restore</strong></summary>
+                    <p><strong>Exportar:</strong> Guarda tu progreso actual en JSON</p>
+                    <p><strong>Importar:</strong> Carga un JSON válido (reemplaza datos actuales)</p>
+                    <p><strong>Generar Reporte:</strong> Genera un .txt con tu progreso actual</p>
+                    <p><strong>Borrar Memoria:</strong> Borra todos los datos de la app almacenados en localStorage</p>
+                    <p><strong>Resetear Progreso:</strong> Vuelve a los datos iniciales de la franquicia actual</p>
+                </details>
+                <!-- 📥 IMPORTAR JSON -->
+                <details>
                     <summary><strong>📥 Importar JSON</strong></summary>
                     <p>Estructura requerida para importar nuevas franquicias:</p>
                     <pre><code>{
@@ -128,7 +137,6 @@
 }
                     </code></pre>
                 </details>
-
                 <!-- ⚠️ SOLUCIÓN DE PROBLEMAS -->
                 <details>
                     <summary><strong>⚠️ Solución de Problemas</strong></summary>
@@ -138,14 +146,6 @@
                         <li>✅ Los campos "completed" y "opened" deben ser booleanos</li>
                         <li>❌ Si falla la importación, revisa la consola (F12)</li>
                     </ul>
-                </details>
-
-                <!-- 💾 EXPORTAR/IMPORTAR -->
-                <details>
-                    <summary><strong>💾 Backup & Restore</strong></summary>
-                    <p><strong>Exportar:</strong> Guarda tu progreso actual en JSON</p>
-                    <p><strong>Importar:</strong> Carga un JSON válido (reemplaza datos actuales)</p>
-                    <p><strong>Resetear:</strong> Vuelve a los datos iniciales</p>
                 </details>
             </article>
 
