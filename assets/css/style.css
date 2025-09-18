@@ -520,7 +520,7 @@ dialog section article details:first-child {
 dialog section article p {
     margin-top: 0;
     margin-bottom: 10px;
-    padding-left: 20px;
+    padding-inline: 20px;
 }
 
 dialog section article details pre{
@@ -578,5 +578,17 @@ dialog section article details pre{
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
+    }
+
+    .modal {
+        width: 90%;
+    }
+
+    dialog section article details pre{
+        overflow-x: auto;
+    }
+
+    dialog section article details li{
+        padding-right: 40px;
     }
 }
