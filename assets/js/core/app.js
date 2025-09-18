@@ -4,7 +4,7 @@ import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeCo
 import { setupTheme } from '../utilities/theme.js';
 import { $, $$, createElement } from '../utilities/dom.js';
 import { importData, exportData, saveChecklistData, loadChecklistData, loadChecklistTitle, saveChecklistTitle } from '../utilities/storage.js'; 
-import { updateTotalProgress, calculateProgress, showNotification, updateChecklistTitle, exportTextReport } from '../utilities/utilities.js';
+import { updateTotalProgress, calculateProgress, showNotification, updateChecklistTitle, exportTextReport, modalSectionHandler } from '../utilities/utilities.js';
 import { sagaSummaryCreator, sagaCreator } from '../components/saga.js';
 
 // 📁 core/app.js
@@ -104,18 +104,9 @@ function setupEventListeners() {
         }
     });
     
-    //Ayuda
+    // Abrir modal con la sección de ayuda visible
     $helpBtn.addEventListener('click', () => {
-        const $modal = $('#multifunction-modal');
-        const $help = $('#help-section');
-        const $dynamic = $('#dynamic-section');
-        const $confirm = $('#confirm-section');
-
-        $dynamic.hidden = true;
-        $confirm.hidden = true;
-
-        $modal.showModal();
-        $help.hidden = false;
+        modalSectionHandler('help');
     });
     
     // Event delegation para cambios de estado de details
