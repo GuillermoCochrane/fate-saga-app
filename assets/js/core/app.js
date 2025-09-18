@@ -4,7 +4,7 @@ import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeCo
 import { setupTheme } from '../utilities/theme.js';
 import { $, $$, createElement } from '../utilities/dom.js';
 import { importData, exportData, saveChecklistData, loadChecklistData, loadChecklistTitle, saveChecklistTitle } from '../utilities/storage.js'; 
-import { updateTotalProgress, calculateProgress, showNotification, updateChecklistTitle, exportTextReport, modalSectionHandler } from '../utilities/utilities.js';
+import { updateTotalProgress, calculateProgress, showNotification, updateChecklistTitle, exportTextReport, modalSectionHandler, modalCloser } from '../utilities/utilities.js';
 import { sagaSummaryCreator, sagaCreator } from '../components/saga.js';
 
 // 📁 core/app.js
@@ -31,6 +31,7 @@ function setupEventListeners() {
     const $resetMemoryBtn = $('#reset-memory-btn');
     const $resetProgressBtn = $('#reset-progress-btn');
     const $helpBtn = $('#help-btn');
+    const $helpCloseBtn = $('#help-close-btn');
     const $fileInput = $('#file-input');
     const $menu = $('#main-menu');
     const $summary = $menu.querySelector('summary');
@@ -107,6 +108,11 @@ function setupEventListeners() {
     // Abrir modal con la sección de ayuda visible
     $helpBtn.addEventListener('click', () => {
         modalSectionHandler('help');
+    });
+
+    // Cerrar modal y ocultar todas las secciones
+    $helpCloseBtn.addEventListener('click', () => {
+        modalCloser();
     });
     
     // Event delegation para cambios de estado de details
