@@ -158,3 +158,8 @@ export function exportTextReport(checklistData, checklistTitle) {
     
     URL.revokeObjectURL(url);
 }
+
+// Devuelve los diferentes tipos de secciones del modal
+export function modalSections() {
+    return ['help', 'dynamic', 'confirm']
+}
