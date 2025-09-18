@@ -327,6 +327,7 @@ details.menu a.button:active {
     border-bottom: none;
 }
 
+dialog section article summary,
 .anime-summary {
     padding: 10px;
     cursor: pointer;
@@ -335,14 +336,17 @@ details.menu a.button:active {
     align-items: center;
 }
 
+dialog section article summary:hover,
 .anime-summary:hover {
     background-color: var(--hover-color);
 }
 
+dialog section article summary::-webkit-details-marker,
 .anime-summary::-webkit-details-marker {
     display: none;
 }
 
+dialog section article summary::after,
 .anime-summary::after {
     content: "➕";
     font-size: 0.8rem;
@@ -351,6 +355,7 @@ details.menu a.button:active {
     margin-left: 10px;
 }
 
+dialog section article details[open] summary::after,
 .anime-details[open] .anime-summary::after {
     transform: rotate(45deg);
 }
@@ -484,7 +489,7 @@ p.empty-list {
     border: 1px solid #1a1a1a;
     padding: 2rem;
     margin: auto;
-    min-width: 550px;
+    width: 650px;
     color: #f5f5f5;
     scale: 0;
 	transition: scale 0.3s ease-out,
@@ -499,6 +504,19 @@ p.empty-list {
     }
 }
 
+dialog section article details{
+    border-bottom: 1px solid var(--border-color);
+}
+
+dialog section article details:first-child {
+    border-top: 1px solid var(--border-color);
+}
+
+dialog section article p {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
 
 .modal::backdrop {
     background-color: rgba(0, 0, 0, 0.8);
@@ -508,7 +526,6 @@ p.empty-list {
 .help-footer {
     margin-top: 20px;
 }
-
 
 @media (max-width: 768px) {
     .controls {
