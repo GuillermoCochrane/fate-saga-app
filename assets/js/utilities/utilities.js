@@ -182,3 +182,10 @@ export function modalSectionHandler(sectionToShow) {
     $(`#${sectionToShow}-section`).hidden = false;
     $modal.showModal();
 }
+
+// Cierra el modal y oculta todas las secciones
+export function modalCloser() {
+    const $modal = $('#multifunction-modal');
+    sectionsHide();
+    $modal.close();
+}
