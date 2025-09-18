@@ -172,3 +172,13 @@ export function sectionsHide() {
         $(`#${section}-section`).hidden = true;
     }
 }
+
+// Abre el modal con la sección indicada visible
+export function modalSectionHandler(sectionToShow) {
+    const $modal = $('#multifunction-modal');
+
+    sectionsHide();
+
+    $(`#${sectionToShow}-section`).hidden = false;
+    $modal.showModal();
+}
