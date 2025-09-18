@@ -80,6 +80,7 @@ export function updateTotalProgress(checklistData) {
     $percentage.textContent = `${percentage}%`; //Actualizamos el porcentaje de completados
 }
 
+// Actualizar el título de la página
 export function updateChecklistTitle(title) {
     const $tabtitle = $("title")    
     const $franchiseMainTitle = $('#franchise-main-title');
@@ -90,6 +91,7 @@ export function updateChecklistTitle(title) {
     $franchiseText.textContent = title;
 }
 
+// Generar separadores en el título del reporte
 export function generateSeparator(title, symmbol) {
     let separatorLength = Math.ceil(title.length / 4);
     separatorLength = separatorLength > 0 ? separatorLength : 1;
@@ -97,21 +99,25 @@ export function generateSeparator(title, symmbol) {
     return separator;
 }
 
+// Generar título principal del reporte
 export function generateTitle(title,symmbol) {
     const separator = generateSeparator(title, symmbol);
     return `\n${separator} ${title} ${separator}\n`;
 }
 
+// Generar margenes en los títulos secundarios del reporte
 export function generateMargins(title, symmbol) {
     return symmbol.repeat((title.length)-2);
 }
 
+// Generar título secundario del reporte
 export function generateSecondaryTitle(title, symmbol) {
     const secondaryTitle = generateTitle(title, symmbol);
     const margins = generateMargins(secondaryTitle, symmbol);
     return `${margins}${secondaryTitle}${margins}\n\n`;
 }
 
+// Generar el reporte en formato de texto
 export function generateTextReport(checklistData, checklistTitle) {
     const title = generateTitle(checklistTitle, '*');
     let report = `${title}\n`;
@@ -139,6 +145,7 @@ export function generateTextReport(checklistData, checklistTitle) {
     return report;
 }
 
+// Exportar el reporte en formato de texto
 export function exportTextReport(checklistData, checklistTitle) {
     const report = generateTextReport(checklistData, checklistTitle);
     const blob = new Blob([report], { type: 'text/plain' });
