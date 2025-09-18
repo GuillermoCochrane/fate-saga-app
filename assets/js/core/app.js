@@ -30,6 +30,7 @@ function setupEventListeners() {
     const $reportBtn = $('#report-btn');
     const $resetMemoryBtn = $('#reset-memory-btn');
     const $resetProgressBtn = $('#reset-progress-btn');
+    const $helpBtn = $('#help-btn');
     const $fileInput = $('#file-input');
     const $menu = $('#main-menu');
     const $summary = $menu.querySelector('summary');
@@ -103,6 +104,20 @@ function setupEventListeners() {
         }
     });
     
+    //Ayuda
+    $helpBtn.addEventListener('click', () => {
+        const $modal = $('#multifunction-modal');
+        const $help = $('#help-section');
+        const $dynamic = $('#dynamic-section');
+        const $confirm = $('#confirm-section');
+
+        $dynamic.hidden = true;
+        $confirm.hidden = true;
+
+        $modal.showModal();
+        $help.hidden = false;
+    });
+    
     // Event delegation para cambios de estado de details
     document.addEventListener('toggle', (e) => { 
         const newData = handleDetails(e, checklistData);
@@ -149,6 +164,7 @@ function renderChecklist() {
         $sagaElement.appendChild($details);     //agregamos el details  al contenedor .saga
         $container.appendChild($sagaElement);   //con cada iteración, agregamos la saga al contenedor
     }
+
 }
 
 function handleToggleCheckbox(seasonID, sagaName, isEpisode = false, episodeID = null) {
