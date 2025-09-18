@@ -9,6 +9,7 @@
     --hover-color: rgba(154, 31, 46, 0.1);
     --filter-active: #d32f2f;
     --error-notification: #f44336;
+    --modal-bg: rgba(0, 0, 0, 0.3);
     --dropdown-width: 180px;
 }
 
@@ -23,6 +24,7 @@
     --hover-color: rgba(201, 50, 67, 0.2);
     --filter-active: #f44336;
     --error-notification: #f44336;
+    --modal-bg: rgba(255, 255, 255, 0.1);
     --dropdown-width: 180px;
 }
 
@@ -470,6 +472,36 @@ p.empty-list {
     text-align: center;
     color: #888;
 }
+/* aplicar el glasmorfism a las secciones en lugar al modal */
+.modal {
+    background: var(--modal-bg);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 15px;
+    border: 1px solid #1a1a1a;
+    padding: 2rem;
+    margin: auto;
+    min-width: 550px;
+    color: #f5f5f5;
+    scale: 0;
+	transition: scale 0.3s ease-out,
+                display 0.3s ease-out allow-discrete;
+}
+
+.modal[open]{
+    scale: 1;
+    transition: scale 0.3s ease-out;
+    @starting-style{
+        scale: 0;
+    }
+}
+
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: background-color 0.3s ease-in-out;
+}
+
 
 @media (max-width: 768px) {
     .controls {
