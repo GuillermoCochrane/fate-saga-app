@@ -192,6 +192,7 @@ details.menu a.button:active {
     gap: 10px;
 }
 
+.btn-close,
 .filter-btn {
     padding: 8px 15px;
     background-color: var(--card-bg);
@@ -202,12 +203,14 @@ details.menu a.button:active {
     transition: all 0.3s;
 }
 
+.btn-close,
 .filter-btn.active {
     background-color: var(--accent-color);
     color: white;
     border-color: var(--accent-color);
 }
 
+.btn-close:hover,
 .filter-btn:hover {
     background-color: var(--hover-color);
 }
@@ -500,6 +503,10 @@ p.empty-list {
 .modal::backdrop {
     background-color: rgba(0, 0, 0, 0.8);
     transition: background-color 0.3s ease-in-out;
+}
+
+.help-footer {
+    margin-top: 20px;
 }
 
 
