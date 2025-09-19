@@ -176,10 +176,14 @@ export function sectionsHide() {
 // Abre el modal con la sección indicada visible
 export function modalSectionHandler(sectionToShow) {
     const $modal = $('#multifunction-modal');
-
+    const $section = $(`#${sectionToShow}-section`);
+    const sectionTitle =`${sectionToShow}-title`
     sectionsHide();
 
-    $(`#${sectionToShow}-section`).hidden = false;
+    $section.setAttribute('aria-hidden', false);
+    $section.hidden = false;
+    $modal.setAttribute('aria-labelledby', sectionTitle);
+    $modal.setAttribute('aria-hidden', false);
     $modal.showModal();
 }
 
