@@ -98,6 +98,7 @@ function setupEventListeners() {
             saveChecklistData(checklistData);
             saveChecklistTitle(checklistTitle);
             renderChecklist();
+            updateChecklistTitle(checklistTitle);
             updateTotalProgress(checklistData);
             showNotification('Datos importados con éxito');
         } catch (error) {
