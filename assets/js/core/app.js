@@ -30,8 +30,10 @@ function setupEventListeners() {
     const $reportBtn = $('#report-btn');
     const $resetMemoryBtn = $('#reset-memory-btn');
     const $resetProgressBtn = $('#reset-progress-btn');
+    const $confirmBtn = $('#confirm-action-btn');
     const $helpBtn = $('#help-btn');
     const $helpCloseBtn = $('#help-close-btn');
+    const $confirmCloseBtn = $('#confirm-close-btn');
     const $fileInput = $('#file-input');
     const $menu = $('#main-menu');
     const $summary = $menu.querySelector('summary');
@@ -76,11 +78,17 @@ function setupEventListeners() {
         showNotification('Datos exportados con éxito'); // ← Notificación aquí
     });
 
-    //Importa los datos al hacer clic
+    //Confirma importar
     $importBtn.addEventListener('click', () => {
-    // capturamos el botón de de id import-btn y escuchamos el evento click
-        $fileInput.click();
-        //hacemos click en el input de id file-input, ya que el mismo no es visible
+        modalConfirmHandler('Estás a punto de importar datos.', 'import');
+    });
+
+    //Eventos de confirmación multifuncional
+    $confirmBtn.addEventListener('click', () => {
+        const action = $confirmBtn.getAttribute('data-action');
+        if (action === 'import') {
+            $fileInput.click(); //hacemos click en el input de id file-input, ya que el mismo no es visible
+        }
     });
 
     //Genera el reporte
