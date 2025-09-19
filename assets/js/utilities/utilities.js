@@ -197,7 +197,8 @@ export function modalConfirmHandler(message) {
 
 // Cierra el modal y oculta todas las secciones
 export function modalCloser() {
-    const $modal = $('#multifunction-modal');
     sectionsHide();
+    const $modal = $('#multifunction-modal');
+    $modal.setAttribute('aria-hidden', true);
     $modal.close();
 }
