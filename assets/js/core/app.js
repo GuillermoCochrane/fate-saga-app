@@ -53,14 +53,9 @@ function setupEventListeners() {
         $summary.setAttribute('aria-expanded', e.target.open);
     });
 
-    //Borra los datos guardados en localStorage
+    //Confirma borrar memoria
     $resetMemoryBtn.addEventListener('click', () => {
-        localStorage.removeItem('checklist');
-        localStorage.removeItem('checklistTitle');
-        showNotification('Memoria borrada correctamente');
-        setTimeout(() => {
-            location.reload();
-        }, 1000);
+        modalConfirmHandler('Estás a punto de borrar todos los datos de la memoria.', 'delete');
     });
     
     //Resetea el progreso de la franquicia
@@ -85,9 +80,21 @@ function setupEventListeners() {
 
     //Eventos de confirmación multifuncional
     $confirmBtn.addEventListener('click', () => {
-        const action = $confirmBtn.getAttribute('data-action');
+        const action = $confirmBtn.getAttribute('data-action'); // capturamos el atributo data-action
         if (action === 'import') {
+            modalCloser();
             $fileInput.click(); //hacemos click en el input de id file-input, ya que el mismo no es visible
+        }
+
+        if (action === 'delete') {
+            // Borra los datos guardados en localStorage
+            modalCloser();
+            localStorage.removeItem('checklist');
+            localStorage.removeItem('checklistTitle');
+            showNotification('Memoria borrada correctamente');
+            setTimeout(() => {
+                location.reload();
+            }, 1000);
         }
     });
 
