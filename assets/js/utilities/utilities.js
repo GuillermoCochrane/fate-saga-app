@@ -190,7 +190,8 @@ export function modalSectionHandler(sectionToShow) {
 }
 
 // Abre el modal con la sección de confrimación visible
-export function modalConfirmHandler(message) {
+export function modalConfirmHandler(message, action) {
+    $('#confirm-action-btn').setAttribute('data-action', action);
     $('#confirm-message').textContent = message;
     modalSectionHandler('confirm');
 }
