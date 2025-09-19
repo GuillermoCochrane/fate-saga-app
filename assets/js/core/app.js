@@ -58,13 +58,9 @@ function setupEventListeners() {
         modalConfirmHandler('Estás a punto de borrar todos los datos de la memoria.', 'delete');
     });
     
-    //Resetea el progreso de la franquicia
+    //Confirma resetear progreso
     $resetProgressBtn.addEventListener('click', () => {
-        checklistData = resetProgress(checklistData);
-        saveChecklistData(checklistData);
-        renderChecklist();
-        updateTotalProgress(checklistData);
-        showNotification('Progreso reseteado correctamente');
+        modalConfirmHandler('Estás a punto de resetear el progreso de la franquicia.', 'reset');
     });
 
     //Exporta los datos al hacer clic 
@@ -95,6 +91,16 @@ function setupEventListeners() {
             setTimeout(() => {
                 location.reload();
             }, 1000);
+        }
+
+        if (action === 'reset') {
+            // Resetea el progreso de la franquicia
+            modalCloser();
+            checklistData = resetProgress(checklistData);
+            saveChecklistData(checklistData);
+            renderChecklist();
+            updateTotalProgress(checklistData);
+            showNotification('Progreso reseteado correctamente');
         }
     });
 
