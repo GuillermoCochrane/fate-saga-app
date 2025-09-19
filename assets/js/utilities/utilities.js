@@ -169,7 +169,9 @@ export function sectionsHide() {
     const sections = modalSections();
 
     for (const section of sections) {
-        $(`#${section}-section`).hidden = true;
+        const $section = $(`#${section}-section`);
+        $section.setAttribute('aria-hidden', true);
+        $section.hidden = true;
     }
 }
 
