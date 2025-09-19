@@ -4,7 +4,7 @@ import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeCo
 import { setupTheme } from '../utilities/theme.js';
 import { $, $$, createElement } from '../utilities/dom.js';
 import { importData, exportData, saveChecklistData, loadChecklistData, loadChecklistTitle, saveChecklistTitle } from '../utilities/storage.js'; 
-import { updateTotalProgress, calculateProgress, showNotification, updateChecklistTitle, exportTextReport, modalSectionHandler, modalCloser } from '../utilities/utilities.js';
+import { updateTotalProgress, calculateProgress, showNotification, updateChecklistTitle, exportTextReport, modalSectionHandler, modalCloser, modalConfirmHandler } from '../utilities/utilities.js';
 import { sagaSummaryCreator, sagaCreator } from '../components/saga.js';
 
 // 📁 core/app.js
@@ -33,7 +33,7 @@ function setupEventListeners() {
     const $confirmBtn = $('#confirm-action-btn');
     const $helpBtn = $('#help-btn');
     const $helpCloseBtn = $('#help-close-btn');
-    const $confirmCloseBtn = $('#confirm-close-btn');
+    const $cancelBtn = $('#cancel-action-btn');
     const $fileInput = $('#file-input');
     const $menu = $('#main-menu');
     const $summary = $menu.querySelector('summary');
@@ -89,6 +89,11 @@ function setupEventListeners() {
         if (action === 'import') {
             $fileInput.click(); //hacemos click en el input de id file-input, ya que el mismo no es visible
         }
+    });
+
+    // Cerrar modal y oculta todas las secciones
+    $cancelBtn.addEventListener('click', () => {
+        modalCloser();
     });
 
     //Genera el reporte
