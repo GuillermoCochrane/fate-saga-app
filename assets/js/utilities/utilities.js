@@ -183,6 +183,12 @@ export function modalSectionHandler(sectionToShow) {
     $modal.showModal();
 }
 
+// Abre el modal con la sección de confrimación visible
+export function modalConfirmHandler(message) {
+    $('#confirm-message').textContent = message;
+    modalSectionHandler('confirm');
+}
+
 // Cierra el modal y oculta todas las secciones
 export function modalCloser() {
     const $modal = $('#multifunction-modal');
