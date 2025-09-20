@@ -192,7 +192,7 @@ details.menu a.button:active {
     gap: 10px;
 }
 
-.btn-close,
+.btn-modal,
 .filter-btn {
     padding: 8px 15px;
     background-color: var(--card-bg);
@@ -203,14 +203,14 @@ details.menu a.button:active {
     transition: all 0.3s;
 }
 
-.btn-close,
+.btn-modal,
 .filter-btn.active {
     background-color: var(--accent-color);
     color: white;
     border-color: var(--accent-color);
 }
 
-.btn-close:hover,
+.btn-modal:hover,
 .filter-btn:hover {
     background-color: var(--hover-color);
 }
@@ -534,6 +534,13 @@ dialog section article details pre{
 
 .help-footer {
     margin-top: 20px;
+}
+
+.confirm-footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 @media (max-width: 768px) {
