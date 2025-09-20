@@ -74,8 +74,8 @@ export function handleDetails(event, checklistData) {
                 return newData; //devuelve el objeto con los cambios
             }
         } 
-        else if (details.classList.contains('anime-details')) {
-            //si el details tiene la clase anime-details
+        else if (details.classList.contains('season-details')) {
+            //si el details tiene la clase season-details
             const seasonID = details.querySelector('input[type="checkbox"]').id.replace('main-', ''); //guardamos el id del checkbox
             
             // recorrremos todas las sagas en localStorage
