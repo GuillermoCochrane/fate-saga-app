@@ -20,11 +20,13 @@
             <ul>
                 <li><hr class="link-separator"></li>
                 <li><input type="file" id="file-input" accept=".json"></li>
-                <li><a href="#" id="import-btn">Importar</a></li>
                 <li><a href="#" id="export-btn">Exportar</a></li>
-                <li><a href="#" id="report-btn">Generar Reporte</a></li>
-                <li><a href="#" id="reset-memory-btn">Borrar memoria</a></li>
+                <li><a href="#" id="import-btn">Importar</a></li>
+                <li><hr class="link-separator"></li>
                 <li><a href="#" id="reset-progress-btn">Resetear progreso</a></li>
+                <li><a href="#" id="reset-memory-btn">Borrar memoria</a></li>
+                <li><hr class="link-separator"></li>
+                <li><a href="#" id="report-btn">Generar Reporte</a></li>
                 <li><a href="#" id="help-btn">Ayuda</a></li>
                 <li><hr class="link-separator"></li>
             </ul>
@@ -73,14 +75,14 @@
                 <h3 id="confirm-title">Confirmar acción</h3>
             </header>
             <article class="confirm-content">
-                <p id="confirm-message"><!-- Mensaje dinámico específico --></p>
+                <p id="confirm-message"><!-- Mensaje dinámico específico --></>
                 <p>Se perderán los cambios no guardados.</p>
                 <p>¿Estás seguro de que deseas continuar?</p>
                 <footer class="modal-buttons">
             </article>
             <footer class="confirm-footer">
-                <button class="btn-confirm" id="confirm-action-btn" data-action="">Confirmar</button>
-                <button class="btn-cancel" id="cancel-action-btn">Cancelar</button>
+                <button class="btn-modal" id="confirm-action-btn" data-action="">Confirmar</button>
+                <button class="btn-modal" id="cancel-action-btn">Cancelar</button>
             </footer>
         </section>
 
@@ -150,7 +152,7 @@
             </article>
 
             <footer class="help-footer">
-                <button class="btn-close" id="help-close-btn">Cerrar</button>
+                <button class="btn-modal" id="help-close-btn">Cerrar</button>
             </footer>
         </section>
 
