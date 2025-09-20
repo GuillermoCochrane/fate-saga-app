@@ -318,17 +318,17 @@ details.menu a.button:active {
     color: var(--completed-color);
 }
 
-.anime-item {
+.season-item {
     padding: 10px 15px;
     border-bottom: 1px solid var(--border-color);
 }
 
-.anime-item:last-child {
+.season-item:last-child {
     border-bottom: none;
 }
 
 dialog section article summary,
-.anime-summary {
+.season-summary {
     padding: 10px;
     cursor: pointer;
     display: flex;
@@ -337,17 +337,17 @@ dialog section article summary,
 }
 
 dialog section article summary:hover,
-.anime-summary:hover {
+.season-summary:hover {
     background-color: var(--hover-color);
 }
 
 dialog section article summary::-webkit-details-marker,
-.anime-summary::-webkit-details-marker {
+.season-summary::-webkit-details-marker {
     display: none;
 }
 
 dialog section article summary::after,
-.anime-summary::after {
+.season-summary::after {
     content: "➕";
     font-size: 0.8rem;
     transition: transform 0.3s;
@@ -356,11 +356,11 @@ dialog section article summary::after,
 }
 
 dialog section article details[open] summary::after,
-.anime-details[open] .anime-summary::after {
+.season-details[open] .season-summary::after {
     transform: rotate(45deg);
 }
 
-.anime-title-container {
+.season-title-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -368,11 +368,11 @@ dialog section article details[open] summary::after,
     gap: 10px;
 }
 
-.anime-title {
+.season-title {
     font-weight: bold;
 }
 
-.anime-format {
+.season-format {
     font-size: 0.9rem;
     color: #888;
     font-style: italic;
@@ -598,7 +598,7 @@ dialog section article details pre{
         width: 100%;
     }
     
-    .anime-title-container {
+    .season-title-container {
         flex-direction: column;
         align-items: flex-start;
         gap: 5px;
