@@ -536,6 +536,23 @@ dialog section article details pre{
     margin-top: 20px;
 }
 
+.modal h3 {
+    margin-block: 0;
+    color: var(--accent-color);
+    font-size: 1.6em;
+}
+
+.modal .confirm-content {
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.modal .confirm-content #confirm-message {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
 .confirm-footer {
     margin-top: 30px;
     padding-top: 15px;
