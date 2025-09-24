@@ -185,11 +185,22 @@ details.menu a.button:active {
     margin-bottom: 20px;
     flex-wrap: wrap;
     gap: 10px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
 
 .filters {
     display: flex;
     gap: 10px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
 }
 
 .btn-modal,
@@ -265,6 +276,12 @@ details.menu a.button:active {
     align-items: center;
     width: 100%;
     gap: 15px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
 }
 
 .saga-title {
@@ -278,6 +295,14 @@ details.menu a.button:active {
     gap: 10px;
     justify-content: flex-end;
     flex-wrap: wrap;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 5px;
+    }
 }
 
 .progress-text {
@@ -295,6 +320,10 @@ details.menu a.button:active {
     background-color: var(--progress-bg);
     border-radius: 4px;
     border: none;
+
+    @media (max-width: 768px) {
+        width: 50%;
+    }    
 }
 
 .progress-bar::-webkit-progress-bar {
@@ -366,6 +395,12 @@ dialog section article details[open] summary::after,
     align-items: center;
     width: 100%;
     gap: 10px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
 }
 
 .season-title {
@@ -433,6 +468,11 @@ dialog section article details[open] summary::after,
     margin-top: 15px;
     flex-wrap: wrap;
     gap: 15px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 .stat {
@@ -480,6 +520,7 @@ p.empty-list {
     text-align: center;
     color: #888;
 }
+
 /* aplicar el glasmorfism a las secciones en lugar al modal */
 .modal {
     background: var(--modal-bg);
@@ -494,6 +535,10 @@ p.empty-list {
     scale: 0;
 	transition: scale 0.3s ease-out,
                 display 0.3s ease-out allow-discrete;
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
 }
 
 .modal[open]{
@@ -530,6 +575,10 @@ dialog section article details pre{
     background-color: var(--card-bg);
     color: var(--text-color);
     border-radius: 15px;
+    
+    @media (max-width: 768px) {
+        overflow-x: auto;
+    }
 }
 
 .help-footer {
@@ -560,59 +609,10 @@ dialog section article details pre{
     justify-content: space-evenly;
 }
 
-@media (max-width: 768px) {
-    .controls {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .filters, .import-export {
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-    
-    .progress-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
-    
-    .progress-bar {
-        width: 50%;
-    }
-    
-    .stats {
-        flex-direction: column;
-        gap: 15px;
-    }
-    
-    .summary-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-    
-    .progress-container {
-        justify-content: flex-start;
-        width: 100%;
-    }
-    
-    .season-title-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-    }
+dialog section article details li{
+    margin: auto;
 
-    .modal {
-        width: 90%;
-    }
-
-    dialog section article details pre{
-        overflow-x: auto;
-    }
-
-    dialog section article details li{
+    @media (max-width: 768px) {
         padding-right: 40px;
     }
 }
