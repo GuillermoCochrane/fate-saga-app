@@ -139,6 +139,7 @@ details.menu {
     
 }
 
+/* Estilos del contenido del menú */
 details.menu ul {
     position: absolute;
     margin: 15px 0 0 0;
@@ -154,32 +155,36 @@ details.menu ul {
     font-size: 14px;
     font-weight: bolder;
     border: 1px solid var(--border-color);
-}
 
-details.menu ul li {
-    padding: 0;
-    margin: 0;
-}
+    /* Items de la lista del menú */
+    & li {
+        padding: 0;
+        margin: 0;
 
-details.menu ul li hr.link-separator{
-    border: var(--accent-color) 1px solid;
-    margin-inline: 10px;
-    margin-block: 5px;
-}
+        /* Separador de links del menú */
+        & hr.link-separator{
+            border: var(--accent-color) 1px solid;
+            margin-inline: 10px;
+            margin-block: 5px;
+        }
 
-details.menu ul li a:link, 
-details.menu ul li a:visited {
-    display: inline-block;
-    padding-block: .25em;
-    width: 100%;
-    box-sizing: border-box;
-    text-decoration: none;
-    color: var(--text-color);
-}
+        /* Link del menú */
+        & a:link, 
+        & a:visited {
+            display: inline-block;
+            padding-block: .25em;
+            width: 100%;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: var(--text-color);
+        }
 
-details.menu ul li a:hover {
-    background-color: var(--hover-color);
-    max-width: 90%;
+        /* Hover del link del menú */
+        & a:hover {
+            background-color: var(--hover-color);
+            max-width: 90%;
+        }
+    }
 }
 
 .controls {
