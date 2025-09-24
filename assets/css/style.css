@@ -212,6 +212,7 @@ details.menu ul {
     }
 }
 
+/* Botones modales y de filtro */
 .btn-modal,
 .filter-btn {
     padding: 8px 15px;
@@ -221,6 +222,10 @@ details.menu ul {
     cursor: pointer;
     color: var(--text-color);
     transition: all 0.3s;
+
+    &:hover {
+        background-color: var(--hover-color);
+    }
 }
 
 .btn-modal,
@@ -228,11 +233,6 @@ details.menu ul {
     background-color: var(--accent-color);
     color: white;
     border-color: var(--accent-color);
-}
-
-.btn-modal:hover,
-.filter-btn:hover {
-    background-color: var(--hover-color);
 }
 
 #file-input {
