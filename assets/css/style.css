@@ -257,24 +257,26 @@ details.menu ul {
     background-color: var(--card-bg);
     transition: background-color 0.2s;
     width: 100%;
+
+    &:hover {
+        background-color: var(--hover-color);
+    }
+
+    /* Ocultar marker por defecto de details/summary */
+    &::-webkit-details-marker {
+        display: none;
+    }
+
+    &::after {
+        content: "▼";
+        font-size: 0.8rem;
+        transition: transform 0.3s;
+        flex-shrink: 0;
+        margin-left: 15px;
+    }
 }
 
-.saga-summary:hover {
-    background-color: var(--hover-color);
-}
-
-.saga-summary::-webkit-details-marker {
-    display: none;
-}
-
-.saga-summary::after {
-    content: "▼";
-    font-size: 0.8rem;
-    transition: transform 0.3s;
-    flex-shrink: 0;
-    margin-left: 15px;
-}
-
+/*  cuando saga details esta abierto, giramos 180º el icono*/
 .saga-details[open] .saga-summary::after {
     transform: rotate(180deg);
 }
