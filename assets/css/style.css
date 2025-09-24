@@ -476,11 +476,11 @@ dialog section article details[open] summary::after,
     background-color: var(--card-bg);
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
 
-.total-progress h3 {
-    margin-top: 0;
-    color: var(--accent-color);
+    & h3 {
+        margin-top: 0;
+        color: var(--accent-color);
+    }
 }
 
 .stats {
