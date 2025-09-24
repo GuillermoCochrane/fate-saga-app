@@ -592,31 +592,44 @@ p.empty-list {
     }
 }
 
-dialog section article details{
-    border-bottom: 1px solid var(--border-color);
-}
+dialog section article{
+    margin: auto;
 
-dialog section article details:first-child {
-    border-top: 1px solid var(--border-color);
-}
+    & details {
+        border-bottom: 1px solid var(--border-color);
 
-dialog section article p {
-    margin-top: 0;
-    margin-bottom: 10px;
-    padding-inline: 20px;
-}
+        &:first-child {
+            border-top: 1px solid var(--border-color);
+        }
 
-dialog section article details pre{
-    margin-inline: 20px;
-    padding-inline: 1em;
-    padding-block: .5em;
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    border-radius: 15px;
-    
-    @media (max-width: 768px) {
-        overflow-x: auto;
+        & li {
+            margin: auto;
+
+            @media (max-width: 768px) {
+                padding-right: 40px;
+            }
+        }
+
+        & pre {
+            margin-inline: 20px;
+            padding-inline: 1em;
+            padding-block: .5em;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            border-radius: 15px;
+            
+            @media (max-width: 768px) {
+                overflow-x: auto;
+            }
+        }
     }
+
+    & p {
+        margin-top: 0;
+        margin-bottom: 10px;
+        padding-inline: 20px;
+    }
+
 }
 
 .help-footer {
@@ -628,12 +641,4 @@ dialog section article details pre{
     padding-top: 15px;
     display: flex;
     justify-content: space-evenly;
-}
-
-dialog section article details li{
-    margin: auto;
-
-    @media (max-width: 768px) {
-        padding-right: 40px;
-    }
 }
