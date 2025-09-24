@@ -372,6 +372,7 @@ details.menu ul {
     }
 }
 
+/* Estilos del summary de la temporada y del modal */
 dialog section article summary,
 .season-summary {
     padding: 10px;
@@ -379,27 +380,28 @@ dialog section article summary,
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    &:hover {
+        background-color: var(--hover-color);
+    }
+
+    /* Ocultar marker por defecto de details/summary */
+    &::-webkit-details-marker {
+        display: none;
+    }
+
+    /* Nuevo marker de details/summary */
+    &::after {
+        content: "➕";
+        font-size: 0.8rem;
+        transition: transform 0.3s;
+        flex-shrink: 0;
+        margin-left: 10px;
+    }
+
 }
 
-dialog section article summary:hover,
-.season-summary:hover {
-    background-color: var(--hover-color);
-}
-
-dialog section article summary::-webkit-details-marker,
-.season-summary::-webkit-details-marker {
-    display: none;
-}
-
-dialog section article summary::after,
-.season-summary::after {
-    content: "➕";
-    font-size: 0.8rem;
-    transition: transform 0.3s;
-    flex-shrink: 0;
-    margin-left: 10px;
-}
-
+/* Cuando el details esta abierto, giramos 45º el icono */
 dialog section article details[open] summary::after,
 .season-details[open] .season-summary::after {
     transform: rotate(45deg);
