@@ -1,0 +1,48 @@
+/* ? Estilos base  (variables, reset y body) */
+
+:root {
+    --bg-color: #ccc;
+    --text-color: #333;
+    --card-bg: #fff;
+    --border-color: #ddd;
+    --accent-color: #9a1f2e;
+    --progress-bg: #e0e0e0;
+    --completed-color: #4caf50;
+    --hover-color: rgba(154, 31, 46, 0.1);
+    --filter-active: #d32f2f;
+    --error-notification: #f44336;
+    --modal-bg: rgba(0, 0, 0, 0.3);
+    --dropdown-width: 180px;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1a1a1a;
+    --text-color: #f5f5f5;
+    --card-bg: #2a2a2a;
+    --border-color: #444;
+    --accent-color: #c93243;
+    --progress-bg: #3a3a3a;
+    --completed-color: #388e3c;
+    --hover-color: rgba(201, 50, 67, 0.2);
+    --filter-active: #f44336;
+    --error-notification: #f44336;
+    --modal-bg: rgba(255, 255, 255, 0.1);
+    --dropdown-width: 180px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px;
+}
