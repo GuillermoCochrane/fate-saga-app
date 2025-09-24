@@ -542,7 +542,6 @@ p.empty-list {
     color: #888;
 }
 
-/* aplicar el glasmorfism a las secciones en lugar al modal */
 .modal {
     background: var(--modal-bg);
     backdrop-filter: blur(5px);
@@ -557,22 +556,40 @@ p.empty-list {
 	transition: scale 0.3s ease-out,
                 display 0.3s ease-out allow-discrete;
 
+    &[open] {
+        scale: 1;
+        transition: scale 0.3s ease-out;
+
+        @starting-style {
+            scale: 0;
+        }
+    }
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    & h3 {
+        margin-block: 0;
+        color: var(--accent-color);
+        font-size: 1.6em;
+    }
+
+    & .confirm-content {
+        text-align: center;
+        font-size: 1.1em;
+
+        & #confirm-message {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+    }
+
     @media (max-width: 768px) {
         width: 90%;
     }
-}
-
-.modal[open]{
-    scale: 1;
-    transition: scale 0.3s ease-out;
-    @starting-style{
-        scale: 0;
-    }
-}
-
-.modal::backdrop {
-    background-color: rgba(0, 0, 0, 0.8);
-    transition: background-color 0.3s ease-in-out;
 }
 
 dialog section article details{
@@ -604,23 +621,6 @@ dialog section article details pre{
 
 .help-footer {
     margin-top: 20px;
-}
-
-.modal h3 {
-    margin-block: 0;
-    color: var(--accent-color);
-    font-size: 1.6em;
-}
-
-.modal .confirm-content {
-    text-align: center;
-    font-size: 1.1em;
-}
-
-.modal .confirm-content #confirm-message {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 1em;
 }
 
 .confirm-footer {
