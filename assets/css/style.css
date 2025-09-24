@@ -74,21 +74,69 @@ details.menu,
     padding: 5px;
 }
 
-/* Dropdown styles */
+/* Estilos del menu (dropdown hecho con details) */
 details.menu {
     left: 0;
     padding: 0;
     margin: auto;
     margin-inline: 10px;
-}
 
-details.menu summary {
-    list-style: none;
-    list-style-type: none;
-}
+    /* Reset del marker por defecto del summary */
+    & summary {
+        list-style: none;
+        list-style-type: none;
+        &::-webkit-details-marker {
+            display: none;
+        }
+    }
 
-details.menu summary::-webkit-details-marker {
-    display: none;
+    /* Overlay para cerrar al hacer click fuera */
+    & > summary::before {
+        display: none;
+    }
+
+    &[open] > summary::before {
+        content: ' ';
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    /* Alternancia de iconos abrir/cerrar */
+    &:not([open]) .close-icon,
+    &[open] .open-icon {
+        display: none;
+    }
+    
+    &:not([open]) .open-icon,
+    &[open] .close-icon {
+        display: block; 
+    }
+    
+    /* Botón del menú */
+    & a.button {
+        /* Frame */
+        display: inline-block;
+        border-radius: 7px;
+        width: 36px;
+        padding: 8px;
+        box-sizing: border-box;
+        /* Style */
+        border: none;
+        font-size: 20px;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    /* Botón del menú cuando está activo */
+    & a.button:active {
+        filter: brightness(75%);
+    }
+    
 }
 
 details.menu ul {
@@ -132,50 +180,6 @@ details.menu ul li a:visited {
 details.menu ul li a:hover {
     background-color: var(--hover-color);
     max-width: 90%;
-}
-
-/* cerrar el menu con click por fuera */
-details.menu > summary::before {
-    display: none;
-}
-
-details.menu[open] > summary::before {
-    content: ' ';
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 1;
-}
-
-details.menu:not([open]) .close-icon,
-details.menu[open] .open-icon {
-    display: none;
-}
-
-details.menu:not([open]) .open-icon,
-details.menu[open] .close-icon {
-    display: block; 
-}
-
-details.menu a.button {
-    /* Frame */
-    display: inline-block;
-    border-radius: 7px;
-    width: 36px;
-    padding: 8px;
-    box-sizing: border-box;
-    /* Style */
-    border: none;
-    font-size: 20px;
-    text-align: center;
-    cursor: pointer;
-}
-
-details.menu a.button:active {
-    filter: brightness(75%);
 }
 
 .controls {
