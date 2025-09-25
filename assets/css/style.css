@@ -3,4 +3,5 @@
 @import url("./base.css");
 @import url("./components/header.css");
 @import url("./components/controls.css");
+@import url("./components/saga_component.css");
 @import url("./styleOld.css");
