@@ -40,7 +40,6 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
     transition: background-color 0.3s, color 0.3s;
     max-width: 900px;
     margin: 0 auto;
