@@ -1,0 +1,101 @@
+/* ? Estilos del modal multifuncional */
+
+.modal {
+    background: var(--modal-bg);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: 15px;
+    border: 1px solid #1a1a1a;
+    padding: 2rem;
+    margin: auto;
+    width: 650px;
+    color: #f5f5f5;
+    scale: 0;
+	transition: scale 0.3s ease-out,
+                display 0.3s ease-out allow-discrete;
+
+    &[open] {
+        scale: 1;
+        transition: scale 0.3s ease-out;
+
+        @starting-style {
+            scale: 0;
+        }
+    }
+
+    &::backdrop {
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    & h3 {
+        margin-block: 0;
+        color: var(--accent-color);
+        font-size: 1.6em;
+    }
+
+    & .confirm-content {
+        text-align: center;
+        font-size: 1.1em;
+
+        & #confirm-message {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+    }
+
+    & section article{
+        margin: auto;
+
+        & details {
+            border-bottom: 1px solid var(--border-color);
+
+            &:first-child {
+                border-top: 1px solid var(--border-color);
+            }
+
+            & li {
+                margin: auto;
+
+                @media (max-width: 768px) {
+                    padding-right: 40px;
+                }
+            }
+
+            & pre {
+                margin-inline: 20px;
+                padding-inline: 1em;
+                padding-block: .5em;
+                background-color: var(--card-bg);
+                color: var(--text-color);
+                border-radius: 15px;
+                
+                @media (max-width: 768px) {
+                    overflow-x: auto;
+                }
+            }
+        }
+
+        & p {
+            margin-top: 0;
+            margin-bottom: 10px;
+            padding-inline: 20px;
+        }
+    }
+
+    & .help-footer {
+        margin-top: 20px;
+    }
+
+    & .confirm-footer {
+        margin-top: 30px;
+        padding-top: 15px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+}
