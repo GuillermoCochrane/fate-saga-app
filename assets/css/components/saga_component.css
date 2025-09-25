@@ -6,6 +6,13 @@
     margin-bottom: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+
+    /* Cuando no hay elementos visibles en la saga */
+    & p.empty-list {
+        padding: 15px;
+        text-align: center;
+        color: #888;
+    }
 }
 
 .saga-summary {
@@ -83,10 +90,4 @@
     font-weight: bold;
     min-width: 60px;
     text-align: right;
-}
-
-p.empty-list {
-    padding: 15px;
-    text-align: center;
-    color: #888;
 }
