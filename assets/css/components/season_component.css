@@ -1,0 +1,70 @@
+/* ? Estilos del componente contenedor de temporada y del modal */
+
+.season-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--border-color);
+    
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+/* Estilos del summary de la temporada y del modal */
+dialog section article summary,
+.season-summary {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+        background-color: var(--hover-color);
+    }
+
+    /* Ocultar marker por defecto de details/summary */
+    &::-webkit-details-marker {
+        display: none;
+    }
+
+    /* Nuevo marker de details/summary */
+    &::after {
+        content: "➕";
+        font-size: 0.8rem;
+        transition: transform 0.3s;
+        flex-shrink: 0;
+        margin-left: 10px;
+    }
+
+}
+
+/* Cuando el details esta abierto, giramos 45º el icono */
+dialog section article details[open] summary::after,
+.season-details[open] .season-summary::after {
+    transform: rotate(45deg);
+}
+
+.season-title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+.season-title {
+    font-weight: bold;
+}
+
+.season-format {
+    font-size: 0.9rem;
+    color: #888;
+    font-style: italic;
+    flex-shrink: 0;
+}
