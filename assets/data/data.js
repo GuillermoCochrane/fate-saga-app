@@ -1254,71 +1254,72 @@ export const fateChecklistData = {
         {
           id: "prisma-herz",
           label: "Fate/kaleid liner Prisma☆Illya 2wei Herz!",
-          format: "Anime (10 episodios) [TERCERA TEMPORADA]",
+          format: "Anime",
+          note: "En animeFLV, son 11 capitulos, pero estan mal, ya que el 11 es uno de los especiales",
           completed: false,
           opened: false,
           episodes: [
             {
               id: "prisma3-1",
               number: 1,
-              label: "¡Un nuevo comienzo!",
-              completed: false,
+              label: "It's Like Looking in a Mirror, and I Don't Like It",
+              completed: false
             },
             {
               id: "prisma3-2",
               number: 2,
-              label: "¡La chica mágica y la chica mágica (Parte 8)!",
-              completed: false,
+              label: "Tricolore Birthday",
+              completed: false
             },
             {
               id: "prisma3-3",
               number: 3,
-              label: "¡La chica mágica y la chica mágica (Parte 9)!",
-              completed: false,
+              label: "Girls, Life is Short, So Rot Away",
+              completed: false
             },
             {
               id: "prisma3-4",
               number: 4,
-              label: "¡La chica mágica y la chica mágica (Parte 10)!",
-              completed: false,
+              label: "Theme Park Panic!",
+              completed: false
             },
             {
               id: "prisma3-5",
               number: 5,
-              label: "¡La chica mágica y la chica mágica (Parte 11)!",
-              completed: false,
+              label: "Yukatas and Fireworks",
+              completed: false
             },
             {
               id: "prisma3-6",
               number: 6,
-              label: "¡La chica mágica y la chica mágica (Parte 12)!",
-              completed: false,
+              label: "Blue Glass Moon",
+              completed: false
             },
             {
               id: "prisma3-7",
               number: 7,
-              label: "¡La chica mágica y la chica mágica (Parte 13)!",
-              completed: false,
+              label: "Enforcer",
+              completed: false
             },
             {
               id: "prisma3-8",
               number: 8,
-              label: "¡La chica mágica y la chica mágica (Parte 14)!",
-              completed: false,
+              label: "Observer",
+              completed: false
             },
             {
               id: "prisma3-9",
               number: 9,
-              label: "¡La chica mágica y la chica mágica (Parte 15)!",
-              completed: false,
+              label: "Golden Boy",
+              completed: false
             },
             {
               id: "prisma3-10",
               number: 10,
-              label: "¡La chica mágica y la chica mágica (Parte 16)!",
-              completed: false,
-            },
-          ],
+              label: "Calling Your Name from a Corner of the World",
+              completed: false
+            }
+          ]
         },
         {
           id: "prisma-3rei",
