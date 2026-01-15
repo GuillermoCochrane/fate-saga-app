@@ -1199,17 +1199,18 @@ export const fateChecklistData = {
         {
           id: "prisma-2wei-ova",
           label: "Fate/kaleid liner Prisma☆Illya 2wei! OVA",
-          format: "OVA (1 episodio) [Opcional - Comedia/Fanservice]",
+          format: "OVA",
+          note: "En animeFLV, es el capitulo 11 de Fate/kaleid liner Prisma Illya 2wei",
           completed: false,
           opened: false,
           episodes: [
             {
               id: "prisma2-ova-1",
               number: 1,
-              label: "OVA 2wei!",
-              completed: false,
-            },
-          ],
+              label: "OVA: Magical Girl in Hot Springs Inn",
+              completed: false
+            }
+          ]
         },
         {
           id: "prisma-herz",
