@@ -1213,6 +1213,45 @@ export const fateChecklistData = {
           ]
         },
         {
+          id: "prisma-2wei-specials",
+          label: "Fate/kaleid liner Prisma Illya 2wei! Specials",
+          format: "Especial",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "prisma2-s-1",
+              number: 1,
+              label: "First Bra: Illya",
+              completed: false
+            },
+            {
+              id: "prisma2-s-2",
+              number: 2,
+              label: "First Bra: Miyu",
+              completed: false
+            },
+            {
+              id: "prisma2-s-3",
+              number: 3,
+              label: "Sisters Skin Treatment",
+              completed: false
+            },
+            {
+              id: "prisma2-s-4",
+              number: 4,
+              label: "Elementary School Chinese Dress",
+              completed: false
+            },
+            {
+              id: "prisma2-s-5",
+              number: 5,
+              label: "Magical Girl Prisma XXX",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "prisma-herz",
           label: "Fate/kaleid liner Prisma☆Illya 2wei Herz!",
           format: "Anime (10 episodios) [TERCERA TEMPORADA]",
