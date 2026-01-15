@@ -1006,71 +1006,71 @@ export const fateChecklistData = {
         {
           id: "prisma-illya-1",
           label: "Fate/kaleid liner Prisma☆Illya",
-          format: "Anime (10 episodios) [PRIMERA TEMPORADA]",
+          format: "Anime",
           completed: false,
           opened: false,
           episodes: [
             {
               id: "prisma1-1",
               number: 1,
-              label: "¡Una chica mágica aparece!",
-              completed: false,
+              label: "Birth! A Magical Girl!",
+              completed: false
             },
             {
               id: "prisma1-2",
               number: 2,
-              label: "¡Recogida de clase!",
-              completed: false,
+              label: "Who?",
+              completed: false
             },
             {
               id: "prisma1-3",
               number: 3,
-              label: "¡El enemigo es una chica mágica!",
-              completed: false,
+              label: "Girl Meets Girl",
+              completed: false
             },
             {
               id: "prisma1-4",
               number: 4,
-              label: "¡Ansiedad y determinación!",
-              completed: false,
+              label: "We Lost",
+              completed: false
             },
             {
               id: "prisma1-5",
               number: 5,
-              label: "¡La que regresa!",
-              completed: false,
+              label: "There Are Two Options?",
+              completed: false
             },
             {
               id: "prisma1-6",
               number: 6,
-              label: "¡La chica mágica en problemas!",
-              completed: false,
+              label: "A Blank, and the End of Night...",
+              completed: false
             },
             {
               id: "prisma1-7",
               number: 7,
-              label: "¡El pasado y el presente se encuentran!",
-              completed: false,
+              label: "Triumph and Escape",
+              completed: false
             },
             {
               id: "prisma1-8",
               number: 8,
-              label: "¡La respuesta está en uno mismo!",
-              completed: false,
+              label: "The Normal Girl Has Returned",
+              completed: false
             },
             {
               id: "prisma1-9",
               number: 9,
-              label: "¡La batalla decisiva en el espejo!",
-              completed: false,
+              label: "End It Here",
+              completed: false
             },
             {
               id: "prisma1-10",
               number: 10,
-              label: "¡Adiós, Chica Mágica!",
-              completed: false,
-            },
-          ],
+              label: "Kaleidoscope",
+              completed: false
+            }
+          ]
         },
         {
           id: "prisma-specials",
