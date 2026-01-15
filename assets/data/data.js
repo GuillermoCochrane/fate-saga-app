@@ -1090,23 +1090,41 @@ export const fateChecklistData = {
         {
           id: "prisma-specials",
           label: "Fate/kaleid liner Prisma Illya Specials",
-          format: "OVA (2 episodios) [Opcional - Comedia]",
+          format: "Especial",
           completed: false,
           opened: false,
           episodes: [
             {
               id: "prisma-s-1",
               number: 1,
-              label: "Especial 1",
-              completed: false,
+              label: "Ruby-chan no Doki Bloomers-darake no Daihanseikai",
+              completed: false
             },
             {
               id: "prisma-s-2",
               number: 2,
-              label: "Especial 2",
-              completed: false,
+              label: "Quiz Magical Rubyonaire",
+              completed: false
             },
-          ],
+            {
+              id: "prisma-s-3",
+              number: 3,
+              label: "Kilo Battle",
+              completed: false
+            },
+            {
+              id: "prisma-s-4",
+              number: 4,
+              label: "Kanojo-tachi no Jijou",
+              completed: false
+            },
+            {
+              id: "prisma-s-5",
+              number: 5,
+              label: "Undressing War",
+              completed: false
+            }
+          ]
         },
         {
           id: "prisma-2wei",
