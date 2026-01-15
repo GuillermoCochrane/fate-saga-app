@@ -1129,71 +1129,72 @@ export const fateChecklistData = {
         {
           id: "prisma-2wei",
           label: "Fate/kaleid liner Prisma☆Illya 2wei!",
-          format: "Anime (10 episodios) [SEGUNDA TEMPORADA]",
+          format: "Anime",
+          note: "En animeFLV, son 15 capitulos, pero estan mal, ya que incluye OVA y especiales",
           completed: false,
           opened: false,
           episodes: [
             {
               id: "prisma2-1",
               number: 1,
-              label: "¡Verano! ¡Mar! ¡Trajes de baño!",
-              completed: false,
+              label: "Illya Grow Up!?",
+              completed: false
             },
             {
               id: "prisma2-2",
               number: 2,
-              label: "¡La misteriosa transferencia!",
-              completed: false,
+              label: "Illya x Illya",
+              completed: false
             },
             {
               id: "prisma2-3",
               number: 3,
-              label: "¡La chica mágica oscura!",
-              completed: false,
+              label: "Normal Life Breaker",
+              completed: false
             },
             {
               id: "prisma2-4",
               number: 4,
-              label: "¡La chica mágica y la chica mágica!",
-              completed: false,
+              label: "Wild Transfer Student",
+              completed: false
             },
             {
               id: "prisma2-5",
               number: 5,
-              label: "¡La chica mágica y la chica mágica (Parte 2)!",
-              completed: false,
+              label: "Well, in Other Words",
+              completed: false
             },
             {
               id: "prisma2-6",
               number: 6,
-              label: "¡La chica mágica y la chica mágica (Parte 3)!",
-              completed: false,
+              label: "On the Other Side of Lies and Façade",
+              completed: false
             },
             {
               id: "prisma2-7",
               number: 7,
-              label: "¡La chica mágica y la chica mágica (Parte 4)!",
-              completed: false,
+              label: "Clash! Cooking Sisters",
+              completed: false
             },
             {
               id: "prisma2-8",
               number: 8,
-              label: "¡La chica mágica y la chica mágica (Parte 5)!",
-              completed: false,
+              label: "Her Name Is",
+              completed: false
             },
             {
               id: "prisma2-9",
               number: 9,
-              label: "¡La chica mágica y la chica mágica (Parte 6)!",
-              completed: false,
+              label: "Lone Battle",
+              completed: false
             },
             {
               id: "prisma2-10",
               number: 10,
-              label: "¡La chica mágica y la chica mágica (Parte 7)!",
-              completed: false,
-            },
-          ],
+              label: "The Things Those Hands Protected",
+              completed: false
+            }
+          ]
         },
         {
           id: "prisma-2wei-ova",
