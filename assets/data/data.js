@@ -1073,6 +1073,21 @@ export const fateChecklistData = {
           ]
         },
         {
+          id: "prisma-dance",
+          label: "Fate/kaleid liner Prisma☆Illya: Undoukai de Dance!",
+          format: "OVA",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "prisma-dance-1",
+              number: 1,
+              label: "Undoukai de Dance!",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "prisma-specials",
           label: "Fate/kaleid liner Prisma Illya Specials",
           format: "OVA (2 episodios) [Opcional - Comedia]",
@@ -1353,21 +1368,6 @@ export const fateChecklistData = {
               id: "prisma-mov-1",
               number: 1,
               label: "Sekka no Chikai",
-              completed: false,
-            },
-          ],
-        },
-        {
-          id: "prisma-dance",
-          label: "Fate/kaleid liner Prisma☆Illya: Undoukai de Dance!",
-          format: "OVA (1 episodio) [Opcional - Comedia]",
-          completed: false,
-          opened: false,
-          episodes: [
-            {
-              id: "prisma-dance-1",
-              number: 1,
-              label: "Undoukai de Dance!",
               completed: false,
             },
           ],
