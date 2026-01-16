@@ -1322,6 +1322,51 @@ export const fateChecklistData = {
           ]
         },
         {
+          id: "prisma-herz-specials",
+          label: "Fate/kaleid liner Prisma Illya 2wei Herz! Specials",
+          format: "Especial",
+          note: "En animeFLV, 1 capitulo se encuentra enFate/kaleid liner Prisma Illya 2wei, y los restantes en fate/kaleid liner Prisma Illya 2wei Specials",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "prisma3-s-1",
+              number: 1,
+              label: "Beast, Futatabi!",
+              note: "Especial 1 - esta como capitulo 11 de Fate/kaleid liner Prisma Illya 2wei",
+              completed: false
+            },
+            {
+              id: "prisma3-s-2",
+              number: 2,
+              label: "Mugen no Fukusei",
+              note: "En AnimeFLV: 2wei! OVA Episodio 2",
+              completed: false
+            },
+            {
+              id: "prisma3-s-3",
+              number: 3,
+              label: "Otome yo Toushi wo Idake (Zenpen)",
+              note: "En AnimeFLV: 2wei! OVA Episodio 3",
+              completed: false
+            },
+            {
+              id: "prisma3-s-4",
+              number: 4,
+              label: "Otome yo Toushi wo Idake (Kouhen)",
+              note: "En AnimeFLV: 2wei! OVA Episodio 4",
+              completed: false
+            },
+            {
+              id: "prisma3-s-5",
+              number: 5,
+              label: "Bazett Hajimete no Arubaito",
+              note: "En AnimeFLV: 2wei! OVA Episodio 5",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "prisma-3rei",
           label: "Fate/kaleid liner Prisma☆Illya 3rei!!",
           format: "Anime (12 episodios) [CUARTA TEMPORADA]",
