@@ -1501,7 +1501,7 @@ export const fateChecklistData = {
         {
           id: "prisma-movie",
           label: "Fate/kaleid liner Prisma☆Illya Movie: Sekka no Chikai",
-          format: "Película [SECUELA directa de la 4ta temporada (3rei!!)]",
+          format: "Película",
           completed: false,
           opened: false,
           episodes: [
@@ -1509,10 +1509,10 @@ export const fateChecklistData = {
               id: "prisma-mov-1",
               number: 1,
               label: "Sekka no Chikai",
-              completed: false,
-            },
-          ],
-        },
+              completed: false
+            }
+          ]
+        }
       ],
     },
     {
