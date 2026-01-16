@@ -135,91 +135,9 @@ export const fateChecklistData = {
       ]
     },
     {
-      saga: "Fate Saga",
+      saga: "Fate/stay night",
       opened: false,
       seasons: [
-        {
-          id: "fate-zero",
-          label: "Fate/Zero",
-          format: "Anime",
-          completed: false,
-          opened: false,
-          episodes: [
-            {
-              id: "fz-1",
-              number: 1,
-              label: "El comienzo de la Guerra del Santo Grial",
-              completed: false,
-            },
-            { id: "fz-2", number: 2, label: "Falsa paz", completed: false },
-            {
-              id: "fz-3",
-              number: 3,
-              label: "Tierras de batalla en Fuyuki",
-              completed: false,
-            },
-            {
-              id: "fz-4",
-              number: 4,
-              label: "Lanza del demonio",
-              completed: false,
-            },
-            {
-              id: "fz-5",
-              number: 5,
-              label: "Bestias inmundas de la oscuridad",
-              completed: false,
-            },
-            {
-              id: "fz-6",
-              number: 6,
-              label: "Una noche de esquirlas",
-              completed: false,
-            },
-            {
-              id: "fz-7",
-              number: 7,
-              label: "El bosque maligno",
-              completed: false,
-            },
-            {
-              id: "fz-8",
-              number: 8,
-              label: "El magus asesino",
-              completed: false,
-            },
-            {
-              id: "fz-9",
-              number: 9,
-              label: "Caballero de la diadema y el escudo",
-              completed: false,
-            },
-            {
-              id: "fz-10",
-              number: 10,
-              label: "Rin en la colina de los tesoros",
-              completed: false,
-            },
-            {
-              id: "fz-11",
-              number: 11,
-              label: "Conversación en el banquete",
-              completed: false,
-            },
-            {
-              id: "fz-12",
-              number: 12,
-              label: "El invitado del mar",
-              completed: false,
-            },
-            {
-              id: "fz-13",
-              number: 13,
-              label: "La prohibición del Santo Grial",
-              completed: false,
-            },
-          ],
-        },
         {
           id: "fate-zero-2",
           label: "Fate/Zero 2",
