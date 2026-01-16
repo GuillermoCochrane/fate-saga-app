@@ -1529,6 +1529,22 @@ export const fateChecklistData = {
               completed: false
             }
           ]
+        },
+        {
+          id: "prisma-phantasm",
+          label: "Fate/Kaleid Liner Prisma Illya: Prisma★Phantasm",
+          format: "OVA",
+          note: "No se encuentra en animeFLV, la vi en ww3.animeonline.ninja",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "prisma-ph-1",
+              number: 1,
+              label: "Prisma★Phantasm",
+              completed: false
+            }
+          ]
         }
       ],
     },
