@@ -1512,6 +1512,23 @@ export const fateChecklistData = {
               completed: false
             }
           ]
+        },
+        {
+          id: "prisma-movie-licht",
+          label: "Fate/kaleid liner Prisma☆Illya Movie: Licht - Namae no Nai Shoujo",
+          format: "Película",
+          note: "No se encuentra en animeFLV, la vi en ww3.animeonline.ninja",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "prisma-mov-licht-1",
+              number: 1,
+              label: "Licht - Nameless Girl",
+              note: "Licht - Namae no Nai Shoujo",
+              completed: false
+            }
+          ]
         }
       ],
     },
