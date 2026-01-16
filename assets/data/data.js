@@ -1369,83 +1369,83 @@ export const fateChecklistData = {
         {
           id: "prisma-3rei",
           label: "Fate/kaleid liner Prisma☆Illya 3rei!!",
-          format: "Anime (12 episodios) [CUARTA TEMPORADA]",
+          format: "Anime",
           completed: false,
           opened: false,
           episodes: [
             {
               id: "prisma4-1",
               number: 1,
-              label: "¡Un mundo paralelo!",
-              completed: false,
+              label: "City Fading to Silver",
+              completed: false
             },
             {
               id: "prisma4-2",
               number: 2,
-              label: "¡La chica mágica y la chica mágica (Parte 17)!",
-              completed: false,
+              label: "Encounters and Reunions",
+              completed: false
             },
             {
               id: "prisma4-3",
               number: 3,
-              label: "¡La chica mágica y la chica mágica (Parte 18)!",
-              completed: false,
+              label: "Your True Enemy",
+              completed: false
             },
             {
               id: "prisma4-4",
               number: 4,
-              label: "¡La chica mágica y la chica mágica (Parte 19)!",
-              completed: false,
+              label: "For My Weak Little Sister",
+              completed: false
             },
             {
               id: "prisma4-5",
               number: 5,
-              label: "¡La chica mágica y la chica mágica (Parte 20)!",
-              completed: false,
+              label: "The Little Lady Attacks",
+              completed: false
             },
             {
               id: "prisma4-6",
               number: 6,
-              label: "¡La chica mágica y la chica mágica (Parte 21)!",
-              completed: false,
+              label: "Chilling Hostility",
+              completed: false
             },
             {
               id: "prisma4-7",
               number: 7,
-              label: "¡La chica mágica and the Magical Girl (Part 22)!",
-              completed: false,
+              label: "Dolls and Stuffed Animals",
+              completed: false
             },
             {
               id: "prisma4-8",
               number: 8,
-              label: "¡La chica mágica y la chica mágica (Parte 23)!",
-              completed: false,
+              label: "People and Tools",
+              completed: false
             },
             {
               id: "prisma4-9",
               number: 9,
-              label: "¡La chica mágica y la chica mágica (Parte 24)!",
-              completed: false,
+              label: "Illya's Choice",
+              completed: false
             },
             {
               id: "prisma4-10",
               number: 10,
-              label: "¡La chica mágica y la chica mágica (Parte 25)!",
-              completed: false,
+              label: "To the Princess's Side",
+              completed: false
             },
             {
               id: "prisma4-11",
               number: 11,
-              label: "¡La chica mágica y la chica mágica (Parte 26)!",
-              completed: false,
+              label: "You Are Not Alone",
+              completed: false
             },
             {
               id: "prisma4-12",
               number: 12,
-              label: "¡La chica mágica y la chica mágica (Parte 27)!",
-              completed: false,
-            },
-          ],
+              label: "Woven Miracles",
+              completed: false
+            }
+          ]
         },
         {
           id: "prisma-3rei-special",
