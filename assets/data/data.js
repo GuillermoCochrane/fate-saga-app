@@ -902,14 +902,21 @@ export const fateChecklistData = {
         },
         {
           id: "fate-ubw-ova",
-          label:
-            "Fate/stay night: Unlimited Blade Works (TV) 2nd Season - Sunny Day",
+          label: "Fate/stay night: Unlimited Blade Works 2nd Season - Sunny Day",
           format: "OVA",
           completed: false,
           opened: false,
           episodes: [
-            { id: "ubw-ova-1", number: 1, label: "Sunny Day", completed: false },
-          ],
+            {
+              id: "ubw-ova-1",
+              number: 1,
+              label: "Sunny Day",
+              romaji: "Sunny Day",
+              jp: "sunny day",
+              es: "Día de Verano",
+              completed: false
+            }
+          ]
         },
         {
           id: "fate-ubw-movie",
