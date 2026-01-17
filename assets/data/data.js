@@ -639,6 +639,25 @@ export const fateChecklistData = {
           ]
         },
         {
+          id: "fate-ubw-prologue",
+          label: "Fate/stay night: Unlimited Blade Works - Prologue",
+          format: "Especial",
+          note: "Episodio 00 / Special de 51 min. Disponible en https://vww.animeflv.one/anime/fatestay-night-unlimited-blade-works-prologue'",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "ubw-pro-1",
+              number: 1,
+              label: "Fate/stay night [Unlimited Blade Works] - Prologue",
+              romaji: "Fate/stay night [Unlimited Blade Works] - Prologue",
+              jp: "Fate/stay night [Unlimited Blade Works] プロローグ",
+              es: "Fate/stay night [Unlimited Blade Works] - Prólogo",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "fate-ubw-1",
           label: "Fate/stay night Unlimited Blade Works 1st Season",
           format: "Anime",
