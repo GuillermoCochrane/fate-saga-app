@@ -611,6 +611,34 @@ export const fateChecklistData = {
           ]
         },
         {
+          id: "fate-stay-night-ova",
+          label: "Fate/stay night TV Reproduction",
+          format: "OVA",
+          note: "Resumen de la serie 2006. Disponible en: https://vww.animeflv.one/anime/fatestay-night-tv-reproduction",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "fsn-ova-1",
+              number: 1,
+              label: "Fate/stay night TV Reproduction Episode 1",
+              romaji: "Fate/stay night TV Reproduction Episode 1",
+              jp: "Fate/stay night TV Reproduction 第1話",
+              es: "Fate/stay night TV Reproduction Episodio 1",
+              completed: false
+            },
+            {
+              id: "fsn-ova-2",
+              number: 2,
+              label: "Fate/stay night TV Reproduction Episode 2",
+              romaji: "Fate/stay night TV Reproduction Episode 2",
+              jp: "Fate/stay night TV Reproduction 第2話",
+              es: "Fate/stay night TV Reproduction Episodio 2",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "fate-ubw-1",
           label: "Fate/stay night Unlimited Blade Works 1st Season",
           format: "Anime",
