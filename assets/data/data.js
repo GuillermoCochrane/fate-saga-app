@@ -659,7 +659,7 @@ export const fateChecklistData = {
         },
         {
           id: "fate-ubw-1",
-          label: "Fate/stay night Unlimited Blade Works 1st Season",
+          label: "Fate/stay night: Unlimited Blade Works",
           format: "Anime",
           completed: false,
           opened: false,
@@ -667,66 +667,112 @@ export const fateChecklistData = {
             {
               id: "ubw1-1",
               number: 1,
-              label: "El comienzo del fin",
-              completed: false,
+              label: "Winter Day, Fateful Night",
+              romaji: "Fuyu no Hi, Unmei no Yoru",
+              jp: "冬の日、運命の夜",
+              es: "Día de invierno, noche del destino",
+              completed: false
             },
             {
               id: "ubw1-2",
               number: 2,
-              label: "El inicio del ritual",
-              completed: false,
+              label: "When the Curtain Goes Up",
+              romaji: "Kaimaku no Toki",
+              jp: "開幕の刻",
+              es: "Se levanta el telón",
+              completed: false
             },
             {
               id: "ubw1-3",
               number: 3,
-              label: "El primer combate",
-              completed: false,
+              label: "The First Battle",
+              romaji: "Shosen",
+              jp: "初戦",
+              es: "La primera batalla",
+              completed: false
             },
             {
               id: "ubw1-4",
               number: 4,
-              label: "Encuentro con el destino",
-              completed: false,
+              label: "Finding the Will to Fight",
+              romaji: "Seni no Arika",
+              jp: "戦意の在処",
+              es: "El paradero del espíritu de batalla",
+              completed: false
             },
-            { id: "ubw1-5", number: 5, label: "Dos magos", completed: false },
-            { id: "ubw1-6", number: 6, label: "Nuevos retos", completed: false },
+            {
+              id: "ubw1-5",
+              number: 5,
+              label: "Dancing After School",
+              romaji: "Houkago ni Odoru",
+              jp: "放課後に踊る",
+              es: "Baile después de clase",
+              completed: false
+            },
+            {
+              id: "ubw1-6",
+              number: 6,
+              label: "Mirage",
+              romaji: "Shinkirou",
+              jp: "蜃気楼",
+              es: "Espejismo",
+              completed: false
+            },
             {
               id: "ubw1-7",
               number: 7,
-              label: "La espada maldita",
-              completed: false,
+              label: "Reward for the Desperate Struggle",
+              romaji: "Shitou no Kotae",
+              jp: "死闘の報酬",
+              es: "La recompensa del combate a muerte",
+              completed: false
             },
             {
               id: "ubw1-8",
               number: 8,
-              label: "El deseo de un héroe",
-              completed: false,
+              label: "Winter Days, Whereabouts of Mind",
+              romaji: "Fuyu no Hi, Kokoro no Shozai",
+              jp: "冬の日、心の所在",
+              es: "Día de invierno. El paradero del corazón",
+              completed: false
             },
             {
               id: "ubw1-9",
               number: 9,
-              label: "Dos mentes, dos ideales",
-              completed: false,
+              label: "The Distance Between Them",
+              romaji: "Futari no Kyori",
+              jp: "二人の距離",
+              es: "La distancia entre los dos",
+              completed: false
             },
             {
               id: "ubw1-10",
               number: 10,
-              label: "Los cinco grandes magos",
-              completed: false,
+              label: "The Fifth Contractor",
+              romaji: "Goninme no Keiyakusha",
+              jp: "五人目の契約者",
+              es: "El quinto contratista",
+              completed: false
             },
             {
               id: "ubw1-11",
               number: 11,
-              label: "Visitar el pasado",
-              completed: false,
+              label: "A Visitor Approaches Lightly",
+              romaji: "Raihousha wa Karoyaka ni",
+              jp: "来訪者は軽やかに",
+              es: "Los visitantes llegan rápidamente",
+              completed: false
             },
             {
               id: "ubw1-12",
               number: 12,
-              label: "El final del héroe",
-              completed: false,
-            },
-          ],
+              label: "The Final Choice",
+              romaji: "Saigo no Sentaku",
+              jp: "最後の選択",
+              es: "La última elección",
+              completed: false
+            }
+          ]
         },
         {
           id: "fate-ubw-2",
