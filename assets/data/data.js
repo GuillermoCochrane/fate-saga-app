@@ -776,7 +776,7 @@ export const fateChecklistData = {
         },
         {
           id: "fate-ubw-2",
-          label: "Fate/stay night: Unlimited Blade Works (TV) 2nd Season",
+          label: "Fate/stay night: Unlimited Blade Works 2nd Season",
           format: "Anime",
           completed: false,
           opened: false,
@@ -784,73 +784,121 @@ export const fateChecklistData = {
             {
               id: "ubw2-1",
               number: 13,
-              label: "El momento de la elección",
-              completed: false,
+              label: "Time of Departure",
+              romaji: "Ketsubetsu no Toki",
+              jp: "決別の刻",
+              es: "El momento de decidir",
+              completed: false
             },
             {
               id: "ubw2-2",
               number: 14,
-              label: "El fin del ideal",
-              completed: false,
+              label: "Princess of Colchis",
+              romaji: "Colchis no Oujo",
+              jp: "コルキスの王女",
+              es: "La princesa de la Cólquida",
+              completed: false
             },
             {
               id: "ubw2-3",
               number: 15,
-              label: "Los doce ensayos",
-              completed: false,
+              label: "A Legendary Showdown",
+              romaji: "Shinwa no Taiketsu",
+              jp: "神話の対決",
+              es: "El duelo mítico",
+              completed: false
             },
             {
               id: "ubw2-4",
               number: 16,
-              label: "La colina donde se promete la victoria",
-              completed: false,
+              label: "Winter Days, the Form Wishes Take",
+              romaji: "Fuyu no Hi, Negai no Katachi",
+              jp: "冬の日、願いの形",
+              es: "Días de invierno. La forma de los deseos",
+              completed: false
             },
             {
               id: "ubw2-5",
               number: 17,
-              label: "La espada del traidor",
-              completed: false,
+              label: "The Dark Sword Bares Its Fangs",
+              romaji: "Anken, Kiba wo Muku",
+              jp: "暗剣, 牙を剥く",
+              es: "La espada asesina revela sus colmillos",
+              completed: false
             },
-            { id: "ubw2-6", number: 18, label: "La decisión", completed: false },
+            {
+              id: "ubw2-6",
+              number: 18,
+              label: "The Beginning of the Circle",
+              romaji: "Sono En wa Hajimari ni",
+              jp: "その縁は始まりに",
+              es: "El inicio del círculo",
+              completed: false
+            },
             {
               id: "ubw2-7",
               number: 19,
-              label: "El oro del rey",
-              completed: false,
+              label: "Idealism's End (The Answer)",
+              romaji: "Risou wo Kotae",
+              jp: "理想の末路 [こたえ]",
+              es: "La solución del ideal",
+              completed: false
             },
             {
               id: "ubw2-8",
               number: 20,
-              label: "Un lugar lejano",
-              completed: false,
+              label: "Unlimited Blade Works.",
+              romaji: "Unlimited Blade Works.",
+              jp: "Unlimited Blade Works.",
+              es: "Unlimited Blade Works",
+              completed: false
             },
             {
               id: "ubw2-9",
               number: 21,
-              label: "El puente del cielo",
-              completed: false,
+              label: "Answer",
+              romaji: "Answer",
+              jp: "Answer",
+              es: "Respuesta",
+              completed: false
             },
-            { id: "ubw2-10", number: 22, label: "Respuesta", completed: false },
+            {
+              id: "ubw2-10",
+              number: 22,
+              label: "Winter Days, Faraway Home",
+              romaji: "Fuyu no hi, Tooi Ieji",
+              jp: "冬の日、遠い家路",
+              es: "Día de invierno, el lejano camino a casa",
+              completed: false
+            },
             {
               id: "ubw2-11",
               number: 23,
-              label: "El amanecer lejano",
-              completed: false,
+              label: "Incarnation",
+              romaji: "Kengen",
+              jp: "顕現",
+              es: "Manifestación",
+              completed: false
             },
             {
               id: "ubw2-12",
               number: 24,
-              label: "La respuesta a todo",
-              completed: false,
+              label: "Unlimited Blade Works",
+              romaji: "Mugen no Kensei",
+              jp: "無限の剣製",
+              es: "Creación de espadas infinita",
+              completed: false
             },
             {
               id: "ubw2-13",
               number: 25,
-              label: "Unlimited Blade Works",
-              completed: false,
-            },
-            { id: "ubw2-14", number: 26, label: "Epílogo", completed: false },
-          ],
+              label: "Epilogue",
+              romaji: "Epilogue",
+              jp: "エピローグ",
+              es: "Epílogo",
+              completed: false
+            }
+          ]
         },
         {
           id: "fate-ubw-ova",
