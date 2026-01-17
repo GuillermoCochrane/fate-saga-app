@@ -920,7 +920,7 @@ export const fateChecklistData = {
         },
         {
           id: "fate-ubw-movie",
-          label: "Fate/stay night Unlimited Blade Works",
+          label: "Fate/stay night: Unlimited Blade Works",
           format: "Película",
           completed: false,
           opened: false,
@@ -928,10 +928,13 @@ export const fateChecklistData = {
             {
               id: "ubw-movie-1",
               number: 1,
-              label: "Película Unlimited Blade Works",
-              completed: false,
-            },
-          ],
+              label: "Fate/stay night: Unlimited Blade Works",
+              romaji: "Gekijouban Fate/Stay Night: Unlimited Blade Works",
+              jp: "劇場版 Fate/stay night UNLIMITED BLADE WORKS",
+              es: "Fate stay night la Película: Unlimited Blade Works",
+              completed: false
+            }
+          ]
         },
         {
           id: "fate-heavens-feel",
