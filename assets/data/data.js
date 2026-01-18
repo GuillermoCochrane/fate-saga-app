@@ -1282,11 +1282,14 @@ export const fateChecklistData = {
           episodes: [
             {
               id: "fsf-s-1",
-              number: 1,
-              label: "Whispers of Dawn",
-              completed: false,
-            },
-          ],
+              number: 0,
+              label: "Fate/strange Fake: Whispers of Dawn",
+              romaji: "Fate/strange Fake: Whispers of Dawn",
+              jp: "Fate/strange Fake -Whispers of Dawn-",
+              es: "Fate/strange Fake: Whispers of Dawn",
+              completed: false
+            }
+          ]
         },
         {
           id: "strange-fake-anime",
