@@ -1249,19 +1249,23 @@ export const fateChecklistData = {
           ]
         },
         {
-          id: "elmelloi-special",
-          label: "Lord El-Melloi II Sei no Jikenbo",
+          id: "elmelloi-extra-special",
+          label: "Lord El-Melloi II's Case Files: Rail Zeppelin Grace Note - Waver, Reunion, and the Magic Lantern",
           format: "Especial",
+          note: "Disponible en: https://ww3.animeonline.ninja/episodio/lord-el-melloi-ii-sei-no-jikenbo-rail-zeppelin-grace-note-tokubetsu-hen/ o en https://jkanime.net/lord-el-melloi-ii-sei-no-jikenbo-rail-zeppelin-grace-note-special/serie/",
           completed: false,
           opened: false,
           episodes: [
             {
-              id: "elmelloi-s-1",
+              id: "elmelloi-extra-1",
               number: 1,
-              label: "Especial Lord El-Melloi II",
-              completed: false,
-            },
-          ],
+              label: "Waver, Reunion, and the Magic Lantern",
+              romaji: "Waver, Saikai, to Mahou Tourou",
+              jp: "ウェイバー、再会、と魔法燈籠",
+              es: "Waver, Reunión, y la Linterna Mágica",
+              completed: false
+            }
+          ]
         },
       ],
     },
