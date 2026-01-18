@@ -1295,83 +1295,39 @@ export const fateChecklistData = {
           id: "strange-fake-anime",
           label: "Fate/strange Fake",
           format: "Anime",
+          note: "Serie en emisión. Estreno: Enero 2026",
           completed: false,
-          opened: false,
+          opened: true,
           episodes: [
             {
               id: "fsf-1",
               number: 1,
-              label: "Preludio: Falso/Amanecer",
-              completed: false,
+              label: "The Heroic Spirit Incident",
+              romaji: "Eirei Jiken",
+              jp: "英霊事変",
+              es: "El incidente del Espíritu Heroico",
+              completed: false
             },
             {
               id: "fsf-2",
               number: 2,
-              label: "Día 1: Rey de los héroes vs Rey de los bandidos",
-              completed: false,
+              label: "Ensemble VS Pretense",
+              romaji: "Gunzou vs Kyozou",
+              jp: "群像VS虚像",
+              es: "Conjunto contra pretensión",
+              completed: false
             },
             {
               id: "fsf-3",
               number: 3,
-              label: "Día 1: Rey de los héroes vs Rey de los bandidos (Parte 2)",
-              completed: false,
+              label: "Proximamente, en emisión",
+              romaji: "Proximamente, en emisión",
+              jp: "Proximamente, en emisión",
+              es: "Proximamente, en emisión",
+              completed: false
             },
-            {
-              id: "fsf-4",
-              number: 4,
-              label: "Día 1: Rey de los héroes vs Rey de los bandidos (Parte 3)",
-              completed: false,
-            },
-            {
-              id: "fsf-5",
-              number: 5,
-              label: "Día 2: El asesino silencioso",
-              completed: false,
-            },
-            {
-              id: "fsf-6",
-              number: 6,
-              label: "Día 2: El asesino silencioso (Parte 2)",
-              completed: false,
-            },
-            {
-              id: "fsf-7",
-              number: 7,
-              label: "Día 3: La verdadera guerra comienza",
-              completed: false,
-            },
-            {
-              id: "fsf-8",
-              number: 8,
-              label: "Día 3: La verdadera guerra comienza (Parte 2)",
-              completed: false,
-            },
-            {
-              id: "fsf-9",
-              number: 9,
-              label: "Día 4: Confrontación de reyes",
-              completed: false,
-            },
-            {
-              id: "fsf-10",
-              number: 10,
-              label: "Día 4: Confrontación de reyes (Parte 2)",
-              completed: false,
-            },
-            {
-              id: "fsf-11",
-              number: 11,
-              label: "Día 5: El despertar de los muertos",
-              completed: false,
-            },
-            {
-              id: "fsf-12",
-              number: 12,
-              label: "Día 5: El despertar de los muertos (Parte 2)",
-              completed: false,
-            },
-          ],
-        },
+          ]
+        }
       ],
     },
     {
