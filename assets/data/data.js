@@ -1335,29 +1335,22 @@ export const fateChecklistData = {
       opened: false,
       seasons: [
         {
-          id: "fgo-recap",
-          label: "Fate/Grand Order: Zettai Majuu Sensen Babylonia - Initium Iter",
+          id: "fgo-first-order",
+          label: "Fate/Grand Order -First Order-",
           format: "Especial",
           completed: false,
           opened: false,
           episodes: [
             {
-              id: "fgo-rec-1",
+              id: "fgo-first-order-1",
               number: 1,
-              label: "Initium Iter",
-              completed: false,
-            },
-          ],
-        },
-        {
-          id: "fgo-first-order",
-          label: "Fate/Grand Order: First Order",
-          format: "Película",
-          completed: false,
-          opened: false,
-          episodes: [
-            { id: "fgo-fo-1", number: 1, label: "First Order", completed: false },
-          ],
+              label: "Fate/Grand Order -First Order-",
+              romaji: "Fate/Grand Order -First Order-",
+              jp: "Fate/Grand Order -First Order-",
+              es: "Fate/Grand Order -First Order-",
+              completed: false
+            }
+          ]
         },
         {
           id: "fgo-camelot-1",
@@ -1387,6 +1380,21 @@ export const fateChecklistData = {
               id: "fgo-cam2-1",
               number: 1,
               label: "Paladin; Agateram",
+              completed: false,
+            },
+          ],
+        },
+        {
+          id: "fgo-recap",
+          label: "Fate/Grand Order: Zettai Majuu Sensen Babylonia - Initium Iter",
+          format: "Especial",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "fgo-rec-1",
+              number: 1,
+              label: "Initium Iter",
               completed: false,
             },
           ],
