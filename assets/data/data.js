@@ -1336,7 +1336,7 @@ export const fateChecklistData = {
       seasons: [
         {
           id: "fgo-first-order",
-          label: "Fate/Grand Order -First Order-",
+          label: "Fate/Grand Order - First Order -",
           format: "Especial",
           completed: false,
           opened: false,
@@ -1344,29 +1344,32 @@ export const fateChecklistData = {
             {
               id: "fgo-first-order-1",
               number: 1,
-              label: "Fate/Grand Order -First Order-",
-              romaji: "Fate/Grand Order -First Order-",
-              jp: "Fate/Grand Order -First Order-",
-              es: "Fate/Grand Order -First Order-",
+              label: "First Order",
+              romaji: "First Order",
+              jp: "First Order",
+              es: "First Order",
               completed: false
             }
           ]
         },
         {
           id: "fgo-camelot-1",
-          label:
-            "Fate/Grand Order: Shinsei Entaku Ryouiki Camelot - Wandering; Agateram",
+          label: "Fate/Grand Order: Divine Realm of the Round Table - Camelot Wandering; Agateram",
           format: "Película",
+          note: "Disponible en: https://ww3.animeonline.ninja/pelicula/fate-grand-order-camelot-1-wandering-agateram-1/",
           completed: false,
           opened: false,
           episodes: [
             {
-              id: "fgo-cam1-1",
+              id: "fgo-camelot-1-1",
               number: 1,
-              label: "Wandering; Agateram",
-              completed: false,
-            },
-          ],
+              label: "Divine Realm of the Round Table - Camelot Wandering; Agateram",
+              romaji: "Shinsei Entaku Ryouiki Camelot 1 - Wandering; Agateram",
+              jp: "劇場版 - 神聖円卓領域キャメロット- Wandering; Agateram",
+              es: "Camelot 1 - Wandering; Agateram",
+              completed: false
+            }
+          ]
         },
         {
           id: "fgo-camelot-2",
