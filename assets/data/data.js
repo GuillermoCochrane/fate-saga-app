@@ -972,6 +972,132 @@ export const fateChecklistData = {
             }
           ]
         },
+        {
+          id: "emiya-todays-menu",
+          label: "Today's Menu for the Emiya Family",
+          format: "ONA",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "menu-1",
+              number: 1,
+              label: "Toshikoshi Soba",
+              romaji: "Toshikoshi Soba",
+              jp: "年越しそば",
+              es: "Soba Toshikoshi",
+              completed: false
+            },
+            {
+              id: "menu-2",
+              number: 2,
+              label: "Salmon, Mushroom and Butter Baked in Foil",
+              romaji: "Shake to Kinoko no Butter Foil Yaki",
+              jp: "鮭ときのこのバターオイル焼き",
+              es: "Si es salmón, cocínalo con mantequilla y aluminio",
+              completed: false
+            },
+            {
+              id: "menu-3",
+              number: 3,
+              label: "Spring Chirashizushi",
+              romaji: "Haru no Chirashizushi",
+              jp: "春のちらし寿司",
+              es: "Chirashizushi de primavera",
+              completed: false
+            },
+            {
+              id: "menu-4",
+              number: 4,
+              label: "Spring Greens and Bacon Sandwich",
+              romaji: "N/A",
+              jp: "N/A",
+              es: "Sándwich de vegetales de primavera y beicon",
+              completed: false
+            },
+            {
+              id: "menu-5",
+              number: 5,
+              label: "Bamboo Shoot Gratin",
+              romaji: "Takenoko Gratin",
+              jp: "たけのこグラタン",
+              es: "Gratinado de brotes de bambú",
+              completed: false
+            },
+            {
+              id: "menu-6",
+              number: 6,
+              label: "First Hamburg Steak",
+              romaji: "N/A",
+              jp: "N/A",
+              es: "La primera hamburguesa",
+              completed: false
+            },
+            {
+              id: "menu-7",
+              number: 7,
+              label: "Refreshing and Easy to Eat Chilled Ochazuke",
+              romaji: "Sarari to Itadaku Hiyashi Chazuke",
+              jp: "さらりと頂く冷やし茶漬け",
+              es: "Comamos ya ochazuke frío",
+              completed: false
+            },
+            {
+              id: "menu-8",
+              number: 8,
+              label: "Toosaka's Gomoku Fried Rice",
+              romaji: "Toosaka-san no Gomoku Chaahan",
+              jp: "遠坂さんの五目炒飯",
+              es: "El arroz frito de Tohsaka",
+              completed: false
+            },
+            {
+              id: "menu-9",
+              number: 9,
+              label: "Taste of Autumn - Caster's Training in Japanese Dish Cooking -",
+              romaji: "N/A",
+              jp: "N/A",
+              es: "El sabor del otoño: el estudio de Caster de la cocina japonesa",
+              completed: false
+            },
+            {
+              id: "menu-10",
+              number: 10,
+              label: "Fried Chicken: Yummy Even When It's Cold",
+              romaji: "N/A",
+              jp: "N/A",
+              es: "Pollo frito, hasta frío es delicioso",
+              completed: false
+            },
+            {
+              id: "menu-11",
+              number: 11,
+              label: "Special Fluffy Gooey Omelet Rice",
+              romaji: "N/A",
+              jp: "N/A",
+              es: "Special Fluffy Gooey Omelet Rice",
+              completed: false
+            },
+            {
+              id: "menu-12",
+              number: 12,
+              label: "One-Pan Roast Beef",
+              romaji: "N/A",
+              jp: "N/A",
+              es: "One-Pan Roast Beef",
+              completed: false
+            },
+            {
+              id: "menu-13",
+              number: 13,
+              label: "Hot, Hot Hot Pot",
+              romaji: "N/A",
+              jp: "N/A",
+              es: "Hot, Hot Hot Pot",
+              completed: false
+            }
+          ]
+        },
       ],
     },
     {
