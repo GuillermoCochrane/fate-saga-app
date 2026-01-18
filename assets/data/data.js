@@ -1373,19 +1373,22 @@ export const fateChecklistData = {
         },
         {
           id: "fgo-camelot-2",
-          label:
-            "Fate/Grand Order: Shinsei Entaku Ryouiki Camelot - Paladin; Agateram",
+          label: "Fate/Grand Order: Divine Realm of the Round Table - Camelot Paladin; Agateram",
           format: "Película",
+          note: "Disponible en: https://ww3.animeonline.ninja/pelicula/fate-grand-order-shinsei-entaku-ryouiki-camelot-2-paladin-agateram-1/",
           completed: false,
           opened: false,
           episodes: [
             {
-              id: "fgo-cam2-1",
+              id: "fgo-camelot-2-1",
               number: 1,
-              label: "Paladin; Agateram",
-              completed: false,
-            },
-          ],
+              label: "Divine Realm of the Round Table - Camelot Paladin; Agateram",
+              romaji: "Shinsei Entaku Ryouiki Camelot 2 - Paladin; Agateram",
+              jp: "劇場版 - 神聖円卓領域キャメロット- Paladin; Agateram",
+              es: "Camelot 2 - Paladin; Agateram",
+              completed: false
+            }
+          ]
         },
         {
           id: "fgo-recap",
