@@ -1106,18 +1106,21 @@ export const fateChecklistData = {
       seasons: [
         {
           id: "elmelloi-special",
-          label: "Lord El-Melloi II Sei no Jikenbo",
+          label: "Lord El-Melloi II's Case Files: Rail Zeppelin Grace Note - A Grave Keeper, a Cat, and a Mage",
           format: "Especial",
           completed: false,
           opened: false,
           episodes: [
             {
               id: "elmelloi-s-1",
-              number: 1,
-              label: "Especial Lord El-Melloi II",
-              completed: false,
-            },
-          ],
+              number: 0,
+              label: "A Grave Keeper, a Cat, and a Mage",
+              romaji: "Hakamori to Neko to Majutsushi",
+              jp: "墓守と猫と魔術師",
+              es: "Un enterrador, un gato y un mago",
+              completed: false
+            }
+          ]
         },
         {
           id: "elmelloi-anime",
@@ -1202,6 +1205,21 @@ export const fateChecklistData = {
               id: "elmelloi-13",
               number: 13,
               label: "El caso del asesinato en el compartimento B4 (Parte 13)",
+              completed: false,
+            },
+          ],
+        },
+        {
+          id: "elmelloi-special",
+          label: "Lord El-Melloi II Sei no Jikenbo",
+          format: "Especial",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "elmelloi-s-1",
+              number: 1,
+              label: "Especial Lord El-Melloi II",
               completed: false,
             },
           ],
