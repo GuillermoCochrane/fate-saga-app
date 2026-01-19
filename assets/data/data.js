@@ -1607,6 +1607,43 @@ export const fateChecklistData = {
           ]
         },
         {
+          id: "fgo-babylonia-recaps",
+          label: "Fate/Grand Order: Absolute Demonic Front - Babylonia Recaps",
+          format: "Especial",
+          note: "Tres episodios de recapitulación de la serie Babylonia. Emitidos entre diciembre 2019 y febrero 2020.",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "fgo-bab-recap-1",
+              number: 1,
+              label: "Babylonia Recap Part 1",
+              romaji: "Babylonia Soushuuhen Part 1",
+              jp: "バビロニア総集編 第1部",
+              es: "Recapitulación de Babylonia Parte 1",
+              completed: false
+            },
+            {
+              id: "fgo-bab-recap-2",
+              number: 2,
+              label: "Babylonia Recap Part 2",
+              romaji: "Babylonia Soushuuhen Part 2",
+              jp: "バビロニア総集編 第2部",
+              es: "Recapitulación de Babylonia Parte 2",
+              completed: false
+            },
+            {
+              id: "fgo-bab-recap-3",
+              number: 3,
+              label: "Babylonia Recap Part 3",
+              romaji: "Babylonia Soushuuhen Part 3",
+              jp: "バビロニア総集編 第3部",
+              es: "Recapitulación de Babylonia Parte 3",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "fgo-solomon",
           label:
             "Fate/Grand Order: Shuukyoku Tokuiten - Kani Jikan Shinden Solomon",
