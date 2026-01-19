@@ -1391,19 +1391,22 @@ export const fateChecklistData = {
           ]
         },
         {
-          id: "fgo-recap",
-          label: "Fate/Grand Order: Zettai Majuu Sensen Babylonia - Initium Iter",
+          id: "fgo-babylonia-initium",
+          label: "Fate/Grand Order: Absolute Demonic Front - Babylonia Initium Iter",
           format: "Especial",
           completed: false,
           opened: false,
           episodes: [
             {
-              id: "fgo-rec-1",
-              number: 1,
-              label: "Initium Iter",
-              completed: false,
-            },
-          ],
+              id: "fgo-bab-initium-1",
+              number: 0,
+              label: "Fate/Grand Order: Absolute Demonic Front - Babylonia Initium Iter",
+              romaji: "Fate/Grand Order: Zettai Majuu Sensen Babylonia Initium Iter",
+              jp: "Fate/Grand Order -絶対魔獣戦線バビロニア- Initium Iter",
+              es: "Initium Iter",
+              completed: false
+            }
+          ]
         },
         {
           id: "fgo-babylonia",
