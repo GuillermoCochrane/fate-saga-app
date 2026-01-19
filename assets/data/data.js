@@ -1672,19 +1672,22 @@ export const fateChecklistData = {
         },
         {
           id: "fgo-solomon",
-          label:
-            "Fate/Grand Order: Shuukyoku Tokuiten - Kani Jikan Shinden Solomon",
+          label: "Fate/Grand Order: Final Singularity - Grand Temple of Time: Solomon",
           format: "Película",
+          note: "Disponible en: https://ww3.animeonline.ninja/pelicula/fate-grand-order-shuukyoku-tokuiten/",
           completed: false,
           opened: false,
           episodes: [
             {
-              id: "fgo-sol-1",
+              id: "fgo-solomon-1",
               number: 1,
-              label: "El templo del tiempo, Salomón",
-              completed: false,
-            },
-          ],
+              label: "Fate/Grand Order: Final Singularity - Grand Temple of Time: Solomon",
+              romaji: "Fate/Grand Order: Shuukyoku Tokuiten - Kani Jikan Shinden Solomon",
+              jp: "Fate/Grand Order -終局特異点 冠位時間神殿ソロモン-",
+              es: "Fate/Grand Order: Singularidad Final - Gran Templo del Tiempo: Salomón",
+              completed: false
+            }
+          ]
         },
         {
           id: "fgo-moonlight",
