@@ -1746,6 +1746,25 @@ export const fateChecklistData = {
           ]
         },
         {
+          id: "fgo-manga-wakaru",
+          label: "Learning with Manga! Fate/Grand Order",
+          format: "Especial",
+          note: "Disponible en: https://vww.animeflv.one/ver/manga-de-wakaru-fategrand-order-1",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "fgo-manga-wakaru-1",
+              number: 1,
+              label: "Learning with Manga! Fate/Grand Order",
+              romaji: "Manga de Wakaru! Fate/Grand Order",
+              jp: "マンガで分かる！Fate/Grand Order",
+              es: "¡Aprende con Manga! Fate/Grand Order",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "fgo-comedy",
           label: "Fate/Grand Order: Fujimaru Ritsuka wa Wakaranai",
           format: "OVA - Comedia",
