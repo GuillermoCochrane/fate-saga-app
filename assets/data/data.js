@@ -1708,6 +1708,25 @@ export const fateChecklistData = {
           ]
         },
         {
+          id: "fgo-gudaguda-2016",
+          label: "Farewell to 2016 Guda Guda Order",
+          format: "Especial",
+          note: "Disponible en: https://www.youtube.com/watch?v=c4hPKL4v-5Y",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "fgo-gudaguda-2016-1",
+              number: 1,
+              label: "Farewell to 2016 Guda Guda Order",
+              romaji: "Toshiwasure Guda Guda Order 2016",
+              jp: "年忘れぐだぐだオーダー2016",
+              es: "Adiós a 2016 Guda Guda Order",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "fgo-comedy",
           label: "Fate/Grand Order: Fujimaru Ritsuka wa Wakaranai",
           format: "OVA - Comedia",
