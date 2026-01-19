@@ -1727,6 +1727,25 @@ export const fateChecklistData = {
           ]
         },
         {
+          id: "fgo-himuro-tenchi",
+          label: "Fate/Grand Order x Himuro's World: Seven Most Powerful Great Figures Chapter",
+          format: "Especial",
+          note: "Disponible en: https://vww.animeflv.one/ver/fategrand-order-himuro-no-tenchi-7-nin-no-saikyou-ijin-hen-1",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "fgo-himuro-1",
+              number: 1,
+              label: "Fate/Grand Order x Himuro's World: Seven Most Powerful Great Figures Chapter",
+              romaji: "Fate/Grand Order: Himuro no Tenchi - 7-nin no Saikyou Ijin-hen",
+              jp: "Fate/Grand Order氷室の天地～7人の最強の偉人編～",
+              es: "Fate/Grand Order: Himuro no Tenchi - 7-nin no Saikyou Ijin-hen",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "fgo-comedy",
           label: "Fate/Grand Order: Fujimaru Ritsuka wa Wakaranai",
           format: "OVA - Comedia",
