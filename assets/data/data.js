@@ -2496,6 +2496,33 @@ export const fateChecklistData = {
             }
           ]
         },
+        {
+          id: "fgo-comedy-season2-specials",
+          label: "Fate/Grand Order: Fujimaru Ritsuka wa Wakaranai Season 2 Specials",
+          format: "Especial",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "fgo-comedy-s2s-1",
+              number: 1,
+              label: "You've Lost Ritsuka Fujimaru S2 Special - Episode 1",
+              romaji: "Fujimaru Ritsuka wa Wakaranai Season 2 Specials - Episode 1",
+              jp: "藤丸立香はわからない Season2 Special 第1話",
+              es: "No Entiendes a Ritsuka Fujimaru T2 Especial - Capítulo 1",
+              completed: false
+            },
+            {
+              id: "fgo-comedy-s2s-2",
+              number: 2,
+              label: "You've Lost Ritsuka Fujimaru S2 Special - Episode 2",
+              romaji: "Fujimaru Ritsuka wa Wakaranai Season 2 Specials - Episode 2",
+              jp: "藤丸立香はわからない Season2 Special 第2話",
+              es: "No Entiendes a Ritsuka Fujimaru T2 Especial - Capítulo 2",
+              completed: false
+            }
+          ]
+        },
       ]
     },
     {
