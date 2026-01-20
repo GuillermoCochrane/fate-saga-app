@@ -1853,6 +1853,30 @@ export const fateChecklistData = {
         }
       ],
     },
+    { 
+      saga: "Fate/Grand Order: Fujimaru Ritsuka wa Wakaranai",
+      opened: false,
+      seasons: [
+        {
+          id: "fgo-comedy-nenmatsu",
+          label: "Fate/Grand Order: Fujimaru Ritsuka wa Wakaranai - Nenmatsu Special",
+          format: "Especial",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "fgo-comedy-nen-1",
+              number: 1,
+              label: "Fate/Grand Order: You've Lost Ritsuka Fujimaru - Year-End Special",
+              romaji: "Fate/Grand Order: Fujimaru Ritsuka wa Wakaranai - Nenmatsu Special",
+              jp: "Fate/Grand Order 藤丸立香はわからない 年末スペシャル",
+              es: "Especial de Fin de Año: No Entiendes a Ritsuka Fujimaru",
+              completed: false
+            }
+          ]
+        },
+      ]
+    },
     {
       saga: "Fate/Kaleid Liner Prisma Illya",
       opened: false,
