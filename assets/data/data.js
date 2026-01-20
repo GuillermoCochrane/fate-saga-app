@@ -1767,7 +1767,7 @@ export const fateChecklistData = {
         {
           id: "fgo-comedy",
           label: "Fate/Grand Order: Fujimaru Ritsuka wa Wakaranai",
-          format: "OVA - Comedia",
+          format: "OVA",
           completed: false,
           opened: false,
           episodes: [
