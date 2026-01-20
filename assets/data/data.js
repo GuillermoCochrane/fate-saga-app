@@ -376,6 +376,24 @@ export const fateChecklistData = {
       opened: false,
       seasons: [
         {
+          id: "fate-stay-night-curtain-raiser",
+          label: "Fate/stay night: Curtain Raiser",
+          format: "OVA",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "fsn-cr-1",
+              number: 1,
+              label: "Fate/stay night: Curtain Raiser",
+              romaji: "Feito/sutei naito",
+              jp: "フェイト／ステイナイト",
+              es: "Fate/stay night: Curtain Raiser",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "fate-stay-night-saber",
           label: "Fate/stay night (Saber Route)",
           format: "Anime",
