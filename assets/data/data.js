@@ -1765,48 +1765,6 @@ export const fateChecklistData = {
           ]
         },
         {
-          id: "fgo-comedy",
-          label: "Fate/Grand Order: Fujimaru Ritsuka wa Wakaranai",
-          format: "OVA",
-          completed: false,
-          opened: false,
-          episodes: [
-            { id: "fgo-com-1", number: 1, label: "Episodio 1", completed: false },
-            { id: "fgo-com-2", number: 2, label: "Episodio 2", completed: false },
-            { id: "fgo-com-3", number: 3, label: "Episodio 3", completed: false },
-            { id: "fgo-com-4", number: 4, label: "Episodio 4", completed: false },
-            { id: "fgo-com-5", number: 5, label: "Episodio 5", completed: false },
-            { id: "fgo-com-6", number: 6, label: "Episodio 6", completed: false },
-            { id: "fgo-com-7", number: 7, label: "Episodio 7", completed: false },
-            { id: "fgo-com-8", number: 8, label: "Episodio 8", completed: false },
-            { id: "fgo-com-9", number: 9, label: "Episodio 9", completed: false },
-            {
-              id: "fgo-com-10",
-              number: 10,
-              label: "Episodio 10",
-              completed: false,
-            },
-            {
-              id: "fgo-com-11",
-              number: 11,
-              label: "Episodio 11",
-              completed: false,
-            },
-            {
-              id: "fgo-com-12",
-              number: 12,
-              label: "Episodio 12",
-              completed: false,
-            },
-            {
-              id: "fgo-com-13",
-              number: 13,
-              label: "Episodio 13",
-              completed: false,
-            },
-          ],
-        },
-        {
           id: "fgo-carnival",
           label: "Fate/Grand Carnival",
           format: "OVA",
