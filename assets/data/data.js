@@ -3515,7 +3515,7 @@ export const fateChecklistData = {
         },
         {
           id: "fate-prototype",
-          label: "Fate Prototype",
+          label: "Fate/Prototype",
           format: "OVA",
           completed: false,
           opened: false,
@@ -3523,10 +3523,13 @@ export const fateChecklistData = {
             {
               id: "proto-1",
               number: 1,
-              label: "Fate Prototype",
-              completed: false,
-            },
-          ],
+              label: "Fate/Prototype",
+              romaji: "Fate/Prototype",
+              jp: "Fate/Prototype",
+              es: "Fate/Prototype",
+              completed: false
+            }
+          ]
         },
         {
           id: "fate-extra",
