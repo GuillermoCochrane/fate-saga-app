@@ -3811,6 +3811,24 @@ export const fateChecklistData = {
             }
           ]
         },
+        {
+          id: "carnival-phantasm-ex",
+          label: "Carnival Phantasm EX Season",
+          format: "OVA",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "carnival-ex-1",
+              number: 1,
+              label: "Carnival Phantasm EX Season",
+              romaji: "Kānibaru Fantazumu EX Season",
+              jp: "カーニバル・ファンタズム EX Season",
+              es: "Carnaval Fantasma: Temporada EX",
+              completed: false
+            }
+          ]
+        },
       ],
     },
 ]};
