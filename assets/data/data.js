@@ -929,9 +929,9 @@ export const fateChecklistData = {
               id: "ubw-ova-1",
               number: 1,
               label: "Sunny Day",
-              romaji: "Sunny Day",
-              jp: "sunny day",
-              es: "Día de Verano",
+              romaji: "Feito/sutei naito [Anrimiteddo Bureido Waakuusu] Nijūgo-wa: Sannī Dei",
+              jp: "Fate/stay night [Unlimited Blade Works] #25「Sunny Day」",
+              es: "Fate/stay night: Unlimited Blade Works - Día Soleado",
               completed: false
             }
           ]
