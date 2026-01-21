@@ -3697,83 +3697,119 @@ export const fateChecklistData = {
         {
           id: "carnival-phantasm",
           label: "Carnival Phantasm",
-          format: "Serie OVA [Parodia esencial del Nasuverse]",
+          format: "OVA",
           completed: false,
           opened: false,
           episodes: [
             {
               id: "carnival-1",
               number: 1,
-              label: "Episodio 1",
-              completed: false,
+              label: "The 5th Great Clash of the Magicians: The Holy Grail War",
+              romaji: "Dai 5-ji Majutsu-shi Daigekitotsu Chikichiki Seihai Sensou",
+              jp: "第5次魔術師大激突チキチキ聖杯戦争",
+              es: "La Quinta Gran Colisión de Magos: La Guerra del Santo Grial",
+              completed: false
             },
             {
               id: "carnival-2",
               number: 2,
-              label: "Episodio 2",
-              completed: false,
+              label: "Badump! Melty Blood",
+              romaji: "Doki! Melty Blood",
+              jp: "ドキッ☆メルティブラッド",
+              es: "¡Palpitaciones! Melty Blood",
+              completed: false
             },
             {
               id: "carnival-3",
               number: 3,
-              label: "Episodio 3",
-              completed: false,
+              label: "It's a Daydream Everywhere",
+              romaji: "Dokemo Issho Hinata no Yume",
+              jp: "どこでもヒナタノユメ",
+              es: "Un Sueño Diurno en Todas Partes",
+              completed: false
             },
             {
               id: "carnival-4",
               number: 4,
-              label: "Episodio 4",
-              completed: false,
+              label: "Badump! Date Super Plan",
+              romaji: "Mahoutsukai wa Meka ga Kirai / Dokidoki Date Daisakusen",
+              jp: "魔法使いはメカが嫌い / ドキドキデート大作戦",
+              es: "¡Palpitaciones! Plan Super Cita",
+              completed: false
             },
             {
               id: "carnival-5",
               number: 5,
-              label: "Episodio 5",
-              completed: false,
+              label: "Berserker's First Errand",
+              romaji: "Berserker Hajimete no Otsukai",
+              jp: "バーサーカー　はじめてのおつかい",
+              es: "El Primer Recado de Berserker",
+              completed: false
             },
             {
               id: "carnival-6",
               number: 6,
-              label: "Episodio 6",
-              completed: false,
+              label: "Type-Moon Serial TV Novel Sakura",
+              romaji: "Katasuki Renzoku TV Shousetsu Sakura",
+              jp: "型月連続テレビ小説　さくら",
+              es: "Novela Serie TV Type-Moon Sakura",
+              completed: false
             },
             {
               id: "carnival-7",
               number: 7,
-              label: "Episodio 7",
-              completed: false,
+              label: "An Expert Gift",
+              romaji: "Tsuu / Kensha no Okurimono ~Love Fate~",
+              jp: "通 / 賢者の贈り物 ~Love Fate~",
+              es: "Un Regalo Experto",
+              completed: false
             },
             {
               id: "carnival-8",
               number: 8,
-              label: "Episodio 8",
-              completed: false,
+              label: "Saber at Work",
+              romaji: "Hataraku Saber",
+              jp: "はたらくセイバー",
+              es: "Saber en el Trabajo",
+              completed: false
             },
             {
               id: "carnival-9",
               number: 9,
-              label: "Episodio 9",
-              completed: false,
+              label: "Holy Grail Grand Prix",
+              romaji: "Seihai Granprix",
+              jp: "聖杯グランプリ",
+              es: "Gran Premio del Santo Grial",
+              completed: false
             },
             {
               id: "carnival-10",
               number: 10,
-              label: "Episodio 10",
-              completed: false,
+              label: "Loli Reversion",
+              romaji: "Loligaeri / Sennou Tantei Hisui",
+              jp: "洗脳探偵ロリ返り",
+              es: "Reversión Loli",
+              completed: false
             },
             {
               id: "carnival-11",
               number: 11,
-              label: "Episodio 11",
-              completed: false,
+              label: "Final Dead Lancer",
+              romaji: "Final Dead Lancer",
+              jp: "Final Dead Lancer",
+              es: "Lancer Final Muerto",
+              completed: false
             },
             {
               id: "carnival-12",
               number: 12,
-              label: "Episodio 12",
-              completed: false,
-            },
-          ],
+              label: "Badump! Date Super Plan: Answer",
+              romaji: "Dokidoki Date Daisakusen Kaitou-hen",
+              jp: "ドキドキデート大作戦 解答編",
+              es: "¡Palpitaciones! Plan Super Cita: Respuesta",
+              completed: false
+            }
+          ]
         },
       ],
     },
