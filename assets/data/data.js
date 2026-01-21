@@ -1028,8 +1028,8 @@ export const fateChecklistData = {
               id: "menu-4",
               number: 4,
               label: "Spring Greens and Bacon Sandwich",
-              romaji: "N/A",
-              jp: "N/A",
+              romaji: "Haru Yasai to Bēkon no Sandoitchi",
+              jp: "春野菜とベーコンのサンドイッチ",
               es: "Sándwich de vegetales de primavera y beicon",
               completed: false
             },
@@ -1037,7 +1037,7 @@ export const fateChecklistData = {
               id: "menu-5",
               number: 5,
               label: "Bamboo Shoot Gratin",
-              romaji: "Takenoko Gratin",
+              romaji: "Takenoko Guratan",
               jp: "たけのこグラタン",
               es: "Gratinado de brotes de bambú",
               completed: false
@@ -1046,8 +1046,8 @@ export const fateChecklistData = {
               id: "menu-6",
               number: 6,
               label: "First Hamburg Steak",
-              romaji: "N/A",
-              jp: "N/A",
+              romaji: "Hajimete no Hanbāgu",
+              jp: "はじめてのハンバーグ",
               es: "La primera hamburguesa",
               completed: false
             },
@@ -1056,7 +1056,7 @@ export const fateChecklistData = {
               number: 7,
               label: "Refreshing and Easy to Eat Chilled Ochazuke",
               romaji: "Sarari to Itadaku Hiyashi Chazuke",
-              jp: "さらりと頂く冷やし茶漬け",
+              jp: "さらりといただく冷やし茶漬け",
               es: "Comamos ya ochazuke frío",
               completed: false
             },
@@ -1064,7 +1064,7 @@ export const fateChecklistData = {
               id: "menu-8",
               number: 8,
               label: "Toosaka's Gomoku Fried Rice",
-              romaji: "Toosaka-san no Gomoku Chaahan",
+              romaji: "Tōsaka-san no Gomoku Chāhan",
               jp: "遠坂さんの五目炒飯",
               es: "El arroz frito de Tohsaka",
               completed: false
@@ -1073,8 +1073,8 @@ export const fateChecklistData = {
               id: "menu-9",
               number: 9,
               label: "Taste of Autumn - Caster's Training in Japanese Dish Cooking -",
-              romaji: "N/A",
-              jp: "N/A",
+              romaji: "Aki no Mikaku: Kyasutā Washoku Shugyō-hen",
+              jp: "秋の味覚-キャスター和食修行編-",
               es: "El sabor del otoño: el estudio de Caster de la cocina japonesa",
               completed: false
             },
@@ -1082,8 +1082,8 @@ export const fateChecklistData = {
               id: "menu-10",
               number: 10,
               label: "Fried Chicken: Yummy Even When It's Cold",
-              romaji: "N/A",
-              jp: "N/A",
+              romaji: "Samete mo Oishii Karaage",
+              jp: "冷めても美味しいからあげ",
               es: "Pollo frito, hasta frío es delicioso",
               completed: false
             },
@@ -1091,8 +1091,8 @@ export const fateChecklistData = {
               id: "menu-11",
               number: 11,
               label: "Special Fluffy Gooey Omelet Rice",
-              romaji: "N/A",
-              jp: "N/A",
+              romaji: "Tokusei Fuwatoro Omuraisu",
+              jp: "特製ふわとろオムライス",
               es: "Special Fluffy Gooey Omelet Rice",
               completed: false
             },
@@ -1100,8 +1100,8 @@ export const fateChecklistData = {
               id: "menu-12",
               number: 12,
               label: "One-Pan Roast Beef",
-              romaji: "N/A",
-              jp: "N/A",
+              romaji: "Furaipan dake de Tsukuru Rōsuto Bīfu",
+              jp: "フライパンだけで作るローストビーフ",
               es: "One-Pan Roast Beef",
               completed: false
             },
@@ -1109,8 +1109,8 @@ export const fateChecklistData = {
               id: "menu-13",
               number: 13,
               label: "Hot, Hot Hot Pot",
-              romaji: "N/A",
-              jp: "N/A",
+              romaji: "Attaka Yosenabe",
+              jp: "あったか寄せ鍋",
               es: "Hot, Hot Hot Pot",
               completed: false
             }
