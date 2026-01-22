@@ -3187,35 +3187,45 @@ export const fateChecklistData = {
               id: "prisma3-s-1",
               number: 1,
               label: "Beast, Futatabi!",
-              note: "Especial 1 - esta como capitulo 11 de Fate/kaleid liner Prisma Illya 2wei",
+              romaji: "Beast, Futatabi!",
+              jp: "ビースト, 再び!",
+              es: "¡Bestia, de Nuevo!",
               completed: false
             },
             {
               id: "prisma3-s-2",
               number: 2,
               label: "Mugen no Fukusei",
-              note: "En AnimeFLV: 2wei! OVA Episodio 2",
+              romaji: "Mugen no Fukusei",
+              jp: "無限の服製",
+              es: "Producción Infinita de Ropa",
               completed: false
             },
             {
               id: "prisma3-s-3",
               number: 3,
               label: "Otome yo Toushi wo Idake (Zenpen)",
-              note: "En AnimeFLV: 2wei! OVA Episodio 3",
+              romaji: "Otome yo Toushi wo Idake (Zenpen)",
+              jp: "乙女よ闘志を抱け (前編)",
+              es: "¡Doncella, Abraza el Espíritu de Lucha! (Primera Parte)",
               completed: false
             },
             {
               id: "prisma3-s-4",
               number: 4,
               label: "Otome yo Toushi wo Idake (Kouhen)",
-              note: "En AnimeFLV: 2wei! OVA Episodio 4",
+              romaji: "Otome yo Toushi wo Idake (Kouhen)",
+              jp: "乙女よ闘志を抱け (後編)",
+              es: "¡Doncella, Abraza el Espíritu de Lucha! (Segunda Parte)",
               completed: false
             },
             {
               id: "prisma3-s-5",
               number: 5,
               label: "Bazett Hajimete no Arubaito",
-              note: "En AnimeFLV: 2wei! OVA Episodio 5",
+              romaji: "Bazett Hajimete no Arubaito",
+              jp: "バゼットはじめてのアルバイト",
+              es: "El Primer Trabajo de Bazett",
               completed: false
             }
           ]
