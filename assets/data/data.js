@@ -2741,60 +2741,90 @@ export const fateChecklistData = {
               id: "prisma1-1",
               number: 1,
               label: "Birth! A Magical Girl!",
+              romaji: "Tanjou! Mahou Shoujo!",
+              jp: "誕生!魔法少女!",
+              es: "¡Nace una Chica Mágica!",
               completed: false
             },
             {
               id: "prisma1-2",
               number: 2,
               label: "Who?",
+              romaji: "Dare?",
+              jp: "誰?",
+              es: "¿Quién?",
               completed: false
             },
             {
               id: "prisma1-3",
               number: 3,
               label: "Girl Meets Girl",
+              romaji: "Girl Meets Girl",
+              jp: "ガール ミーツ ガール",
+              es: "Chica conoce a chica",
               completed: false
             },
             {
               id: "prisma1-4",
               number: 4,
               label: "We Lost",
+              romaji: "Makemashita",
+              jp: "負けました",
+              es: "Perdimos",
               completed: false
             },
             {
               id: "prisma1-5",
               number: 5,
-              label: "There Are Two Options?",
+              label: "There are two options?",
+              romaji: "Sentakushi wa Futatsu...?",
+              jp: "選択肢は2つ…?",
+              es: "¿Solo hay dos opciones?",
               completed: false
             },
             {
               id: "prisma1-6",
               number: 6,
-              label: "A Blank, and the End of Night...",
+              label: "A Blank, and the End of Night…",
+              romaji: "Kuuhaku Yoru no Owari",
+              jp: "空白 夜の終わり",
+              es: "Un Vacío, y el Fin de la Noche…",
               completed: false
             },
             {
               id: "prisma1-7",
               number: 7,
-              label: "Triumph and Escape",
+              label: "Victory and Flight",
+              romaji: "Shouri to Tousou",
+              jp: "勝利と逃走",
+              es: "Victoria y Huida",
               completed: false
             },
             {
               id: "prisma1-8",
               number: 8,
-              label: "The Normal Girl Has Returned",
+              label: "I'm Going to Be a Normal Girl Again!",
+              romaji: "Futsuu no Onnanoko ni Modorimasu",
+              jp: "普通の女の子に戻ります",
+              es: "¡Volveré a ser una chica normal!",
               completed: false
             },
             {
               id: "prisma1-9",
               number: 9,
-              label: "End It Here",
+              label: "I'll End It Here!",
+              romaji: "Koko de Owaraseru",
+              jp: "ここで終わらせる",
+              es: "¡Lo terminaré aquí!",
               completed: false
             },
             {
               id: "prisma1-10",
               number: 10,
               label: "Kaleidoscope",
+              romaji: "Kaleidoscope",
+              jp: "Kaleidoscope",
+              es: "Kaleidoscopio",
               completed: false
             }
           ]
