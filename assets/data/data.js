@@ -2859,30 +2859,45 @@ export const fateChecklistData = {
               id: "prisma-s-1",
               number: 1,
               label: "Ruby-chan no Doki Bloomers-darake no Daihanseikai",
+              romaji: "Ruby-chan no Doki Bloomers-darake no Daihanseikai",
+              jp: "ルビーちゃんのドキッ☆ブルマだらけの大反省会",
+              es: "La gran reunión de reflexión de Ruby-chan☆llena de bloomers",
               completed: false
             },
             {
               id: "prisma-s-2",
               number: 2,
               label: "Quiz Magical Rubyonaire",
+              romaji: "Quiz Magical Rubyonaire",
+              jp: "クイズ☆マジカルルビオネア",
+              es: "Concurso☆Magical Rubyonario",
               completed: false
             },
             {
               id: "prisma-s-3",
               number: 3,
               label: "Kilo Battle",
+              romaji: "Kilo Battle",
+              jp: "キロバトル",
+              es: "Batalla de Kilos",
               completed: false
             },
             {
               id: "prisma-s-4",
               number: 4,
               label: "Kanojo-tachi no Jijou",
+              romaji: "Kanojo-tachi no Jijou",
+              jp: "彼女たちの事情",
+              es: "Las circunstancias de ellas",
               completed: false
             },
             {
               id: "prisma-s-5",
               number: 5,
               label: "Undressing War",
+              romaji: "Datsui Sensou",
+              jp: "脱衣戦争",
+              es: "La guerra de los desvestidos",
               completed: false
             }
           ]
