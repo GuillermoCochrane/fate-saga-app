@@ -2832,6 +2832,7 @@ export const fateChecklistData = {
         {
           id: "prisma-dance",
           label: "Fate/kaleid liner Prisma☆Illya: Undoukai de Dance!",
+          note: "En animeFLV, es el capitulo 11 de Fate/kaleid liner Prisma Illya 2wei",
           format: "OVA",
           completed: false,
           opened: false,
@@ -2840,6 +2841,9 @@ export const fateChecklistData = {
               id: "prisma-dance-1",
               number: 1,
               label: "Undoukai de Dance!",
+              romaji: "Undoukai de Dance!",
+              jp: "運動会 DE ダンス！",
+              es: "¡Baile en el festival deportivo!",
               completed: false
             }
           ]
