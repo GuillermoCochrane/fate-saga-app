@@ -3241,72 +3241,108 @@ export const fateChecklistData = {
               id: "prisma4-1",
               number: 1,
               label: "City Fading to Silver",
+              romaji: "Giniro ni Shizumu Machi",
+              jp: "銀色に沈む街",
+              es: "Ciudad Desvaneciéndose en Plata",
               completed: false
             },
             {
               id: "prisma4-2",
               number: 2,
               label: "Encounters and Reunions",
+              romaji: "Kaikou to Saikai",
+              jp: "邂逅と再会",
+              es: "Encuentros y Reencuentros",
               completed: false
             },
             {
               id: "prisma4-3",
               number: 3,
               label: "Your True Enemy",
+              romaji: "Kimi no Hontou no Teki",
+              jp: "君の本当の敵",
+              es: "Tu Verdadero Enemigo",
               completed: false
             },
             {
               id: "prisma4-4",
               number: 4,
               label: "For My Weak Little Sister",
+              romaji: "Yowamushi no Imouto e",
+              jp: "弱虫の妹へ",
+              es: "Para mi Débil Hermanita",
               completed: false
             },
             {
               id: "prisma4-5",
               number: 5,
               label: "The Little Lady Attacks",
+              romaji: "Little Lady, Shuurai",
+              jp: "リトルレディ、襲来",
+              es: "La Pequeña Dama Ataca",
               completed: false
             },
             {
               id: "prisma4-6",
               number: 6,
               label: "Chilling Hostility",
+              romaji: "Itetsuku Tekii",
+              jp: "凍てつく敵意",
+              es: "Hostilidad Heladora",
               completed: false
             },
             {
               id: "prisma4-7",
               number: 7,
               label: "Dolls and Stuffed Animals",
+              romaji: "Ningyou to Nuigurumi",
+              jp: "人形とぬいぐるみ",
+              es: "Muñecas y Peluches",
               completed: false
             },
             {
               id: "prisma4-8",
               number: 8,
               label: "People and Tools",
+              romaji: "Hito to Dougu",
+              jp: "人と道具",
+              es: "Personas y Herramientas",
               completed: false
             },
             {
               id: "prisma4-9",
               number: 9,
               label: "Illya's Choice",
+              romaji: "Illya no Sentaku",
+              jp: "イリヤの選択",
+              es: "La Elección de Illya",
               completed: false
             },
             {
               id: "prisma4-10",
               number: 10,
               label: "To the Princess's Side",
+              romaji: "Hime no Moto e",
+              jp: "姫の元へ",
+              es: "Hacia el Lado de la Princesa",
               completed: false
             },
             {
               id: "prisma4-11",
               number: 11,
               label: "You Are Not Alone",
+              romaji: "Hitori ja Nai",
+              jp: "独りじゃない",
+              es: "No Estás Solo/a",
               completed: false
             },
             {
               id: "prisma4-12",
               number: 12,
               label: "Woven Miracles",
+              romaji: "Tsunaida Kiseki",
+              jp: "繋いだ奇跡",
+              es: "Milagros Entrelazados",
               completed: false
             }
           ]
