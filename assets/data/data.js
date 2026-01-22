@@ -2913,61 +2913,91 @@ export const fateChecklistData = {
             {
               id: "prisma2-1",
               number: 1,
-              label: "Illya Grow Up!?",
+              label: "Illya Grow Up?!",
+              romaji: "Illya Grow Up?!",
+              jp: "Illya Grow Up?!",
+              es: "¿¡Illya crece!?",
               completed: false
             },
             {
               id: "prisma2-2",
               number: 2,
               label: "Illya x Illya",
+              romaji: "Illya x Illya",
+              jp: "Illya x Illya",
+              es: "Illya x Illya",
               completed: false
             },
             {
               id: "prisma2-3",
               number: 3,
               label: "Normal Life Breaker",
+              romaji: "Normal Life Breaker",
+              jp: "Normal Life Breaker",
+              es: "Rompedor de Vida Normal",
               completed: false
             },
             {
               id: "prisma2-4",
               number: 4,
               label: "Wild Transfer Student",
+              romaji: "Wild Transfer Student",
+              jp: "Wild Transfer Student",
+              es: "Estudiante de Intercambio Salvaje",
               completed: false
             },
             {
               id: "prisma2-5",
               number: 5,
-              label: "Well, in Other Words",
+              label: "Well, In Other Words",
+              romaji: "Well, In Other Words",
+              jp: "Well, In Other Words",
+              es: "Bueno, en Otras Palabras",
               completed: false
             },
             {
               id: "prisma2-6",
               number: 6,
               label: "On the Other Side of Lies and Façade",
+              romaji: "On the Other Side of Lies and Façade",
+              jp: "On the Other Side of Lies and Façade",
+              es: "Del Otro Lado de las Mentiras y la Fachada",
               completed: false
             },
             {
               id: "prisma2-7",
               number: 7,
-              label: "Clash! Cooking Sisters",
+              label: "Clash! Cooking Sisters!",
+              romaji: "Clash! Cooking Sisters!",
+              jp: "Clash! Cooking Sisters!",
+              es: "¡Choque! ¡Hermanas Cocineras!",
               completed: false
             },
             {
               id: "prisma2-8",
               number: 8,
               label: "Her Name Is",
+              romaji: "Her Name Is",
+              jp: "Her Name Is",
+              es: "Su Nombre Es",
               completed: false
             },
             {
               id: "prisma2-9",
               number: 9,
               label: "Lone Battle",
+              romaji: "Lone Battle",
+              jp: "Lone Battle",
+              es: "Batalla Solitaria",
               completed: false
             },
             {
               id: "prisma2-10",
               number: 10,
               label: "The Things Those Hands Protected",
+              romaji: "The Things Those Hands Protected",
+              jp: "The Things Those Hands Protected",
+              es: "Las Cosas que Esas Manos Protegieron",
               completed: false
             }
           ]
