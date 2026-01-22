@@ -3032,30 +3032,45 @@ export const fateChecklistData = {
               id: "prisma2-s-1",
               number: 1,
               label: "First Bra: Illya",
+              romaji: "First Bra: Illya-hen",
+              jp: "ファーストブラ イリヤ編",
+              es: "Primer Sostén: Illya",
               completed: false
             },
             {
               id: "prisma2-s-2",
               number: 2,
               label: "First Bra: Miyu",
+              romaji: "First Bra: Miyu-hen",
+              jp: "ファーストブラ 美遊編",
+              es: "Primer Sostén: Miyu",
               completed: false
             },
             {
               id: "prisma2-s-3",
               number: 3,
               label: "Sisters Skin Treatment",
+              romaji: "Onee-chan no Hitohada Chiryou",
+              jp: "おねえちゃんの人肌治療",
+              es: "Tratamiento de Piel entre Hermanas",
               completed: false
             },
             {
               id: "prisma2-s-4",
               number: 4,
               label: "Elementary School Chinese Dress",
+              romaji: "Shougakusei China Dress",
+              jp: "小学生チャイナドレス",
+              es: "Vestido Chino de Primaria",
               completed: false
             },
             {
               id: "prisma2-s-5",
               number: 5,
               label: "Magical Girl Prisma XXX",
+              romaji: "Mahou Shoujo Prisma XXX",
+              jp: "魔法少女プリズマ×××",
+              es: "Chica Mágica Prisma XXX",
               completed: false
             }
           ]
