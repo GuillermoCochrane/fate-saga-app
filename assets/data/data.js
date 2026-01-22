@@ -3013,7 +3013,10 @@ export const fateChecklistData = {
             {
               id: "prisma2-ova-1",
               number: 1,
-              label: "OVA: Magical Girl in Hot Springs Inn",
+              label: "Magical Girl in Hot Springs Inn",
+              romaji: "Mahou Shoujo in Onsen Ryokou",
+              jp: "魔法少女in温泉旅行",
+              es: "Chicas Mágicas en un Viaje a las Aguas Termales",
               completed: false
             }
           ]
