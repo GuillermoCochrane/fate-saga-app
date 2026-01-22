@@ -3087,60 +3087,90 @@ export const fateChecklistData = {
               id: "prisma3-1",
               number: 1,
               label: "It's Like Looking in a Mirror, and I Don't Like It",
+              romaji: "Kagami ni Shiteru Mitai de Iyanandakedo",
+              jp: "鏡にしてるみたいでイヤなんだけど",
+              es: "Es como verse en el espejo, pero no me gusta",
               completed: false
             },
             {
               id: "prisma3-2",
               number: 2,
               label: "Tricolore Birthday",
+              romaji: "Tricolore Birthday",
+              jp: "Tricolore Birthday",
+              es: "Cumpleaños Tricolor",
               completed: false
             },
             {
               id: "prisma3-3",
               number: 3,
-              label: "Girls, Life is Short, So Rot Away",
+              label: "Girls, Life is Short, so Rot Away!",
+              romaji: "Girls, Life is Short, so Rot Away!",
+              jp: "Girls, Life is Short, so Rot Away!",
+              es: "¡Chicas, la vida es corta, así que púdranse!",
               completed: false
             },
             {
               id: "prisma3-4",
               number: 4,
-              label: "Theme Park Panic!",
+              label: "Theme Park Panic",
+              romaji: "Theme Park Panic",
+              jp: "Theme Park Panic",
+              es: "Pánico en el Parque Temático",
               completed: false
             },
             {
               id: "prisma3-5",
               number: 5,
               label: "Yukatas and Fireworks",
+              romaji: "Yukatas and Fireworks",
+              jp: "Yukatas and Fireworks",
+              es: "Yukatas y Fuegos Artificiales",
               completed: false
             },
             {
               id: "prisma3-6",
               number: 6,
               label: "Blue Glass Moon",
+              romaji: "Blue Glass Moon",
+              jp: "Blue Glass Moon",
+              es: "Luna de Cristal Azul",
               completed: false
             },
             {
               id: "prisma3-7",
               number: 7,
               label: "Enforcer",
+              romaji: "Enforcer",
+              jp: "Enforcer",
+              es: "Ejecutor",
               completed: false
             },
             {
               id: "prisma3-8",
               number: 8,
               label: "Observer",
+              romaji: "Observer",
+              jp: "Observer",
+              es: "Observador",
               completed: false
             },
             {
               id: "prisma3-9",
               number: 9,
               label: "Golden Boy",
+              romaji: "Golden Boy",
+              jp: "Golden Boy",
+              es: "Chico Dorado",
               completed: false
             },
             {
               id: "prisma3-10",
               number: 10,
-              label: "Calling Your Name from a Corner of the World",
+              label: "Calling Your Name From a Corner of the World",
+              romaji: "Calling Your Name From a Corner of the World",
+              jp: "Calling Your Name From a Corner of the World",
+              es: "Llamando tu Nombre desde un Rincón del Mundo",
               completed: false
             }
           ]
