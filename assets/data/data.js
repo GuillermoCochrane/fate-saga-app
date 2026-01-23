@@ -1783,6 +1783,26 @@ export const fateChecklistData = {
           ]
         },
         {
+          id: "fgo-memorial-movie-2023",
+          label: "Fate/Grand Order Memorial Movie 2023",
+          format: "Especial",
+          note: "Cortometraje conmemorativo lanzado para el 8º aniversario de FGO. Duración: 4 min. Para más info: https://typemoon.fandom.com/",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "fgo-memorial-2023-1",
+              number: 1,
+              label: "Fate/Grand Order Memorial Movie 2023",
+              romaji: "Fate/Grand Order Memorial Movie 2023",
+              jp: "「Fate/Grand Order」Memorial Movie 2023",
+              es: "Fate/Grand Order Memorial Movie 2023",
+              note: "Disponible en: https://www.youtube.com/watch?v=tlj5Z3wWE_U",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "fgo-carnival",
           label: "Fate/Grand Carnival",
           format: "OVA",
