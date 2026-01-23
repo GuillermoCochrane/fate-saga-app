@@ -3504,7 +3504,7 @@ export const fateChecklistData = {
         {
           id: "prisma-phantasm",
           label: "Fate/Kaleid Liner Prisma Illya: Prisma★Phantasm",
-          format: "OVA",
+          format: "Película",
           note: "No se encuentra en animeFLV, la vi en ww3.animeonline.ninja",
           completed: false,
           opened: false,
@@ -3513,6 +3513,9 @@ export const fateChecklistData = {
               id: "prisma-ph-1",
               number: 1,
               label: "Prisma★Phantasm",
+              romaji: "Prisma★Phantasm",
+              jp: "プリズマ☆ファンタズム",
+              es: "Prisma★Phantasm",
               completed: false
             }
           ]
