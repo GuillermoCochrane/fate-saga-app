@@ -1823,6 +1823,46 @@ export const fateChecklistData = {
           ]
         },
         {
+          id: "fgo-explore-movies-2024",
+          label: "Fate/Grand Order Explore Movies 2024",
+          format: "Película",
+          note: "Tres cortos promocionales lanzados para el 9º aniversario de FGO. Para más info: https://typemoon.fandom.com/",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "fgo-explore-1",
+              number: 1,
+              label: "Food ＆ Adventure",
+              romaji: "Food & Adventure",
+              jp: "Food ＆ Adventure",
+              es: "Comida y Aventura",
+              note: "Disponible en: https://www.youtube.com/watch?v=3oQgcogvap8",
+              completed: false
+            },
+            {
+              id: "fgo-explore-2",
+              number: 2,
+              label: "nippon memoir",
+              romaji: "nippon memoir",
+              jp: "nippon memoir",
+              es: "Memorias de Japón",
+              note: "Disponible en: https://www.youtube.com/watch?v=d4uU4dS-ODQ",
+              completed: false
+            },
+            {
+              id: "fgo-explore-3",
+              number: 3,
+              label: "WANTED!",
+              romaji: "WANTED!",
+              jp: "WANTED!",
+              es: "¡SE BUSCA!",
+              note: "Disponible en: https://www.youtube.com/watch?v=C4LNhAzAPRk",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "fgo-carnival",
           label: "Fate/Grand Carnival",
           format: "OVA",
