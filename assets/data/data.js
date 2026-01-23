@@ -3420,7 +3420,10 @@ export const fateChecklistData = {
             {
               id: "prisma-mov-1",
               number: 1,
-              label: "Sekka no Chikai",
+              label: "Vow in the Snow",
+              romaji: "Sekka no Chikai",
+              jp: "雪下の誓い",
+              es: "Voto en la Nieve",
               completed: false
             }
           ]
