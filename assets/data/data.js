@@ -1863,6 +1863,66 @@ export const fateChecklistData = {
           ]
         },
         {
+          id: "fgo-nye-special-2024",
+          label: "Fate Project New Year's Eve TV Special 2024",
+          format: "Especial",
+          note: "Colección de cinco cortometrajes especiales emitidos el 31 de diciembre de 2024. Para más info de cada uno: https://typemoon.fandom.com/",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "fgo-nye-1",
+              number: 1,
+              label: "Doman TV Shop",
+              romaji: "Doman TV Shop",
+              jp: "Doman TV Shop",
+              es: "Doman TV Shop",
+              note: "Disponible en: https://www.youtube.com/watch?v=vZvRW11QahE",
+              completed: false
+            },
+            {
+              id: "fgo-nye-2",
+              number: 2,
+              label: "Grand Life Agent",
+              romaji: "Grand Life Agent",
+              jp: "Grand Life Agent",
+              es: "Grand Life Agent",
+              note: "Disponible en: https://www.youtube.com/watch?v=OK0wyh5tQ90",
+              completed: false
+            },
+            {
+              id: "fgo-nye-3",
+              number: 3,
+              label: "Kung Fu To Fu",
+              romaji: "Kung Fu To Fu",
+              jp: "功夫豆腐",
+              es: "Kung Fu To Fu",
+              note: "Disponible en: https://www.youtube.com/watch?v=vD-FPbegHFI",
+              completed: false
+            },
+            {
+              id: "fgo-nye-4",
+              number: 4,
+              label: "NFF Beauty",
+              romaji: "NFF Beauty",
+              jp: "NFF Beauty",
+              es: "NFF Beauty",
+              note: "Disponible en: https://www.youtube.com/watch?v=duOJKCLODLM",
+              completed: false
+            },
+            {
+              id: "fgo-nye-5",
+              number: 5,
+              label: "Oh! e-yama Ghost I♥ Scream",
+              romaji: "Oh! e-yama Ghost I♥ Scream",
+              jp: "Oh! e-yama Ghost I♥ Scream",
+              es: "Oh! e-yama Ghost I♥ Scream",
+              note: "Disponible en: https://www.youtube.com/watch?v=I9lZLm-c4Uc",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "fgo-carnival",
           label: "Fate/Grand Carnival",
           format: "OVA",
