@@ -3457,8 +3457,10 @@ export const fateChecklistData = {
             {
               id: "prisma-mov-licht-1",
               number: 1,
-              label: "Licht - Nameless Girl",
-              note: "Licht - Namae no Nai Shoujo",
+              label: "Licht Nameless Girl",
+              romaji: "Licht - Namae no Nai Shoujo",
+              jp: "Licht 名前の無い少女",
+              es: "Licht - La Chica sin Nombre",
               completed: false
             }
           ]
