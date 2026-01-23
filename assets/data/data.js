@@ -1803,6 +1803,26 @@ export const fateChecklistData = {
           ]
         },
         {
+          id: "fate-samurai-remnant-nye-2023",
+          label: "Saber and Berserker's Gourmet Journey Through the Japanese Archipelago",
+          format: "Especial",
+          note: "Especial de TV de Fin de Año 2023 que combina acción real y animación, basado en Fate/Samurai Remnant. Para más info: https://typemoon.fandom.com/",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "fsr-nye-2023-1",
+              number: 1,
+              label: "Saber and Berserker's Gourmet Journey Through the Japanese Archipelago",
+              romaji: "Seibā to Bāsākā no Nihon Rettō Kuidare no Tabi",
+              jp: "セイバーとバーサーカーの日本列島くいだおれの旅",
+              es: "El Viaje Gastronómico de Saber y Berserker a través del Archipiélago Japonés",
+              note: "Disponible en: https://www.youtube.com/watch?v=U0HbxEI4rcA",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "fgo-carnival",
           label: "Fate/Grand Carnival",
           format: "OVA",
