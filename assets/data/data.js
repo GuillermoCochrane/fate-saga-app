@@ -3429,6 +3429,24 @@ export const fateChecklistData = {
           ]
         },
         {
+          id: "prisma-movie-special",
+          label: "Fate/kaleid liner Prisma☆Illya Movie: Sekka no Chikai - Kuro Sakura no Heya",
+          format: "Especial",
+          completed: false,
+          opened: false,
+          episodes: [
+            {
+              id: "prisma-mov-special-1",
+              number: 1,
+              label: "Fate/Kaleid Liner Prisma Illya: Vow in the Snow - Dark Sakura's Room",
+              romaji: "Sekka no Chikai - Kuro Sakura no Heya",
+              jp: "雪下の誓い 黒桜の部屋",
+              es: "Voto en la Nieve - La Habitación de Sakura Oscura",
+              completed: false
+            }
+          ]
+        },
+        {
           id: "prisma-movie-licht",
           label: "Fate/kaleid liner Prisma☆Illya Movie: Licht - Namae no Nai Shoujo",
           format: "Película",
