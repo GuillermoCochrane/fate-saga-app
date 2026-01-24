@@ -29,6 +29,11 @@ export function saveChecklistTitle(title) {
     localStorage.setItem('checklistTitle', JSON.stringify(title)); //Convertimos el titulo a un string JSON y lo guardamos en localStorage en el key 'checklistTitle'
 }
 
+// Guardar el franchise en localStorage
+export function saveFranchiseData(franchise) {
+    localStorage.setItem('franchise', JSON.stringify(franchise)); //Convertimos el franchise a un string JSON y lo guardamos en localStorage en el key 'franchise'
+}
+
 // Exportar datos
 export function exportData(checklistData, checklistTitle) {
     const data = {
