@@ -34,7 +34,7 @@ function getVarNameFromId(id) {
 
 // Helper: object data builder
 function objetDataBuilder(object,key) {
-  return `${[key]}: ${object[key]},\n`;
+  return `${key}: ${JSON.stringify(object[key])},\n`;
 }
 
 // Helper: episode data generator
@@ -60,31 +60,31 @@ function episodeGenerator(episodes) {
 
 // helper: season data generator
 function seasonGenerator(season, episodeVars, seasonFileName) {
-  const seasonContent = `import { ${episodeVars.join(", ")} } from "./${seasonFileName}/episodes.js";`;
+  let seasonContent = `import { ${episodeVars.join(", ")} } from "./${seasonFileName}/episodes.js";\n\n`;
   seasonContent += `export const ${seasonFileName} = {\n`;
   for (const key in season) {
     if (typeof season[key] !== 'object') {
-    seasonContent += objetDataBuilder(season,key);
+      seasonContent += objetDataBuilder(season,key);
     } else {
-      seasonContent += `${[key]}: ${episodeVars.join(", ")},\n`;
+      seasonContent += `${key}: [\n    ${episodeVars.join(", ")}\n  ],\n`;
     }
-    seasonContent += `};\n\n`;
   }
+  seasonContent += `};\n`;
   return seasonContent;
 }
 
 // Helper: saga data generator
-function sagaGenerator(saga, seasonImports, seasonExports) {
-  const sagaIndexContent = `${seasonImports.map(i => i.replace(`"./${sagaDirName}/`, `"./${sagaDirName}/`)).join('\n')}`
+function sagaGenerator(saga, seasonImports, seasonExports, sagaDirName) {
+  let sagaIndexContent = `${seasonImports.join('\n')}\n\n`;
   sagaIndexContent += `export const ${sanitizeVarName(sagaDirName)} = {\n`;
   for (const key in saga) {
     if (typeof saga[key] !== 'object') {
       sagaIndexContent += objetDataBuilder(saga,key);
     } else {
-      sagaIndexContent += `${[key]}: ${seasonExports.join(",\n    ")},\n`;
+      sagaIndexContent += `${key}: [\n    ${seasonExports.join(",\n    ")}\n  ],\n`;
     }
   }
-  sagaIndexContent += `};\n\n`;
+  sagaIndexContent += `};\n`;
   return sagaIndexContent;
 }
 
@@ -141,7 +141,7 @@ checklist.sagas.forEach(saga => {
         }
     }
     // 3. Update/Create Saga Index File (e.g. fate/fateGrandOrder.js)
-    const sagaIndexContent = sagaGenerator(saga, seasonImports, seasonExports);
+    const sagaIndexContent = sagaGenerator(saga, seasonImports, seasonExports, sagaDirName);
     const sagaIndexName = `${sanitizeVarName(sagaDirName)}.js`;
     fs.writeFileSync(path.join(outputDir, sagaIndexName), sagaIndexContent);
     console.log(`   📝 Generated Saga Index: ${sagaIndexName}`);
