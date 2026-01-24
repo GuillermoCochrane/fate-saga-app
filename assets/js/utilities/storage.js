@@ -13,6 +13,12 @@ export function loadChecklistTitle(franchise="fate2") {
     return savedData ? JSON.parse(savedData) : checklistData[franchise].franchiseName; //Si los datos existen. los devuelve, si no, devuelve los datos por defecto
 }
 
+// Cargar datos del la franquicia o usar el predeterminado
+export function loadFranchiseData(franchise="fate2") {
+    const savedData = localStorage.getItem('franchise'); //Capturamos los datos guardados en localStorage
+    return savedData ? JSON.parse(savedData) : checklistData[franchise].franchise; //Si los datos existen. los devuelve, si no, devuelve los datos por defecto
+}
+
 // Guardar datos en localStorage
 export function saveChecklistData(data) {
     localStorage.setItem('checklist', JSON.stringify(data)); //Convertimos los datos a un string JSON y lo guardamos en localStorage en el key 'checklist'
