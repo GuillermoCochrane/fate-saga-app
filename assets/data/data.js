@@ -1,6 +1,7 @@
 // Datos iniciales de la checklist con episodios
 export const fateChecklistData = {
-  franchise: "Fate",
+  franchise: "fate",
+  franchiseName: "Fate",
   sagas:[
     {
       saga: "Fate/Zero",

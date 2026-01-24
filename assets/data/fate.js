@@ -6,6 +6,7 @@ import { fateKaleidLinerPrismaIllya } from "./fate/fateKaleidLinerPrismaIllya.js
 import { otrosMundosAlternativosEIndependientes } from "./fate/otrosMundosAlternativosEIndependientes.js";
 
 export const fateChecklist = {
-  franchise: "Fate",
+  franchise: "fate",
+  franchiseName: "Fate",
   sagas: [ fateSaga, lordElMelloiII, fateStrangeFake, fateGrandOrder, fateKaleidLinerPrismaIllya, otrosMundosAlternativosEIndependientes ]
 };
