@@ -1,13 +1,10 @@
 // Funciones para manipular la carga y guardado de datos
-
-import { fateChecklistData } from '../../data/data.js';
-import { asistenceChecklistData } from "../../data/asistence.js";
-
+import { checklistData } from "../../data/index.js";
 
 // Cargar datos guardados en localStorage de la checklist o usar el predeterminado
-export function loadChecklistData() {
+export function loadChecklistData(franchise="fate2") {
     const savedData = localStorage.getItem('checklist'); //Capturamos los datos guardados en localStorage
-    return savedData ? JSON.parse(savedData) : [...fateChecklistData.sagas]; //Si los datos existen. los devuelve, si no, devuelve los datos por defecto
+    return savedData ? JSON.parse(savedData) : [...checklistData[franchise].sagas]; //Si los datos existen. los devuelve, si no, devuelve los datos por defecto
 }
 
 // Cargar datos del titulo de la checklist o usar el predeterminado
