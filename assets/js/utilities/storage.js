@@ -8,9 +8,9 @@ export function loadChecklistData(franchise="fate2") {
 }
 
 // Cargar datos del titulo de la checklist o usar el predeterminado
-export function loadChecklistTitle() {
+export function loadChecklistTitle(franchise="fate2") {
     const savedData = localStorage.getItem('checklistTitle'); //Capturamos los datos guardados en localStorage
-    return savedData ? JSON.parse(savedData) : fateChecklistData.franchise; //Si los datos existen. los devuelve, si no, devuelve los datos por defecto
+    return savedData ? JSON.parse(savedData) : checklistData[franchise].franchiseName; //Si los datos existen. los devuelve, si no, devuelve los datos por defecto
 }
 
 // Guardar datos en localStorage
