@@ -37,6 +37,7 @@ function setupEventListeners() {
     const $fileInput = $('#file-input');
     const $menu = $('#main-menu');
     const $summary = $menu.querySelector('summary');
+    const $frachiseButton = $('#select-franchise-btn');
 
     // Selecciona el filtro, y le da la clase active al botón correspondiente
     $filterBtns.forEach(button => {
@@ -142,6 +143,24 @@ function setupEventListeners() {
     // Cerrar modal y ocultar todas las secciones
     $helpCloseBtn.addEventListener('click', () => {
         modalCloser();
+    });
+
+    // Selecciona la franquicia
+    $frachiseButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        const $frachiseSelect = $('#franchise-select');
+        const selectedValue = $frachiseSelect.value; // Valor seleccionado ('fate', 'asistence', etc.)
+        if (!selectedValue) {
+            showNotification('Por favor selecciona una franquicia', true);
+            return;
+        }
+        checklistData = loadChecklistData(selectedValue);
+        checklistTitle = loadChecklistTitle(selectedValue);
+        modalCloser();
+        renderChecklist();
+        showNotification('Seleccionada la franquicia: ' + selectedValue);
+        updateChecklistTitle(checklistTitle);
+        updateTotalProgress(checklistData);
     });
     
     // Event delegation para cambios de estado de details
