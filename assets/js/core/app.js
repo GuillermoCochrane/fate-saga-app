@@ -7,18 +7,32 @@ import { importData, exportData, saveChecklistData, loadChecklistData, loadCheck
 import { updateTotalProgress, calculateProgress, showNotification, updateChecklistTitle, exportTextReport, modalSectionHandler, modalCloser, modalConfirmHandler } from '../utilities/utilities.js';
 import { sagaSummaryCreator, sagaCreator } from '../components/saga.js';
 
-// 📁 core/app.js
 export let currentFilter = 'all';
 export let checklistData = [];
 export let checklistTitle = '';
+let activeListener = false;
 
 function initApp() {
+    //Activamos los listeners y el theme, solo si no lo hicimos antes
+    if (!activeListener){
+        setupEventListeners();
+        setupTheme();
+        activeListener = true;
+    } 
+
+    //Cargamos los datos de la checklist
     checklistData = loadChecklistData();
     checklistTitle = loadChecklistTitle();
-    setupEventListeners();
+
+    //Si no hay datos de la checklist, mostramos el modal de seleccion
+    if (!checklistTitle || !checklistData.length){
+        modalSectionHandler('selection');
+        return;
+    }
+
+    // Actualizamos los datos de la app
     updateChecklistTitle(checklistTitle);
     renderChecklist();
-    setupTheme();
     updateTotalProgress(checklistData);
 }
 
