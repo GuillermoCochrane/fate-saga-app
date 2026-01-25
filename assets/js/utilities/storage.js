@@ -19,12 +19,6 @@ export function loadChecklistTitle(franchise = null) {
     return ''; // String vacío (para que initApp() muestre el modal)
 }
 
-// Cargar datos del la franquicia o usar el predeterminado
-export function loadFranchiseData(franchise) {
-    const savedData = localStorage.getItem('franchise'); //Capturamos los datos guardados en localStorage
-    return savedData ? JSON.parse(savedData) : checklistData[franchise]?.franchise; //Si los datos existen. los devuelve, si no, devuelve los datos por defecto
-}
-
 // Guardar datos en localStorage
 export function saveChecklistData(data) {
     localStorage.setItem('checklist', JSON.stringify(data)); //Convertimos los datos a un string JSON y lo guardamos en localStorage en el key 'checklist'
@@ -33,11 +27,6 @@ export function saveChecklistData(data) {
 // Guardar el titulo de la franquicia en localStorage
 export function saveChecklistTitle(title) {
     localStorage.setItem('checklistTitle', JSON.stringify(title)); //Convertimos el titulo a un string JSON y lo guardamos en localStorage en el key 'checklistTitle'
-}
-
-// Guardar el franchise en localStorage
-export function saveFranchiseData(franchise) {
-    localStorage.setItem('franchise', JSON.stringify(franchise)); //Convertimos el franchise a un string JSON y lo guardamos en localStorage en el key 'franchise'
 }
 
 // Exportar datos
