@@ -2,21 +2,27 @@
 import { checklistData } from "../../data/index.js";
 
 // Cargar datos guardados en localStorage de la checklist o usar el predeterminado
-export function loadChecklistData(franchise="fate2") {
-    const savedData = localStorage.getItem('checklist'); //Capturamos los datos guardados en localStorage
-    return savedData ? JSON.parse(savedData) : [...checklistData[franchise].sagas]; //Si los datos existen. los devuelve, si no, devuelve los datos por defecto
+export function loadChecklistData(franchise = null) {
+    const savedData = localStorage.getItem('checklist');
+    // 1. Si hay datos guardados, usarlos siempre
+    if (savedData) return JSON.parse(savedData);
+    // 2. Si NO hay datos guardados PERO nos dieron franquicia
+    if (franchise && checklistData[franchise]) return [...checklistData[franchise].sagas];
+    // 3. Si no hay datos guardados y no nos dieron franquicia
+    return []; // Devolver array vacío (para que initApp() muestre el modal)
 }
 
-// Cargar datos del titulo de la checklist o usar el predeterminado
-export function loadChecklistTitle(franchise="fate2") {
-    const savedData = localStorage.getItem('checklistTitle'); //Capturamos los datos guardados en localStorage
-    return savedData ? JSON.parse(savedData) : checklistData[franchise].franchiseName; //Si los datos existen. los devuelve, si no, devuelve los datos por defecto
+export function loadChecklistTitle(franchise = null) {
+    const savedData = localStorage.getItem('checklistTitle');
+    if (savedData) return JSON.parse(savedData);
+    if (franchise && checklistData[franchise]) return checklistData[franchise].franchiseName;
+    return ''; // String vacío (para que initApp() muestre el modal)
 }
 
 // Cargar datos del la franquicia o usar el predeterminado
-export function loadFranchiseData(franchise="fate2") {
+export function loadFranchiseData(franchise) {
     const savedData = localStorage.getItem('franchise'); //Capturamos los datos guardados en localStorage
-    return savedData ? JSON.parse(savedData) : checklistData[franchise].franchise; //Si los datos existen. los devuelve, si no, devuelve los datos por defecto
+    return savedData ? JSON.parse(savedData) : checklistData[franchise]?.franchise; //Si los datos existen. los devuelve, si no, devuelve los datos por defecto
 }
 
 // Guardar datos en localStorage
