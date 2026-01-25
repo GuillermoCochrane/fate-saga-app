@@ -4,6 +4,6 @@ import { fateChecklist } from './fate.js';
 
 export const checklistData = {
     fate: fateChecklistData,
-    asistence: asistenceChecklistData,
+    assistence: asistenceChecklistData,
     fate2: fateChecklist
 };
