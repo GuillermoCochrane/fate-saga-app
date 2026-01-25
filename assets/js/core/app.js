@@ -149,18 +149,24 @@ function setupEventListeners() {
     $frachiseButton.addEventListener('click', (e) => {
         e.preventDefault();
         const $frachiseSelect = $('#franchise-select');
-        const selectedValue = $frachiseSelect.value; // Valor seleccionado ('fate', 'asistence', etc.)
+        // Guardamos el valor de la franquicia seleccionada
+        const selectedValue = $frachiseSelect.value;
         if (!selectedValue) {
             showNotification('Por favor selecciona una franquicia', true);
             return;
         }
+
+        // Cargamos los datos de la franquicia seleccionada
         checklistData = loadChecklistData(selectedValue);
         checklistTitle = loadChecklistTitle(selectedValue);
+
+        // Actualizamos los datos en localStorage
+        saveChecklistData(checklistData);
+        saveChecklistTitle(checklistTitle);
+
+        showNotification('Seleccionada la franquicia: ' + checklistTitle);
         modalCloser();
-        renderChecklist();
-        showNotification('Seleccionada la franquicia: ' + selectedValue);
-        updateChecklistTitle(checklistTitle);
-        updateTotalProgress(checklistData);
+        initApp();
     });
     
     // Event delegation para cambios de estado de details
