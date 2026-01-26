@@ -33,6 +33,17 @@ export function updateTotalProgress(checklistData) {
     const $totalItems = $('#total-items');
     const $percentage = $('#percentage');
     const $progressBar = $('#complete-progress-bar');
+
+    if (!$completedItems || !$totalItems || !$percentage || !$progressBar) {
+        let message = 'Error al actualizar el progreso, ya que no se encuentran los elementos del DOM: ';
+        message += !$completedItems ? '$completedItems, ' : '';
+        message += !$totalItems ? '$totalItems, ' : '';
+        message += !$percentage ? '$percentage, ' : '';
+        message += !$progressBar ? '$progressBar' : '';
+        console.warn(message);
+        return;
+    }
+    
     let totalItems = 0;
     let completedItems = 0;
     
