@@ -60,7 +60,8 @@ export function exportTextReport(checklistData, checklistTitle) {
     
     const link = document.createElement('a');
     link.href = url;
-    link.download = `${checklistTitle}-report.txt`;
+    const sanitizedTitle = checklistTitle.replace(/\s+/g, '-');
+    link.download = `${sanitizedTitle}-report.txt`;
     link.click();
     
     URL.revokeObjectURL(url);
