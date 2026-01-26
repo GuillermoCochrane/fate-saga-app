@@ -21,6 +21,19 @@ function calculatePercentage(completed, total) {
     return  total > 0 ? Math.round((completed / total) * 100) : 0; // devolvemos el porcentaje de completados, siempre que no sea 0
 }
 
+function getProgressData(checklistData) {
+    let totalItems = 0;
+    let completedItems = 0;
+    
+    for (const saga of checklistData) {
+        const { total, completed } = countEpisodes(saga.seasons);
+        totalItems += total;
+        completedItems += completed;
+    }
+    
+    return { totalItems, completedItems, percentage: calculatePercentage(completedItems, totalItems) };
+}
+
 // Calcular el progreso total de la saga
 export function calculateProgress(data) {
     const { total, completed } = countEpisodes(data); //calculamos el total de episodios de la saga
@@ -43,19 +56,8 @@ export function updateTotalProgress(checklistData) {
         console.warn(message);
         return;
     }
-    
-    let totalItems = 0;
-    let completedItems = 0;
-    
-    for (const saga of checklistData) {
-        //Recorremos cada saga en el objeto
-        let { total, completed } = countEpisodes(saga.seasons); //calculamos el total de episodios de la saga
-        totalItems += total; //Calculamos el total de items de la saga
-        completedItems += completed; //Calculamos el total de items completados de la saga
-    }
-    
-    const percentage = calculatePercentage(completedItems, totalItems);
-    //si hay items, calculamos el porcentaje de completados, siempre que no sea 0
+
+    const { totalItems, completedItems, percentage } = getProgressData(checklistData);
 
     $progressBar.value = percentage;
     $completedItems.textContent = completedItems; //Actualizamos el número de items completados
