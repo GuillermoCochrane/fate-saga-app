@@ -161,7 +161,7 @@ export function exportTextReport(checklistData, checklistTitle) {
 
 // Devuelve los diferentes tipos de secciones del modal
 export function modalSections() {
-    return ['help', 'dynamic', 'confirm']
+    return ['help', 'dynamic', 'confirm', 'selection']
 }
 
 // Oculta todas las secciones del modal
