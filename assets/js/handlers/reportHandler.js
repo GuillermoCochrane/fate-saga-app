@@ -1,7 +1,7 @@
 // Generar separadores en el título del reporte
 function generateSeparator(title, symmbol) {
     let separatorLength = Math.ceil(title.length / 4);
-    separatorLength = separatorLength > 0 ? separatorLength : 1;
+    separatorLength = Math.max(1, separatorLength);
     const separator = symmbol.repeat(separatorLength);
     return separator;
 }
