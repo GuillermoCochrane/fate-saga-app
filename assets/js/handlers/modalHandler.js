@@ -11,8 +11,10 @@ function sectionsHide() {
 
     for (const section of sections) {
         const $section = $(`#${section}-section`);
-        $section.setAttribute('aria-hidden', true);
-        $section.hidden = true;
+        if ($section){
+            $section.setAttribute('aria-hidden', true);
+            $section.hidden = true;
+        }
     }
 }
 
@@ -20,8 +22,10 @@ function sectionsHide() {
 export function modalSectionHandler(sectionToShow) {
     const $modal = $('#multifunction-modal');
     const $section = $(`#${sectionToShow}-section`);
+    if (!$section || !$modal) return;
     const sectionTitle =`${sectionToShow}-title`
     sectionsHide();
+
 
     $section.setAttribute('aria-hidden', false);
     $section.hidden = false;
@@ -32,8 +36,8 @@ export function modalSectionHandler(sectionToShow) {
 
 // Abre el modal con la sección de confrimación visible
 export function modalConfirmHandler(message, action) {
-    $('#confirm-action-btn').setAttribute('data-action', action);
-    $('#confirm-message').textContent = message;
+    $('#confirm-action-btn')?.setAttribute('data-action', action);
+    $('#confirm-message')?.textContent = message;
     modalSectionHandler('confirm');
 }
 
@@ -41,6 +45,8 @@ export function modalConfirmHandler(message, action) {
 export function modalCloser() {
     sectionsHide();
     const $modal = $('#multifunction-modal');
-    $modal.setAttribute('aria-hidden', true);
-    $modal.close();
+    if (!$modal) {
+        $modal.setAttribute('aria-hidden', true);
+        $modal.close();
+    }
 }
