@@ -1,4 +1,4 @@
-import { $ } from './dom.js';
+import { $ } from '../utilities/dom.js';
 
 // Devuelve los diferentes tipos de secciones del modal
 function modalSections() {
@@ -36,8 +36,10 @@ export function modalSectionHandler(sectionToShow) {
 
 // Abre el modal con la sección de confrimación visible
 export function modalConfirmHandler(message, action) {
-    $('#confirm-action-btn')?.setAttribute('data-action', action);
-    $('#confirm-message')?.textContent = message;
+    const $confirmActionBtn = $('#confirm-action-btn');
+    const $confirmMessage = $('#confirm-message');
+    $confirmActionBtn?.setAttribute('data-action', action);
+    $confirmMessage && ($confirmMessage.textContent = message);
     modalSectionHandler('confirm');
 }
 

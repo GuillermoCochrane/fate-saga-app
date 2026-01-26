@@ -1,4 +1,4 @@
-import { $ } from './dom.js';
+import { $ } from '../utilities/dom.js';
 
 // Devuelve el número de episodios totales y el número de episodios vistos
 function countEpisodes(saga) {
