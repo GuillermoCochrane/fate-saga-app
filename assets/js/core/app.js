@@ -16,6 +16,7 @@ export let currentFilter = 'all';
 export let checklistData = [];
 export let checklistTitle = '';
 let activeListener = false;
+let shouldRenderTitle = true;
 
 function initApp() {
     //Activamos los listeners y el theme, solo si no lo hicimos antes
@@ -37,7 +38,11 @@ function initApp() {
     }
 
     // Actualizamos los datos de la app
-    updateChecklistTitle(checklistTitle);
+    if (shouldRenderTitle) {
+        updateChecklistTitle(checklistTitle);
+        shouldRenderTitle = false;
+    }
+
     renderChecklist(checklistData, currentFilter, handleToggleCheckbox);
     updateTotalProgress(checklistData);
 }
@@ -144,6 +149,7 @@ function setupEventListeners() {
             const importedData = await importData(event);
             checklistData = importedData.checklistData;
             checklistTitle = importedData.checklistTitle;
+            shouldRenderTitle = true;
             saveChecklistData(checklistData);
             saveChecklistTitle(checklistTitle);
             renderChecklist(checklistData, currentFilter, handleToggleCheckbox);
@@ -179,10 +185,11 @@ function setupEventListeners() {
         // Cargamos los datos de la franquicia seleccionada
         checklistData = loadChecklistData(selectedValue);
         checklistTitle = loadChecklistTitle(selectedValue);
-
+        
         // Actualizamos los datos en localStorage
         saveChecklistData(checklistData);
         saveChecklistTitle(checklistTitle);
+        shouldRenderTitle = true;
 
         showNotification('Seleccionada la franquicia: ' + checklistTitle);
         modalCloser();
