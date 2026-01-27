@@ -15,7 +15,18 @@ export function renderFranchiseSelector() {
     
     // Opciones de cada franquicia
     for (const key in checklistData) {
-      const $option = createOption(key, checklistData[key].franchise);
-      $select.appendChild($option);
+        const $option = createOption(key, checklistData[key].franchise);
+        $select.appendChild($option);
     }
+};
+
+// Actualizar el título de la página
+export function updateChecklistTitle(title) {
+    const $tabtitle = $("title")    
+    const $franchiseMainTitle = $('#franchise-main-title');
+    const $franchiseText = $('#franchise-text');
+
+    $tabtitle.textContent = title + ' - Checklist';
+    $franchiseMainTitle.textContent = title;
+    $franchiseText.textContent = title;
 }

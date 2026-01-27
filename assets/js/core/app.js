@@ -4,7 +4,7 @@ import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeCo
 import { setupTheme } from '../utilities/theme.js';
 import { $, $$, createElement } from '../utilities/dom.js';
 import { importData, exportData, saveChecklistData, loadChecklistData, loadChecklistTitle, saveChecklistTitle } from '../utilities/storage.js'; 
-import { updateChecklistTitle } from '../utilities/utilities.js';
+import { updateChecklistTitle, renderFranchiseSelector} from '../handlers/selectHandler.js';
 import { modalSectionHandler, modalCloser, modalConfirmHandler} from '../handlers/modalHandler.js';
 import { exportTextReport } from '../handlers/reportHandler.js';
 import { updateTotalProgress, calculateProgress } from '../handlers/progressHandler.js';
@@ -21,6 +21,7 @@ function initApp() {
     if (!activeListener){
         setupEventListeners();
         setupTheme();
+        renderFranchiseSelector();
         activeListener = true;
     } 
 
