@@ -4,11 +4,12 @@ import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeCo
 import { setupTheme } from '../utilities/theme.js';
 import { $, $$, createElement } from '../utilities/dom.js';
 import { importData, exportData, saveChecklistData, loadChecklistData, loadChecklistTitle, saveChecklistTitle } from '../utilities/storage.js'; 
-import { showNotification, updateChecklistTitle } from '../utilities/utilities.js';
+import { updateChecklistTitle } from '../utilities/utilities.js';
 import { modalSectionHandler, modalCloser, modalConfirmHandler} from '../handlers/modalHandler.js';
 import { exportTextReport } from '../handlers/reportHandler.js';
 import { updateTotalProgress, calculateProgress } from '../handlers/progressHandler.js';
 import { sagaSummaryCreator, sagaCreator } from '../components/saga.js';
+import { showNotification } from '../handlers/notificationHandler.js';
 
 export let currentFilter = 'all';
 export let checklistData = [];
