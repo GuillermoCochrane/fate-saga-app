@@ -1,5 +1,5 @@
 // Funciones para manipular el tema
-import { $ } from './dom.js';
+import { $ } from '../utilities/dom.js';
 
 // Referencias a elementos del DOM que se uttilizan frecuentemente
 const themeElements = {
@@ -8,21 +8,21 @@ const themeElements = {
 };
 
 // aplica tema oscuro
-export function enableDarkMode(){
+function enableDarkMode(){
     const { $globalTag, $themeToggle } = themeElements;
     $globalTag.setAttribute('data-theme', 'dark'); // <html data-theme="dark">
     $themeToggle.textContent = '☀️';
 }
 
 // aplica tema claro
-export function enableLightMode() {
+function enableLightMode() {
     const { $globalTag, $themeToggle } = themeElements;
     $globalTag.removeAttribute('data-theme');
     $themeToggle.textContent = '🌙';
 }
 
 // maneja el cambio de tema
-export function themeHandler(settings, store = false) {
+function themeHandler(settings, store = false) {
     if (settings === 'dark') {
         enableDarkMode();
         if (store) localStorage.setItem('theme', 'dark');
