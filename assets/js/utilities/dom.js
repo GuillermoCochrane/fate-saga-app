@@ -46,3 +46,11 @@ export function createCheckbox(id, checked = false, onChange = null, className) 
     onChange && (checkbox.addEventListener('change', onChange));
     return checkbox;
 }
+
+export function createOption(value, text, selected = false, disabled = false) {
+    const $option = createElement('option', null, text);
+    $option.value = value;
+    if (selected) $option.selected = true;
+    if (disabled) $option.disabled = true;
+    return $option;
+}
