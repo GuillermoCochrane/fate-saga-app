@@ -1,7 +1,7 @@
 //? funcion de creación de componente saga
 
 import { createElement } from '../utilities/dom.js';
-import { shouldShowItem } from '../utilities/utilities.js';
+import { shouldShowItem } from "../handlers/filterHandlers.js";
 import { seasonContainerCreator } from './season.js';
 
 

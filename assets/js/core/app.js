@@ -1,6 +1,7 @@
 //? Funciones encargada de manejar la aplicación
 
-import { handleFilterClick, handleDetails, toggleSeasonComplete, toggleEpisodeComplete, resetProgress } from '../handlers/eventHandlers.js';
+import { handleDetails, toggleSeasonComplete, toggleEpisodeComplete, resetProgress } from '../handlers/eventHandlers.js';
+import { handleFilterClick } from '../handlers/filterHandlers.js';
 import { setupTheme } from '../handlers/themeHandler.js';
 import { $, $$, createElement } from '../utilities/dom.js';
 import { importData, exportData, saveChecklistData, loadChecklistData, loadChecklistTitle, saveChecklistTitle } from '../utilities/storage.js'; 
