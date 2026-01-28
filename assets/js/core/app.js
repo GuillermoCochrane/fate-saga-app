@@ -200,6 +200,7 @@ function setupEventListeners() {
         saveChecklistData(checklistData);
         saveChecklistTitle(checklistTitle);
         shouldRenderTitle = true;
+        shouldUpdateProgress = true;
 
         showNotification('Seleccionada la franquicia: ' + checklistTitle);
         modalCloser();
