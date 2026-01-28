@@ -64,6 +64,7 @@ function setupEventListeners() {
     const $exportBtn = $('#export-btn');
     const $importBtn = $('#import-btn');
     const $reportBtn = $('#report-btn');
+    const $changeFranchiseBtn = $('#change-franchise-btn');
     const $resetMemoryBtn = $('#reset-memory-btn');
     const $resetProgressBtn = $('#reset-progress-btn');
     const $confirmBtn = $('#confirm-action-btn');
@@ -98,6 +99,11 @@ function setupEventListeners() {
     //Confirma resetear progreso
     $resetProgressBtn.addEventListener('click', () => {
         modalConfirmHandler('Estás a punto de resetear el progreso de la franquicia.', 'reset');
+    });
+
+    //Cambia la franquicia
+    $changeFranchiseBtn.addEventListener('click', () => {
+        modalConfirmHandler('Estás a punto de cambiar la franquicia.', 'change');
     });
 
     //Exporta los datos al hacer clic 
