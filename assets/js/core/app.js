@@ -33,7 +33,7 @@ function initApp() {
     if (shouldReadCachedData) {
         checklistData = loadChecklistData();
         checklistTitle = loadChecklistTitle();
-        readCachedData = false;
+        shouldReadCachedData = false;
     }
 
     //Si no hay datos de la checklist, mostramos el modal de seleccion
@@ -81,7 +81,7 @@ function setupEventListeners() {
         button.addEventListener('click', (e) => {
             //ponemos a escuchar el evento click 
             currentFilter = handleFilterClick(e, $filterBtns); // Delegamos en handleFilterClick, los cambios de estilos de los botones de filtro
-            renderChecklist(checklistData, currentFilter, handleToggleCheckbox); // renderizamos
+            initApp(); // ← Actualizamos la checklist
         });
     });
 
