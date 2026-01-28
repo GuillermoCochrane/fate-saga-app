@@ -132,10 +132,16 @@ function setupEventListeners() {
             localStorage.removeItem('checklistTitle');
             showNotification('Memoria borrada correctamente');
             setTimeout(() => {
-                //location.reload();
-                // aca tengo que abrir el modal de seleccion de franquicia en lugar de recargar
                 modalSectionHandler('selection');
             }, 1000);
+        }
+
+        if (action === 'change') {
+            //Abre el modal de seleccion de franquicia
+            modalCloser();
+            setTimeout(() => {
+                modalSectionHandler('selection');
+            }, 150);
         }
 
         if (action === 'reset') {
