@@ -137,9 +137,9 @@ function setupEventListeners() {
             modalCloser();
             checklistData = resetProgress(checklistData);
             saveChecklistData(checklistData);
-            renderChecklist(checklistData, currentFilter, handleToggleCheckbox);
-            updateTotalProgress(checklistData);
             showNotification('Progreso reseteado correctamente');
+            shouldUpdateProgress = true;
+            initApp();
         }
     });
 
