@@ -160,12 +160,11 @@ function setupEventListeners() {
             const importedData = await importData(event);
             checklistData = importedData.checklistData;
             checklistTitle = importedData.checklistTitle;
-            shouldRenderTitle = true;
             saveChecklistData(checklistData);
             saveChecklistTitle(checklistTitle);
-            renderChecklist(checklistData, currentFilter, handleToggleCheckbox);
-            updateChecklistTitle(checklistTitle);
-            updateTotalProgress(checklistData);
+            shouldRenderTitle = true;
+            shouldUpdateProgress = true;
+            initApp();
             showNotification('Datos importados con éxito');
         } catch (error) {
             showNotification('Error al importar: ' + error.message, true);
