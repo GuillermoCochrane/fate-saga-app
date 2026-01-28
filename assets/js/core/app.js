@@ -217,15 +217,14 @@ function setupEventListeners() {
     }, true);
 }
 
-// Renderizar la checklist completa
-
+//Helper que actualiza el progreso de la checklist
 function handleToggleCheckbox(seasonID, sagaName, isEpisode = false, episodeID = null) {
     checklistData = isEpisode ? 
         toggleEpisodeComplete(episodeID, seasonID, sagaName, checklistData) : 
         toggleSeasonComplete(seasonID, sagaName, checklistData);
     saveChecklistData(checklistData);
-    renderChecklist(checklistData, currentFilter, handleToggleCheckbox);
-    updateTotalProgress(checklistData);
+    shouldUpdateProgress = true;
+    initApp();
 }
 
 // Iniciar la aplicación cuando el DOM esté listo
