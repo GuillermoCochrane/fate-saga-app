@@ -17,6 +17,7 @@ export let checklistData = [];
 export let checklistTitle = '';
 let activeListener = false;
 let shouldRenderTitle = true;
+let shouldReadCachedData = true;
 
 function initApp() {
     //Activamos los listeners y el theme, solo si no lo hicimos antes
@@ -28,8 +29,11 @@ function initApp() {
     } 
 
     //Cargamos los datos de la checklist
-    checklistData = loadChecklistData();
-    checklistTitle = loadChecklistTitle();
+    if (shouldReadCachedData) {
+        checklistData = loadChecklistData();
+        checklistTitle = loadChecklistTitle();
+        readCachedData = false;
+    }
 
     //Si no hay datos de la checklist, mostramos el modal de seleccion
     if (!checklistTitle || !checklistData.length){
