@@ -18,6 +18,7 @@ export let checklistTitle = '';
 let activeListener = false;
 let shouldRenderTitle = true;
 let shouldReadCachedData = true;
+let shouldUpdateProgress = true;
 
 function initApp() {
     //Activamos los listeners y el theme, solo si no lo hicimos antes
@@ -47,8 +48,14 @@ function initApp() {
         shouldRenderTitle = false;
     }
 
+    // Renderizamos la checklist con datos actualizados
     renderChecklist(checklistData, currentFilter, handleToggleCheckbox);
-    updateTotalProgress(checklistData);
+
+    // Actualizamos el progreso
+    if (shouldUpdateProgress) {
+        updateTotalProgress(checklistData);
+        shouldUpdateProgress = false;
+    }
 }
 
 // Configurar event listeners
