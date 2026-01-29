@@ -4,7 +4,13 @@
     padding: 10px 15px 10px 30px;
 }
 
-/* Estilos del contenedor de episodios */
+.episode-list {
+    margin-left: 25px;
+    margin-top: 5px;
+    padding-left: 15px;
+    border-left: 2px solid var(--border-color);
+}
+
 .check-item {
     margin-bottom: 8px;
     display: flex;
@@ -12,9 +18,14 @@
 
     /* Estilos del checkbox */
     & input[type="checkbox"] {
-        margin-right: 10px;
+        margin-right: 0.7em;
         margin-top: 7px;
         accent-color: var(--accent-color);
+
+        &:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
     }
 
     /* Estilos del label (datos del episodio) */
@@ -24,12 +35,6 @@
     }
 }
 
-.episode-list {
-    margin-left: 25px;
-    margin-top: 5px;
-    padding-left: 15px;
-    border-left: 2px solid var(--border-color);
-}
 
 .episode-number {
     font-weight: bold;
