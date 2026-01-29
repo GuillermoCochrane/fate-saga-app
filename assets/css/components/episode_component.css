@@ -1,14 +1,15 @@
 /* ? Estilos del componente contenedor de episodios */
-
-.checklist {
-    padding: 10px 15px 10px 30px;
-}
-
 .episode-list {
-    margin-left: 25px;
+    margin-left: 1.2em;
     margin-top: 5px;
-    padding-left: 15px;
+    padding-left: 0.5em;
     border-left: 2px solid var(--border-color);
+
+    @media (min-width: 768px) {
+        margin-left: 25px;
+        padding-left: 15px;
+        border-width: 3px;
+    }
 }
 
 .check-item {
