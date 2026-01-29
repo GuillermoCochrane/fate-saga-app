@@ -5,6 +5,7 @@ export const fateChecklistData = {
   sagas:[
     {
       saga: "Fate/Zero",
+      id: "fzs",
       opened: false,
       seasons: [
         {
@@ -374,6 +375,7 @@ export const fateChecklistData = {
     },
     {
       saga: "Fate/stay night",
+      id: "fsn",
       opened: false,
       seasons: [
         {
@@ -1121,6 +1123,7 @@ export const fateChecklistData = {
     },
     {
       saga: "Lord El-Melloi II",
+      id: "lem",
       opened: false,
       seasons: [
         {
@@ -1290,6 +1293,7 @@ export const fateChecklistData = {
     },
     {
       saga: "Fate/Strange Fake",
+      id: "fsf",
       opened: false,
       seasons: [
         {
@@ -1351,6 +1355,7 @@ export const fateChecklistData = {
     },
     {
       saga: "Fate/Grand Order",
+      id: "fgo",
       opened: false,
       seasons: [
         {
@@ -1972,6 +1977,7 @@ export const fateChecklistData = {
     },
     { 
       saga: "Fate/Grand Order: Fujimaru Ritsuka wa Wakaranai",
+      id: "frw",
       opened: false,
       seasons: [
         {
@@ -2869,6 +2875,7 @@ export const fateChecklistData = {
     },
     {
       saga: "Fate/Kaleid Liner Prisma Illya",
+      id: "fkl",
       opened: false,
       seasons: [
         {
@@ -3665,6 +3672,7 @@ export const fateChecklistData = {
     },
     {
       saga: "Otros Sagas",
+      id: "osf",
       opened: false,
       seasons: [
         {
