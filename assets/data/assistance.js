@@ -5,6 +5,7 @@ export const asistenceChecklistData = {
   sagas:[ 
     {
       saga: "Curso de front-end",
+      id: "cfe",
       opened: false,
       seasons: [
         {
@@ -68,6 +69,7 @@ export const asistenceChecklistData = {
     },
     {
       saga: "Curso de aplicaciones web Aptugo",
+      id: "caw",
       opened: false,
       seasons: [
         { id: "caw1", label: "Clase 1", format: "A distancia", completed: false, opened: false, episodes: [
@@ -113,6 +115,7 @@ export const asistenceChecklistData = {
     },
     {
       saga: "Curso de Back-end",
+      id: "cbe",
       opened: false,
       seasons: [
         {
@@ -162,7 +165,8 @@ export const asistenceChecklistData = {
           episodes: [
             { id: "cbe3-a1", number: 1, label: "Evan Rachel Wood", completed: false },
             { id: "cbe3-a2", number: 2, label: "Jeffrey Wright", completed: false },
-            { id: "cbe3-a3", number: 3, label: "Thandie Newton", completed: false },            { id: "cbe3-a4", number: 4, label: "Ed Harris", completed: false },
+            { id: "cbe3-a3", number: 3, label: "Thandie Newton", completed: false },            
+            { id: "cbe3-a4", number: 4, label: "Ed Harris", completed: false },
             { id: "cbe3-a5", number: 5, label: "James Marsden", completed: false },
             { id: "cbe3-a6", number: 6, label: "Tessa Thompson", completed: false },
             { id: "cbe3-a7", number: 7, label: "Angela Sarafyan", completed: false },
@@ -171,7 +175,6 @@ export const asistenceChecklistData = {
             { id: "cbe3-a10", number: 10, label: "Luke Hemsworth", completed: false },
           ],
         },
-
       ],
     },
   ]
