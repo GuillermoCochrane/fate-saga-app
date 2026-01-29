@@ -35,9 +35,16 @@
     }
 }
 
-
 .episode-number {
+    display: inline;
     font-weight: bold;
-    margin-right: 5px;
+    margin-right: 0.5em;
     color: var(--accent-color);
+
+    & span{
+        display: none;
+        @media (min-width: 768px) {
+            display: inline;
+        }
+    }
 }
