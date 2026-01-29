@@ -1,6 +1,6 @@
 //? funcion de creacion de componente season (temporada)
 
-import { createElement, createDetails, createLabel, createCheckbox } from '../utilities/dom.js';
+import { createElement, createDetails, createLabel, createCheckbox, $ } from '../utilities/dom.js';
 import { episodeCreator } from './episode.js';
 
 // Crear elemento de la temporada con sus episodios
@@ -9,7 +9,7 @@ export function seasonContainerCreator(season, sagaName, handleToggleCheckbox) {
     const $seasonDiv = createElement('div', 'season-item');
     const $details = createDetails('season-details', season.opened); //creamos el elemento details, abierto cuando corresponda
     const $summary = seasonSummaryCreator(sagaName, season, handleToggleCheckbox);  //creamos el summary de la temporada
-    const $seasonContainer = seasonCreator(season, sagaName, handleToggleCheckbox); //creamos el contenedor de la temporada
+    const $seasonContainer = episodeListCreator(season, sagaName, handleToggleCheckbox); //creamos el contenedor de la temporada
     
     $details.appendChild($summary);         //agregamos el summary al details
     $details.appendChild($seasonContainer); //Agregamos el contenedor de la temporada al details
@@ -30,26 +30,23 @@ export function seasonContainerCreator(season, sagaName, handleToggleCheckbox) {
     return $seasonDiv; //devuelve el contendeor de la temporada completo, con todos sus elementos hijos
 }
 
-// Crear el contenedor de la temporada
-export function seasonCreator(season, sagaName, handleToggleCheckbox) {
-    const $seasonContainer = createElement('div', 'checklist');  //creamos el contenedor del la temporada
-    if (season.episodes && season.episodes.length > 0) {
-    //si la temporada tiene episodios...
-        const $episodeList = createElement('div', 'episode-list'); //creamos el contenedor de episodios
-
-        for (const episode of season.episodes) {
-            //recorremos todos los episodios del item
-            const $episodeItem = episodeCreator(episode, season.id, sagaName, handleToggleCheckbox); //creamos el capitulo
-            $episodeList.appendChild($episodeItem);                             //lo agregamos al contenedor de episodios
+// Crear el listado de episodios de la temporada
+function episodeListCreator(season, sagaName, handleToggleCheckbox, parentSagaID) {
+    const $episodeList = createElement('section', 'episode-list'); //creamos el contenedor de episodios
+    if (season.episodes && season.episodes.length > 0) { //si la temporada tiene episodios...
+        for (const episode of season.episodes) { //recorremos todos los episodios del item
+            const $episodeItem = episodeCreator(episode, season.id, sagaName, handleToggleCheckbox, parentSagaID); //creamos el capitulo
+            $episodeList.appendChild($episodeItem); //lo agregamos al contenedor de episodios
         }
-
-        $seasonContainer.appendChild($episodeList); //lo agregamos al contenedor de la temporada
+    } else { //sino...
+        const $noItemsMsg = createElement('p', "empty-list", "La temporada no tiene episodios");
+        $episodeList.appendChild($noItemsMsg); // agregamos un mensaje de que no hay episodios
     }
-    return $seasonContainer;
+    return $episodeList;
 }
 
 // Crear el summary de la temporada
-export function seasonSummaryCreator(sagaName, season, handleToggleCheckbox) {
+function seasonSummaryCreator(sagaName, season, handleToggleCheckbox) {
     const $summary = createElement('summary', 'season-summary');
     const checkboxID = `main-${season.id}`; //id del checkbox
     const checkBoxEventHandler = () => handleToggleCheckbox(season.id, sagaName); //funcion que se ejecuta al cambiar el estado del checkbox
