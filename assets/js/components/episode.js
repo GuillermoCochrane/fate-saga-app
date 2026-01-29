@@ -12,17 +12,14 @@ export function episodeCreator(episode, seasonID, sagaName, handleToggleCheckbox
 
     const ariaLabel = `Episodio ${episode.number}: ${episode.label}` 
     const $checkbox = createCheckbox(checkboxID, episode.completed, checkBoxEventHandler, null, parentSagaID, ariaLabel);
+    
+    //creamos el label con sus componentes internos
+    const $label = createLabel('', checkboxID);                       
     const $episode =  createElement('span', null, "Episodio ");
-    const $episodeTag = createElement('strong', null); //Marcador del episodio en negrita
-    $episodeTag.appendChild($episode);
-    $episodeTag.appendChild(document.createTextNode(`${episode.number}:`));
-
-    // const episodeTag =  `<strong>Episodio ${episode.number}:</strong>`
-    const $episodeNumber = createElement('aside', 'episode-number');
-    $episodeNumber.appendChild($episodeTag);
-
-    const $label = createLabel('', checkboxID, 'episode-label');      //creamos el label
-    $label.appendChild($episodeNumber);                               //agregamos el marcador del episodio al label
+    const $episodeTag = createElement('strong', 'episode-number'); //Marcador del episodio en negrita
+    $episodeTag.appendChild($episode);                                      //agregamos el texto "Episodio" al strong
+    $episodeTag.appendChild(document.createTextNode(`${episode.number}:`)); //agregamos el numero del episodio al strong
+    $label.appendChild($episodeTag);                               //agregamos el marcador del episodio al label
     $label.appendChild(document.createTextNode(` ${episode.label}`)); //agregamos el nombre del episodio al label
 
 
@@ -33,9 +30,7 @@ export function episodeCreator(episode, seasonID, sagaName, handleToggleCheckbox
         <article class="check-item">
             <input type="checkbox" id="main-1">
             <label for="main-1" class="episode-label">
-                <aside class="episode-number">
-                    <strong>Episodio 1:</strong> 
-                </aside>
+                <strong class="episode-number">Episodio 1:</strong> 
                 Título del episodio
             </label>
         </article>
