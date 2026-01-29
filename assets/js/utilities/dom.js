@@ -38,12 +38,16 @@ export function createLabel(textContent, forId, className) {
 }
 
 // Crea etiqueta input tipo Checkbox
-export function createCheckbox(id, checked = false, onChange = null, className) {
+export function createCheckbox(id, checked = false, onChange = null, className = null, parentSagaID = null, ariaLabel = null) {
     const checkbox = createElement('input', className, null);
     checkbox.type = 'checkbox';
     id && (checkbox.id = id);
-    checked && (checkbox.checked = checked);
+    checkbox.checked = checked;
     onChange && (checkbox.addEventListener('change', onChange));
+    parentSagaID && (checkbox.dataset.parentSagaID = parentSagaID);
+    ariaLabel && (checkbox.setAttribute('aria-label', ariaLabel));
+    checkbox.setAttribute('role', 'checkbox');
+    checkbox.setAttribute('aria-checked', checked);
     return checkbox;
 }
 
