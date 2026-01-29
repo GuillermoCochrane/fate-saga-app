@@ -47,7 +47,7 @@ export function modalConfirmHandler(message, action) {
 export function modalCloser() {
     sectionsHide();
     const $modal = $('#multifunction-modal');
-    if (!$modal) {
+    if ($modal) {
         $modal.setAttribute('aria-hidden', true);
         $modal.close();
     }
