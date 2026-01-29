@@ -231,10 +231,10 @@ function setupEventListeners() {
 }
 
 //Helper que actualiza el progreso de la checklist
-function handleToggleCheckbox(seasonID, sagaName, isEpisode = false, episodeID = null) {
+function handleToggleCheckbox(seasonID, sagaID, isEpisode = false, episodeID = null) {
     checklistData = isEpisode ? 
-        toggleEpisodeComplete(episodeID, seasonID, sagaName, checklistData) : 
-        toggleSeasonComplete(seasonID, sagaName, checklistData);
+        toggleEpisodeComplete(episodeID, seasonID, sagaID, checklistData) : 
+        toggleSeasonComplete(seasonID, sagaID, checklistData);
     saveChecklistData(checklistData);
     shouldUpdateProgress = true;
     initApp();
