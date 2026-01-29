@@ -14,6 +14,7 @@ import { prismaphantasm } from "./fateKaleidLinerPrismaIllya/prismaphantasm.js";
 
 export const fateKaleidLinerPrismaIllya = {
 saga: "Fate/Kaleid Liner Prisma Illya",
+id: "fkl",
 opened: true,
 seasons: [
     prismaillya1,

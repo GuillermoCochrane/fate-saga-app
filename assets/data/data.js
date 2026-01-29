@@ -1320,7 +1320,7 @@ export const fateChecklistData = {
           format: "Anime",
           note: "Serie en emisión. Estreno: Enero 2026",
           completed: false,
-          opened: true,
+          opened: false,
           episodes: [
             {
               id: "fsf-1",
@@ -1717,7 +1717,7 @@ export const fateChecklistData = {
           id: "fgo-moonlight",
           label: "Fate/Grand Order: Moonlight/Lostroom",
           format: "Especial",
-          completed: true,
+          completed: false,
           opened: false,
           episodes: [
             {
@@ -1727,7 +1727,7 @@ export const fateChecklistData = {
               romaji: "Fate/Grand Order: Moonlight/Lostroom",
               jp: "Fate/Grand Order -MOONLIGHT/LOSTROOM-",
               es: "Fate/Grand Order -MOONLIGHT/LOSTROOM-",
-              completed: true
+              completed: false
             }
           ]
         },
@@ -1932,7 +1932,7 @@ export const fateChecklistData = {
           id: "fgo-carnival",
           label: "Fate/Grand Carnival",
           format: "OVA",
-          completed: true,
+          completed: false,
           opened: false,
           episodes: [
             {
@@ -1942,7 +1942,7 @@ export const fateChecklistData = {
               romaji: "Eirei Genkai Taisai Olympia: Kyouen no Taika - Dai Reiki Henkan Keikaku",
               jp: "英霊限界大祭オリンピア: 狂宴の大火 - 大霊基返還計画",
               es: "Gran Festival de los Espíritus Heroicos Olimpo: El Gran Incendio del Banquete - Plan de Conversión de los Grandes Espíritus",
-              completed: true
+              completed: false
             },
             {
               id: "fgo-car-2",
@@ -1951,7 +1951,7 @@ export const fateChecklistData = {
               romaji: "Yoru no Tokuiten Kabukichou",
               jp: "夜の特異点カブキチョウ",
               es: "Punto Singular Nocturno: Kabukicho",
-              completed: true
+              completed: false
             },
             {
               id: "fgo-car-3",
@@ -1960,7 +1960,7 @@ export const fateChecklistData = {
               romaji: "The Documentary: Hirogaru Eirei Kakusa - Eirei Roudoukijunhou",
               jp: "ザ・ドキュメンタリー 拡がる英霊格差 ~英霊労働基準法~",
               es: "El Documental: La Creciente Brecha entre los Espíritus Heroicos - Ley Laboral de los Espíritus Heroicos",
-              completed: true
+              completed: false
             },
             {
               id: "fgo-car-4",
@@ -1969,7 +1969,7 @@ export const fateChecklistData = {
               romaji: "Kizuna Max Channel",
               jp: "絆MAXチャンネル",
               es: "Canal de Lazos Máximos",
-              completed: true
+              completed: false
             }
           ]
         }
@@ -3406,7 +3406,7 @@ export const fateChecklistData = {
             {
               id: "prisma4-3",
               number: 3,
-              label: "Your True Enemy",
+              label: "Your false Enemy",
               romaji: "Kimi no Hontou no Teki",
               jp: "君の本当の敵",
               es: "Tu Verdadero Enemigo",
@@ -3679,7 +3679,7 @@ export const fateChecklistData = {
           id: "fate-apocrypha",
           label: "Fate/Apocrypha",
           format: "Anime",
-          completed: true,
+          completed: false,
           opened: false,
           episodes: [
             {
@@ -3689,7 +3689,7 @@ export const fateChecklistData = {
               romaji: "Gaiten: Seihai Taisen",
               jp: "外典:聖杯大戦",
               es: "Apócrifa: La Gran Guerra del Santo Grial",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-2",
@@ -3698,7 +3698,7 @@ export const fateChecklistData = {
               romaji: "Seijo no Shuttatsu",
               jp: "聖女の出立",
               es: "La Partida de la Santa",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-3",
@@ -3707,7 +3707,7 @@ export const fateChecklistData = {
               romaji: "Arukidasu Unmei",
               jp: "歩き出す運命",
               es: "Los Primeros Pasos del Destino",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-4",
@@ -3716,7 +3716,7 @@ export const fateChecklistData = {
               romaji: "Sei no Daishou, Shi no Tsugunai",
               jp: "生の代償、死の贖い",
               es: "El Costo de la Vida, la Redención de la Muerte",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-5",
@@ -3725,7 +3725,7 @@ export const fateChecklistData = {
               romaji: "Ten no Koe",
               jp: "天の声",
               es: "Voz Desde lo Alto",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-6",
@@ -3734,7 +3734,7 @@ export const fateChecklistData = {
               romaji: "Hangyaku no Kishi",
               jp: "叛逆の騎士",
               es: "El Caballero de la Rebelión",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-7",
@@ -3743,7 +3743,7 @@ export const fateChecklistData = {
               romaji: "Jiyuu no Arika",
               jp: "自由の在処",
               es: "Donde yace la Libertad",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-8",
@@ -3752,7 +3752,7 @@ export const fateChecklistData = {
               romaji: "Kaisen no Noroshi",
               jp: "開戦の狼煙",
               es: "La Guerra Comienza",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-9",
@@ -3761,7 +3761,7 @@ export const fateChecklistData = {
               romaji: "Hyaku no Honoo to Hyaku no Hana",
               jp: "百の焔と百の華",
               es: "Cien Llamas, Cien Flores",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-10",
@@ -3770,7 +3770,7 @@ export const fateChecklistData = {
               romaji: "Hana to Chiru",
               jp: "花と散る",
               es: "Como Pétalos Dispersos",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-11",
@@ -3779,7 +3779,7 @@ export const fateChecklistData = {
               romaji: "Eien no Kagayaki",
               jp: "永遠の輝き",
               es: "Resplandor Eterno",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-12",
@@ -3788,7 +3788,7 @@ export const fateChecklistData = {
               romaji: "Seijin no Gaisen",
               jp: "聖人の凱旋",
               es: "El Regreso Triunfal de la Santa",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-13",
@@ -3797,7 +3797,7 @@ export const fateChecklistData = {
               romaji: "Saigo no Master",
               jp: "最後のマスター",
               es: "El último amo",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-14",
@@ -3806,7 +3806,7 @@ export const fateChecklistData = {
               romaji: "Kyousei no Inori",
               jp: "救世の祈り",
               es: "Rezo de salvación",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-15",
@@ -3815,7 +3815,7 @@ export const fateChecklistData = {
               romaji: "Michi wa Chigaedo",
               jp: "道は違えど",
               es: "Aunque nuestros caminos se separan",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-16",
@@ -3824,7 +3824,7 @@ export const fateChecklistData = {
               romaji: "Jack the Ripper",
               jp: "ジャック・ザ・リッパー",
               es: "Jack el Destripador",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-17",
@@ -3833,7 +3833,7 @@ export const fateChecklistData = {
               romaji: "Träumerei",
               jp: "トロイメライ",
               es: "Träumerei",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-18",
@@ -3842,7 +3842,7 @@ export const fateChecklistData = {
               romaji: "From Hell",
               jp: "フロム・ヘル",
               es: "Del infierno",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-19",
@@ -3851,7 +3851,7 @@ export const fateChecklistData = {
               romaji: "Owari no Asa",
               jp: "終わりの朝",
               es: "La última primera luz",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-20",
@@ -3860,7 +3860,7 @@ export const fateChecklistData = {
               romaji: "Sora wo Kakeru",
               jp: "空を駆ける",
               es: "Deslizándose en el cielo",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-21",
@@ -3869,7 +3869,7 @@ export const fateChecklistData = {
               romaji: "Antares Snipe",
               jp: "天蠍一射〈アンタレス・スナイプ〉",
               es: "Disparo de Escorpio",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-22",
@@ -3878,7 +3878,7 @@ export const fateChecklistData = {
               romaji: "Saikai to Betsuri",
               jp: "再会と別離",
               es: "Reunión y separación",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-23",
@@ -3887,7 +3887,7 @@ export const fateChecklistData = {
               romaji: "Kanata e to",
               jp: "彼方へと",
               es: "Más Allá",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-24",
@@ -3896,7 +3896,7 @@ export const fateChecklistData = {
               romaji: "Seihai Sensou",
               jp: "聖杯戦争",
               es: "La Guerra del Santo Grial",
-              completed: true
+              completed: false
             },
             {
               id: "apoc-25",
@@ -3905,7 +3905,7 @@ export const fateChecklistData = {
               romaji: "Apocrypha",
               jp: "Apocrypha",
               es: "Apócrifa",
-              completed: true
+              completed: false
             }
           ]
         },

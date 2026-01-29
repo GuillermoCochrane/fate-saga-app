@@ -14,7 +14,8 @@ import { heavensfeel } from "./fateSaga/heavensfeel.js";
 import { emiyatodaysmenu } from "./fateSaga/emiyatodaysmenu.js";
 
 export const fateSaga = {
-saga: "Fate Saga",
+saga: "Fate/Stay Night",
+id: "fsn",
 opened: false,
 seasons: [
     zero,

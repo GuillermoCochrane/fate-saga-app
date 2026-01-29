@@ -8,7 +8,8 @@ import { carnivalphantasmex } from "./otrosMundosAlternativosEIndependientes/car
 import { carnivalphantasmhibichika } from "./otrosMundosAlternativosEIndependientes/carnivalphantasmhibichika.js";
 
 export const otrosMundosAlternativosEIndependientes = {
-saga: "Otros (Mundos Alternativos e Independientes)",
+saga: "Otros Sagas",
+id: "osf",
 opened: false,
 seasons: [
     apocrypha,

@@ -19,6 +19,7 @@ import { carnival } from "./fateGrandOrder/carnival.js";
 
 export const fateGrandOrder = {
 saga: "Fate/Grand Order",
+id: "fgo",
 opened: false,
 seasons: [
     firstorder,
