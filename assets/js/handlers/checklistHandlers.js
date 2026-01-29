@@ -58,14 +58,15 @@ export function handleDetails(event, checklistData) {
         // Encontrar el ID del elemento y actualizar su estado opened
         if (details.classList.contains('saga-details')) {
             //si el details tiene la clase saga-details
-            const sagaName = details.querySelector('.saga-title').textContent; //guardamos el texto del título
-            const saga = newData.find(saga => saga.saga === sagaName); // Buscamos el saga con ese nombre
+            const sagaID = details.dataset.sagaId; //guardamos el id del título
+            //const sagaName = details.querySelector('.saga-title').textContent; //guardamos el texto del título
+            const saga = newData.find(saga => saga.id === sagaID); // Buscamos el saga con ese id
+            //const saga = newData.find(saga => saga.saga === sagaName); // Buscamos el saga con ese nombre
             if (saga) {
                 saga.opened = isOpen; //actualizamos el objeto, guardando el estado del details
                 return newData; //devuelve el objeto con los cambios
             }
-        } 
-        else if (details.classList.contains('season-details')) {
+        } else if (details.classList.contains('season-details')) {
             //si el details tiene la clase season-details
             const seasonID = details.querySelector('input[type="checkbox"]').id.replace('main-', ''); //guardamos el id del checkbox
             
