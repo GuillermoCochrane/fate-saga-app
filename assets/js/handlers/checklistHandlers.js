@@ -28,9 +28,9 @@ export function toggleSeasonComplete(seasonID, sagaID, checklistData) {
 }
 
 // Alternar estado completo de un episodio
-export function toggleEpisodeComplete(episodeID, seasonID, sagaName, checklistData) {
+export function toggleEpisodeComplete(episodeID, seasonID, sagaID, checklistData) {
     const newData = JSON.parse(JSON.stringify(checklistData));
-    const saga = newData.find(saga => saga.saga === sagaName); // Buscamos el saga con ese nombre
+    const saga = newData.find(saga => saga.id === sagaID); // Buscamos el saga con ese id
     const season = saga.seasons.find(season => season.id === seasonID); // Buscamos la temporada con ese id
 
     if (season && season.episodes) {
