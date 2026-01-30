@@ -49,11 +49,10 @@ function episodeListCreator(season, sagaID, handleToggleCheckbox) {
 }
 
 // Crear el summary de la temporada
-function seasonSummaryCreator(sagaName, season, handleToggleCheckbox) {
+function seasonSummaryCreator(sagaID, season, handleToggleCheckbox) {
     const $summary = createElement('summary', 'season-summary');
     const checkboxID = `main-${season.id}`; //id del checkbox
-    const checkBoxEventHandler = () => handleToggleCheckbox(season.id, sagaName); //funcion que se ejecuta al cambiar el estado del checkbox
-    //const checkBoxEventHandler = () => toggleSeasonComplete(season.id, sagaName, checklistdata); //funcion que se ejecuta al cambiar el estado del checkbox
+    const checkBoxEventHandler = () => handleToggleCheckbox(season.id, sagaID); //funcion que se ejecuta al cambiar el estado del checkbox
     // Checkbox para la temporada completa
     const $seasonCheckbox = createCheckbox(checkboxID, season.completed, checkBoxEventHandler);
 
