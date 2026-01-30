@@ -68,13 +68,10 @@ export function handleDetails(event, checklistData) {
             }
         } else if (details.classList.contains('season-details')) {
             //si el details tiene la clase season-details
-            const seasonID = details.querySelector('input[type="checkbox"]').id.replace('main-', ''); //guardamos el id del checkbox
-            
-            // recorrremos todas las sagas en localStorage
-            for (const sagaData of newData) {
+            const seasonID = details.dataset.seasonId; //guardamos el id del checkbox
+            for (const sagaData of newData) { // recorrremos todas las sagas en localStorage
                 const season = sagaData.seasons.find(season => season.id === seasonID); // capturamos la temporada con ese id
-                if (season) {
-                    //si encuentra la temporada
+                if (season) { //si encuentra la temporada
                     season.opened = isOpen; //actualizamos el estado abierto
                     return newData; // devuelve el objeto con los cambios
                 }
