@@ -13,13 +13,14 @@ export function renderChecklist(checklistData, currentFilter, handleToggleCheckb
         const sagaName = sagaData.saga;
         const $sagaElement = createElement('div', 'saga');          // Creamos el elemento div con la clase saga
         const $details = createElement('details', 'saga-details');  //Creamos el elemento details, y le ponemos  el atributo open cuando corresponda, asi el details queda abierto
+        $details.dataset.sagaId = sagaData.id;                      //le ponemos el atributo data-saga-id con el id de la saga
         if (sagaData.opened) {
             $details.setAttribute('open', 'true');
         }
 
         const percentage = calculateProgress(sagaData.seasons);       //calculamos el progreso de la saga
-        const $summary = sagaSummaryCreator(sagaName, percentage);  // Creamos el summary de la saga
-        const $contentDiv = sagaCreator(sagaData, sagaName, handleToggleCheckbox, currentFilter);        // Creamos el contenedor de la seasons de la saga
+        const $summary = sagaSummaryCreator(sagaName, percentage, sagaData.id);  // Creamos el summary de la saga
+        const $contentDiv = sagaCreator(sagaData,  sagaData.id, handleToggleCheckbox, currentFilter);        // Creamos el contenedor de la seasons de la saga
 
         $details.appendChild($summary);
         $details.appendChild($contentDiv);
