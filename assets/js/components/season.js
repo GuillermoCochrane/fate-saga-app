@@ -4,12 +4,15 @@ import { createElement, createDetails, createLabel, createCheckbox, $ } from '..
 import { episodeCreator } from './episode.js';
 
 // Crear elemento de la temporada con sus episodios
-export function seasonContainerCreator(season, sagaName, handleToggleCheckbox) {
+export function seasonContainerCreator(season, sagaID, handleToggleCheckbox) {
     //Creacion de los elementos
     const $seasonDiv = createElement('div', 'season-item');
     const $details = createDetails('season-details', season.opened); //creamos el elemento details, abierto cuando corresponda
-    const $summary = seasonSummaryCreator(sagaName, season, handleToggleCheckbox);  //creamos el summary de la temporada
-    const $seasonContainer = episodeListCreator(season, sagaName, handleToggleCheckbox); //creamos el contenedor de la temporada
+    $details.dataset.seasonId = season.id;
+    $details.dataset.sagaId = sagaID;
+
+    const $summary = seasonSummaryCreator(sagaID, season, handleToggleCheckbox);  //creamos el summary de la temporada
+    const $seasonContainer = episodeListCreator(season, sagaID, handleToggleCheckbox); //creamos el contenedor de la temporada
     
     $details.appendChild($summary);         //agregamos el summary al details
     $details.appendChild($seasonContainer); //Agregamos el contenedor de la temporada al details
