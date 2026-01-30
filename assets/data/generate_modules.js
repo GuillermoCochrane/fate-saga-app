@@ -33,8 +33,8 @@ function getVarNameFromId(id) {
 }
 
 // Helper: object data builder
-function objetDataBuilder(object,key) {
-  return `${key}: ${JSON.stringify(object[key])},\n`;
+function objetDataBuilder(object, key, indent = "  ") {
+  return `${indent}${key}: ${JSON.stringify(object[key])},\n`;
 }
 
 // Helper: episode data generator
@@ -49,9 +49,31 @@ function episodeGenerator(episodes) {
           
       // Reconstruct object string
       episodesContent += `export const ${epVarName} = {\n`;
+      
+      const labelKeys = ['label', 'romaji', 'jp', 'es'];
+      const labelObj = {};
+      
+      // First pass: Handle non-label keys
       for (const key in episode) {
-          episodesContent += objetDataBuilder(episode,key);
+          if (!labelKeys.includes(key)) {
+              episodesContent += objetDataBuilder(episode, key, "  ");
+          } else {
+             // Store for later
+             labelObj[key] = episode[key];
+          }
       }
+      
+      // Second pass: Construct nested label object if needed
+      if (Object.keys(labelObj).length > 0) {
+          episodesContent += `  label: {\n`;
+          // Defined order: en (from label), romaji, jp, es
+          if (labelObj.label) episodesContent += `    en: ${JSON.stringify(labelObj.label)},\n`;
+          if (labelObj.romaji) episodesContent += `    romaji: ${JSON.stringify(labelObj.romaji)},\n`;
+          if (labelObj.jp) episodesContent += `    jp: ${JSON.stringify(labelObj.jp)},\n`;
+          if (labelObj.es) episodesContent += `    es: ${JSON.stringify(labelObj.es)},\n`;
+          episodesContent += `  },\n`;
+      }
+
       episodesContent += `};\n\n`;
     }
   }
@@ -64,9 +86,9 @@ function seasonGenerator(season, episodeVars, seasonFileName) {
   seasonContent += `export const ${seasonFileName} = {\n`;
   for (const key in season) {
     if (typeof season[key] !== 'object') {
-      seasonContent += objetDataBuilder(season,key);
+      seasonContent += objetDataBuilder(season, key, "  ");
     } else {
-      seasonContent += `${key}: [\n    ${episodeVars.join(", ")}\n  ],\n`;
+      seasonContent += `  ${key}: [\n    ${episodeVars.join(", ")}\n  ],\n`;
     }
   }
   seasonContent += `};\n`;
@@ -79,9 +101,9 @@ function sagaGenerator(saga, seasonImports, seasonExports, sagaDirName) {
   sagaIndexContent += `export const ${sanitizeVarName(sagaDirName)} = {\n`;
   for (const key in saga) {
     if (typeof saga[key] !== 'object') {
-      sagaIndexContent += objetDataBuilder(saga,key);
+      sagaIndexContent += objetDataBuilder(saga, key, "  ");
     } else {
-      sagaIndexContent += `${key}: [\n    ${seasonExports.join(",\n    ")}\n  ],\n`;
+      sagaIndexContent += `  ${key}: [\n    ${seasonExports.join(",\n    ")}\n  ],\n`;
     }
   }
   sagaIndexContent += `};\n`;
@@ -154,13 +176,20 @@ checklist.sagas.forEach(saga => {
 
 // 4. Generate Master Package File
 console.log("\n📦 Generating Master Package (fate-checklist-master.js)...");
-const masterContent = `${masterImports.join('\n')}
+let masterContent = `${masterImports.join('\n')}\n\n`;
+masterContent += `export const fateChecklist = {\n`;
 
-export const fateChecklist = {
-  franchise: "Fate",
-  sagas: [ ${masterExports.join(', ')} ]
-};
-`;
+// Dynamic Master Object Construction
+for (const key in checklist) {
+    if (key === 'sagas') {
+        // Special handling for the aggregated sagas list
+        masterContent += `  sagas: [ ${masterExports.join(', ')} ],\n`;
+    } else {
+        // Use the builder for standard fields (franchise, author, year, etc.)
+        masterContent += objetDataBuilder(checklist, key, "  ");
+    }
+}
+masterContent += `};\n`;
 
 fs.writeFileSync('fate-checklist-master.js', masterContent);
 console.log("   ✅ Created fate-checklist-master.js");
