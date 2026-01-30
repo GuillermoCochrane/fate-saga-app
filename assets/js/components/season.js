@@ -34,11 +34,11 @@ export function seasonContainerCreator(season, sagaID, handleToggleCheckbox) {
 }
 
 // Crear el listado de episodios de la temporada
-function episodeListCreator(season, sagaName, handleToggleCheckbox, parentSagaID) {
+function episodeListCreator(season, sagaID, handleToggleCheckbox) {
     const $episodeList = createElement('section', 'episode-list'); //creamos el contenedor de episodios
     if (season.episodes && season.episodes.length > 0) { //si la temporada tiene episodios...
         for (const episode of season.episodes) { //recorremos todos los episodios del item
-            const $episodeItem = episodeCreator(episode, season.id, sagaName, handleToggleCheckbox, parentSagaID); //creamos el capitulo
+            const $episodeItem = episodeCreator(episode, season.id, sagaID, handleToggleCheckbox); //creamos el capitulo
             $episodeList.appendChild($episodeItem); //lo agregamos al contenedor de episodios
         }
     } else { //sino...
