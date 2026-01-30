@@ -2,16 +2,16 @@
 import { createElement, createCheckbox, createLabel } from '../utilities/dom.js';
 
 // Crear elemento de episodio individual
-export function episodeCreator(episode, seasonID, sagaName, handleToggleCheckbox, parentSagaID) {
+export function episodeCreator(episode, seasonID, sagaID, handleToggleCheckbox) {
     //Creamos el contendor con la clase check-item
     const $episodeArticle = createElement('article', 'check-item');
 
     //Creamos el checkbox, dejándolo marcado según corresponda
     const checkboxID = `${episode.id}`;
-    const checkBoxEventHandler = () => handleToggleCheckbox(seasonID, sagaName , true, episode.id);
+    const checkBoxEventHandler = () => handleToggleCheckbox(seasonID, sagaID , true, episode.id);
 
     const ariaLabel = `Episodio ${episode.number}: ${episode.label}` 
-    const $checkbox = createCheckbox(checkboxID, episode.completed, checkBoxEventHandler, null, parentSagaID, ariaLabel);
+    const $checkbox = createCheckbox(checkboxID, episode.completed, checkBoxEventHandler, null, sagaID, ariaLabel);
     
     //creamos el label con sus componentes internos
     const $label = createLabel('', checkboxID);                       
