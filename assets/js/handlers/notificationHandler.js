@@ -1,4 +1,5 @@
 // Handler de notificaciones
+import { $ } from '../utilities/dom.js';
 export function showNotification(message, isError = false) {
     const $notification = $('#notification');
     $notification.textContent = message; // Capturamos el elemento con id notification y le cambiamos el texto
