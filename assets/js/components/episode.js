@@ -10,7 +10,9 @@ export function episodeCreator(episode, seasonID, sagaID, handleToggleCheckbox) 
     const checkboxID = `${episode.id}`;
     const checkBoxEventHandler = () => handleToggleCheckbox(seasonID, sagaID , true, episode.id);
 
-    const ariaLabel = `Episodio ${episode.number}: ${episode.label}` 
+    const labelData = typeof episode.label === 'object' ?  episode.label.en : episode.label;
+
+    const ariaLabel = `Episodio ${episode.number}: ${labelData}` 
     const $checkbox = createCheckbox(checkboxID, episode.completed, checkBoxEventHandler, null, sagaID, ariaLabel);
     
     //creamos el label con sus componentes internos
@@ -20,7 +22,8 @@ export function episodeCreator(episode, seasonID, sagaID, handleToggleCheckbox) 
     $episodeTag.appendChild($episode);                                      //agregamos el texto "Episodio" al strong
     $episodeTag.appendChild(document.createTextNode(`${episode.number}:`)); //agregamos el numero del episodio al strong
     $label.appendChild($episodeTag);                               //agregamos el marcador del episodio al label
-    $label.appendChild(document.createTextNode(` ${episode.label}`)); //agregamos el nombre del episodio al label
+
+    $label.appendChild(document.createTextNode(` ${labelData}`)); //agregamos el nombre del episodio al label
 
 
     $episodeArticle.appendChild($checkbox);  //agregamos el checkbox al contenedor de episodio
