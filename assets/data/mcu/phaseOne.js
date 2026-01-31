@@ -5,7 +5,7 @@ import { thor2011 } from "./phaseOne/thor2011.js";
 import { captainamericafirstavenger2011 } from "./phaseOne/captainamericafirstavenger2011.js";
 import { oneshotconsultant2011 } from "./phaseOne/oneshotconsultant2011.js";
 import { oneshotfunnything2011 } from "./phaseOne/oneshotfunnything2011.js";
-import { avengers2012 } from "../../../cosas_referencia/cosas_referencia/avengers2012.js";
+import { avengers2012 } from "./phaseOne/avengers2012.js";
 
 export const phaseOne = {
   saga: "Phase One",
@@ -18,5 +18,6 @@ export const phaseOne = {
     oneshotconsultant2011,
     captainamericafirstavenger2011,
     oneshotfunnything2011,
+    avengers2012,
   ],
 };
