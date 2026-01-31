@@ -2,7 +2,7 @@ import { ironman2008 } from "./phaseOne/ironman2008.js";
 import { incrediblehulk2008 } from "./phaseOne/incrediblehulk2008.js";
 import { ironman22010 } from "./phaseOne/ironman22010.js";
 import { thor2011 } from "./phaseOne/thor2011.js";
-import { captainamericafirstavenger2011 } from "../../../cosas_referencia/cosas_referencia/captainamericafirstavenger2011.js";
+import { captainamericafirstavenger2011 } from "./phaseOne/captainamericafirstavenger2011.js";
 import { avengers2012 } from "../../../cosas_referencia/cosas_referencia/avengers2012.js";
 import { oneshotconsultant2011 } from "../../../cosas_referencia/cosas_referencia/oneshotconsultant2011.js";
 import { oneshotfunnything2011 } from "../../../cosas_referencia/cosas_referencia/oneshotfunnything2011.js";
@@ -15,5 +15,6 @@ export const phaseOne = {
     incrediblehulk2008,
     ironman22010,
     thor2011,
+    captainamericafirstavenger2011,
   ],
 };
