@@ -6,6 +6,7 @@ import { captainamericafirstavenger2011 } from "./phaseOne/captainamericafirstav
 import { oneshotconsultant2011 } from "./phaseOne/oneshotconsultant2011.js";
 import { oneshotfunnything2011 } from "./phaseOne/oneshotfunnything2011.js";
 import { avengers2012 } from "./phaseOne/avengers2012.js";
+import { oneshotitem472012 } from "./phaseOne/oneshotitem472012.js";
 
 export const phaseOne = {
   saga: "Phase One",
@@ -19,5 +20,6 @@ export const phaseOne = {
     captainamericafirstavenger2011,
     oneshotfunnything2011,
     avengers2012,
+    oneshotitem472012,
   ],
 };
