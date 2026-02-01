@@ -6,6 +6,7 @@ export const ironman22010 = {
   format: "Película",
   release: 2010,
   order: 3,
+  phase_order: 3,
   year_in_movie: 2010,
   completed: false,
   opened: false,

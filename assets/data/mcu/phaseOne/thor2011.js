@@ -6,6 +6,7 @@ export const thor2011 = {
   format: "Película",
   release: 2011,
   order: 4,
+  phase_order: 4,
   year_in_movie: 2011,
   completed: false,
   opened: false,
