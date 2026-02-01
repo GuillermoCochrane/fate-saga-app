@@ -9,7 +9,7 @@ import { avengersageultron2015 } from "./phaseTwo/avengersageultron2015.js";
 import { antman2015 } from "./phaseTwo/antman2015.js";
 import { agentcarterseries2015 } from "./phaseTwo/agentcarterseries2015.js";
 import { daredevil2015 } from "./phaseTwo/daredevil2015.js";
-//import { jessicajones2015 } from "./phaseTwo/jessicajones2015.js";
+import { jessicajones2015 } from "./phaseTwo/jessicajones2015.js";
 
 export const phaseTwo = {
   saga: "Phase Two",
@@ -27,5 +27,6 @@ export const phaseTwo = {
     antman2015,
     agentcarterseries2015,
     daredevil2015,
+    jessicajones2015,
   ],
 };
