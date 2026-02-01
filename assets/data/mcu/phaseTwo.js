@@ -18,5 +18,6 @@ export const phaseTwo = {
   seasons: [
     ironman32013,
     thordarkworld2013,
+    captainamericawintersoldier2014,
   ],
 };
