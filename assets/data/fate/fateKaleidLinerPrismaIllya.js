@@ -9,14 +9,16 @@ import { prismaherzspecials } from "./fateKaleidLinerPrismaIllya/prismaherzspeci
 import { prisma3rei } from "./fateKaleidLinerPrismaIllya/prisma3rei.js";
 import { prisma3reispecials } from "./fateKaleidLinerPrismaIllya/prisma3reispecials.js";
 import { prismamovie } from "./fateKaleidLinerPrismaIllya/prismamovie.js";
+import { prismamoviespecial } from "./fateKaleidLinerPrismaIllya/prismamoviespecial.js";
 import { prismamovielicht } from "./fateKaleidLinerPrismaIllya/prismamovielicht.js";
+import { prismamovielichtmini } from "./fateKaleidLinerPrismaIllya/prismamovielichtmini.js";
 import { prismaphantasm } from "./fateKaleidLinerPrismaIllya/prismaphantasm.js";
 
 export const fateKaleidLinerPrismaIllya = {
-saga: "Fate/Kaleid Liner Prisma Illya",
-id: "fkl",
-opened: true,
-seasons: [
+  saga: "Fate/Kaleid Liner Prisma Illya",
+  id: "fkl",
+  opened: false,
+  seasons: [
     prismaillya1,
     prismadance,
     prismaspecials,
@@ -28,7 +30,9 @@ seasons: [
     prisma3rei,
     prisma3reispecials,
     prismamovie,
+    prismamoviespecial,
     prismamovielicht,
+    prismamovielichtmini,
     prismaphantasm
   ],
 };

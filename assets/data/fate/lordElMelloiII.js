@@ -3,10 +3,10 @@ import { elmelloianime } from "./lordElMelloiII/elmelloianime.js";
 import { elmelloiextraspecial } from "./lordElMelloiII/elmelloiextraspecial.js";
 
 export const lordElMelloiII = {
-saga: "Lord El-Melloi II",
-id: "lem",
-opened: false,
-seasons: [
+  saga: "Lord El-Melloi II",
+  id: "lem",
+  opened: false,
+  seasons: [
     elmelloispecial,
     elmelloianime,
     elmelloiextraspecial
