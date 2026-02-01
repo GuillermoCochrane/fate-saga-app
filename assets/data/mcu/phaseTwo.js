@@ -23,5 +23,6 @@ export const phaseTwo = {
     oneshotallhailking2014,
     captainamericawintersoldier2014,
     guardiansgalaxy2014,
+    avengersageultron2015,
   ],
 };
