@@ -6,8 +6,8 @@ export const thepunisher2017 = {
   format: "Serie",
   season: 1,
   release: 2017,
-  order: 30,
-  phase_order: 9,
+  order: 28,
+  phase_order: 7,
   completed: false,
   opened: false,
   episodes: [

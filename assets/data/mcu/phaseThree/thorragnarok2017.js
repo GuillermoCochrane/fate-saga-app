@@ -5,8 +5,8 @@ export const thorragnarok2017 = {
   label: "Thor: Ragnarok",
   format: "Película",
   release: 2017,
-  order: 28,
-  phase_order: 7,
+  order: 30,
+  phase_order: 9,
   completed: false,
   opened: false,
   episodes: [
