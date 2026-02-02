@@ -125,7 +125,7 @@ function setupEventListeners() {
             $fileInput.click(); //hacemos click en el input de id file-input, ya que el mismo no es visible
         }
 
-        if (action === 'delete') {
+        if (action === 'delete' || action === 'change') {
             // Borra los datos guardados en localStorage
             modalCloser();
             localStorage.removeItem('checklist');
@@ -134,14 +134,6 @@ function setupEventListeners() {
             setTimeout(() => {
                 modalSectionHandler('selection');
             }, 1000);
-        }
-
-        if (action === 'change') {
-            //Abre el modal de seleccion de franquicia
-            modalCloser();
-            setTimeout(() => {
-                modalSectionHandler('selection');
-            }, 150);
         }
 
         if (action === 'reset') {
