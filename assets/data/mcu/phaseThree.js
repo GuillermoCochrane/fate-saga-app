@@ -1,5 +1,5 @@
 import { captainamericacivilwar2016 } from "./phaseThree/captainamericacivilwar2016.js";
-// import { oneshotteamthor12016 } from "./phaseThree/oneshotteamthor12016.js";
+import { oneshotteamthor12016 } from "./phaseThree/oneshotteamthor12016.js";
 // import { doctorstrange2016 } from "./phaseThree/doctorstrange2016.js";
 // import { guardiansgalaxyvol22017 } from "./phaseThree/guardiansgalaxyvol22017.js";
 // import { spidermanhomecoming2017 } from "./phaseThree/spidermanhomecoming2017.js";
@@ -21,5 +21,6 @@ export const phaseThree = {
   opened: false,
   seasons: [
     captainamericacivilwar2016,
+    oneshotteamthor12016,
   ],
 };
