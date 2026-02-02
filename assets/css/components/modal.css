@@ -95,6 +95,56 @@
         justify-content: space-evenly;
     }
 
+    & form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        width: 50%;
+        max-width: 300px;
+        margin: auto;
+
+        & label {
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        & select,::picker(select) {
+            appearance: base-select;
+            padding-inline: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 7px;
+            background-color: var(--card-bg);
+            color: var(--text-color);
+            font-size: 1.1em;
+
+            &:focus {
+                outline: 2px;
+                border-color: var(--accent-color);
+            }
+
+            & option {
+                color: var(--text-color);
+                border-radius: 5px;
+                transition: all 0.2s ease-in;
+
+                &:hover { 
+                    background-color: var(--text-color);
+                    color: var(--bg-color);
+                    border-radius: 5px;
+                }
+
+                &:checked {
+                    background-color: var(--accent-color);
+                }
+
+                &:disabled {
+                    color: #5a5a5a;
+                    background-color: var(--card-bg);
+                }
+            }
+        }
+    }
+
     @media (max-width: 768px) {
         width: 90%;
     }
