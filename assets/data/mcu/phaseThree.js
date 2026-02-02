@@ -1,10 +1,10 @@
 import { captainamericacivilwar2016 } from "./phaseThree/captainamericacivilwar2016.js";
 import { oneshotteamthor12016 } from "./phaseThree/oneshotteamthor12016.js";
 import { doctorstrange2016 } from "./phaseThree/doctorstrange2016.js";
+import { oneshotteamthor22017 } from "./phaseThree/oneshotteamthor22017.js";
+// import { thorragnarok2017 } from "./phaseThree/thorragnarok2017.js";
 // import { guardiansgalaxyvol22017 } from "./phaseThree/guardiansgalaxyvol22017.js";
 // import { spidermanhomecoming2017 } from "./phaseThree/spidermanhomecoming2017.js";
-// import { thorragnarok2017 } from "./phaseThree/thorragnarok2017.js";
-// import { oneshotteamthor22017 } from "./phaseThree/oneshotteamthor22017.js";
 // import { thepunisher2017 } from "./phaseThree/thepunisher2017.js";
 // import { runaways2017 } from "./phaseThree/runaways2017.js";
 // import { blackpanther2018 } from "./phaseThree/blackpanther2018.js";
@@ -23,5 +23,6 @@ export const phaseThree = {
     captainamericacivilwar2016,
     oneshotteamthor12016,
     doctorstrange2016,
+    oneshotteamthor22017,
   ],
 };
