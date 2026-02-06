@@ -1,2 +1,3 @@
 # fate-saga-app
-App con distintas funcionalidades basada en el universo Fate
+
+Tracker de franquicias  de audiovisuales, con templates predeterminados de varias de ellas.
