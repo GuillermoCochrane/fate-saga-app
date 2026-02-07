@@ -9,7 +9,7 @@ import { thepunisher2017 } from "./phaseThree/thepunisher2017.js";
 import { thorragnarok2017 } from "./phaseThree/thorragnarok2017.js";
 import { oneshotteamdarryl2018 } from "./phaseThree/oneshotteamdarryl2018.js";
 import { blackpanther2018 } from "./phaseThree/blackpanther2018.js";
-// import { avengersinfinitywar2018 } from "./phaseThree/avengersinfinitywar2018.js";
+import { avengersinfinitywar2018 } from "./phaseThree/avengersinfinitywar2018.js";
 // import { antmanwasp2018 } from "./phaseThree/antmanwasp2018.js";
 // import { cloakdagger2018 } from "./phaseThree/cloakdagger2018.js";
 // import { captainmarvel2019 } from "./phaseThree/captainmarvel2019.js";
@@ -31,5 +31,6 @@ export const phaseThree = {
     thorragnarok2017,
     oneshotteamdarryl2018,
     blackpanther2018,
+    avengersinfinitywar2018,
   ],
 };
