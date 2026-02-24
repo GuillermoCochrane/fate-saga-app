@@ -12,6 +12,6 @@ export const captainmarvel2019 = {
   completed: false,
   opened: false,
   episodes: [
-    cm_2s019_1
+    cm_2019_1
   ],
 };
