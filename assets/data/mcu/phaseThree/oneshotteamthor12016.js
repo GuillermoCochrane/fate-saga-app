@@ -1,12 +1,14 @@
 import { team_thor1_2016_1 } from "./oneshotteamthor12016/episodes.js";
 
 export const oneshotteamthor12016 = {
-  id: "to1",
+  id: "mttE1",
   label: "Marvel One-Shot: Team Thor (Part 1)",
   format: "Especial",
   release: 2016,
   order: 23,
+  phase: 3,
   phase_order: 2,
+  year_in_timeline: 2016,
   completed: false,
   opened: false,
   episodes: [

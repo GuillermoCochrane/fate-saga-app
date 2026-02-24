@@ -1,12 +1,14 @@
 import { avengers3_2018_1 } from "./avengersinfinitywar2018/episodes.js";
 
 export const avengersinfinitywar2018 = {
-  id: "im1",
+  id: "aiwM1",
   label: "Avengers: Infinity War",
   format: "Película",
-  release: "2018",
+  release: 2018,
   order: 33,
+  phase: 3,
   phase_order: 12,
+  year_in_timeline: 2018,
   completed: false,
   opened: false,
   episodes: [
