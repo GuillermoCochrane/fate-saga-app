@@ -12,7 +12,7 @@ import { blackpanther2018 } from "./phaseThree/blackpanther2018.js";
 import { avengersinfinitywar2018 } from "./phaseThree/avengersinfinitywar2018.js";
 import { antmanwasp2018 } from "./phaseThree/antmanwasp2018.js";
 import { cloakdagger2018 } from "./phaseThree/cloakdagger2018.js";
-// import { captainmarvel2019 } from "./phaseThree/captainmarvel2019.js";
+import { captainmarvel2019 } from "./phaseThree/captainmarvel2019.js";
 // import { avengersendgame2019 } from "./phaseThree/avengersendgame2019.js";
 // import { spidermanfarhome2019 } from "./phaseThree/spidermanfarhome2019.js";
 
