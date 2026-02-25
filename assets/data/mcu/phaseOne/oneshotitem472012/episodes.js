@@ -1,5 +1,5 @@
 export const item47_2012_1 = {
-  id: "item47-2012-1",
+  id: "i47",
   number: 1,
   completed: false,
   label: {

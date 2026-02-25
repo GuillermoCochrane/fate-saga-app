@@ -1,5 +1,5 @@
 export const funny_thing_2011_1 = {
-  id: "tfo",
+  id: "oft",
   number: 1,
   completed: false,
   label: {
