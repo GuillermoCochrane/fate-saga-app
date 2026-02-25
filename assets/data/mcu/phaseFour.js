@@ -1,7 +1,7 @@
 import { wandavision2021 } from "./phaseFour/wandavision2021.js";
 //2021
 import { falconwintersoldier2021 } from "./phaseFour/falconwintersoldier2021.js";
-// import { loki2021 } from "../../../cosas_referencia/phaseFour/loki2021.js";
+import { loki2021 } from "./phaseFour/loki2021.js";
 // import { blackwidow2021 } from "../../../cosas_referencia/phaseFour/blackwidow2021.js";
 // import { whatif2021 } from "../../../cosas_referencia/phaseFour/whatif2021.js";
 // import { shangchi2021 } from "../../../cosas_referencia/phaseFour/shangchi2021.js";
@@ -24,5 +24,6 @@ export const phaseFour = {
   seasons: [
     wandavision2021,
     falconwintersoldier2021,
+    loki2021,
   ],
 };
