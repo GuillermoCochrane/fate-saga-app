@@ -1,0 +1,28 @@
+// Phase 4 - MCU
+// 2021
+import { wandavision2021 } from "./phaseFour/wandavision2021.js";
+// import { falconwintersoldier2021 } from "../../../cosas_referencia/phaseFour/falconwintersoldier2021.js";
+// import { loki2021 } from "../../../cosas_referencia/phaseFour/loki2021.js";
+// import { blackwidow2021 } from "../../../cosas_referencia/phaseFour/blackwidow2021.js";
+// import { whatif2021 } from "../../../cosas_referencia/phaseFour/whatif2021.js";
+// import { shangchi2021 } from "../../../cosas_referencia/phaseFour/shangchi2021.js";
+// import { eternals2021 } from "../../../cosas_referencia/phaseFour/eternals2021.js";
+// import { hawkeye2021 } from "../../../cosas_referencia/phaseFour/hawkeye2021.js";
+// import { spidermannowayhome2021 } from "../../../cosas_referencia/phaseFour/spidermannowayhome2021.js";
+
+// 2022
+// import { moonknight2022 } from "../../../cosas_referencia/phaseFour/moonknight2022.js";
+// import { doctorstrangemom2022 } from "../../../cosas_referencia/phaseFour/doctorstrangemom2022.js";
+// import { msmarvel2022 } from "../../../cosas_referencia/phaseFour/msmarvel2022.js";
+// import { thorlovethunder2022 } from "../../../cosas_referencia/phaseFour/thorlovethunder2022.js";
+// import { shehulk2022 } from "../../../cosas_referencia/phaseFour/shehulk2022.js";
+// import { werewolfbynight2022 } from "../../../cosas_referencia/phaseFour/werewolfbynight2022.js";
+// import { blackpantherwakandaforever2022 } from "../../../cosas_referencia/phaseFour/blackpantherwakandaforever2022.js";
+// import { guardiansholidayspecial2022 } from "../../../cosas_referencia/phaseFour/guardiansholidayspecial2022.js";
+export const phaseFour = {
+  saga: "Phase Four",
+  opened: false,
+  seasons: [
+    wandavision2021,
+  ],
+};
