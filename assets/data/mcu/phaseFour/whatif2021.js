@@ -1,0 +1,16 @@
+import { wi_s1e1 } from "./whatif2021/episodes.js";
+
+export const whatif2021 = {
+  id: "wtiS1",
+  label: "What If...?",
+  format: "Serie Animada",
+  release: 2021,
+  order: 35,
+  phase: 4,
+  phase_order: 5,
+  completed: false,
+  opened: false,
+  episodes: [
+    wi_s1e1
+  ],
+};
