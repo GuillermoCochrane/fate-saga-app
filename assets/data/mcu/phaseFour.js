@@ -5,7 +5,7 @@ import { loki2021 } from "./phaseFour/loki2021.js";
 import { blackwidow2021 } from "./phaseFour/blackwidow2021.js";
 import { whatif2021 } from "./phaseFour/whatif2021.js";
 import { shangchi2021 } from "./phaseFour/shangchi2021.js";
-// import { eternals2021 } from "../../../cosas_referencia/phaseFour/eternals2021.js";
+import { eternals2021 } from "./phaseFour/eternals2021.js";
 // import { hawkeye2021 } from "../../../cosas_referencia/phaseFour/hawkeye2021.js";
 // import { spidermannowayhome2021 } from "../../../cosas_referencia/phaseFour/spidermannowayhome2021.js";
 
@@ -28,5 +28,6 @@ export const phaseFour = {
     blackwidow2021,
     whatif2021,
     shangchi2021,
+    eternals2021,
   ],
 };
