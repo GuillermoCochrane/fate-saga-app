@@ -14,7 +14,7 @@ import { moonknight2022 } from "./phaseFour/moonknight2022.js";
 import { doctorstrangemom2022 } from "./phaseFour/doctorstrangemom2022.js";
 import { msmarvel2022 } from "./phaseFour/msmarvel2022.js";
 import { thorlovethunder2022 } from "./phaseFour/thorlovethunder2022.js";
-// import { shehulk2022 } from "../../../cosas_referencia/phaseFour/shehulk2022.js";
+import { shehulk2022 } from "./phaseFour/shehulk2022.js";
 // import { werewolfbynight2022 } from "../../../cosas_referencia/phaseFour/werewolfbynight2022.js";
 // import { blackpantherwakandaforever2022 } from "../../../cosas_referencia/phaseFour/blackpantherwakandaforever2022.js";
 // import { guardiansholidayspecial2022 } from "../../../cosas_referencia/phaseFour/guardiansholidayspecial2022.js";
@@ -35,5 +35,6 @@ export const phaseFour = {
     doctorstrangemom2022,
     msmarvel2022,
     thorlovethunder2022,
+    shehulk2022,
   ],
 };
