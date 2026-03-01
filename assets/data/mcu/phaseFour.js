@@ -17,7 +17,8 @@ import { thorlovethunder2022 } from "./phaseFour/thorlovethunder2022.js";
 import { shehulk2022 } from "./phaseFour/shehulk2022.js";
 import { werewolfbynight2022 } from "./phaseFour/werewolfbynight2022.js";
 import { blackpantherwakandaforever2022 } from "./phaseFour/blackpantherwakandaforever2022.js";
-// import { guardiansholidayspecial2022 } from "../../../cosas_referencia/phaseFour/guardiansholidayspecial2022.js";
+import { guardiansholidayspecial2022 } from "./phaseFour/guardiansholidayspecial2022.js";
+
 export const phaseFour = {
   saga: "Phase Four",
   opened: false,
@@ -38,5 +39,6 @@ export const phaseFour = {
     shehulk2022,
     werewolfbynight2022,
     blackpantherwakandaforever2022,
+    guardiansholidayspecial2022,
   ],
 };
