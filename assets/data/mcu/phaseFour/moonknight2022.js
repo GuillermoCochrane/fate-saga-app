@@ -8,6 +8,7 @@ export const moonknight2022 = {
   order: 40,
   phase: 4,
   phase_order: 10,
+  year_in_timeline: 2022,
   completed: false,
   opened: false,
   episodes: [

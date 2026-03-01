@@ -8,6 +8,7 @@ export const blackwidow2021 = {
   order: 34,
   phase: 4,
   phase_order: 4,
+  year_in_timeline: 2021,
   completed: false,
   opened: false,
   episodes: [

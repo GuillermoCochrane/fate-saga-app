@@ -8,6 +8,7 @@ export const eternals2021 = {
   order: 37,
   phase: 4,
   phase_order: 7,
+  year_in_timeline: 2021,
   completed: false,
   opened: false,
   episodes: [

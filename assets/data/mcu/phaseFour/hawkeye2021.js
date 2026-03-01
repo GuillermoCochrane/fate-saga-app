@@ -8,6 +8,7 @@ export const hawkeye2021 = {
   order: 38,
   phase: 4,
   phase_order: 8,
+  year_in_timeline: 2021,
   completed: false,
   opened: false,
   episodes: [

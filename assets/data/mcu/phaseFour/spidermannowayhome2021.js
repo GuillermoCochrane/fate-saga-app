@@ -8,6 +8,7 @@ export const spidermannowayhome2021 = {
   order: 39,
   phase: 4, 
   phase_order: 9,
+  year_in_timeline: 2021,
   completed: false,
   opened: false,
   episodes: [

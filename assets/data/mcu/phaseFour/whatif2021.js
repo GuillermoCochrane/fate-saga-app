@@ -8,6 +8,7 @@ export const whatif2021 = {
   order: 35,
   phase: 4,
   phase_order: 5,
+  year_in_timeline: 2021,
   completed: false,
   opened: false,
   episodes: [
