@@ -4,6 +4,7 @@ export const falconwintersoldier2021 = {
   id: "fwsS1",
   label: "The Falcon and The Winter Soldier",
   format: "Serie",
+  season: 1,
   release: 2021,
   order: 32,
   phase: 4,

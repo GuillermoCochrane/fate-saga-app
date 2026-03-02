@@ -3,7 +3,8 @@ import { groot_s1e1 } from "./iamgroot2022/episodes.js";
 export const iamgroot2022 = {
   id: "iagS1",
   label: "I Am Groot",
-  format: "Serie",
+  format: "Serie", 
+  season: 1,
   release: 2022,
   order: 48,
   phase: 5,

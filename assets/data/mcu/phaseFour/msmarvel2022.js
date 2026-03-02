@@ -4,6 +4,7 @@ export const msmarvel2022 = {
   id: "msmS1",
   label: "Ms. Marvel",
   format: "Serie",
+  season: 1,
   release: 2022,
   order: 42,
   phase: 4,

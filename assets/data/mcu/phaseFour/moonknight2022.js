@@ -4,6 +4,7 @@ export const moonknight2022 = {
   id: "mnkS1",
   label: "Moon Knight",
   format: "Serie",
+  season: 1,
   release: 2022,
   order: 40,
   phase: 4,

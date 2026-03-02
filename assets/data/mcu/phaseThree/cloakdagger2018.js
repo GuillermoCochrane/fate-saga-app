@@ -4,6 +4,7 @@ export const cloakdagger2018 = {
   id: "cadS1",
   label: "Cloak & Dagger",
   format: "Serie",
+  season: 1,
   release: 2018,
   order: 35,
   phase: 3,

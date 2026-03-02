@@ -4,6 +4,7 @@ export const shehulk2022 = {
   id: "shkS1",
   label: "She-Hulk: Attorney at Law",
   format: "Serie",
+  season: 1,
   release: 2022,
   order: 44,
   phase: 4,

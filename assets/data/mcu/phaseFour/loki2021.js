@@ -4,6 +4,7 @@ export const loki2021 = {
   id: "lokS1",
   label: "Loki",
   format: "Serie",
+  season: 1,
   release: 2021,
   order: 33,
   phase: 4,

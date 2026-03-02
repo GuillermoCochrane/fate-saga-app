@@ -4,6 +4,7 @@ export const wandavision2021 = {
   id: "wvnS1",
   label: "WandaVision",
   format: "Serie",
+  season: 1,
   release: 2021,
   order:31,
   phase: 4,

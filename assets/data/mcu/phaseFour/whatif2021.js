@@ -4,6 +4,7 @@ export const whatif2021 = {
   id: "wtiS1",
   label: "What If...?",
   format: "Serie",
+  season: 1,
   release: 2021,
   order: 35,
   phase: 4,

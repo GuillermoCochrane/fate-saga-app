@@ -4,6 +4,7 @@ export const hawkeye2021 = {
   id: "hkeS1",
   label: "Hawkeye",
   format: "Serie",
+  season: 1,
   release: 2021,
   order: 38,
   phase: 4,
