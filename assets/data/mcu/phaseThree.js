@@ -18,6 +18,7 @@ import { spidermanfarhome2019 } from "./phaseThree/spidermanfarhome2019.js";
 
 export const phaseThree = {
   saga: "Phase Three",
+  id: "ph3",
   opened: false,
   seasons: [
     captainamericacivilwar2016,

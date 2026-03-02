@@ -10,6 +10,7 @@ import { oneshotitem472012 } from "./phaseOne/oneshotitem472012.js";
 
 export const phaseOne = {
   saga: "Phase One",
+  id: "ph1",
   opened: false,
   seasons: [
     ironman2008,

@@ -1,5 +1,3 @@
-// --- Orden cronológico de lanzamiento ---
-
 // 2022
 import { iamgroot2022 } from "./phaseFive/iamgroot2022.js";
 
@@ -17,10 +15,11 @@ import { guardiansgalaxyvol32023 } from "./phaseFive/guardiansgalaxyvol32023.js"
 
 // // 2025
 // import { captainamericabravenewworld2025 } from "./phaseFive/captainamericabravenewworld2025.js";
-import { thunderbolts2025 } from "./phaseFive/thunderbolts2025.js";
+//import { thunderbolts2025 } from "./phaseFive/thunderbolts2025.js";
 
 export const phaseFive = {
   saga: "Phase Five",
+  id: "ph5",
   opened: false,
   seasons: [
     iamgroot2022,
