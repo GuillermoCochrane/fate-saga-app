@@ -1,7 +1,7 @@
 import { gotg3_2023_1 } from "./guardiansgalaxyvol32023/episodes.js";
 
 export const guardiansgalaxyvol32023 = {
-  id: "gogM1",
+  id: "gogM3",
   label: "Guardians of the Galaxy Vol. 3",
   format: "Película",
   release: 2023,
