@@ -11,7 +11,7 @@ import { themarvels2023 } from "./phaseFive/themarvels2023.js";
 // 2024
 import { echo2024 } from "./phaseFive/echo2024.js";
 import { deadpoolwolverine2024 } from "./phaseFive/deadpoolwolverine2024.js";
-// import { agathaallalong2024 } from "./phaseFive/agathaallalong2024.js";
+import { agathaallalong2024 } from "./phaseFive/agathaallalong2024.js";
 
 // // 2025
 // import { captainamericabravenewworld2025 } from "./phaseFive/captainamericabravenewworld2025.js";
@@ -30,5 +30,6 @@ export const phaseFive = {
     themarvels2023,
     echo2024,
     deadpoolwolverine2024,
+    agathaallalong2024,
   ],
 };
