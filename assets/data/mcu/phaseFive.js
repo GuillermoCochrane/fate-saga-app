@@ -6,7 +6,7 @@ import { antmanquantumania2023 } from "./phaseFive/antmanquantumania2023.js";
 import { guardiansgalaxyvol32023 } from "./phaseFive/guardiansgalaxyvol32023.js";
 import { secretinvasion2023 } from "./phaseFive/secretinvasion2023.js";
 import { whatifseason22023 } from "./phaseFive/whatifseason22023.js";
-// import { themarvels2023 } from "./phaseFive/themarvels2023.js";
+import { themarvels2023 } from "./phaseFive/themarvels2023.js";
 
 // // 2024
 // import { echo2024 } from "./phaseFive/echo2024.js";
@@ -27,5 +27,6 @@ export const phaseFive = {
     guardiansgalaxyvol32023,
     secretinvasion2023,
     whatifseason22023,
+    themarvels2023,
   ],
 };
