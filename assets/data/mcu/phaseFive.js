@@ -10,7 +10,7 @@ import { themarvels2023 } from "./phaseFive/themarvels2023.js";
 
 // 2024
 import { echo2024 } from "./phaseFive/echo2024.js";
-// import { deadpoolwolverine2024 } from "./phaseFive/deadpoolwolverine2024.js";
+import { deadpoolwolverine2024 } from "./phaseFive/deadpoolwolverine2024.js";
 // import { agathaallalong2024 } from "./phaseFive/agathaallalong2024.js";
 
 // // 2025
@@ -29,5 +29,6 @@ export const phaseFive = {
     whatifseason22023,
     themarvels2023,
     echo2024,
+    deadpoolwolverine2024,
   ],
 };
