@@ -1,5 +1,5 @@
 // 2025
-// import { yourfriendlyspiderman2025 } from "../../../cosas_referencia/mcu/phaseSix/yourfriendlyspiderman2025.js";
+import { yourfriendlyspiderman2025 } from "./phaseSix/yourfriendlyspiderman2025.js";
 // import { daredevilbornagain2025 } from "./phaseSix/daredevilbornagain2025.js";
 // import { eyesofwakanda2025 } from "./phaseSix/eyesofwakanda2025.js";
 // import { fantasticfour2025 } from "./phaseSix/fantasticfour2025.js";
@@ -19,6 +19,6 @@ export const phaseSix = {
   saga: "Phase Six",
   opened: false,
   seasons: [
-
+    yourfriendlyspiderman2025,
   ],
 };
