@@ -2,7 +2,7 @@
 import { yourfriendlyspiderman2025 } from "./phaseSix/yourfriendlyspiderman2025.js";
 import { daredevilbornagain2025 } from "./phaseSix/daredevilbornagain2025.js";
 import { eyesofwakanda2025 } from "./phaseSix/eyesofwakanda2025.js";
-// import { fantasticfour2025 } from "./phaseSix/fantasticfour2025.js";
+import { fantasticfour2025 } from "./phaseSix/fantasticfour2025.js";
 // import { ironheart2025 } from "./phaseSix/ironheart2025.js";
 // import { marvelzombies2025 } from "./phaseSix/marvelzombies2025.js";
 
@@ -22,5 +22,6 @@ export const phaseSix = {
     yourfriendlyspiderman2025,
     daredevilbornagain2025,
     eyesofwakanda2025,
+    fantasticfour2025,
   ],
 };
