@@ -5,9 +5,9 @@ export const avengersdoomsday2026 = {
   label: "Avengers: Doomsday",
   format: "Película",
   release: 2026,
-  order: 66,
+  order: 67,
   phase: 6,
-  phase_order: 8,
+  phase_order: 9,
   completed: false,
   opened: false,
   episodes: [
