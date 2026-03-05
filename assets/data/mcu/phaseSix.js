@@ -4,7 +4,7 @@ import { daredevilbornagain2025 } from "./phaseSix/daredevilbornagain2025.js";
 import { eyesofwakanda2025 } from "./phaseSix/eyesofwakanda2025.js";
 import { fantasticfour2025 } from "./phaseSix/fantasticfour2025.js";
 import { ironheart2025 } from "./phaseSix/ironheart2025.js";
-// import { marvelzombies2025 } from "./phaseSix/marvelzombies2025.js";
+import { marvelzombies2025 } from "./phaseSix/marvelzombies2025.js";
 
 // // 2026
 // import { avengersdoomsday2026 } from "./phaseSix/avengersdoomsday2026.js";
@@ -24,5 +24,6 @@ export const phaseSix = {
     eyesofwakanda2025,
     fantasticfour2025,
     ironheart2025,
+    marvelzombies2025,
   ],
 };
