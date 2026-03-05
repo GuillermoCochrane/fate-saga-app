@@ -27,5 +27,6 @@ export const phaseSix = {
     ironheart2025,
     marvelzombies2025,
     daredevilbornagainS22025,
+    avengersdoomsday2026,
   ],
 };
