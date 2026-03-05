@@ -1,5 +1,5 @@
 export const ff_2025_1 = {
-  id: "ff-2025-1",
+  id: "ffs",
   number: 1,
   completed: false,
   label: {

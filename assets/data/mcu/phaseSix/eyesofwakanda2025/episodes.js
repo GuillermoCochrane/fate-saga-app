@@ -1,5 +1,5 @@
-export const eowS1S1E1 = {
-  id: "eowS1S1E1",
+export const eowS1E1 = {
+  id: "eowS1E1",
   number: 1,
   completed: false,
   label: {

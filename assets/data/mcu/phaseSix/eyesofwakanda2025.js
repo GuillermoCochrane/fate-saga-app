@@ -1,4 +1,4 @@
-import { eowS1S1E1 } from "./eyesofwakanda2025/episodes.js";
+import { eowS1E1 } from "./eyesofwakanda2025/episodes.js";
 
 export const eyesofwakanda2025 = {
   id: "eowS1",
@@ -13,6 +13,6 @@ export const eyesofwakanda2025 = {
   completed: false,
   opened: false,
   episodes: [
-    eowS1S1E1
+    eowS1E1
   ],
 };
