@@ -4,6 +4,6 @@ export const hulk_2008_1 = {
   completed: false,
   label: {
     en: "The Incredible Hulk",
-    es:  "El Increíble Hulk",
+    es: "El increíble Hulk",
   },
 };
