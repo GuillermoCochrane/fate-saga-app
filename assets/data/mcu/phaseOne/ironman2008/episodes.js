@@ -4,6 +4,6 @@ export const im_2008_1 = {
   completed: false,
   label: {
     en: "Iron Man",
-    es: "Iron Man: El hombre de acero",
+    es: "Iron Man",
   },
 };

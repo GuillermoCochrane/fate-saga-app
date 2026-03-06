@@ -4,11 +4,16 @@ export const ironman22010 = {
   id: "irmM2",
   label: "Iron Man 2",
   format: "Película",
-  release: 2010,
-  order: 3,
+  release: {
+    year: 2010,
+    month: 5,
+    day: 7
+  },
   phase: 1,
-  phase_order: 3,
-  year_in_timeline: 2010,
+  year_in_timeline: {
+    start: 2010,
+    end: 2010
+  },
   completed: false,
   opened: false,
   episodes: [
