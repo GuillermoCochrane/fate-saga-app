@@ -4,11 +4,16 @@ export const oneshotconsultant2011 = {
   id: "otcE1",
   label: "Marvel One-Shot: The Consultant",
   format: "Especial",
-  release: 2011,
-  order: 5,
+  release: {
+    year: 2011,
+    month: 9,
+    day: 13
+  },
   phase: 1,
-  phase_order: 5,
-  year_in_timeline: 2011,
+  year_in_timeline: {
+    start: 2010,
+    end: 2010
+  },
   completed: false,
   opened: false,
   episodes: [
