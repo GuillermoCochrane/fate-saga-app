@@ -4,7 +4,6 @@ export const item47_2012_1 = {
   completed: false,
   label: {
     en: "Item 47",
-    es: "Item 47",
+    es: "El artículo 47",
   },
 };
-
