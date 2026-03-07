@@ -4,11 +4,16 @@ export const captainamericafirstavenger2011 = {
   id: "cfaM1",
   label: "Captain America: The First Avenger",
   format: "Película",
-  release: 2011,
-  order: 6,
+  release: {
+    year: 2011,
+    month: 7,
+    day: 22
+  },
   phase: 1,
-  phase_order: 6,
-  year_in_timeline: 2011,
+  year_in_timeline: {
+    start: 1943,
+    end: 1945
+  },
   completed: false,
   opened: false,
   episodes: [

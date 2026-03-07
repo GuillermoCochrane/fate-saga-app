@@ -4,6 +4,6 @@ export const cap1_2011_1 = {
   completed: false,
   label: {
     en: "Captain America: The First Avenger",
-    es: "Captain America: El Primer Vengador",
+    es: "Capitán América: El primer vengador",
   },
 };
