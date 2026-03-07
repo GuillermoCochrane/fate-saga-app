@@ -4,11 +4,16 @@ export const thor2011 = {
   id: "thrM1",
   label: "Thor",
   format: "Película",
-  release: 2011,
-  order: 4,
+  release: {
+    year: 2011,
+    month: 5,
+    day: 6
+  },
   phase: 1,
-  phase_order: 4,
-  year_in_timeline: 2011,
+  year_in_timeline: {
+    start: 2010,
+    end: 2010
+  },
   completed: false,
   opened: false,
   episodes: [
