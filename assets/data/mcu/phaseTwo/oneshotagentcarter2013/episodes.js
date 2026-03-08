@@ -4,6 +4,6 @@ export const agent_carter_2013_1 = {
   completed: false,
   label: {
     en: "Agent Carter",
-    es: "Agente Carter",
+    es: "La Agente Carter",
   },
 };

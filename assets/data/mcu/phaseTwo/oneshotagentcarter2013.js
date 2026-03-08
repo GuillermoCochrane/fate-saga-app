@@ -4,11 +4,16 @@ export const oneshotagentcarter2013 = {
   id: "oacE1",
   label: "Marvel One-Shot: Agent Carter",
   format: "Especial",
-  release: 2013,
-  order: 12,
+  release: {
+    year: 2013,
+    month: 9,
+    day: 3
+  },
   phase: 2,
-  phase_order: 3,
-  year_in_timeline: 2013,
+  year_in_timeline: {
+    start: 1946,
+    end: 1946
+  },
   completed: false,
   opened: false,
   episodes: [
