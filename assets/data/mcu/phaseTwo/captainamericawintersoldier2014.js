@@ -4,11 +4,16 @@ export const captainamericawintersoldier2014 = {
   id: "cwsM1",
   label: "Captain America: The Winter Soldier",
   format: "Película",
-  year: 2014,
-  order: 15,
+  release: {
+    year: 2014,
+    month: 4,
+    day: 4
+  },
   phase: 2,
-  phase_order: 6,
-  year_in_timeline: 2014,
+  year_in_timeline: {
+    start: 2014,
+    end: 2014
+  },
   completed: false,
   opened: false,
   episodes: [
