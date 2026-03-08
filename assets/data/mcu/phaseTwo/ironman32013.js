@@ -4,11 +4,16 @@ export const ironman32013 = {
   id: "irmM3",
   label: "Iron Man 3",
   format: "Película",
-  release: 2013,
-  order: 11,
+  release: {
+    year: 2013,
+    month: 5,
+    day: 3
+  },
   phase: 2,
-  phase_order: 2,
-  year_in_timeline: 2013,
+  year_in_timeline: {
+    start: 2012,
+    end: 2012
+  },
   completed: false,
   opened: false,
   episodes: [
