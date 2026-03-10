@@ -18,6 +18,7 @@ import { spidermanfarhome2019 } from "./phaseThree/spidermanfarhome2019.js";
 import { agentsshieldS3 } from "./phaseThree/agentsshieldS3";
 import { agentsshieldS4 } from "./phaseThree/agentsshieldS4";
 import { agentsshieldS5 } from "./phaseThree/agentsshieldS5";
+import { agentsshieldS6 } from "./phaseThree/agentsshieldS6";
 
 
 export const phaseThree = {
@@ -44,6 +45,7 @@ export const phaseThree = {
     spidermanfarhome2019,
     agentsshieldS3,
     agentsshieldS4,
-    agentsshieldS5
+    agentsshieldS5,
+    agentsshieldS6
   ],
 };
