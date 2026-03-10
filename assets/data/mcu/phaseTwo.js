@@ -1,7 +1,7 @@
 import { ironman32013 } from "./phaseTwo/ironman32013.js";
 import { oneshotagentcarter2013 } from "./phaseTwo/oneshotagentcarter2013.js";
 import { thordarkworld2013 } from "./phaseTwo/thordarkworld2013.js";
-import { agentsshield2013 } from "./phaseTwo/agentsshield2013.js";
+import { agentsshieldS1 } from "./phaseTwo/agentsshieldS1.js";
 import { oneshotallhailking2014 } from "./phaseTwo/oneshotallhailking2014.js";
 import { captainamericawintersoldier2014 } from "./phaseTwo/captainamericawintersoldier2014.js";
 import { guardiansgalaxy2014 } from "./phaseTwo/guardiansgalaxy2014.js";
@@ -19,7 +19,8 @@ export const phaseTwo = {
     ironman32013,
     oneshotagentcarter2013,
     thordarkworld2013,
-    agentsshield2013,
+    agentcarterseries2015,
+    agentsshieldS1,
     oneshotallhailking2014,
     captainamericawintersoldier2014,
     guardiansgalaxy2014,

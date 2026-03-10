@@ -1,8 +1,8 @@
-import { aos_s1e1 } from "./agentsshield2013/episodes.js";
+import { aos_s1e1 } from "./agentsshieldS1/episodes.js";
 
-export const agentsshield2013 = {
+export const agentsshieldS1 = {
   id: "aosS1",
-  label: "Marvel: Agents of S.H.I.E.L.D.",
+  label: "Marvel: Agents of S.H.I.E.L.D. (S1)",
   format: "Serie",
   season: 1,
   release: 2013,
