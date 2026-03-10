@@ -15,7 +15,8 @@ import { cloakdagger2018 } from "./phaseThree/cloakdagger2018.js";
 import { captainmarvel2019 } from "./phaseThree/captainmarvel2019.js";
 import { avengersendgame2019 } from "./phaseThree/avengersendgame2019.js";
 import { spidermanfarhome2019 } from "./phaseThree/spidermanfarhome2019.js";
-import { agentsshieldS3} from "./phaseThree/agentsshieldS3"
+import { agentsshieldS3 } from "./phaseThree/agentsshieldS3";
+import { agentsshieldS4 } from "./phaseThree/agentsshieldS4";
 
 export const phaseThree = {
   saga: "Phase Three",
@@ -39,6 +40,7 @@ export const phaseThree = {
     captainmarvel2019,
     avengersendgame2019,
     spidermanfarhome2019,
-    agentsshieldS3
+    agentsshieldS3,
+    agentsshieldS4
   ],
 };
