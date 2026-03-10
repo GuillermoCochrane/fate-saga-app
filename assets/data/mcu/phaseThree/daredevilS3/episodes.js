@@ -1,0 +1,9 @@
+export const dd_s3e1 = {
+  id: "ddS3E1",
+  number: 1,
+  completed: false,
+  label: {
+    en: "Pilot",
+    es: "Piloto",
+  },
+};

@@ -21,6 +21,7 @@ import { agentsshieldS5 } from "./phaseThree/agentsshieldS5";
 import { agentsshieldS6 } from "./phaseThree/agentsshieldS6";
 import { agentcarterS2 } from "./phaseThree/agentcarterS2.js";
 import { daredevilS2 } from "./phaseThree/daredevilS2.js";
+import { daredevilS3 } from "./phaseThree/daredevilS3.js";
 
 export const phaseThree = {
   saga: "Phase Three",
@@ -50,5 +51,6 @@ export const phaseThree = {
     agentsshieldS6,
     agentcarterS2,
     daredevilS2,
+    daredevilS3,
   ],
 };
