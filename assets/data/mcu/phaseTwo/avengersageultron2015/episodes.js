@@ -4,6 +4,6 @@ export const avengers2_2015_1 = {
   completed: false,
   label: {
     en: "Avengers: Age of Ultron",
-    es: "Avengers: La era de Ultron",
+    es: "Avengers: La era de Ultrón",
   },
 };

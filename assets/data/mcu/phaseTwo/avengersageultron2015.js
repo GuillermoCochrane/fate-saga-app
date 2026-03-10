@@ -4,11 +4,16 @@ export const avengersageultron2015 = {
   id: "aauM1",
   label: "Avengers: Age of Ultron",
   format: "Película",
-  release: 2015,
-  order: 17,
+  release: {
+    year: 2015,
+    month: 5,
+    day: 1
+  },
   phase: 2,
-  phase_order: 8,
-  year_in_timeline: 2015,
+  year_in_timeline: {
+    start: 2015,
+    end: 2015
+  },
   completed: false,
   opened: false,
   episodes: [
