@@ -17,6 +17,8 @@ import { avengersendgame2019 } from "./phaseThree/avengersendgame2019.js";
 import { spidermanfarhome2019 } from "./phaseThree/spidermanfarhome2019.js";
 import { agentsshieldS3 } from "./phaseThree/agentsshieldS3";
 import { agentsshieldS4 } from "./phaseThree/agentsshieldS4";
+import { agentsshieldS5 } from "./phaseThree/agentsshieldS5";
+
 
 export const phaseThree = {
   saga: "Phase Three",
@@ -41,6 +43,7 @@ export const phaseThree = {
     avengersendgame2019,
     spidermanfarhome2019,
     agentsshieldS3,
-    agentsshieldS4
+    agentsshieldS4,
+    agentsshieldS5
   ],
 };
