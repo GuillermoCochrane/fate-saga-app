@@ -19,6 +19,7 @@ import { agentsshieldS3 } from "./phaseThree/agentsshieldS3";
 import { agentsshieldS4 } from "./phaseThree/agentsshieldS4";
 import { agentsshieldS5 } from "./phaseThree/agentsshieldS5";
 import { agentsshieldS6 } from "./phaseThree/agentsshieldS6";
+import { agentcarterS2 } from "./phaseThree/agentcarterS2.js";
 
 
 export const phaseThree = {
@@ -46,6 +47,7 @@ export const phaseThree = {
     agentsshieldS3,
     agentsshieldS4,
     agentsshieldS5,
-    agentsshieldS6
+    agentsshieldS6,
+    agentcarterS2,
   ],
 };
