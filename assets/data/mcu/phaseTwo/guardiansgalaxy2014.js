@@ -4,11 +4,16 @@ export const guardiansgalaxy2014 = {
   id: "gogM1",
   label: "Guardians of the Galaxy",
   format: "Película",
-  release: 2014,
-  order: 16,
+  release: {
+    year: 2014,
+    month: 8,
+    day: 1
+  },
   phase: 2,
-  phase_order: 7,
-  year_in_timeline: 2014,
+  year_in_timeline: {
+    start: 2014,
+    end: 2014
+  },
   completed: false,
   opened: false,
   episodes: [
