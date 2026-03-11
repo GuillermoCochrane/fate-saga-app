@@ -1,4 +1,4 @@
-import { aos_s6e1 } from "./agentsshieldS6/episodes";
+import { aos_s6e1 } from "./agentsshieldS6/episodes.js";
 
 export const agentsshieldS6 = {
   id: "aosS1",

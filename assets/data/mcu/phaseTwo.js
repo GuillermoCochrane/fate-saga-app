@@ -26,7 +26,6 @@ export const phaseTwo = {
     captainamericawintersoldier2014,
     agentsshieldS2,
     guardiansgalaxy2014,
-    agentcarterseries2015,
     daredevil2015,
     avengersageultron2015,
     antman2015,
