@@ -4,11 +4,16 @@ export const oneshotteamthor12016 = {
   id: "mttE1",
   label: "Marvel One-Shot: Team Thor (Part 1)",
   format: "Especial",
-  release: 2016,
-  order: 23,
+  release: {
+    year: 2016,
+    month: 8,
+    day: 28
+  },
   phase: 3,
-  phase_order: 2,
-  year_in_timeline: 2016,
+  year_in_timeline: {
+    start: 2016,
+    end: 2016
+  },
   completed: false,
   opened: false,
   episodes: [
