@@ -4,6 +4,6 @@ export const cap3_2016_1 = {
   completed: false,
   label: {
     en: "Captain America: Civil War",
-    es: "Capitán América: Guerra civil",
+    es: "Capitán América: Civil War",
   },
 };

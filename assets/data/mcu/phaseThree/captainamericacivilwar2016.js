@@ -4,11 +4,16 @@ export const captainamericacivilwar2016 = {
   id: "cacwM",
   label: "Captain America: Civil War",
   format: "Película",
-  release: 2016,
-  order: 22,
+  release: {
+    year: 2016,
+    month: 5,
+    day: 6
+  },
   phase: 3,
-  phase_order: 1,
-  year_in_timeline: 2016,
+  year_in_timeline: {
+    start: 2016,
+    end: 2016
+  },
   completed: false,
   opened: false,
   episodes: [
