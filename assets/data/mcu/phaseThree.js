@@ -1,28 +1,35 @@
+// 2016
 import { captainamericacivilwar2016 } from "./phaseThree/captainamericacivilwar2016.js";
 import { oneshotteamthor12016 } from "./phaseThree/oneshotteamthor12016.js";
 import { doctorstrange2016 } from "./phaseThree/doctorstrange2016.js";
+import { agentcarterS2 } from "./phaseThree/agentcarterS2.js";
+import { daredevilS2 } from "./phaseThree/daredevilS2.js";
+import { agentsshieldS3 } from "./phaseThree/agentsshieldS3.js";
+
+// 2017
 import { oneshotteamthor22017 } from "./phaseThree/oneshotteamthor22017.js";
 import { guardiansgalaxyvol22017 } from "./phaseThree/guardiansgalaxyvol22017.js";
 import { spidermanhomecoming2017 } from "./phaseThree/spidermanhomecoming2017.js";
-import { runaways2017 } from "./phaseThree/runaways2017.js";
 import { thepunisher2017 } from "./phaseThree/thepunisher2017.js";
 import { thorragnarok2017 } from "./phaseThree/thorragnarok2017.js";
+import { runaways2017 } from "./phaseThree/runaways2017.js";
+
+// 2018
 import { oneshotteamdarryl2018 } from "./phaseThree/oneshotteamdarryl2018.js";
 import { blackpanther2018 } from "./phaseThree/blackpanther2018.js";
 import { avengersinfinitywar2018 } from "./phaseThree/avengersinfinitywar2018.js";
 import { antmanwasp2018 } from "./phaseThree/antmanwasp2018.js";
 import { cloakdagger2018 } from "./phaseThree/cloakdagger2018.js";
+import { agentsshieldS4 } from "./phaseThree/agentsshieldS4.js";
+import { agentsshieldS5 } from "./phaseThree/agentsshieldS5.js";
+import { jessicajonesS2 } from "./phaseThree/jessicajonesS2.js";
+import { daredevilS3 } from "./phaseThree/daredevilS3.js";
+
+// 2019
 import { captainmarvel2019 } from "./phaseThree/captainmarvel2019.js";
 import { avengersendgame2019 } from "./phaseThree/avengersendgame2019.js";
 import { spidermanfarhome2019 } from "./phaseThree/spidermanfarhome2019.js";
-import { agentsshieldS3 } from "./phaseThree/agentsshieldS3.js";
-import { agentsshieldS4 } from "./phaseThree/agentsshieldS4.js";
-import { agentsshieldS5 } from "./phaseThree/agentsshieldS5.js";
 import { agentsshieldS6 } from "./phaseThree/agentsshieldS6.js";
-import { agentcarterS2 } from "./phaseThree/agentcarterS2.js";
-import { daredevilS2 } from "./phaseThree/daredevilS2.js";
-import { daredevilS3 } from "./phaseThree/daredevilS3.js";
-import { jessicajonesS2 } from "./phaseThree/jessicajonesS2.js";
 import { jessicajonesS3 } from "./phaseThree/jessicajonesS3.js";
 
 export const phaseThree = {
@@ -32,7 +39,10 @@ export const phaseThree = {
   seasons: [
     captainamericacivilwar2016,
     oneshotteamthor12016,
+    agentcarterS2,
+    daredevilS2,
     doctorstrange2016,
+    agentsshieldS3,
     oneshotteamthor22017,
     guardiansgalaxyvol22017,
     spidermanhomecoming2017,
@@ -44,17 +54,14 @@ export const phaseThree = {
     avengersinfinitywar2018,
     antmanwasp2018,
     cloakdagger2018,
+    agentsshieldS4,
+    agentsshieldS5,
+    jessicajonesS2,
+    daredevilS3,
     captainmarvel2019,
     avengersendgame2019,
     spidermanfarhome2019,
-    agentsshieldS3,
-    agentsshieldS4,
-    agentsshieldS5,
     agentsshieldS6,
-    agentcarterS2,
-    daredevilS2,
-    daredevilS3,
-    jessicajonesS2,
     jessicajonesS3,
   ],
 };
