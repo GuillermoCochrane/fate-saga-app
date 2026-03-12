@@ -39,9 +39,9 @@ export const phaseThree = {
   seasons: [
     captainamericacivilwar2016,
     oneshotteamthor12016,
+    doctorstrange2016,
     agentcarterS2,
     daredevilS2,
-    doctorstrange2016,
     agentsshieldS3,
     oneshotteamthor22017,
     guardiansgalaxyvol22017,
