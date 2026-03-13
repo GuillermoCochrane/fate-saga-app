@@ -1,8 +1,8 @@
-import { runaways_s1e1 } from "./runaways2017/episodes.js";
+import { runaways_s1e1 } from "./runawaysS1/episodes.js";
 
-export const runaways2017 = {
+export const runawaysS1 = {
   id: "mraS1",
-  label: "Marvel:Runaways",
+  label: "Marvel:Runaways (S1)",
   format: "Serie",
   season: 1,
   release: 2017,

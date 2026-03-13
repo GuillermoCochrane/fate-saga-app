@@ -12,13 +12,14 @@ import { guardiansgalaxyvol22017 } from "./phaseThree/guardiansgalaxyvol22017.js
 import { spidermanhomecoming2017 } from "./phaseThree/spidermanhomecoming2017.js";
 import { thepunisher2017 } from "./phaseThree/thepunisher2017.js";
 import { thorragnarok2017 } from "./phaseThree/thorragnarok2017.js";
-import { runaways2017 } from "./phaseThree/runaways2017.js";
+import { runawaysS1 } from "./phaseThree/runawaysS1.js";
 
 // 2018
 import { oneshotteamdarryl2018 } from "./phaseThree/oneshotteamdarryl2018.js";
 import { blackpanther2018 } from "./phaseThree/blackpanther2018.js";
 import { avengersinfinitywar2018 } from "./phaseThree/avengersinfinitywar2018.js";
 import { antmanwasp2018 } from "./phaseThree/antmanwasp2018.js";
+import { runawaysS2 } from "./phaseThree/runawaysS2.js";
 import { cloakdagger2018 } from "./phaseThree/cloakdagger2018.js";
 import { agentsshieldS4 } from "./phaseThree/agentsshieldS4.js";
 import { agentsshieldS5 } from "./phaseThree/agentsshieldS5.js";
@@ -29,6 +30,7 @@ import { daredevilS3 } from "./phaseThree/daredevilS3.js";
 import { captainmarvel2019 } from "./phaseThree/captainmarvel2019.js";
 import { avengersendgame2019 } from "./phaseThree/avengersendgame2019.js";
 import { spidermanfarhome2019 } from "./phaseThree/spidermanfarhome2019.js";
+import { runawaysS3 } from "./phaseThree/runawaysS3.js";
 import { agentsshieldS6 } from "./phaseThree/agentsshieldS6.js";
 import { jessicajonesS3 } from "./phaseThree/jessicajonesS3.js";
 
@@ -46,13 +48,14 @@ export const phaseThree = {
     oneshotteamthor22017,
     guardiansgalaxyvol22017,
     spidermanhomecoming2017,
-    runaways2017,
+    runawaysS1,
     thepunisher2017,
     thorragnarok2017,
     oneshotteamdarryl2018,
     blackpanther2018,
     avengersinfinitywar2018,
     antmanwasp2018,
+    runawaysS2,
     cloakdagger2018,
     agentsshieldS4,
     agentsshieldS5,
@@ -61,6 +64,7 @@ export const phaseThree = {
     captainmarvel2019,
     avengersendgame2019,
     spidermanfarhome2019,
+    runawaysS3,
     agentsshieldS6,
     jessicajonesS3,
   ],
