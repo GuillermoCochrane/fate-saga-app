@@ -10,7 +10,7 @@ import { agentsshieldS3 } from "./phaseThree/agentsshieldS3.js";
 import { oneshotteamthor22017 } from "./phaseThree/oneshotteamthor22017.js";
 import { guardiansgalaxyvol22017 } from "./phaseThree/guardiansgalaxyvol22017.js";
 import { spidermanhomecoming2017 } from "./phaseThree/spidermanhomecoming2017.js";
-import { thepunisher2017 } from "./phaseThree/thepunisher2017.js";
+import { thepunisherS1 } from "./phaseThree/thepunisherS1.js";
 import { thorragnarok2017 } from "./phaseThree/thorragnarok2017.js";
 import { runawaysS1 } from "./phaseThree/runawaysS1.js";
 
@@ -49,7 +49,7 @@ export const phaseThree = {
     guardiansgalaxyvol22017,
     spidermanhomecoming2017,
     runawaysS1,
-    thepunisher2017,
+    thepunisherS1,
     thorragnarok2017,
     oneshotteamdarryl2018,
     blackpanther2018,
