@@ -4,11 +4,16 @@ export const spidermanhomecoming2017 = {
   id: "smhM1",
   label: "Spider-Man: Homecoming",
   format: "Película",
-  release: 2017,
-  order: 27,
+  release: {
+    year: 2017,
+    month: 7,
+    day: 7
+  },
   phase: 3,
-  phase_order: 6,
-  year_in_timeline: 2017,
+  year_in_timeline: {
+    start: 2016,
+    end: 2016
+  },
   completed: false,
   opened: false,
   episodes: [

@@ -4,6 +4,6 @@ export const sm_homecoming_2017_1 = {
   completed: false,
   label: {
     en: "Spider-Man: Homecoming",
-    es: "Spider-Man: De regreso a casa",
+    es: "Spider-Man: Homecoming",
   },
 };
