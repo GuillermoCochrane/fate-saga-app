@@ -4,11 +4,16 @@ export const oneshotteamdarryl2018 = {
   id: "mtdE1",
   label: "Marvel One-Shot: Team Darryl",
   format: "Especial",
-  release: 2018,
-  order: 31,
+  release: {
+    year: 2018,
+    month: 2,
+    day: 20
+  },
   phase: 3,
-  phase_order: 10,
-  year_in_timeline: 2018,
+  year_in_timeline: {
+    start: 2018,
+    end: 2018
+  },
   completed: false,
   opened: false,
   episodes: [

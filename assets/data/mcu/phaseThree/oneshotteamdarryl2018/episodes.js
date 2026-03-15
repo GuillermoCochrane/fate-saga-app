@@ -1,5 +1,5 @@
 export const team_darryl_2018_1 = {
-  id: "otd",
+  id: "td1",
   number: 1,
   completed: false,
   label: {
