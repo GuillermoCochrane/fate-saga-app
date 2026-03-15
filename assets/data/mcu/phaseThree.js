@@ -25,11 +25,11 @@ import { agentsshieldS4 } from "./phaseThree/agentsshieldS4.js";
 import { agentsshieldS5 } from "./phaseThree/agentsshieldS5.js";
 import { jessicajonesS2 } from "./phaseThree/jessicajonesS2.js";
 import { daredevilS3 } from "./phaseThree/daredevilS3.js";
-import { cloakdaggerS2 } from "./phaseThree/cloakdaggerS2.js";
 
 // 2019
 import { captainmarvel2019 } from "./phaseThree/captainmarvel2019.js";
 import { avengersendgame2019 } from "./phaseThree/avengersendgame2019.js";
+import { cloakdaggerS2 } from "./phaseThree/cloakdaggerS2.js";
 import { spidermanfarhome2019 } from "./phaseThree/spidermanfarhome2019.js";
 import { runawaysS3 } from "./phaseThree/runawaysS3.js";
 import { agentsshieldS6 } from "./phaseThree/agentsshieldS6.js";
@@ -62,9 +62,9 @@ export const phaseThree = {
     agentsshieldS5,
     jessicajonesS2,
     daredevilS3,
-    cloakdaggerS2,
     captainmarvel2019,
     avengersendgame2019,
+    cloakdaggerS2,
     spidermanfarhome2019,
     runawaysS3,
     agentsshieldS6,
