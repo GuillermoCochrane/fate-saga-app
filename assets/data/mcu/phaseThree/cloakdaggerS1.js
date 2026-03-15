@@ -1,8 +1,8 @@
-import { cd_s1e1 } from "./cloakdagger2018/episodes.js";
+import { cd_s1e1 } from "./cloakdaggerS1/episodes.js";
 
-export const cloakdagger2018 = {
+export const cloakdaggerS1 = {
   id: "cadS1",
-  label: "Cloak & Dagger",
+  label: "Cloak & Dagger (S1)",
   format: "Serie",
   season: 1,
   release: 2018,

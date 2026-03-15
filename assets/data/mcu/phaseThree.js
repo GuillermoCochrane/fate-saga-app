@@ -19,12 +19,13 @@ import { oneshotteamdarryl2018 } from "./phaseThree/oneshotteamdarryl2018.js";
 import { blackpanther2018 } from "./phaseThree/blackpanther2018.js";
 import { avengersinfinitywar2018 } from "./phaseThree/avengersinfinitywar2018.js";
 import { antmanwasp2018 } from "./phaseThree/antmanwasp2018.js";
+import { cloakdaggerS1 } from "./phaseThree/cloakdaggerS1.js";
 import { runawaysS2 } from "./phaseThree/runawaysS2.js";
-import { cloakdagger2018 } from "./phaseThree/cloakdagger2018.js";
 import { agentsshieldS4 } from "./phaseThree/agentsshieldS4.js";
 import { agentsshieldS5 } from "./phaseThree/agentsshieldS5.js";
 import { jessicajonesS2 } from "./phaseThree/jessicajonesS2.js";
 import { daredevilS3 } from "./phaseThree/daredevilS3.js";
+import { cloakdaggerS2 } from "./phaseThree/cloakdaggerS2.js";
 
 // 2019
 import { captainmarvel2019 } from "./phaseThree/captainmarvel2019.js";
@@ -55,12 +56,13 @@ export const phaseThree = {
     blackpanther2018,
     avengersinfinitywar2018,
     antmanwasp2018,
+    cloakdaggerS1,
     runawaysS2,
-    cloakdagger2018,
     agentsshieldS4,
     agentsshieldS5,
     jessicajonesS2,
     daredevilS3,
+    cloakdaggerS2,
     captainmarvel2019,
     avengersendgame2019,
     spidermanfarhome2019,
