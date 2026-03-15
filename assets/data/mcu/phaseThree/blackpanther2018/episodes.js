@@ -4,6 +4,6 @@ export const bp_2018_1 = {
   completed: false,
   label: {
     en: "Black Panther",
-    es: "Pantera Negra",
+    es: "Black Panther",
   },
 };

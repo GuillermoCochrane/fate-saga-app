@@ -4,11 +4,16 @@ export const blackpanther2018 = {
   id: "bkpM1",
   label: "Black Panther",
   format: "Película",
-  release: 2018,
-  order: 32,
+  release: {
+    year: 2018,
+    month: 2,
+    day: 16
+  },
   phase: 3,
-  phase_order: 11,
-  year_in_timeline: 2018,
+  year_in_timeline: {
+    start: 2016,
+    end: 2016
+  },
   completed: false,
   opened: false,
   episodes: [
