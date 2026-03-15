@@ -4,6 +4,6 @@ export const avengers3_2018_1 = {
   completed: false,
   label: {
     en: "Avengers: Infinity War",
-    es: "Vengadores: Infinity War",
+    es: "Avengers: Infinity War",
   },
 };
