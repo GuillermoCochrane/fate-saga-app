@@ -4,11 +4,16 @@ export const avengersendgame2019 = {
   id: "aegM1",
   label: "Avengers: Endgame",
   format: "Película",
-  release: 2019,
-  order: 37,
+  release: {
+    year: 2019,
+    month: 4,
+    day: 26
+  },
   phase: 3,
-  phase_order: 16,
-  year_in_timeline: 2019,
+  year_in_timeline: {
+    start: 2023,
+    end: 2023
+  },
   completed: false,
   opened: false,
   episodes: [
