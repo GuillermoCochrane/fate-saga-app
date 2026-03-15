@@ -4,7 +4,6 @@ export const antman2_2018_1 = {
   completed: false,
   label: {
     en: "Ant-Man and the Wasp",
-    es: "Ant-Man y la Avispa",
+    es: "Ant-Man and the Wasp",
   },
 };
-

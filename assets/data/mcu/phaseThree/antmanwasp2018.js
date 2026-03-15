@@ -4,11 +4,16 @@ export const antmanwasp2018 = {
   id: "amwM2",
   label: "Ant-Man and the Wasp",
   format: "Película",
-  release: 2018,
-  order: 34,
+  release: {
+    year: 2018,
+    month: 7,
+    day: 6
+  },
   phase: 3,
-  phase_order: 13,
-  year_in_timeline: 2018,
+  year_in_timeline: {
+    start: 2018,
+    end: 2018
+  },
   completed: false,
   opened: false,
   episodes: [
