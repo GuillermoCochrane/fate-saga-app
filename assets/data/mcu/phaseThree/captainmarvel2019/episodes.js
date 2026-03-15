@@ -1,10 +1,9 @@
 export const cm_2019_1 = {
-  id: "cpm",
+  id: "cm1",
   number: 1,
   completed: false,
   label: {
     en: "Captain Marvel",
-    es: "Capitana Marvel",
+    es: "Captain Marvel",
   },
 };
-

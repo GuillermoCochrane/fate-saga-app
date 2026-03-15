@@ -4,11 +4,16 @@ export const captainmarvel2019 = {
   id: "cpmM1",
   label: "Captain Marvel",
   format: "Película",
-  release: 2019,
-  order: 36,
+  release: {
+    year: 2019,
+    month: 3,
+    day: 8
+  },
   phase: 3,
-  phase_order: 15,
-  year_in_timeline: 2019,
+  year_in_timeline: {
+    start: 1995,
+    end: 1995
+  },
   completed: false,
   opened: false,
   episodes: [
