@@ -1,18 +1,27 @@
-import { runaways_s3e1 } from "./runawaysS3/episodes.js";
+import { 
+  mrS3E1, mrS3E2, mrS3E3, mrS3E4, mrS3E5,
+  mrS3E6, mrS3E7, mrS3E8, mrS3E9, mrS3E10
+} from "./runawaysS3/episodes.js";
 
 export const runawaysS3 = {
   id: "mraS3",
-  label: "Marvel:Runaways (S3)",
+  label: "Marvel's Runaways (S3)",
   format: "Serie",
-  season: 1,
-  release: 2017,
-  order: 29,
+  season: 3,
+  release: {
+    year: 2019,
+    month: 12,
+    day: 13
+  },
   phase: 3,
-  phase_order: 8,
-  year_in_timeline: 2017,
+  year_in_timeline: {
+    start: 2019,
+    end: 2019
+  },
   completed: false,
   opened: false,
   episodes: [
-    runaways_s3e1
+    mrS3E1, mrS3E2, mrS3E3, mrS3E4, mrS3E5,
+    mrS3E6, mrS3E7, mrS3E8, mrS3E9, mrS3E10
   ],
 };
