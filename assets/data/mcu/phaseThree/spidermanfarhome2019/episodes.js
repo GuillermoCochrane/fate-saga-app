@@ -4,7 +4,6 @@ export const sm_farhome_2019_1 = {
   completed: false,
   label: {
     en: "Spider-Man: Far From Home",
-    es: "El Hombre Araña: Lejos del Casa",
+    es: "Spider-Man: Lejos de casa",
   },
 };
-

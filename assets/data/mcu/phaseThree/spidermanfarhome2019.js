@@ -4,11 +4,16 @@ export const spidermanfarhome2019 = {
   id: "sffhM",
   label: "Spider-Man: Far From Home",
   format: "Película",
-  release: 2019,
-  order: 38,
+  release: {
+    year: 2019,
+    month: 7,
+    day: 2
+  },
   phase: 3,
-  phase_order: 17,
-  year_in_timeline: 2019,
+  year_in_timeline: {
+    start: 2024,
+    end: 2024
+  },
   completed: false,
   opened: false,
   episodes: [
