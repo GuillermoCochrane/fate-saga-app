@@ -10,8 +10,9 @@ import { agentsshieldS3 } from "./phaseThree/agentsshieldS3.js";
 import { oneshotteamthor22017 } from "./phaseThree/oneshotteamthor22017.js";
 import { guardiansgalaxyvol22017 } from "./phaseThree/guardiansgalaxyvol22017.js";
 import { spidermanhomecoming2017 } from "./phaseThree/spidermanhomecoming2017.js";
-import { thepunisherS1 } from "./phaseThree/thepunisherS1.js";
+import { inhumansS1 } from "./phaseThree/inhumansS1.js";
 import { thorragnarok2017 } from "./phaseThree/thorragnarok2017.js";
+import { thepunisherS1 } from "./phaseThree/thepunisherS1.js";
 import { runawaysS1 } from "./phaseThree/runawaysS1.js";
 
 // 2018
@@ -49,9 +50,10 @@ export const phaseThree = {
     oneshotteamthor22017,
     guardiansgalaxyvol22017,
     spidermanhomecoming2017,
-    runawaysS1,
-    thepunisherS1,
     thorragnarok2017,
+    inhumansS1,
+    thepunisherS1,
+    runawaysS1,
     oneshotteamdarryl2018,
     blackpanther2018,
     avengersinfinitywar2018,
