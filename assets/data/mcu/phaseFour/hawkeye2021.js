@@ -1,18 +1,25 @@
-import { hawkeye_e1 } from "./hawkeye2021/episodes.js";
+import { 
+  heE1, heE2, heE3, heE4, heE5, heE6
+} from "./hawkeye2021/episodes.js";
 
 export const hawkeye2021 = {
   id: "hkeS1",
   label: "Hawkeye",
   format: "Serie",
   season: 1,
-  release: 2021,
-  order: 38,
+  release: {
+    year: 2021,
+    month: 11,
+    day: 24
+  },
   phase: 4,
-  phase_order: 8,
-  year_in_timeline: 2021,
+  year_in_timeline: {
+    start: 2024,
+    end: 2024
+  },
   completed: false,
   opened: false,
   episodes: [
-    hawkeye_e1
+    heE1, heE2, heE3, heE4, heE5, heE6
   ],
 };
