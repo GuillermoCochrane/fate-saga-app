@@ -1,19 +1,25 @@
-import { loki_s1e1 } from "./loki2021/episodes.js";
+import { 
+  lkE1, lkE2, lkE3, lkE4, lkE5, lkE6
+} from "./loki2021/episodes.js";
 
 export const loki2021 = {
   id: "lokS1",
-  label: "Loki",
+  label: "Loki (S1)",
   format: "Serie",
   season: 1,
-  release: 2021,
-  order: 33,
+  release: {
+    year: 2021,
+    month: 6,
+    day: 9
+  },
   phase: 4,
-  phase_order: 3,
-  year_in_timeline: 2021,
-  note: "Año 2021-2023. 2 temporadas.",
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
   completed: false,
   opened: false,
   episodes: [
-    loki_s1e1
+    lkE1, lkE2, lkE3, lkE4, lkE5, lkE6
   ],
 };
