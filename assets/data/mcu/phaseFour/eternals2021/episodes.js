@@ -1,5 +1,5 @@
 export const eternals_2021_1 = {
-  id: "ets",
+  id: "et1",
   number: 1,
   completed: false,
   label: {
@@ -7,4 +7,3 @@ export const eternals_2021_1 = {
     es: "Eternals",
   },
 };
-

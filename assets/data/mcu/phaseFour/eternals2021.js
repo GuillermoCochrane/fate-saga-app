@@ -4,11 +4,16 @@ export const eternals2021 = {
   id: "etsM1",
   label: "Eternals",
   format: "Película",
-  release: 2021,
-  order: 37,
+  release: {
+    year: 2021,
+    month: 11,
+    day: 5
+  },
   phase: 4,
-  phase_order: 7,
-  year_in_timeline: 2021,
+  year_in_timeline: {
+    start: 2024,
+    end: 2024
+  },
   completed: false,
   opened: false,
   episodes: [
