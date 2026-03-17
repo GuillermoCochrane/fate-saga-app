@@ -4,11 +4,16 @@ export const blackwidow2021 = {
   id: "bkwM1",
   label: "Black Widow",
   format: "Película",
-  release: 2021,
-  order: 34,
+  release: {
+    year: 2021,
+    month: 7,
+    day: 9
+  },
   phase: 4,
-  phase_order: 4,
-  year_in_timeline: 2021,
+  year_in_timeline: {
+    start: 2016,
+    end: 2016
+  },
   completed: false,
   opened: false,
   episodes: [

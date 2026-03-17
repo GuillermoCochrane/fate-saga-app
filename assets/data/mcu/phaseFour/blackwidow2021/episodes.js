@@ -4,7 +4,6 @@ export const bw_2021_1 = {
   completed: false,
   label: {
     en: "Black Widow",
-    es: "La viuda negra",
+    es: "Black Widow",
   },
 };
-
