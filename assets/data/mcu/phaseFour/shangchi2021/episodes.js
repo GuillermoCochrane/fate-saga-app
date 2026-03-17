@@ -1,5 +1,5 @@
 export const sc_2021_1 = {
-  id: "sc-2021-1",
+  id: "sc1",
   number: 1,
   completed: false,
   label: {
@@ -7,4 +7,3 @@ export const sc_2021_1 = {
     es: "Shang-Chi y la leyenda de los diez anillos",
   },
 };
-

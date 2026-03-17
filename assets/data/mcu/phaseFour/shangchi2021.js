@@ -4,11 +4,16 @@ export const shangchi2021 = {
   id: "shcM1",
   label: "Shang-Chi and the Legend of the Ten Rings",
   format: "Película",
-  release: 2021,
-  order: 36,
+  release: {
+    year: 2021,
+    month: 9,
+    day: 3
+  },
   phase: 4,
-  phase_order: 6,
-  year_in_timeline: 2021,
+  year_in_timeline: {
+    start: 2024,
+    end: 2024
+  },
   completed: false,
   opened: false,
   episodes: [
