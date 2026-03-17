@@ -4,11 +4,16 @@ export const spidermannowayhome2021 = {
   id: "snhM1",
   label: "Spider-Man: No Way Home",
   format: "Película",
-  release: 2021,
-  order: 39,
-  phase: 4, 
-  phase_order: 9,
-  year_in_timeline: 2021,
+  release: {
+    year: 2021,
+    month: 12,
+    day: 17
+  },
+  phase: 4,
+  year_in_timeline: {
+    start: 2024,
+    end: 2024
+  },
   completed: false,
   opened: false,
   episodes: [
