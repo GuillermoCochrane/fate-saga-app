@@ -1,18 +1,25 @@
-import { wi_s1e1 } from "./whatif2021/episodes.js";
+import { 
+  wiE1, wiE2, wiE3, wiE4, wiE5, wiE6, wiE7, wiE8, wiE9
+} from "./whatif2021/episodes.js";
 
 export const whatif2021 = {
   id: "wtiS1",
-  label: "What If...?",
+  label: "What If...? (S1)",
   format: "Serie",
   season: 1,
-  release: 2021,
-  order: 35,
+  release: {
+    year: 2021,
+    month: 8,
+    day: 11
+  },
   phase: 4,
-  phase_order: 5,
-  year_in_timeline: 2021,
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
   completed: false,
   opened: false,
   episodes: [
-    wi_s1e1
+    wiE1, wiE2, wiE3, wiE4, wiE5, wiE6, wiE7, wiE8, wiE9
   ],
 };
