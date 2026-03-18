@@ -1,18 +1,25 @@
-import { shehulk_e1 } from "./shehulk2022/episodes.js";
+import { 
+  shE1, shE2, shE3, shE4, shE5, shE6, shE7, shE8, shE9
+} from "./shehulk2022/episodes.js";
 
 export const shehulk2022 = {
   id: "shkS1",
   label: "She-Hulk: Attorney at Law",
   format: "Serie",
   season: 1,
-  release: 2022,
-  order: 44,
+  release: {
+    year: 2022,
+    month: 8,
+    day: 18
+  },
   phase: 4,
-  phase_order: 14,
-  year_in_timeline: 2022,
+  year_in_timeline: {
+    start: 2025,
+    end: 2025
+  },
   completed: false,
   opened: false,
   episodes: [
-    shehulk_e1
+    shE1, shE2, shE3, shE4, shE5, shE6, shE7, shE8, shE9
   ],
 };
