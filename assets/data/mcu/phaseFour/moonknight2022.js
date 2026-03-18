@@ -1,18 +1,25 @@
-import { mk_e1 } from "./moonknight2022/episodes.js";
+import { 
+  mkE1, mkE2, mkE3, mkE4, mkE5, mkE6
+} from "./moonknight2022/episodes.js";
 
 export const moonknight2022 = {
   id: "mnkS1",
   label: "Moon Knight",
   format: "Serie",
   season: 1,
-  release: 2022,
-  order: 40,
+  release: {
+    year: 2022,
+    month: 3,
+    day: 30
+  },
   phase: 4,
-  phase_order: 10,
-  year_in_timeline: 2022,
+  year_in_timeline: {
+    start: 2025,
+    end: 2025
+  },
   completed: false,
   opened: false,
   episodes: [
-    mk_e1
+    mkE1, mkE2, mkE3, mkE4, mkE5, mkE6
   ],
 };
