@@ -1,10 +1,9 @@
 export const werewolf_2022_1 = {
-  id: "wbn",
+  id: "wb1",
   number: 1,
   completed: false,
   label: {
     en: "Werewolf by Night",
-    es: "Hombre lobo por la noche",
+    es: "Werewolf by Night",
   },
 };
-

@@ -4,11 +4,16 @@ export const werewolfbynight2022 = {
   id: "wbnE1",
   label: "Werewolf by Night",
   format: "Especial",
-  release: 2022,
-  order: 45,
+  release: {
+    year: 2022,
+    month: 10,
+    day: 7
+  },
   phase: 4,
-  phase_order: 15,
-  year_in_timeline: 2022,
+  year_in_timeline: {
+    start: 2025,
+    end: 2025
+  },
   completed: false,
   opened: false,
   episodes: [
