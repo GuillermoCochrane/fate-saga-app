@@ -4,11 +4,16 @@ export const thorlovethunder2022 = {
   id: "tltM1",
   label: "Thor: Love and Thunder",
   format: "Película",
-  release: 2022,
-  order: 43,
+  release: {
+    year: 2022,
+    month: 7,
+    day: 8
+  },
   phase: 4,
-  phase_order: 13,
-  year_in_timeline: 2022,
+  year_in_timeline: {
+    start: 2025,
+    end: 2025
+  },
   completed: false,
   opened: false,
   episodes: [
