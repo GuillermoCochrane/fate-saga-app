@@ -4,11 +4,16 @@ export const blackpantherwakandaforever2022 = {
   id: "bwfM1",
   label: "Black Panther: Wakanda Forever",
   format: "Película",
-  release: 2022,
-  order: 46,
+  release: {
+    year: 2022,
+    month: 11,
+    day: 11
+  },
   phase: 4,
-  phase_order: 16,
-  year_in_timeline: 2022,
+  year_in_timeline: {
+    start: 2025,
+    end: 2025
+  },
   completed: false,
   opened: false,
   episodes: [
