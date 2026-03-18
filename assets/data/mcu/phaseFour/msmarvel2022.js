@@ -1,18 +1,25 @@
-import { msm_e1 } from "./msmarvel2022/episodes.js";
+import { 
+  msE1, msE2, msE3, msE4, msE5, msE6
+} from "./msmarvel2022/episodes.js";
 
 export const msmarvel2022 = {
   id: "msmS1",
   label: "Ms. Marvel",
   format: "Serie",
   season: 1,
-  release: 2022,
-  order: 42,
+  release: {
+    year: 2022,
+    month: 6,
+    day: 8
+  },
   phase: 4,
-  phase_order: 12,
-  year_in_timeline: 2022,
+  year_in_timeline: {
+    start: 2025,
+    end: 2025
+  },
   completed: false,
   opened: false,
   episodes: [
-    msm_e1
+    msE1, msE2, msE3, msE4, msE5, msE6
   ],
 };
