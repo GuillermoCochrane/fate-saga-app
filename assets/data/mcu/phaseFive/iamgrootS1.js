@@ -1,8 +1,8 @@
-import { groot_s1e1 } from "./iamgroot2022/episodes.js";
+import { groot_s1e1 } from "./iamgrootS1/episodes.js";
 
-export const iamgroot2022 = {
-  id: "iagS1",
-  label: "I Am Groot",
+export const iamgrootS1 = {
+  id: "iagS2",
+  label: "I Am Groot (S1)",
   format: "Serie", 
   season: 1,
   release: 2022,
