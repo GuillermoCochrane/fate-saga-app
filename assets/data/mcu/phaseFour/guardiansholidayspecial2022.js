@@ -4,11 +4,16 @@ export const guardiansholidayspecial2022 = {
   id: "ghsE1",
   label: "The Guardians of the Galaxy Holiday Special",
   format: "Especial",
-  release: 2022,
-  order: 47,
+  release: {
+    year: 2022,
+    month: 11,
+    day: 25
+  },
   phase: 4,
-  phase_order: 17,
-  year_in_timeline: 2022,
+  year_in_timeline: {
+    start: 2025,
+    end: 2025
+  },
   completed: false,
   opened: false,
   episodes: [
