@@ -1,18 +1,25 @@
-import { groot_s1e1 } from "./iamgrootS1/episodes.js";
+import { 
+  igS1E1, igS1E2, igS1E3, igS1E4, igS1E5
+} from "./iamgrootS1/episodes.js";
 
 export const iamgrootS1 = {
-  id: "iagS2",
+  id: "igS1",
   label: "I Am Groot (S1)",
-  format: "Serie", 
+  format: "Serie",
   season: 1,
-  release: 2022,
-  order: 48,
+  release: {
+    year: 2022,
+    month: 8,
+    day: 10
+  },
   phase: 5,
-  phase_order: 1,
-  year_in_timeline: 2022,
+  year_in_timeline: {
+    start: 2018,
+    end: 2018
+  },
   completed: false,
   opened: false,
   episodes: [
-    groot_s1e1
+    igS1E1, igS1E2, igS1E3, igS1E4, igS1E5
   ],
 };
