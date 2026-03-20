@@ -1,18 +1,25 @@
-import { si_e1, } from "./secretinvasion2023/episodes.js";
+import { 
+  siE1, siE2, siE3, siE4, siE5, siE6
+} from "./secretinvasion2023/episodes.js";
 
 export const secretinvasion2023 = {
-  id: "si_S1",
+  id: "siS1",
   label: "Secret Invasion",
   format: "Serie",
   season: 1,
-  release: 2023,
-  order: 51,
+  release: {
+    year: 2023,
+    month: 6,
+    day: 21
+  },
   phase: 5,
-  phase_order: 4,
-  year_in_timeline: 2023,
+  year_in_timeline: {
+    start: 2025,
+    end: 2025
+  },
   completed: false,
   opened: false,
   episodes: [
-    si_e1,
+    siE1, siE2, siE3, siE4, siE5, siE6
   ],
 };
