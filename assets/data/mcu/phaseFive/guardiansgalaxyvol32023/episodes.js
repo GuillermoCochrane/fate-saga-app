@@ -4,7 +4,6 @@ export const gotg3_2023_1 = {
   completed: false,
   label: {
     en: "Guardians of the Galaxy Vol. 3",
-    es: "Guardianes del Galaxia Vol. 3",
+    es: "Guardians of the Galaxy Vol. 3",
   },
 };
-

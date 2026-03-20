@@ -4,11 +4,16 @@ export const guardiansgalaxyvol32023 = {
   id: "gogM3",
   label: "Guardians of the Galaxy Vol. 3",
   format: "Película",
-  release: 2023,
-  order: 50,
+  release: {
+    year: 2023,
+    month: 5,
+    day: 5
+  },
   phase: 5,
-  phase_order: 3,
-  year_in_timeline: 2023,
+  year_in_timeline: {
+    start: 2025,
+    end: 2025
+  },
   completed: false,
   opened: false,
   episodes: [
