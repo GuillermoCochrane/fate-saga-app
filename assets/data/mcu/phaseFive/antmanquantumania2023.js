@@ -4,11 +4,16 @@ export const antmanquantumania2023 = {
   id: "amqM1",
   label: "Ant-Man and the Wasp: Quantumania",
   format: "Película",
-  release: 2023,
-  order: 49,
+  release: {
+    year: 2023,
+    month: 2,
+    day: 17
+  },
   phase: 5,
-  phase_order: 2,
-  year_in_timeline: 2023,
+  year_in_timeline: {
+    start: 2025,
+    end: 2025
+  },
   completed: false,
   opened: false,
   episodes: [
