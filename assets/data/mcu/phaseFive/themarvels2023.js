@@ -4,11 +4,16 @@ export const themarvels2023 = {
   id: "tmvM1",
   label: "The Marvels",
   format: "Película",
-  release: 2023,
-  order: 53,
+  release: {
+    year: 2023,
+    month: 11,
+    day: 10
+  },
   phase: 5,
-  phase_order: 6,
-  year_in_timeline: 2023,
+  year_in_timeline: {
+    start: 2025,
+    end: 2025
+  },
   completed: false,
   opened: false,
   episodes: [
