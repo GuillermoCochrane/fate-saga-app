@@ -4,11 +4,16 @@ export const captainamericabravenewworld2025 = {
   id: "cbwM1",
   label: "Captain America: Brave New World",
   format: "Película",
-  release: 2025,
-  order: 57,
+  release: {
+    year: 2025,
+    month: 2,
+    day: 14
+  },
   phase: 5,
-  phase_order: 10,
-  year_in_timeline: 2025,
+  year_in_timeline: {
+    start: 2025,
+    end: 2025
+  },
   completed: false,
   opened: false,
   episodes: [
