@@ -1,5 +1,5 @@
 export const thunderbolts_2025_1 = {
-  id: "thb",
+  id: "thb1",
   number: 1,
   completed: false,
   label: {
@@ -7,4 +7,3 @@ export const thunderbolts_2025_1 = {
     es: "Thunderbolts*",
   },
 };
-
