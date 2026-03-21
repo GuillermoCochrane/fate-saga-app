@@ -1,5 +1,5 @@
 export const dpw_2024_1 = {
-  id: "dpw",
+  id: "dpw1",
   number: 1,
   completed: false,
   label: {
@@ -7,4 +7,3 @@ export const dpw_2024_1 = {
     es: "Deadpool & Wolverine",
   },
 };
-
