@@ -1,18 +1,25 @@
-import { mzsS1E1 } from "./marvelzombies2025/episodes.js";
+import { 
+  mzE1, mzE2, mzE3, mzE4
+} from "./marvelzombies2025/episodes.js";
 
 export const marvelzombies2025 = {
   id: "mzsS1",
-  label: "Marvel Zombies",
+  label: "Marvel Zombies (S1)",
   format: "Serie",
   season: 1,
-  release: 2025,
-  order: 64,
+  release: {
+    year: 2025,
+    month: 9,
+    day: 24
+  },
   phase: 6,
-  phase_order: 6,
-  year_in_timeline: 2025,
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
   completed: false,
   opened: false,
   episodes: [
-    mzsS1E1
+    mzE1, mzE2, mzE3, mzE4
   ],
 };
