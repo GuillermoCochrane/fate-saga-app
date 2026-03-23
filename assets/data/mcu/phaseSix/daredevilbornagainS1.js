@@ -1,8 +1,8 @@
-import { dbaS1E1 } from "./daredevilbornagain2025/episodes.js";
+import { dbaS1E1 } from "./daredevilbornagainS1/episodes.js";
 
-export const daredevilbornagain2025 = {
+export const daredevilbornagainS1 = {
   id: "dbaS1",
-  label: "Daredevil: Born Again",
+  label: "Daredevil: Born Again (S1)",
   format: "Serie",
   season: 1,
   release: 2025,
