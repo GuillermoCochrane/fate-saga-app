@@ -1,18 +1,25 @@
-import { eowS1E1 } from "./eyesofwakanda2025/episodes.js";
+import {
+  eowE1, eowE2, eowE3, eowE4
+} from "./eyesofwakanda2025/episodes.js";
 
 export const eyesofwakanda2025 = {
   id: "eowS1",
-  label: "Eyes of Wakanda",
+  label: "Eyes of Wakanda (S1)",
   format: "Serie",
   season: 1,
-  release: 2025,
-  order: 61,
+  release: {
+    year: 2025,
+    month: 8,
+    day: 1
+  },
   phase: 6,
-  phase_order: 3,
-  year_in_timeline: 2025,
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
   completed: false,
   opened: false,
   episodes: [
-    eowS1E1
+    eowE1, eowE2, eowE3, eowE4
   ],
 };
