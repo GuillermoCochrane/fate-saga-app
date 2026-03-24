@@ -1,7 +1,9 @@
 export const xow = {
   id: "xow",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"X-Men Origins: Wolverine"},
+    en: "X-Men Origins: Wolverine",
+    es: "X-Men Orígenes: Wolverine",
   },
 };
-
