@@ -1,7 +1,9 @@
 export const x1 = {
   id: "x1",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"X-Men"},
+    en: "X-Men",
+    es: "X-Men",
   },
 };
-
