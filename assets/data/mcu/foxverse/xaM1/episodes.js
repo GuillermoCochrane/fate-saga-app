@@ -1,7 +1,9 @@
 export const xa = {
   id: "xa",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"X-Men: Apocalypse"},
+    en: "X-Men: Apocalypse",
+    es: "X-Men: Apocalipsis",
   },
 };
-
