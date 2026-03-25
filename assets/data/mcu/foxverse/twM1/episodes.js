@@ -1,7 +1,9 @@
 export const tw = {
   id: "tw",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"The Wolverine"},
+    en: "The Wolverine",
+    es: "The Wolverine",
   },
 };
-
