@@ -1,7 +1,9 @@
 export const sm1 = {
   id: "sm1",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Spider-Man"},
+    en: "Spider-Man",
+    es: "Spider-Man",
   },
 };
-
