@@ -1,7 +1,9 @@
-export const spidey78TVE1 = {
-  id: "spidey78TVE1",
+export const sp78TVE1 = {
+  id: "sp78TVE1",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Spider-Man Strikes Back"},
+    en: "Spider-Man Strikes Back",
+    es: "Spider-Man contraataca"
   },
 };
-
