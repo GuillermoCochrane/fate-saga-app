@@ -1,7 +1,3 @@
-// ==============================================
-// BLOQUE 1: RAREZAS Y CLÁSICOS (1944-2005)
-// Seriales, TV Movies, Telefilmes, Películas sueltas
-// ==============================================
 import { cap1944S1 } from "./marvelKnightsLegacy/cap1944S1.js";
 import { spidey77TV } from "./marvelKnightsLegacy/spidey77TV.js";
 import { spidey77S1 } from "./marvelKnightsLegacy/spidey77S1.js";
@@ -9,45 +5,28 @@ import { hulk77S1 } from "./marvelKnightsLegacy/hulk77S1.js";
 import { hulk77S2 } from "./marvelKnightsLegacy/hulk77S2.js";
 import { spidey78TV } from "./marvelKnightsLegacy/spidey78TV.js";
 import { ds1978TV } from "./marvelKnightsLegacy/ds1978TV.js";
-import { hulkmarried78TV } from "./marvelKnightsLegacy/hulkmarried78TV.js";
 import { hulk77S3 } from "./marvelKnightsLegacy/hulk77S3.js";
 import { hulk77S4 } from "./marvelKnightsLegacy/hulk77S4.js";
 import { hulk77S5 } from "./marvelKnightsLegacy/hulk77S5.js";
-import { spidey81TV } from "./marvelKnightsLegacy/spidey81TV.js";
 import { howard1986M1 } from "./marvelKnightsLegacy/howard1986M1.js";
 import { hulkreturns1988TV } from "./marvelKnightsLegacy/hulkreturns1988TV.js";
 import { hulktrial1989TV } from "./marvelKnightsLegacy/hulktrial1989TV.js";
 import { hulkdeath1990TV } from "./marvelKnightsLegacy/hulkdeath1990TV.js";
 import { cap1990M1 } from "./marvelKnightsLegacy/cap1990M1.js";
-import { fantasticfour1994M1 } from "./marvelKnightsLegacy/fantasticfour1994M1.js";
 import { genx1996TV } from "./marvelKnightsLegacy/genx1996TV.js";
 import { nickfury1998TV } from "./marvelKnightsLegacy/nickfury1998TV.js";
-import { manthing2005TV } from "./marvelKnightsLegacy/manthing2005TV.js";
-
-// ==============================================
-// BLOQUE 2: BLADE SAGA (1998-2006)
-// New Line Cinema
-// ==============================================
 import { blade1998M1 } from "./marvelKnightsLegacy/blade1998M1.js";
 import { blade22002M1 } from "./marvelKnightsLegacy/blade22002M1.js";
-import { blade32004M1 } from "./marvelKnightsLegacy/blade32004M1.js";
-import { bladeseries2006S1 } from "./marvelKnightsLegacy/bladeseries2006S1.js";
-
-// ==============================================
-// BLOQUE 3: MARVEL KNIGHTS (2003-2011)
-// Daredevil, Punisher, Elektra, Ghost Rider
-// ==============================================
 import { daredevil2003M1 } from "./marvelKnightsLegacy/daredevil2003M1.js";
+import { hulk2003M1 } from "./marvelKnightsLegacy/hulk2003M1.js";
 import { thepunisher2004M1 } from "./marvelKnightsLegacy/thepunisher2004M1.js";
+import { blade32004M1 } from "./marvelKnightsLegacy/blade32004M1.js";
 import { elektra2005M1 } from "./marvelKnightsLegacy/elektra2005M1.js";
+import { manthing2005TV } from "./marvelKnightsLegacy/manthing2005TV.js";
+import { bladeseries2006S1 } from "./marvelKnightsLegacy/bladeseries2006S1.js";
 import { ghostrider2007M1 } from "./marvelKnightsLegacy/ghostrider2007M1.js";
 import { punisherwarz2008M1 } from "./marvelKnightsLegacy/punisherwarz2008M1.js";
 import { ghostrider22011M1 } from "./marvelKnightsLegacy/ghostrider22011M1.js";
-
-// ==============================================
-// BLOQUE 4: HULK 2003 (UNIVERSAL)
-// ==============================================
-import { hulk2003M1 } from "./marvelKnightsLegacy/hulk2003M1.js";
 
 export const marvelKnightsLegacy = {
   saga: "Marvel Knights & Legacy",
@@ -61,30 +40,27 @@ export const marvelKnightsLegacy = {
     hulk77S2,
     spidey78TV,
     ds1978TV,
-    hulkmarried78TV,
     hulk77S3,
     hulk77S4,
     hulk77S5,
-    spidey81TV,
     howard1986M1,
     hulkreturns1988TV,
     hulktrial1989TV,
     hulkdeath1990TV,
     cap1990M1,
-    fantasticfour1994M1,
     genx1996TV,
     nickfury1998TV,
-    manthing2005TV,
     blade1998M1,
     blade22002M1,
-    blade32004M1,
-    bladeseries2006S1,
     daredevil2003M1,
+    hulk2003M1,
     thepunisher2004M1,
+    blade32004M1,
     elektra2005M1,
+    manthing2005TV,
+    bladeseries2006S1,
     ghostrider2007M1,
     punisherwarz2008M1,
-    ghostrider22011M1,
-    hulk2003M1,
+    ghostrider22011M1
   ],
 };
