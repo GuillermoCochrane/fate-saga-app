@@ -1,7 +1,9 @@
 export const madameweb = {
-  id: "madameweb",
+  id: "mw1", 
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Madame Web"},
-  },
+    en: "Madame Web",
+    es: "Madame Web"
+  }
 };
-
