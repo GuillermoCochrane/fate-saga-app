@@ -3,8 +3,8 @@ export const dbaS2E1 = {
   number: 1,
   completed: false,
   label: {
-    en: "Episode 1",
-    es: "Episodio 1",
+    en: "The Northern Star",
+    es: "La estrella del norte",
   },
 };
 
@@ -13,8 +13,8 @@ export const dbaS2E2 = {
   number: 2,
   completed: false,
   label: {
-    en: "Episode 2",
-    es: "Episodio 2",
+    en: "Shoot the Moon",
+    es: "Apunta a la luna",
   },
 };
 
@@ -23,8 +23,8 @@ export const dbaS2E3 = {
   number: 3,
   completed: false,
   label: {
-    en: "Episode 3",
-    es: "Episodio 3",
+    en: "The Scales and The Sword",
+    es: "La balanza y la espada",
   },
 };
 
@@ -33,8 +33,8 @@ export const dbaS2E4 = {
   number: 4,
   completed: false,
   label: {
-    en: "Episode 4",
-    es: "Episodio 4",
+    en: "Gloves Off",
+    es: "Sin guantes",
   },
 };
 
@@ -43,8 +43,8 @@ export const dbaS2E5 = {
   number: 5,
   completed: false,
   label: {
-    en: "Episode 5",
-    es: "Episodio 5",
+    en: "The Grand Design",
+    es: "El gran diseño",
   },
 };
 
@@ -53,8 +53,8 @@ export const dbaS2E6 = {
   number: 6,
   completed: false,
   label: {
-    en: "Episode 6",
-    es: "Episodio 6",
+    en: "Requiem",
+    es: "Réquiem",
   },
 };
 
@@ -63,8 +63,8 @@ export const dbaS2E7 = {
   number: 7,
   completed: false,
   label: {
-    en: "Episode 7",
-    es: "Episodio 7",
+    en: "The Hateful Darkness",
+    es: "La odiosa oscuridad",
   },
 };
 
@@ -73,7 +73,7 @@ export const dbaS2E8 = {
   number: 8,
   completed: false,
   label: {
-    en: "Episode 8",
-    es: "Episodio 8",
+    en: "The Southern Cross",
+    es: "La cruz del sur",
   },
 };
