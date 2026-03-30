@@ -1,7 +1,9 @@
 export const kraven = {
-  id: "kraven",
+  id: "krh1", 
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Kraven the Hunter"},
-  },
+    en: "Kraven the Hunter",
+    es: "Kraven el Cazador"
+  }
 };
-
