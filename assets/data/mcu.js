@@ -6,6 +6,7 @@ import { phaseFive } from "./mcu/phaseFive.js";
 import { phaseSix } from "./mcu/phaseSix.js";
 import { foxverse } from "./mcu/foxverse.js";
 import { sonyverse } from "./mcu/sonyverse.js";
+import { marvelKnightsLegacy } from "./mcu/marvelKnightsLegacy.js";
 
 export const mcuChecklist = {
   franchiseName: "Marvel Cinematic Universe",
@@ -19,5 +20,6 @@ export const mcuChecklist = {
     phaseSix,
     foxverse,
     sonyverse,
+    marvelKnightsLegacy
   ],
 };

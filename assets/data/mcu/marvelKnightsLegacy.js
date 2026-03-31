@@ -6,7 +6,7 @@ import { cap1944S1 } from "./marvelKnightsLegacy/cap1944S1.js";
 import { spidey77TV } from "./marvelKnightsLegacy/spidey77TV.js";
 import { spidey77S1 } from "./marvelKnightsLegacy/spidey77S1.js";
 import { hkS1 } from "./marvelKnightsLegacy/hulk77S1.js";
-import { hulk77S2 } from "./marvelKnightsLegacy/hulk77S2.js";
+import { hkS2 } from "./marvelKnightsLegacy/hulk77S2.js";
 import { sp78TV } from "./marvelKnightsLegacy/spidey78TV.js";
 import { ds1978TV } from "./marvelKnightsLegacy/ds1978TV.js";
 import { hulkmarried78TV } from "./marvelKnightsLegacy/hulkmarried78TV.js";
@@ -58,7 +58,7 @@ export const marvelKnightsLegacy = {
     spidey77TV,
     spidey77S1,
     hkS1,
-    hulk77S2,
+    hkS2,
     sp78TV,
     ds1978TV,
     hulkmarried78TV,
