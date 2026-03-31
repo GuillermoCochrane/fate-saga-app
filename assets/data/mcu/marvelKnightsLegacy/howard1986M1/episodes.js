@@ -1,7 +1,9 @@
-export const howard1 = {
-  id: "howard1",
+export const how = {
+  id: "how",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Howard the Duck"},
+    en: "Howard the Duck",
+    es: "Howard el pato"
   },
 };
-
