@@ -9,7 +9,7 @@ import { hkS1 } from "./marvelKnightsLegacy/hulk77S1.js";
 import { hkS2 } from "./marvelKnightsLegacy/hulk77S2.js";
 import { sp78TV } from "./marvelKnightsLegacy/spidey78TV.js";
 import { ds1978TV } from "./marvelKnightsLegacy/ds1978TV.js";
-import { hulkmarried78TV } from "./marvelKnightsLegacy/hulkmarried78TV.js";
+import { hkmTV } from "./marvelKnightsLegacy/hulkmarried78TV.js";
 import { hulk77S3 } from "./marvelKnightsLegacy/hulk77S3.js";
 import { hulk77S4 } from "./marvelKnightsLegacy/hulk77S4.js";
 import { hulk77S5 } from "./marvelKnightsLegacy/hulk77S5.js";
@@ -61,7 +61,7 @@ export const marvelKnightsLegacy = {
     hkS2,
     sp78TV,
     ds1978TV,
-    hulkmarried78TV,
+    hkmTV,
     hulk77S3,
     hulk77S4,
     hulk77S5,

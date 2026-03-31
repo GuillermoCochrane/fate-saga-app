@@ -1,7 +1,9 @@
-export const hulkmarried78TVE1 = {
-  id: "hulkmarried78TVE1",
+export const hkmTVE1 = {
+  id: "hkmTVE1",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"The Incredible Hulk: Married"},
+    en: "The Incredible Hulk: Married",
+    es: "El increíble Hulk: Casado"
   },
 };
-
