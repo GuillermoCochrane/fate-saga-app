@@ -1,7 +1,9 @@
-export const cap1990 = {
-  id: "cap1990",
+export const cap90 = {
+  id: "cap90",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Captain America"},
+    en: "Captain America",
+    es: "Capitán América"
   },
 };
-
