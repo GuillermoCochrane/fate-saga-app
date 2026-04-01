@@ -1,7 +1,9 @@
-export const hulkretE1 = {
-  id: "hulkretE1",
+export const hkrTVE1 = {
+  id: "hkrTVE1",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"The Incredible Hulk Returns"},
+    en: "The Incredible Hulk Returns",
+    es: "El regreso del increíble Hulk"
   },
 };
-

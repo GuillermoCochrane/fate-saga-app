@@ -1,9 +1,19 @@
-import { hulkretE1 } from "./hulkreturns1988TV/episodes.js";
+import { hkrTVE1 } from "./hulkreturns1988TV/episodes.js";
 
-export const hulkreturns1988TV = {
-  id: "hulkreturns1988TV",
+export const hkrTV = {
+  id: "hkrTV",
   label: "The Incredible Hulk Returns (1988 TV Movie)",
-  episodes: [
-    hulkretE1
-  ],
+  format: "Película",
+  release: {
+    year: 1988,
+    month: 5,
+    day: 22
+  },
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
+  completed: false,
+  opened: false,
+  episodes: [hkrTVE1],
 };
