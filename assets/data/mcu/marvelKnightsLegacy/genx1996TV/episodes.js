@@ -1,7 +1,9 @@
-export const genxE1 = {
-  id: "genxE1",
+export const genxTVE1 = {
+  id: "genxTVE1",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Generation X"},
+    en: "Generation X",
+    es: "Generación X"
   },
 };
-
