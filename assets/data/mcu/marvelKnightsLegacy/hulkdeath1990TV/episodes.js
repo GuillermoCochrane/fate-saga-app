@@ -1,7 +1,9 @@
-export const hulkdeathE1 = {
-  id: "hulkdeathE1",
+export const hkdTVE1 = {
+  id: "hkdTVE1",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"The Death of the Incredible Hulk"},
+    en: "The Death of the Incredible Hulk",
+    es: "La muerte del increíble Hulk"
   },
 };
-
