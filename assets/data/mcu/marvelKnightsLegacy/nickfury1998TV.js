@@ -1,9 +1,19 @@
-import { nickfuryE1 } from "./nickfury1998TV/episodes.js";
+import { nfTVE1 } from "./nickfury1998TV/episodes.js";
 
-export const nickfury1998TV = {
-  id: "nickfury1998TV",
+export const nfTV = {
+  id: "nfTV",
   label: "Nick Fury: Agent of S.H.I.E.L.D. (1998 TV Movie)",
-  episodes: [
-    nickfuryE1
-  ],
+  format: "Película",
+  release: {
+    year: 1998,
+    month: 5,
+    day: 26
+  },
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
+  completed: false,
+  opened: false,
+  episodes: [nfTVE1],
 };
