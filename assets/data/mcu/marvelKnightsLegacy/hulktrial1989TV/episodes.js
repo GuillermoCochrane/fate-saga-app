@@ -1,7 +1,9 @@
-export const hulktrialE1 = {
-  id: "hulktrialE1",
+export const hktTVE1 = {
+  id: "hktTVE1",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"The Trial of the Incredible Hulk"},
+    en: "The Trial of the Incredible Hulk",
+    es: "El juicio del increíble Hulk"
   },
 };
-

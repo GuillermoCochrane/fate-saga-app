@@ -1,9 +1,19 @@
-import { hulktrialE1 } from "./hulktrial1989TV/episodes.js";
+import { hktTVE1 } from "./hulktrial1989TV/episodes.js";
 
-export const hulktrial1989TV = {
-  id: "hulktrial1989TV",
+export const hktTV = {
+  id: "hktTV",
   label: "The Trial of the Incredible Hulk (1989 TV Movie)",
-  episodes: [
-    hulktrialE1
-  ],
+  format: "Película",
+  release: {
+    year: 1989,
+    month: 5,
+    day: 7
+  },
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
+  completed: false,
+  opened: false,
+  episodes: [hktTVE1],
 };
