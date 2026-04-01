@@ -1,9 +1,19 @@
-import { ff1994E1 } from "./fantasticfour1994M1/episodes.js";
+import { ff94 } from "./fantasticfour1994M1/episodes.js";
 
-export const fantasticfour1994M1 = {
-  id: "fantasticfour1994M1",
+export const ff94M1 = {
+  id: "ff94M1",
   label: "The Fantastic Four (1994 Unreleased)",
-  episodes: [
-    ff1994E1
-  ],
+  format: "Película",
+  release: {
+    year: 1994,
+    month: null,
+    day: null
+  },
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
+  completed: false,
+  opened: false,
+  episodes: [ff94],
 };

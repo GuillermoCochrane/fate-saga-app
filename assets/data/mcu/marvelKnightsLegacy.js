@@ -19,7 +19,7 @@ import { hkrTV } from "./marvelKnightsLegacy/hulkreturns1988TV.js";
 import { hktTV } from "./marvelKnightsLegacy/hulktrial1989TV.js";
 import { hkdTV } from "./marvelKnightsLegacy/hulkdeath1990TV.js";
 import { cap90M1 } from "./marvelKnightsLegacy/cap1990M1.js";
-import { fantasticfour1994M1 } from "./marvelKnightsLegacy/fantasticfour1994M1.js";
+import { ff94M1 } from "./marvelKnightsLegacy/fantasticfour1994M1.js";
 import { genx1996TV } from "./marvelKnightsLegacy/genx1996TV.js";
 import { nickfury1998TV } from "./marvelKnightsLegacy/nickfury1998TV.js";
 import { manthing2005TV } from "./marvelKnightsLegacy/manthing2005TV.js";
@@ -71,7 +71,7 @@ export const marvelKnightsLegacy = {
     hktTV,
     hkdTV,
     cap90M1,
-    fantasticfour1994M1,
+    ff94M1,
     genx1996TV,
     nickfury1998TV,
     manthing2005TV,
