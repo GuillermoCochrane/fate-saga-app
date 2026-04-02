@@ -1,7 +1,9 @@
-export const manthingE1 = {
-  id: "manthingE1",
+export const mtTVE1 = {
+  id: "mtTVE1",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Man-Thing"},
+    en: "Man-Thing",
+    es: "La Cosa del Pantano"
   },
 };
-
