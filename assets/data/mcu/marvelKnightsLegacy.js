@@ -37,8 +37,8 @@ import { bldsS1 } from "./marvelKnightsLegacy/bladeseries2006S1.js";
 // BLOQUE 3: MARVEL KNIGHTS (2003-2011)
 // Daredevil, Punisher, Elektra, Ghost Rider
 // ==============================================
-import { daredevil2003M1 } from "./marvelKnightsLegacy/daredevil2003M1.js";
-import { thepunisher2004M1 } from "./marvelKnightsLegacy/thepunisher2004M1.js";
+import { dd03M1 } from "./marvelKnightsLegacy/daredevil2003M1.js";
+import { pun04M1 } from "./marvelKnightsLegacy/thepunisher2004M1.js";
 import { elektra2005M1 } from "./marvelKnightsLegacy/elektra2005M1.js";
 import { ghostrider2007M1 } from "./marvelKnightsLegacy/ghostrider2007M1.js";
 import { punisherwarz2008M1 } from "./marvelKnightsLegacy/punisherwarz2008M1.js";
@@ -79,8 +79,8 @@ export const marvelKnightsLegacy = {
     bld2M1,
     bld3M1,
     bldsS1,
-    daredevil2003M1,
-    thepunisher2004M1,
+    dd03M1,
+    pun04M1,
     elektra2005M1,
     ghostrider2007M1,
     punisherwarz2008M1,

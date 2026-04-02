@@ -1,7 +1,9 @@
-export const punisher2004 = {
-  id: "punisher2004",
+export const pun04 = {
+  id: "pun04",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"The Punisher"},
+    en: "The Punisher",
+    es: "The Punisher"
   },
 };
-
