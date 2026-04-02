@@ -1,7 +1,9 @@
-export const blade2 = {
-  id: "blade2",
+export const bld2 = {
+  id: "bld2",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Blade II"},
+    en: "Blade II",
+    es: "Blade II"
   },
 };
-

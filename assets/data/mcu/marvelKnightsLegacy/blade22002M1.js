@@ -1,9 +1,19 @@
-import { blade2 } from "./blade22002M1/episodes.js";
+import { bld2 } from "./blade22002M1/episodes.js";
 
-export const blade22002M1 = {
-  id: "blade2_2002M1",
+export const bld2M1 = {
+  id: "bld2M1",
   label: "Blade II",
-  episodes: [
-    blade2
-  ],
+  format: "Película",
+  release: {
+    year: 2002,
+    month: 3,
+    day: 22
+  },
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
+  completed: false,
+  opened: false,
+  episodes: [bld2],
 };

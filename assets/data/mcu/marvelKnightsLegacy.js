@@ -29,7 +29,7 @@ import { mtTV } from "./marvelKnightsLegacy/manthing2005TV.js";
 // New Line Cinema
 // ==============================================
 import { bldM1 } from "./marvelKnightsLegacy/blade1998M1.js";
-import { blade22002M1 } from "./marvelKnightsLegacy/blade22002M1.js";
+import { bld2M1 } from "./marvelKnightsLegacy/blade22002M1.js";
 import { blade32004M1 } from "./marvelKnightsLegacy/blade32004M1.js";
 import { bladeseries2006S1 } from "./marvelKnightsLegacy/bladeseries2006S1.js";
 
@@ -76,7 +76,7 @@ export const marvelKnightsLegacy = {
     nfTV ,
     mtTV ,
     bldM1,
-    blade22002M1,
+    bld2M1,
     blade32004M1,
     bladeseries2006S1,
     daredevil2003M1,
