@@ -31,7 +31,7 @@ import { mtTV } from "./marvelKnightsLegacy/manthing2005TV.js";
 import { bldM1 } from "./marvelKnightsLegacy/blade1998M1.js";
 import { bld2M1 } from "./marvelKnightsLegacy/blade22002M1.js";
 import { bld3M1 } from "./marvelKnightsLegacy/blade32004M1.js";
-import { bladeseries2006S1 } from "./marvelKnightsLegacy/bladeseries2006S1.js";
+import { bldsS1 } from "./marvelKnightsLegacy/bladeseries2006S1.js";
 
 // ==============================================
 // BLOQUE 3: MARVEL KNIGHTS (2003-2011)
@@ -78,7 +78,7 @@ export const marvelKnightsLegacy = {
     bldM1,
     bld2M1,
     bld3M1,
-    bladeseries2006S1,
+    bldsS1,
     daredevil2003M1,
     thepunisher2004M1,
     elektra2005M1,
