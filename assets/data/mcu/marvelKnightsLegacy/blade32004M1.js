@@ -1,9 +1,19 @@
-import { blade3 } from "./blade32004M1/episodes.js";
+import { bld3 } from "./blade32004M1/episodes.js";
 
-export const blade32004M1 = {
-  id: "blade3_2004M1",
+export const bld3M1 = {
+  id: "bld3M1",
   label: "Blade: Trinity",
-  episodes: [
-    blade3
-  ],
+  format: "Película",
+  release: {
+    year: 2004,
+    month: 12,
+    day: 8
+  },
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
+  completed: false,
+  opened: false,
+  episodes: [bld3],
 };

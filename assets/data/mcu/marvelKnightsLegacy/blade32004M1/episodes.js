@@ -1,7 +1,9 @@
-export const blade3 = {
-  id: "blade3",
+export const bld3 = {
+  id: "bld3",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Blade: Trinity"},
+    en: "Blade: Trinity",
+    es: "Blade: Trinidad"
   },
 };
-
