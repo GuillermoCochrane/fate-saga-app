@@ -41,7 +41,7 @@ import { dd03M1 } from "./marvelKnightsLegacy/daredevil2003M1.js";
 import { pun04M1 } from "./marvelKnightsLegacy/thepunisher2004M1.js";
 import { eleM1 } from "./marvelKnightsLegacy/elektra2005M1.js";
 import { grM1 } from "./marvelKnightsLegacy/ghostrider2007M1.js";
-import { punisherwarz2008M1 } from "./marvelKnightsLegacy/punisherwarz2008M1.js";
+import { pwzM1 } from "./marvelKnightsLegacy/punisherwarz2008M1.js";
 import { ghostrider22011M1 } from "./marvelKnightsLegacy/ghostrider22011M1.js";
 
 // ==============================================
@@ -83,7 +83,7 @@ export const marvelKnightsLegacy = {
     pun04M1,
     eleM1,
     grM1,
-    punisherwarz2008M1,
+    pwzM1,
     ghostrider22011M1,
     hulk2003M1,
   ],

@@ -1,7 +1,9 @@
 export const pwz = {
   id: "pwz",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Punisher: War Zone"},
+    en: "Punisher: War Zone",
+    es: "Punisher: War Zone"
   },
 };
-
