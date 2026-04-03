@@ -1,9 +1,19 @@
 import { gr2 } from "./ghostrider22011M1/episodes.js";
 
-export const ghostrider22011M1 = {
-  id: "ghostrider2_2011M1",
+export const gr2M1 = {
+  id: "gr2M1",
   label: "Ghost Rider: Spirit of Vengeance",
-  episodes: [
-    gr2
-  ],
+  format: "Película",
+  release: {
+    year: 2011,
+    month: 12,
+    day: 11
+  },
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
+  completed: false,
+  opened: false,
+  episodes: [gr2],
 };

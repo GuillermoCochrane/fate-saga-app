@@ -42,7 +42,7 @@ import { pun04M1 } from "./marvelKnightsLegacy/thepunisher2004M1.js";
 import { eleM1 } from "./marvelKnightsLegacy/elektra2005M1.js";
 import { grM1 } from "./marvelKnightsLegacy/ghostrider2007M1.js";
 import { pwzM1 } from "./marvelKnightsLegacy/punisherwarz2008M1.js";
-import { ghostrider22011M1 } from "./marvelKnightsLegacy/ghostrider22011M1.js";
+import { gr2M1 } from "./marvelKnightsLegacy/ghostrider22011M1.js";
 
 // ==============================================
 // BLOQUE 4: HULK 2003 (UNIVERSAL)
@@ -84,7 +84,7 @@ export const marvelKnightsLegacy = {
     eleM1,
     grM1,
     pwzM1,
-    ghostrider22011M1,
+    gr2M1,
     hulk2003M1,
   ],
 };
