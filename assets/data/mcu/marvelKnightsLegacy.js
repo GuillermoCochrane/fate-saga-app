@@ -47,7 +47,7 @@ import { gr2M1 } from "./marvelKnightsLegacy/ghostrider22011M1.js";
 // ==============================================
 // BLOQUE 4: HULK 2003 (UNIVERSAL)
 // ==============================================
-import { hulk2003M1 } from "./marvelKnightsLegacy/hulk2003M1.js";
+import { hk03M1 } from "./marvelKnightsLegacy/hulk2003M1.js";
 
 export const marvelKnightsLegacy = {
   saga: "Marvel Knights & Legacy",
@@ -85,6 +85,6 @@ export const marvelKnightsLegacy = {
     grM1,
     pwzM1,
     gr2M1,
-    hulk2003M1,
+    hk03M1,
   ],
 };

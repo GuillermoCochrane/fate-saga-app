@@ -1,9 +1,19 @@
-import { hulk2003 } from "./hulk2003M1/episodes.js";
+import { hk03 } from "./hulk2003M1/episodes.js";
 
-export const hulk2003M1 = {
-  id: "hulk2003M1",
+export const hk03M1 = {
+  id: "hk03M1",
   label: "Hulk",
-  episodes: [
-    hulk2003
-  ],
+  format: "Película",
+  release: {
+    year: 2003,
+    month: 6,
+    day: 20
+  },
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
+  completed: false,
+  opened: false,
+  episodes: [hk03],
 };

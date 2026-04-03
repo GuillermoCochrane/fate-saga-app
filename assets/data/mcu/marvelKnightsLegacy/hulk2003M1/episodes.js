@@ -1,7 +1,9 @@
-export const hulk2003 = {
-  id: "hulk2003",
+export const hk03 = {
+  id: "hk03",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Hulk"},
+    en: "Hulk",
+    es: "Hulk"
   },
 };
-
