@@ -31,7 +31,7 @@ import { hk82S1 } from "./animacionVintage/hk82S1.js";
 import { xpotm89S1 } from "./animacionVintage/xpotm89S1.js";
 
 export const animacionVintage = {
-  saga: "Animación Vintage",
+  saga: "Animación Vintage (1966-1989)",
   id: "animvintage",
   opened: false,
   seasons: [
