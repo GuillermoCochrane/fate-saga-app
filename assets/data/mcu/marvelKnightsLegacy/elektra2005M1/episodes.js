@@ -1,7 +1,9 @@
-export const elektra = {
-  id: "elektra",
+export const ele = {
+  id: "ele",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Elektra"},
+    en: "Elektra",
+    es: "Elektra"
   },
 };
-

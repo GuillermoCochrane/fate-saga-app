@@ -1,9 +1,19 @@
-import { elektra } from "./elektra2005M1/episodes.js";
+import { ele } from "./elektra2005M1/episodes.js";
 
-export const elektra2005M1 = {
-  id: "elektra2005M1",
+export const eleM1 = {
+  id: "eleM1",
   label: "Elektra",
-  episodes: [
-    elektra
-  ],
+  format: "Película",
+  release: {
+    year: 2005,
+    month: 1,
+    day: 14
+  },
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
+  completed: false,
+  opened: false,
+  episodes: [ele],
 };
