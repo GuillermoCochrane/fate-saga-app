@@ -1,7 +1,9 @@
-export const gr1 = {
-  id: "gr1",
+export const gr = {
+  id: "gr",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Ghost Rider"},
+    en: "Ghost Rider",
+    es: "Ghost Rider"
   },
 };
-

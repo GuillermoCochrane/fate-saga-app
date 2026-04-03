@@ -1,9 +1,19 @@
-import { gr1 } from "./ghostrider2007M1/episodes.js";
+import { gr } from "./ghostrider2007M1/episodes.js";
 
-export const ghostrider2007M1 = {
-  id: "ghostrider2007M1",
+export const grM1 = {
+  id: "grM1",
   label: "Ghost Rider",
-  episodes: [
-    gr1
-  ],
+  format: "Película",
+  release: {
+    year: 2007,
+    month: 2,
+    day: 16
+  },
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
+  completed: false,
+  opened: false,
+  episodes: [gr],
 };
