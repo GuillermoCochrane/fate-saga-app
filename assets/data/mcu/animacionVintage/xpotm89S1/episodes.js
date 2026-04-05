@@ -1,7 +1,9 @@
 export const xpotm89S1E1 = {
   id: "xpotm89S1E1",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Pryde of the X-Men"},
+    en: "Pryde of the X-Men",
+    es: "El orgullo de los X-Men"
   },
 };
-
