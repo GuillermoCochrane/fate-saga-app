@@ -9,6 +9,7 @@ import { sonyverse } from "./mcu/sonyverse.js";
 import { marvelKnightsLegacy } from "./mcu/marvelKnightsLegacy.js";
 import { animacionVintage } from "./mcu/animacionVintage.js";
 import { animacion90s } from "./mcu/animacion90s.js";
+import { animacion2000s } from "./mcu/animacion2000s.js";
 
 export const mcuChecklist = {
   franchiseName: "Marvel Cinematic Universe",
@@ -24,6 +25,7 @@ export const mcuChecklist = {
     sonyverse,
     marvelKnightsLegacy,
     animacionVintage,
-    animacion90s
+    animacion90s,
+    animacion2000s,
   ],
 };
