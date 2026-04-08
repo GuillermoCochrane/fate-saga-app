@@ -1,11 +1,26 @@
+// ==============================================
+// X-MEN: EVOLUTION (2000-2003)
+// ==============================================
 import { xme00S1 } from "./animacion2000s/xme00S1.js";
 import { xme00S2 } from "./animacion2000s/xme00S2.js";
 import { xme00S3 } from "./animacion2000s/xme00S3.js";
 import { xme00S4 } from "./animacion2000s/xme00S4.js";
+// ==============================================
+// FANTASTIC FOUR: WORLD'S GREATEST HEROES (2006-2007)
+// ==============================================
 import { fwwgh06S1 } from "./animacion2000s/fwwgh06S1.js";
+// ==============================================
+// WOLVERINE AND THE X-MEN (2009)
+// ==============================================
 import { wolverine09S1 } from "./animacion2000s/wolverine09S1.js";
+// ==============================================
+// THE SUPER HERO SQUAD SHOW (2009-2011)
+// ==============================================
 import { shs09S1 } from "./animacion2000s/shs09S1.js";
 import { shs09S2 } from "./animacion2000s/shs09S2.js";
+// ==============================================
+// BLACK PANTHER (2010)
+// ==============================================
 import { bp10S1 } from "./animacion2000s/bp10S1.js";
 
 export const animacion2000s = {
