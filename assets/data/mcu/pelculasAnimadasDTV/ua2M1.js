@@ -3,7 +3,17 @@ import { ua2 } from "./ua2M1/episodes.js";
 export const ua2M1 = {
   id: "ua2M1",
   label: "Ultimate Avengers 2 (2006)",
-  episodes: [
-    ua2
-  ],
+  format: "Película",
+  release: {
+    year: 2006,
+    month: 8,
+    day: 8
+  },
+  year_in_timeline: {
+    start: null,
+    end: null
+  },
+  completed: false,
+  opened: false,
+  episodes: [ua2],
 };
