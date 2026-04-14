@@ -1,16 +1,16 @@
-import { imanime10S1 } from "./marvelAnime/imanime10S1.js";
-import { wolanime11S1 } from "./marvelAnime/wolanime11S1.js";
-import { xmanime11S1 } from "./marvelAnime/xmanime11S1.js";
-import { bladeanime11S1 } from "./marvelAnime/bladeanime11S1.js";
+import { imaS1 } from "./marvelAnime/imaS1.js";
+import { wolaS1 } from "./marvelAnime/wolaS1.js";
+import { xmaS1 } from "./marvelAnime/xmaS1.js";
+import { bldaS1 } from "./marvelAnime/bldaS1.js";
 
 export const marvelAnime = {
   saga: "Marvel Anime",
   id: "marvelanime",
   opened: false,
   seasons: [
-    imanime10S1,
-    wolanime11S1,
-    xmanime11S1,
-    bladeanime11S1
+    imaS1,
+    wolaS1,
+    xmaS1,
+    bldaS1
   ],
 };
