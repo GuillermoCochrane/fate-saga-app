@@ -1,7 +1,9 @@
 export const ua = {
   id: "ua",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Ultimate Avengers"},
+    en: "Ultimate Avengers",
+    es: "Ultimate Avengers"
   },
 };
-
