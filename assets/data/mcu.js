@@ -12,6 +12,7 @@ import { animacion90s } from "./mcu/animacion90s.js";
 import { animacion2000s } from "./mcu/animacion2000s.js";
 import { animacion2010s } from "./mcu/animacion2010s.js";
 import { marvelAnime } from "./mcu/marvelAnime.js";
+import { pelculasAnimadasDTV } from "./mcu/pelculasAnimadasDTV.js";
 
 export const mcuChecklist = {
   franchiseName: "Marvel Cinematic Universe",
@@ -31,5 +32,6 @@ export const mcuChecklist = {
     animacion2000s,
     animacion2010s,
     marvelAnime,
+    pelculasAnimadasDTV,
   ],
 };
