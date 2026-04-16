@@ -1,7 +1,9 @@
 export const dsss = {
   id: "dsss",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Doctor Strange: The Sorcerer Supreme"},
+    en: "Doctor Strange: The Sorcerer Supreme",
+    es: "Doctor Strange: Hechicero Supremo"
   },
 };
-
