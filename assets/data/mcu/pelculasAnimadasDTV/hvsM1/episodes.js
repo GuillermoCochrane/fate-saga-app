@@ -1,7 +1,9 @@
 export const hvs = {
   id: "hvs",
+  number: 1,
+  completed: false,
   label: {
-    en: {"en":"Hulk Vs"},
+    en: "Hulk Vs",
+    es: "Hulk Vs"
   },
 };
-
