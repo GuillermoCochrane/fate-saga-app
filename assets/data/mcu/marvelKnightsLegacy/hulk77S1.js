@@ -1,4 +1,4 @@
-import { hkS1E1, hkS1E2, hkS1E3, hkS1E4, hkS1E5, hkS1E6, hkS1E7, hkS1E8, hkS1E9, hkS1E10, hkS1E11 } from "./hkS1/episodes.js";
+import { hkS1E1, hkS1E2, hkS1E3, hkS1E4, hkS1E5, hkS1E6, hkS1E7, hkS1E8, hkS1E9, hkS1E10, hkS1E11 } from "./hulk77S1/episodes.js";
 
 export const hkS1 = {
   id: "hkS1",
