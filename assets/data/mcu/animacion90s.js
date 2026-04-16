@@ -7,6 +7,11 @@ import { xm92S3 } from "./animacion90s/xm92S3.js";
 import { xm92S4 } from "./animacion90s/xm92S4.js";
 import { xm92S5 } from "./animacion90s/xm92S5.js";
 // ==============================================
+// X-MEN '97 (2024-2026) (CONTINUA LA ORIGINAL)
+// ==============================================
+import { xm97S1 } from "./animacion90s/xm97S1.js";
+import { xm97S2 } from "./animacion90s/xm97S2.js";
+// ==============================================
 // SPIDER-MAN: THE ANIMATED SERIES (1994-1998)
 // ==============================================
 import { sp94S1 } from "./animacion90s/sp94S1.js";
@@ -52,6 +57,8 @@ export const animacion90s = {
     xm92S3,
     xm92S4,
     xm92S5,
+    xm97S1,
+    xm97S2,
     sp94S1,
     sp94S2,
     sp94S3,
