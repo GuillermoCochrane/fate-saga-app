@@ -1,4 +1,4 @@
-import data from "../../cosas_referencia/Marvel Cinematic Universe-checklist.json" with { type: "json" };
+import data from "../../../cosas_referencia/Marvel Cinematic Universe-checklist.json" with { type: "json" };
 
 const allIds = [];
 
