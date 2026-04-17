@@ -141,6 +141,10 @@
                     color: #5a5a5a;
                     background-color: var(--card-bg);
                 }
+
+                &::checkmark {
+                    display: none;   /* O también: content: ''; */
+                }
             }
         }
     }
