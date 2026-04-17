@@ -1,6 +1,6 @@
 // Datos iniciales de la checklist con episodios
 export const asistenceChecklistData = {
-  franchise: "assistence",
+  franchise: "Asistencia",
   franchiseName: "Asistencia",
   sagas:[ 
     {

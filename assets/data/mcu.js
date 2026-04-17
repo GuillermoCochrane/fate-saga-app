@@ -17,7 +17,7 @@ import { rarezasLiveaction } from "./mcu/rarezasLiveaction.js";
 
 export const mcuChecklist = {
   franchiseName: "Marvel Cinematic Universe",
-  franchise: "mcu",
+  franchise: "Marvel",
   sagas: [ 
     phaseOne,
     phaseTwo,
