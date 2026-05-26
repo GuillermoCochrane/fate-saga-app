@@ -1,6 +1,6 @@
 //? funcion de creación de componente saga
 
-import { createElement } from '../utilities/dom.js';
+import { createElement, createProgress } from '../utilities/dom.js';
 import { shouldShowItem } from "../handlers/filterHandlers.js";
 import { calculateProgress } from '../handlers/progressHandler.js';
 import { seasonContainerCreator } from './season.js';
@@ -51,13 +51,14 @@ export function sagaCreator(sagaData, sagaID, handleToggleCheckbox, currentFilte
 
 // Crear el Summary de la saga, con el progreso de la misma
 export function sagaSummaryCreator(sagaName, progress, sagaID){              
-    const $summary = createElement('summary', 'saga-summary');              // Creamos el elemento summary con la clase saga-summary
-    const $summaryContent = createElement('div', 'summary-content');        // Contenedor flexible para título y progreso
-    const $sagaTitle = createElement('span', 'saga-title', sagaName);       // Título de la saga
-    /*         <progress id="complete-progress-bar" class="progress-bar" value="0" max="100"></progress> */
-    const progressHTML =  `<span class="progress-text" id="saga-progress-text-${sagaID}">${progress}%</span>\n
-                            <progress  class="progress-bar" value="${progress}" max="100" id="saga-progress-${sagaID}"></progress>\n`;// Contenedor de progreso
-    const $progressContainer = createElement('div', 'progress-container', progressHTML, true); // Creamos el elemento div con la clase progress-container
+    const $summary = createElement('summary', 'saga-summary');                  // Creamos el elemento summary con la clase saga-summary
+    const $summaryContent = createElement('header', 'summary-content');         // Contenedor flexible para título y progreso
+    const $sagaTitle = createElement('span', 'saga-title', sagaName);           // Título de la saga
+    const $progressContainer = createElement('aside', 'progress-container');    // Creamos contenedor del progreso
+    const $sagaProgressData = createElement('span','progress-text', `${progress}%`, false, `saga-progress-text-${sagaID}`); // Creamos el porcentaje de progreso con el id unico de la saga
+    const $sagaProgressBar = createProgress(`saga-progress-${sagaID}`, progress);  // Creamos barra de progreso con el id unico de la saga, y el valor del progreso calculado
+    $progressContainer.appendChild($sagaProgressData);
+    $progressContainer.appendChild($sagaProgressBar);
 
     $summaryContent.appendChild($sagaTitle);         // agregamos  el titulo 
     $summaryContent.appendChild($progressContainer); // agregamos el contenedor de progreso
@@ -66,13 +67,13 @@ export function sagaSummaryCreator(sagaName, progress, sagaID){
     /* 
         hasta aca tendriamos (1)
         <summary class="saga-summary">
-            <div class="summary-content">
+            <header class="summary-content">
                 <span class="saga-title">Saga X</span>
-                <div class="progress-container">
+                <aside class="progress-container">
                     <span class="progress-text">100%</span>
                     <progress  class="progress-bar" value="0" max="100"></progress>
-                </div>
-            </div>
+                </aside>
+            </header>
         </summary>
         */
 
