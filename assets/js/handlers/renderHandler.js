@@ -1,6 +1,6 @@
 import { $, createElement } from '../utilities/dom.js';
 import { sagaSummaryCreator, sagaCreator } from '../components/saga.js';
-import { calculateProgress } from '../handlers/progressHandler.js';
+import { calculateProgress } from './progressHandler.js';
 
 // Renderizar la checklist completa
 export function renderChecklist(checklistData, currentFilter, handleToggleCheckbox) {
@@ -10,32 +10,9 @@ export function renderChecklist(checklistData, currentFilter, handleToggleCheckb
 
     // recorremos cada saga en el objeto
     for (const sagaData of checklistData) {
-        const sagaName = sagaData.saga;
-        const $sagaElement = createElement('div', 'saga');          // Creamos el elemento div con la clase saga
-        const $details = createElement('details', 'saga-details');  //Creamos el elemento details, y le ponemos  el atributo open cuando corresponda, asi el details queda abierto
-        $details.dataset.sagaId = sagaData.id;                      //le ponemos el atributo data-saga-id con el id de la saga
-        if (sagaData.opened) {
-            $details.setAttribute('open', 'true');
-        }
-
-        const percentage = calculateProgress(sagaData.seasons);       //calculamos el progreso de la saga
-        const $summary = sagaSummaryCreator(sagaName, percentage, sagaData.id);  // Creamos el summary de la saga
-        const $contentDiv = sagaCreator(sagaData,  sagaData.id, handleToggleCheckbox, currentFilter);        // Creamos el contenedor de la seasons de la saga
-
-        $details.appendChild($summary);
-        $details.appendChild($contentDiv);
-        /* 
-            hasta aca tendriamos (2)
-            <details class="saga-details" open>
-                <summary class="saga-summary">
-                    --- con todo lo del componente summary ---
-                </summary>
-                <div>
-                    --- con todas las temporadas de la saga, o el mensaje de no hay items visibles ---
-                </div>
-            </details>
-         */      
-        $sagaElement.appendChild($details);     //agregamos el details  al contenedor .saga
-        $container.appendChild($sagaElement);   //con cada iteración, agregamos la saga al contenedor
+        // Creamos el contenedor de la seasons de la saga
+        const $details = sagaCreator(sagaData,  sagaData.id, handleToggleCheckbox, currentFilter);
+        //con cada iteración, agregamos la saga al contenedor
+        $container.appendChild($details);   
     }
 }
