@@ -6,8 +6,7 @@ import { episodeCreator } from './episode.js';
 // Crear elemento de la temporada con sus episodios
 export function seasonContainerCreator(season, sagaID, handleToggleCheckbox) {
     //Creacion de los elementos
-    const $seasonDiv = createElement('div', 'season-item');
-    const $details = createDetails('season-details', season.opened); //creamos el elemento details, abierto cuando corresponda
+    const $details = createDetails('season-item', season.opened); //creamos el elemento details, abierto cuando corresponda
     $details.dataset.seasonId = season.id;
     $details.dataset.sagaId = sagaID;
 
@@ -16,21 +15,18 @@ export function seasonContainerCreator(season, sagaID, handleToggleCheckbox) {
     
     $details.appendChild($summary);         //agregamos el summary al details
     $details.appendChild($seasonContainer); //Agregamos el contenedor de la temporada al details
-    $seasonDiv.appendChild($details);        //agregamos el details al contenedor general de la temporada
     /*
-        hasta aca tendriamos (
-        <div class="season-item">
-            <details class="season-details">
+        hasta aca tendriamos:
+        <details class="season-item">
+            <summary class="season-summary">
                 --- con todo lo de summary ---
-                <div class="checklist">
-                    <div class="episode-list">
-                        --- todos los episodios de la temporada ---
-                    </div>
-                </div>
-            </details>
-        </div>
+            </summary>
+            <section class="episode-list">
+                --- todos los episodios de la temporada ---
+            </section>
+        </details>
     */
-    return $seasonDiv; //devuelve el contendeor de la temporada completo, con todos sus elementos hijos
+    return $details; //devuelve el contendeor de la temporada completo, con todos sus elementos hijos
 }
 
 // Crear el listado de episodios de la temporada
