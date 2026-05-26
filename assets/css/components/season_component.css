@@ -40,7 +40,7 @@ dialog section article summary,
 
 /* Cuando el details esta abierto, giramos 45º el icono */
 dialog section article details[open] summary::after,
-.season-details[open] .season-summary::after {
+.season-item[open] .season-summary::after {
     transform: rotate(45deg);
 }
 
