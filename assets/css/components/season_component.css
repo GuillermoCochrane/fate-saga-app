@@ -18,6 +18,13 @@ dialog section article summary,
     justify-content: space-between;
     align-items: center;
 
+    input[type="checkbox"] {
+        margin-right: 10px;
+        margin-top: 5px;
+        flex-shrink: 0;
+        accent-color: var(--accent-color);
+    }
+
     &:hover {
         background-color: var(--hover-color);
     }
@@ -58,7 +65,7 @@ dialog section article details[open] summary::after,
     }
 }
 
-.season-title {
+.season-label {
     font-weight: bold;
 }
 
