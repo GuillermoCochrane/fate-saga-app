@@ -58,15 +58,15 @@ function seasonSummaryCreator(sagaID, season, handleToggleCheckbox) {
 
     const $label = createLabel(season.label, checkboxID, 'season-label');              //label del checkbox 
     const $formatSpan = createElement('span', 'season-format', `${season.format}`);    //span con el formato de la temporada
-    const $titleContainer = createElement('div', 'season-title-container');          //contenedor para el label y el formato
+    const $titleContainer = createElement('header', 'season-title-container');          //contenedor para el label y el formato
     
     // Agregamos el label y el span al contenedor de título
     $titleContainer.appendChild($label);
     $titleContainer.appendChild($formatSpan);
-    /*  <div class="season-title-container">
+    /*  <header class="season-title-container">
             <label for="main-1" class="season-label">Titulo de la temporada</label>
             <span class="season-format">Formato de la temporada</span>
-        </div> 
+        </header> 
     */
     // Agregamos el checkbox y el contenedor de título al summary
     $summary.appendChild($seasonCheckbox);
@@ -75,10 +75,10 @@ function seasonSummaryCreator(sagaID, season, handleToggleCheckbox) {
         hasta aca tendriamos (1)
         <summary class="season-summary">
             <input type="checkbox" id="main-1">
-            <div class="season-title-container">
+            <header class="season-title-container">
                 <label for="main-1" class="season-label">Titulo de la temporada</label>
                 <span class="season-format">Formato de la temporada</span>
-            </div>
+            </header>
         </summary>
     */    
     return $summary;
